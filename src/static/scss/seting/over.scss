@@ -359,6 +359,7 @@
     width: 39px;
     margin-right: 33px;
     display: block;
+    align-self: flex-start;
   }
 
   &__caption {
@@ -407,8 +408,8 @@ a.link-doc img {
     }
 
     svg {
-      width: 10px;
-      height: 10px;
+      width: 14px;
+      height: 14px;
       stroke: #0061D9;
       stroke-width: 2px;
       transform: rotate(90deg);
@@ -428,6 +429,7 @@ a.link-doc img {
   &__down {
     overflow: hidden;
     max-height: 0;
+    transition: all 0.3s ease-in-out;
   }
 
   &__content {
@@ -448,6 +450,12 @@ a.link-doc img {
       }
     }
     
+  }
+}
+
+.accordion__up.active {
+  svg {
+    transform: rotate(-90deg);
   }
 }
 

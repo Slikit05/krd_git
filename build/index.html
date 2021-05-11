@@ -189,13 +189,13 @@
         </div>
       </div>
     </section>
-    <section class="mob-menu">
+    <section class="mob-menu" data-mobile-menu>
       <div class="mob-menu__up">
         <a href="#" class="logo">
           <img src="img/logo-one.png" alt="">
           <span class="logo__text">krd.ru</span>
         </a>
-        <div class="mob-menu__close-wrap">
+        <div class="mob-menu__close-wrap" data-hide-mob-menu>
           <span>Закрыть</span>
           <div class="mob-menu__close"></div>
         </div>
@@ -209,7 +209,20 @@
                 <use xlink:href="img/sprite.svg#svg--arrow-one">
               </svg>
             </div>
-
+            <div class="menu-nav__dropdown">
+              <ul class="menu-nav__list">
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Главные новости</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Герои Великой Отечественной Войны</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">История города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Гостям города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Символика</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Виртуальные экскурсии</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Руководители города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Фотогалереи</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Почетные граждане города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Международные связи</a></li>
+              </ul>
+            </div>
           </div>
           <div class="menu-nav__item">
             <div class="menu-nav__up">
@@ -430,24 +443,207 @@
         <div class="news-tabs">
           <div class="news-tabs__up">
             <div class="news-tabs__item" data-tab="1">
-              <span class="news-tabs__caption">Новости городской думы</span>
-              <svg>
-                <use xlink:href="img/sprite.svg#svg--arrow-one">
-              </svg>
+              <div class="news-tabs__row-flex">
+                <span class="news-tabs__caption">Новости городской думы</span>
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-one">
+                </svg>
+              </div>
+            </div>
+            <div class="news-tabs__row" id="tab1">
+              <div class="news-tabs__grid">
+                <div class="md-block-news">
+                  <div class="md-block-news__wrapper">
+                    <div class="md-block-news__wrap-img">
+                      <picture>
+                        <source srcset="img/sm-news3.webp" type="image/webp">
+                        <source srcset="img/sm-news3.jpg" type="image/jpeg">
+                        <img src="img/sm-news3.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="md-block-news__down">
+                      <div class="md-block-news__wrap-text">
+                        <h3>Церемония возложение цветов у обелиска Краснодара, погибшим на месте боев за Пашковскую переправу</h3>
+                      </div>
+                      <div class="md-block-news__row">
+                        <span class="info-text date">10 февраля 2021,</span>
+                        <span class="info-text time">10:24</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md-block-news">
+                  <div class="md-block-news__wrapper">
+                    <div class="md-block-news__wrap-img">
+                      <picture>
+                        <source srcset="img/sm-news4.webp" type="image/webp">
+                        <source srcset="img/sm-news4.jpg" type="image/jpeg">
+                        <img src="img/sm-news4.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="md-block-news__down">
+                      <div class="md-block-news__wrap-text">
+                        <h3>Заседания комитетов в городской Думе Краснодара</h3>
+                      </div>
+                      <div class="md-block-news__row">
+                        <span class="info-text date">10 февраля 2021,</span>
+                        <span class="info-text time">10:24</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md-block-news">
+                  <div class="md-block-news__wrapper">
+                    <div class="md-block-news__wrap-img">
+                      <picture>
+                        <source srcset="img/sm-news3.webp" type="image/webp">
+                        <source srcset="img/sm-news3.jpg" type="image/jpeg">
+                        <img src="img/sm-news3.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="md-block-news__down">
+                      <div class="md-block-news__wrap-text">
+                        <h3>Депутаты комитета встретились с руководителем общественной организацией «Федерация рукопашного боя»</h3>
+                      </div>
+                      <div class="md-block-news__row">
+                        <span class="info-text date">10 февраля 2021,</span>
+                        <span class="info-text time">10:24</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md-block-news">
+                  <div class="md-block-news__wrapper">
+                    <div class="md-block-news__wrap-img">
+                      <picture>
+                        <source srcset="img/sm-news5.webp" type="image/webp">
+                        <source srcset="img/sm-news5.jpg" type="image/jpeg">
+                        <img src="img/sm-news5.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="md-block-news__down">
+                      <div class="md-block-news__wrap-text">
+                        <h3>Детские площадки — безопасность превыше всего</h3>
+                      </div>
+                      <div class="md-block-news__row">
+                        <span class="info-text date">10 февраля 2021,</span>
+                        <span class="info-text time">10:24</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="news-tabs__end-row">
+                <a href="#" class="link-more">
+                  <span>Все новости</span>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#svg--arrow-link">
+                  </svg>
+                </a>
+              </div>
             </div>
             <div class="news-tabs__item" data-tab="2">
-              <span class="news-tabs__caption">Новости городских округов</span>
-              <svg>
-                <use xlink:href="img/sprite.svg#svg--arrow-one">
-              </svg>
+              <div class="news-tabs__row-flex">
+                <span class="news-tabs__caption">Новости городских округов</span>
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-one">
+                </svg>
+              </div>
+            </div>
+            <div class="news-tabs__row" id="tab2">
+              <div class="news-tabs__grid">
+                <div class="md-block-news">
+                  <div class="md-block-news__wrapper">
+                    <div class="md-block-news__wrap-img">
+                      <picture>
+                        <source srcset="img/sm-news3.webp" type="image/webp">
+                        <source srcset="img/sm-news3.jpg" type="image/jpeg">
+                        <img src="img/sm-news3.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="md-block-news__down">
+                      <div class="md-block-news__wrap-text">
+                        <h3>Церемония возложение цветов у обелиска Краснодара, погибшим на месте боев за Пашковскую переправу</h3>
+                      </div>
+                      <div class="md-block-news__row">
+                        <span class="info-text date">10 февраля 2021,</span>
+                        <span class="info-text time">10:24</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md-block-news">
+                  <div class="md-block-news__wrapper">
+                    <div class="md-block-news__wrap-img">
+                      <picture>
+                        <source srcset="img/sm-news4.webp" type="image/webp">
+                        <source srcset="img/sm-news4.jpg" type="image/jpeg">
+                        <img src="img/sm-news4.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="md-block-news__down">
+                      <div class="md-block-news__wrap-text">
+                        <h3>Заседания комитетов в городской Думе Краснодара</h3>
+                      </div>
+                      <div class="md-block-news__row">
+                        <span class="info-text date">10 февраля 2021,</span>
+                        <span class="info-text time">10:24</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md-block-news">
+                  <div class="md-block-news__wrapper">
+                    <div class="md-block-news__wrap-img">
+                      <picture>
+                        <source srcset="img/sm-news3.webp" type="image/webp">
+                        <source srcset="img/sm-news3.jpg" type="image/jpeg">
+                        <img src="img/sm-news3.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="md-block-news__down">
+                      <div class="md-block-news__wrap-text">
+                        <h3>Депутаты комитета встретились с руководителем общественной организацией «Федерация рукопашного боя»</h3>
+                      </div>
+                      <div class="md-block-news__row">
+                        <span class="info-text date">10 февраля 2021,</span>
+                        <span class="info-text time">10:24</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md-block-news">
+                  <div class="md-block-news__wrapper">
+                    <div class="md-block-news__wrap-img">
+                      <picture>
+                        <source srcset="img/sm-news5.webp" type="image/webp">
+                        <source srcset="img/sm-news5.jpg" type="image/jpeg">
+                        <img src="img/sm-news5.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="md-block-news__down">
+                      <div class="md-block-news__wrap-text">
+                        <h3>Детские площадки — безопасность превыше всего</h3>
+                      </div>
+                      <div class="md-block-news__row">
+                        <span class="info-text date">10 февраля 2021,</span>
+                        <span class="info-text time">10:24</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="news-tabs__end-row">
+                <a href="#" class="link-more">
+                  <span>Все новости</span>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#svg--arrow-link">
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="news-tabs__down">
-            <div class="news-tabs__content">
 
-
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -880,6 +1076,7 @@
       </div>
     </section>
   </footer>
+  <script src="js/main.js"></script>
 
   <script src="js/swiper.min.js"></script>
   <script>
@@ -906,6 +1103,10 @@
         },
       }
     });
+
+    const accTab = new Accordion(".news-tabs__item");
+
+    accTab.createAccordion();
   </script>
 
 </body>

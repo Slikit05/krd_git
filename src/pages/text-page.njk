@@ -37,6 +37,12 @@
 			<div class="inner-grid-page__wrapper">
 				<div class="inner-grid-page__left">
 					<div class="link-menu">
+						<div class="link-menu__up">
+							<span class="link-menu__caption">Гостям города</span>
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-one">
+							</svg>
+						</div>
 						<ul class="link-menu__list">
 							<li class="link-menu__item">
 								<a href="" class="link-menu__link">
@@ -162,6 +168,7 @@
 									</div>
 								</div>
 							</div>
+							<p>Город занимает выгодное экономико-географическое положение в Южном федеральном округе, расположен на важнейших транспортных магистралях, связывающих центр России с портами Черного и Азовского морей, а также курортами черноморского побережья Кавказа. В Юго-восточной части Краснодара расположено Кубанское водохранилище, построенное в 1973 году для обеспечения выполнения производственных и мелиоративных мероприятий.</p>
 							<div class="block-links-section">
 								<a href="#" class="link-section">
 									<span>Пример ссылки на любой раздел</span>
@@ -204,4 +211,14 @@
 			</div>
 		</div>
 	</section>
+{% endblock %}
+
+{% block Scripts %}
+	<script>
+		const accUp = new Accordion(".accordion__up");
+		const accLink = new Accordion(".link-menu__up");
+
+		accUp.createAccordion();
+		accLink.createAccordion();
+	</script>
 {% endblock %}

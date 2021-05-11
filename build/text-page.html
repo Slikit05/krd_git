@@ -188,13 +188,13 @@
         </div>
       </div>
     </section>
-    <section class="mob-menu">
+    <section class="mob-menu" data-mobile-menu>
       <div class="mob-menu__up">
         <a href="#" class="logo">
           <img src="img/logo-one.png" alt="">
           <span class="logo__text">krd.ru</span>
         </a>
-        <div class="mob-menu__close-wrap">
+        <div class="mob-menu__close-wrap" data-hide-mob-menu>
           <span>Закрыть</span>
           <div class="mob-menu__close"></div>
         </div>
@@ -208,7 +208,20 @@
                 <use xlink:href="img/sprite.svg#svg--arrow-one">
               </svg>
             </div>
-
+            <div class="menu-nav__dropdown">
+              <ul class="menu-nav__list">
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Главные новости</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Герои Великой Отечественной Войны</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">История города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Гостям города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Символика</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Виртуальные экскурсии</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Руководители города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Фотогалереи</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Почетные граждане города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Международные связи</a></li>
+              </ul>
+            </div>
           </div>
           <div class="menu-nav__item">
             <div class="menu-nav__up">
@@ -344,6 +357,12 @@
         <div class="inner-grid-page__wrapper">
           <div class="inner-grid-page__left">
             <div class="link-menu">
+              <div class="link-menu__up">
+                <span class="link-menu__caption">Гостям города</span>
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-one">
+                </svg>
+              </div>
               <ul class="link-menu__list">
                 <li class="link-menu__item">
                   <a href="" class="link-menu__link">
@@ -469,6 +488,7 @@
                     </div>
                   </div>
                 </div>
+                <p>Город занимает выгодное экономико-географическое положение в Южном федеральном округе, расположен на важнейших транспортных магистралях, связывающих центр России с портами Черного и Азовского морей, а также курортами черноморского побережья Кавказа. В Юго-восточной части Краснодара расположено Кубанское водохранилище, построенное в 1973 году для обеспечения выполнения производственных и мелиоративных мероприятий.</p>
                 <div class="block-links-section">
                   <a href="#" class="link-section">
                     <span>Пример ссылки на любой раздел</span>
@@ -679,7 +699,15 @@
       </div>
     </section>
   </footer>
+  <script src="js/main.js"></script>
 
+  <script>
+    const accUp = new Accordion(".accordion__up");
+    const accLink = new Accordion(".link-menu__up");
+
+    accUp.createAccordion();
+    accLink.createAccordion();
+  </script>
 
 </body>
 
