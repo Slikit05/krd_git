@@ -8,6 +8,9 @@ header {
 		justify-content: space-between;
 		padding: 15px 0;
 		border-bottom: 1px solid #D9D9DE;
+		@media (max-width: 1079px) {
+			display: none;
+		}
 	}
 
 	&__wrapper-left {
@@ -38,6 +41,14 @@ header {
 	&__left {
 		display: flex;
 		align-items: center;
+		@media (max-width: 1079px) {
+			order: 2;
+		}
+		.sm-text {
+			@media (max-width: 1300px) {
+				display: none;
+			}
+		}
 	}
 
 	&__right {
@@ -46,10 +57,17 @@ header {
 		flex-grow: 1;
 		justify-content: flex-end;
 		padding-left: 15px;
+		@media (max-width: 1079px) {
+			flex-grow: 0;
+			padding-left: 0;
+		}
 	}
 }
 
 .nav {
+	@media (max-width: 1079px) {
+		display: none;
+	}
 	&__list {
 		display: flex;
 	}
@@ -58,9 +76,6 @@ header {
 		margin-right: 40px;
 	}
 
-	&__link {
-		
-	}
 	&__text {
 		font-weight: 500;
 		font-size: 16px;
@@ -79,5 +94,24 @@ header {
 		stroke: #000000;
 		stroke-width: 2px;
 		cursor: pointer;
+	}
+}
+
+.burger {
+	display: none;
+	@media (max-width: 1079px) {
+		display: flex;
+		order: 3;
+	}
+	width: 16px;
+	height: 14px;
+	flex-direction: column;
+	justify-content: space-between;
+	&__line {
+		height: 2px;
+		background-color: #000;
+		&:nth-child(2) {
+			margin-left: 4px;
+		}
 	}
 }

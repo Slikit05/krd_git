@@ -1,5 +1,9 @@
 {% extends "__layout.njk" %}
 
+{% block Link %}
+	<link rel="stylesheet" href="css/swiper.css">
+{% endblock %}
+
 {% block Header %}
 	{% include "include/blue-line.njk" %}
 {% endblock %}
@@ -27,13 +31,19 @@
 				<div class="main-news__grid">
 					<div class="lg-block-news">
 						<div class="lg-block-news__wrapper">
-							<div class="lg-block-news__wrap-img"></div>
+							<div class="lg-block-news__wrap-img">
+								<picture>
+									<source srcset="img/lg-news1.webp" type="image/webp">
+									<source srcset="img/lg-news1.jpg" type="image/jpeg">
+									<img src="img/lg-news1.jpg" alt="">
+								</picture>
+							</div>
 							<div class="lg-block-news__down">
 								<div class="lg-block-news__wrap-text">
 									<h3>Откачку дождевой воды в Краснодаре продолжат в ночь с 10 на 11 февраля</h3>
 								</div>
 								<div class="lg-block-news__row">
-									<span class="info-text date">10 февраля 2021</span>
+									<span class="info-text date">10 февраля 2021,</span>
 									<span class="info-text time">10:24</span>
 								</div>
 							</div>
@@ -41,13 +51,19 @@
 					</div>
 					<div class="md-block-news">
 						<div class="md-block-news__wrapper">
-							<div class="md-block-news__wrap-img"></div>
+							<div class="md-block-news__wrap-img">
+								<picture>
+									<source srcset="img/sm-news1.webp" type="image/webp">
+									<source srcset="img/sm-news1.jpg" type="image/jpeg">
+									<img src="img/sm-news1.jpg" alt="">
+								</picture>
+							</div>
 							<div class="md-block-news__down">
 								<div class="md-block-news__wrap-text">
 									<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
 								</div>
 								<div class="md-block-news__row">
-									<span class="info-text date">10 февраля 2021</span>
+									<span class="info-text date">10 февраля 2021,</span>
 									<span class="info-text time">10:24</span>
 								</div>
 							</div>
@@ -55,41 +71,45 @@
 					</div>
 					<div class="md-block-news">
 						<div class="md-block-news__wrapper">
-							<div class="md-block-news__wrap-img"></div>
+							<div class="md-block-news__wrap-img">
+								<picture>
+									<source srcset="img/sm-news2.webp" type="image/webp">
+									<source srcset="img/sm-news2.jpg" type="image/jpeg">
+									<img src="img/sm-news2.jpg" alt="">
+								</picture>
+							</div>
 							<div class="md-block-news__down">
 								<div class="md-block-news__wrap-text">
 									<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
 								</div>
 								<div class="md-block-news__row">
-									<span class="info-text date">10 февраля 2021</span>
+									<span class="info-text date">10 февраля 2021,</span>
 									<span class="info-text time">10:24</span>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="md-block-news">
+					<div class="md-block-news md-block-news--sm">
 						<div class="md-block-news__wrapper">
-							<div class="md-block-news__wrap-img"></div>
 							<div class="md-block-news__down">
 								<div class="md-block-news__wrap-text">
 									<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
 								</div>
 								<div class="md-block-news__row">
-									<span class="info-text date">10 февраля 2021</span>
+									<span class="info-text date">10 февраля 2021,</span>
 									<span class="info-text time">10:24</span>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="md-block-news">
+					<div class="md-block-news md-block-news--sm">
 						<div class="md-block-news__wrapper">
-							<div class="md-block-news__wrap-img"></div>
 							<div class="md-block-news__down">
 								<div class="md-block-news__wrap-text">
 									<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
 								</div>
 								<div class="md-block-news__row">
-									<span class="info-text date">10 февраля 2021</span>
+									<span class="info-text date">10 февраля 2021,</span>
 									<span class="info-text time">10:24</span>
 								</div>
 							</div>
@@ -105,134 +125,202 @@
 					<div class="news-tabs__item" data-tab="1">
 						<span class="news-tabs__caption">Новости городской думы</span>
 						<svg>
-							<use xlink:href="img/sprite.svg#svg--">
+							<use xlink:href="img/sprite.svg#svg--arrow-one">
 						</svg>
 					</div>
 					<div class="news-tabs__item" data-tab="2">
 						<span class="news-tabs__caption">Новости городских округов</span>
 						<svg>
-							<use xlink:href="img/sprite.svg#svg--">
+							<use xlink:href="img/sprite.svg#svg--arrow-one">
 						</svg>
 					</div>
 				</div>
 				<div class="news-tabs__down">
 					<div class="news-tabs__content">
-						<div class="news-tabs__row" id="tab1">
-							<div class="md-block-news">
-								<div class="md-block-news__wrapper">
-									<div class="md-block-news__wrap-img"></div>
-									<div class="md-block-news__down">
-										<div class="md-block-news__wrap-text">
-											<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
+						{# <div class="news-tabs__row" id="tab1">
+							<div class="news-tabs__grid">
+								<div class="md-block-news">
+									<div class="md-block-news__wrapper">
+										<div class="md-block-news__wrap-img">
+											<picture>
+												<source srcset="img/sm-news3.webp" type="image/webp">
+												<source srcset="img/sm-news3.jpg" type="image/jpeg">
+												<img src="img/sm-news3.jpg" alt="">
+											</picture>
 										</div>
-										<div class="md-block-news__row">
-											<span class="info-text date">10 февраля 2021</span>
-											<span class="info-text time">10:24</span>
+										<div class="md-block-news__down">
+											<div class="md-block-news__wrap-text">
+												<h3>Церемония возложение цветов у обелиска Краснодара, погибшим на месте боев за Пашковскую переправу</h3>
+											</div>
+											<div class="md-block-news__row">
+												<span class="info-text date">10 февраля 2021,</span>
+												<span class="info-text time">10:24</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="md-block-news">
+									<div class="md-block-news__wrapper">
+										<div class="md-block-news__wrap-img">
+											<picture>
+												<source srcset="img/sm-news4.webp" type="image/webp">
+												<source srcset="img/sm-news4.jpg" type="image/jpeg">
+												<img src="img/sm-news4.jpg" alt="">
+											</picture>
+										</div>
+										<div class="md-block-news__down">
+											<div class="md-block-news__wrap-text">
+												<h3>Заседания комитетов в городской Думе Краснодара</h3>
+											</div>
+											<div class="md-block-news__row">
+												<span class="info-text date">10 февраля 2021,</span>
+												<span class="info-text time">10:24</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="md-block-news">
+									<div class="md-block-news__wrapper">
+										<div class="md-block-news__wrap-img">
+											<picture>
+												<source srcset="img/sm-news3.webp" type="image/webp">
+												<source srcset="img/sm-news3.jpg" type="image/jpeg">
+												<img src="img/sm-news3.jpg" alt="">
+											</picture>
+										</div>
+										<div class="md-block-news__down">
+											<div class="md-block-news__wrap-text">
+												<h3>Депутаты комитета встретились с руководителем общественной организацией «Федерация рукопашного боя»</h3>
+											</div>
+											<div class="md-block-news__row">
+												<span class="info-text date">10 февраля 2021,</span>
+												<span class="info-text time">10:24</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="md-block-news">
+									<div class="md-block-news__wrapper">
+										<div class="md-block-news__wrap-img">
+											<picture>
+												<source srcset="img/sm-news5.webp" type="image/webp">
+												<source srcset="img/sm-news5.jpg" type="image/jpeg">
+												<img src="img/sm-news5.jpg" alt="">
+											</picture>
+										</div>
+										<div class="md-block-news__down">
+											<div class="md-block-news__wrap-text">
+												<h3>Детские площадки — безопасность превыше всего</h3>
+											</div>
+											<div class="md-block-news__row">
+												<span class="info-text date">10 февраля 2021,</span>
+												<span class="info-text time">10:24</span>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="md-block-news">
-								<div class="md-block-news__wrapper">
-									<div class="md-block-news__wrap-img"></div>
-									<div class="md-block-news__down">
-										<div class="md-block-news__wrap-text">
-											<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
+							<div class="news-tabs__end-row">
+								<a href="#" class="link-more">
+									<span>Все новости</span>
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-link">
+									</svg>
+								</a>
+							</div>
+						</div> #}
+						{# <div class="news-tabs__row" id="tab2">
+							<div class="news-tabs__grid">
+								<div class="md-block-news">
+									<div class="md-block-news__wrapper">
+										<div class="md-block-news__wrap-img">
+											<picture>
+												<source srcset="img/sm-news3.webp" type="image/webp">
+												<source srcset="img/sm-news3.jpg" type="image/jpeg">
+												<img src="img/sm-news3.jpg" alt="">
+											</picture>
 										</div>
-										<div class="md-block-news__row">
-											<span class="info-text date">10 февраля 2021</span>
-											<span class="info-text time">10:24</span>
+										<div class="md-block-news__down">
+											<div class="md-block-news__wrap-text">
+												<h3>Церемония возложение цветов у обелиска Краснодара, погибшим на месте боев за Пашковскую переправу</h3>
+											</div>
+											<div class="md-block-news__row">
+												<span class="info-text date">10 февраля 2021,</span>
+												<span class="info-text time">10:24</span>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="md-block-news">
-								<div class="md-block-news__wrapper">
-									<div class="md-block-news__wrap-img"></div>
-									<div class="md-block-news__down">
-										<div class="md-block-news__wrap-text">
-											<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
+								<div class="md-block-news">
+									<div class="md-block-news__wrapper">
+										<div class="md-block-news__wrap-img">
+											<picture>
+												<source srcset="img/sm-news4.webp" type="image/webp">
+												<source srcset="img/sm-news4.jpg" type="image/jpeg">
+												<img src="img/sm-news4.jpg" alt="">
+											</picture>
 										</div>
-										<div class="md-block-news__row">
-											<span class="info-text date">10 февраля 2021</span>
-											<span class="info-text time">10:24</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="md-block-news">
-								<div class="md-block-news__wrapper">
-									<div class="md-block-news__wrap-img"></div>
-									<div class="md-block-news__down">
-										<div class="md-block-news__wrap-text">
-											<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
-										</div>
-										<div class="md-block-news__row">
-											<span class="info-text date">10 февраля 2021</span>
-											<span class="info-text time">10:24</span>
+										<div class="md-block-news__down">
+											<div class="md-block-news__wrap-text">
+												<h3>Заседания комитетов в городской Думе Краснодара</h3>
+											</div>
+											<div class="md-block-news__row">
+												<span class="info-text date">10 февраля 2021,</span>
+												<span class="info-text time">10:24</span>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="news-tabs__row" id="tab2">
-							<div class="md-block-news">
-								<div class="md-block-news__wrapper">
-									<div class="md-block-news__wrap-img"></div>
-									<div class="md-block-news__down">
-										<div class="md-block-news__wrap-text">
-											<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
+								<div class="md-block-news">
+									<div class="md-block-news__wrapper">
+										<div class="md-block-news__wrap-img">
+											<picture>
+												<source srcset="img/sm-news3.webp" type="image/webp">
+												<source srcset="img/sm-news3.jpg" type="image/jpeg">
+												<img src="img/sm-news3.jpg" alt="">
+											</picture>
 										</div>
-										<div class="md-block-news__row">
-											<span class="info-text date">10 февраля 2021</span>
-											<span class="info-text time">10:24</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="md-block-news">
-								<div class="md-block-news__wrapper">
-									<div class="md-block-news__wrap-img"></div>
-									<div class="md-block-news__down">
-										<div class="md-block-news__wrap-text">
-											<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
-										</div>
-										<div class="md-block-news__row">
-											<span class="info-text date">10 февраля 2021</span>
-											<span class="info-text time">10:24</span>
+										<div class="md-block-news__down">
+											<div class="md-block-news__wrap-text">
+												<h3>Депутаты комитета встретились с руководителем общественной организацией «Федерация рукопашного боя»</h3>
+											</div>
+											<div class="md-block-news__row">
+												<span class="info-text date">10 февраля 2021,</span>
+												<span class="info-text time">10:24</span>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="md-block-news">
-								<div class="md-block-news__wrapper">
-									<div class="md-block-news__wrap-img"></div>
-									<div class="md-block-news__down">
-										<div class="md-block-news__wrap-text">
-											<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
+								<div class="md-block-news">
+									<div class="md-block-news__wrapper">
+										<div class="md-block-news__wrap-img">
+											<picture>
+												<source srcset="img/sm-news5.webp" type="image/webp">
+												<source srcset="img/sm-news5.jpg" type="image/jpeg">
+												<img src="img/sm-news5.jpg" alt="">
+											</picture>
 										</div>
-										<div class="md-block-news__row">
-											<span class="info-text date">10 февраля 2021</span>
-											<span class="info-text time">10:24</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="md-block-news">
-								<div class="md-block-news__wrapper">
-									<div class="md-block-news__wrap-img"></div>
-									<div class="md-block-news__down">
-										<div class="md-block-news__wrap-text">
-											<h3>Более четырёх тысяч человек прошли вакцинацию против коронавируса в мобильных пунктах Краснодара</h3>
-										</div>
-										<div class="md-block-news__row">
-											<span class="info-text date">10 февраля 2021</span>
-											<span class="info-text time">10:24</span>
+										<div class="md-block-news__down">
+											<div class="md-block-news__wrap-text">
+												<h3>Детские площадки — безопасность превыше всего</h3>
+											</div>
+											<div class="md-block-news__row">
+												<span class="info-text date">10 февраля 2021,</span>
+												<span class="info-text time">10:24</span>
+											</div>
 										</div>
 									</div>
-								</div>
+								</div>								
 							</div>
-						</div>
+							<div class="news-tabs__end-row">
+								<a href="#" class="link-more">
+									<span>Все новости</span>
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-link">
+									</svg>
+								</a>
+							</div>
+						</div> #}
 					</div>
 				</div>
 			</div>
@@ -246,69 +334,93 @@
 			<div class="popular-sect__wrapper">
 				<div class="link-block">
 					<div class="link-block__wrap-icon">
-						<svg></svg>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-link-block">
+						</svg>
 					</div>
 					<span class="link-block__caption">Заголовок cтраницы например интерактивные карты</span>
 				</div>
 				<div class="link-block">
 					<div class="link-block__wrap-icon">
-						<svg></svg>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-link-block">
+						</svg>
 					</div>
 					<span class="link-block__caption">Заголовок cтраницы например интерактивные карты</span>
 				</div>
 				<div class="link-block">
 					<div class="link-block__wrap-icon">
-						<svg></svg>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-link-block">
+						</svg>
 					</div>
 					<span class="link-block__caption">Заголовок cтраницы например интерактивные карты</span>
 				</div>
+			</div>
+			<div class="popular-sect__wrapper">	
 				<div class="post-popular-block">
 					<div class="post-popular-block__wrap-img">
-						<svg></svg>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--popular-block-icon1">
+						</svg>
 					</div>
-					<span class="post-popular-block__caption"></span>
+					<span class="post-popular-block__caption">Официальное опубликование</span>
 				</div>
 				<div class="post-popular-block">
 					<div class="post-popular-block__wrap-img">
-						<svg></svg>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--popular-block-icon2">
+						</svg>
 					</div>
-					<span class="post-popular-block__caption"></span>
+					<span class="post-popular-block__caption">Структура администрации</span>
 				</div>
 				<div class="post-popular-block">
 					<div class="post-popular-block__wrap-img">
-						<svg></svg>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--popular-block-icon3">
+						</svg>
 					</div>
-					<span class="post-popular-block__caption"></span>
+					<span class="post-popular-block__caption">Вакансии в администрации</span>
 				</div>
 				<div class="post-popular-block">
 					<div class="post-popular-block__wrap-img">
-						<svg></svg>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--popular-block-icon4">
+						</svg>
 					</div>
-					<span class="post-popular-block__caption"></span>
+					<span class="post-popular-block__caption">Интернет - приемная</span>
 				</div>
 				<div class="post-popular-block">
 					<div class="post-popular-block__wrap-img">
-						<svg></svg>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--popular-block-icon5">
+						</svg>
 					</div>
-					<span class="post-popular-block__caption"></span>
+					<span class="post-popular-block__caption">Публичные слушания</span>
 				</div>
 				<div class="post-popular-block">
 					<div class="post-popular-block__wrap-img">
-						<svg></svg>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--popular-block-icon6">
+						</svg>
 					</div>
-					<span class="post-popular-block__caption"></span>
+					<span class="post-popular-block__caption">Аукционы, конкурсы, торги</span>
 				</div>
 				<div class="post-popular-block">
 					<div class="post-popular-block__wrap-img">
-						<svg></svg>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--popular-block-icon7">
+						</svg>
 					</div>
-					<span class="post-popular-block__caption"></span>
+					<span class="post-popular-block__caption">Противодействие коррупции</span>
 				</div>
 				<div class="post-popular-block">
 					<div class="post-popular-block__wrap-img">
-						<svg></svg>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--popular-block-icon8">
+						</svg>
 					</div>
-					<span class="post-popular-block__caption"></span>
+					<span class="post-popular-block__caption">Общественные обсуждения</span>
 				</div>
 			</div>
 		</div>
@@ -327,7 +439,7 @@
 			<div class="services-to-citizens__wrapper">
 				<a href="#" class="services-post">
 					<span class="services-post__wrapper">
-						<span class="services-post__wrap-icon"><img src="img/" alt=""></span>
+						<div class="services-post__wrap-icon"><img src="img/svg/service1.svg" alt=""></div>
 						<span class="services-post__wrap-text">
 							<h3>Регистрация по месту пребывания</h3>
 						</span>
@@ -335,7 +447,7 @@
 				</a>
 				<a href="#" class="services-post">
 					<span class="services-post__wrapper">
-						<span class="services-post__wrap-icon"><img src="img/" alt=""></span>
+						<div class="services-post__wrap-icon"><img src="img/svg/service2.svg" alt=""></div>
 						<span class="services-post__wrap-text">
 							<h3>Продажа автомобиля салону или частному лицу</h3>
 						</span>
@@ -343,7 +455,7 @@
 				</a>
 				<a href="#" class="services-post">
 					<span class="services-post__wrapper">
-						<span class="services-post__wrap-icon"><img src="img/" alt=""></span>
+						<div class="services-post__wrap-icon"><img src="img/svg/service3.svg" alt=""></div>
 						<span class="services-post__wrap-text">
 							<h3>Предоставление предварительных результатов ЕГЭ</h3>
 						</span>
@@ -351,7 +463,7 @@
 				</a>
 				<a href="#" class="services-post">
 					<span class="services-post__wrapper">
-						<span class="services-post__wrap-icon"><img src="img/" alt=""></span>
+						<div class="services-post__wrap-icon"><img src="img/svg/service4.svg" alt=""></div>
 						<span class="services-post__wrap-text">
 							<h3>Извещение о состоянии лицевого счета в ПФР</h3>
 						</span>
@@ -359,7 +471,7 @@
 				</a>
 				<a href="#" class="services-post">
 					<span class="services-post__wrapper">
-						<span class="services-post__wrap-icon"><img src="img/" alt=""></span>
+						<div class="services-post__wrap-icon"><img src="img/svg/service5.svg" alt=""></div>
 						<span class="services-post__wrap-text">
 							<h3>Имущественный налоговый вычет</h3>
 						</span>
@@ -367,7 +479,7 @@
 				</a>
 				<a href="#" class="services-post">
 					<span class="services-post__wrapper">
-						<span class="services-post__wrap-icon"><img src="img/" alt=""></span>
+						<div class="services-post__wrap-icon"><img src="img/svg/service6.svg" alt=""></div>
 						<span class="services-post__wrap-text">
 							<h3>Получение пособия по безработице и постановка на учет</h3>
 						</span>
@@ -410,37 +522,98 @@
 	</section>
 	<section class="slider-news">
 		<div class="container">
-			<div class="slider-news__container swiper-container">
-				<div class="slider-news__wrapper swiper-wrapper">
-					<div class="slider-news__slide swiper-slide">
-						<div class="slider-news__block">
-							<div class="slider-news__wrap-img"></div>
-							<div class="slider-news__wrap-text">
-								<h3>Берегите себя и своих Близких</h3>
-								<span>#НаденьМаску</span>
+			<div class="slider-news__sect-container">
+				<div class="slider-news__container swiper-container">
+					<div class="slider-news__wrapper swiper-wrapper">
+						<div class="slider-news__slide swiper-slide">
+							<div class="slider-news__block">
+								<div class="slider-news__wrap-img">
+									<picture>
+										<source srcset="img/slide-news-img1.webp" type="image/webp">
+										<source srcset="img/slide-news-img1.jpg" type="image/jpeg">
+										<img src="img/slide-news-img1.jpg" alt="">
+									</picture>
+								</div>
+								<div class="slider-news__wrap-text">
+									<h3>Берегите себя и своих Близких</h3>
+									<span>#НаденьМаску</span>
+								</div>
+							</div>
+						</div>
+						<div class="slider-news__slide swiper-slide">
+							<div class="slider-news__block">
+								<div class="slider-news__wrap-img">
+									<picture>
+										<source srcset="img/slide-news-img2.webp" type="image/webp">
+										<source srcset="img/slide-news-img2.jpg" type="image/jpeg">
+										<img src="img/slide-news-img2.jpg" alt="">
+									</picture>
+								</div>
+								<div class="slider-news__wrap-text">
+									<h3>Коронавирус COVID–19</h3>
+									<span>Официальная информация</span>
+								</div>
+							</div>
+						</div>
+						<div class="slider-news__slide swiper-slide">
+							<div class="slider-news__block">
+								<div class="slider-news__wrap-img">
+									<picture>
+										<source srcset="img/slide-news-img3.webp" type="image/webp">
+										<source srcset="img/slide-news-img3.jpg" type="image/jpeg">
+										<img src="img/slide-news-img3.jpg" alt="">
+									</picture>
+								</div>
+								<div class="slider-news__wrap-text">
+									<h3>Отопистельный сезон 2020-2021</h3>
+									<span>Горячие линии</span>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="slider-news__slide swiper-slide">
-						<div class="slider-news__block">
-							<div class="slider-news__wrap-img"></div>
-							<div class="slider-news__wrap-text">
-								<h3>Коронавирус COVID–19</h3>
-								<span>Официальная информация</span>
-							</div>
-						</div>
+				</div>
+				<div class="slider-news__navigation">
+					<div class="slider-news__arrow slider-news__arrow--prev">
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-one">
+						</svg>
 					</div>
-					<div class="slider-news__slide swiper-slide">
-						<div class="slider-news__block">
-							<div class="slider-news__wrap-img"></div>
-							<div class="slider-news__wrap-text">
-								<h3>Отопистельный сезон 2020-2021</h3>
-								<span>Горячие линии</span>
-							</div>
-						</div>
+					<div class="slider-news__arrow slider-news__arrow--next">
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-one">
+						</svg>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+{% endblock %}
+
+{% block Scripts %}
+	<script src="js/swiper.min.js"></script>
+	<script>
+		const swiper = new Swiper(".slider-news__container", {
+			slidesPerView: 3,
+			spaceBetween: 40,
+			loop: true,
+			navigation: {
+				nextEl: ".slider-news__arrow--next",
+				prevEl: ".slider-news__arrow--prev",
+			},
+			breakpoints: {
+				1079: {
+					slidesPerView: 3,
+					spaceBetween: 40
+    		},
+				575: {
+					slidesPerView: 2,
+					spaceBetween: 32
+    		},
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 32
+				},
+			}
+		});
+	</script>
 {% endblock %}
