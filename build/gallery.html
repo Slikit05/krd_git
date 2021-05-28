@@ -8,6 +8,7 @@
   <title></title>
   <link rel="stylesheet" href="css/style.css">
 
+  <link rel="stylesheet" href="css/flatpickr.min.css">
 
 </head>
 
@@ -344,7 +345,7 @@
             </svg>
           </li>
           <li class="breadcrumbs__item">
-            <span class="breadcrumbs__link">Гостям города</span>
+            <span class="breadcrumbs__link">Главные новости</span>
           </li>
         </ul>
       </div>
@@ -353,185 +354,281 @@
   </header>
   <main class="main">
 
-    <section class="inner-grid-page">
+    <section class="content-page">
       <div class="container">
-        <div class="inner-grid-page__wrapper">
-          <div class="inner-grid-page__left">
-            <div class="link-menu">
-              <div class="link-menu__up">
-                <span class="link-menu__caption">Гостям города</span>
-                <svg>
-                  <use xlink:href="img/sprite.svg#svg--arrow-one">
-                </svg>
+        <div class="row-title">
+          <h2 class="title">Фотогалереи</h2>
+          <div class="row-title__wrap">
+            <a href="" class="link-change">
+              <span class="link-change__text">Календарь</span>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--calendar">
+              </svg>
+            </a>
+            <a href="" class="link-change">
+              <span class="link-change__text">Темы</span>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--topics">
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-grid">
+        <div class="container">
+          <div class="gallery-grid__wrapper">
+
+            <div class="gallery-post">
+              <a href="#" class="gallery-post__wrap-img">
+                <picture>
+                  <source srcset="img/gallery-post1.webp" type="image/webp">
+                  <source srcset="img/gallery-post1.jpg" type="image/jpeg">
+                  <img src="img/gallery-post1.jpg" alt="">
+                </picture>
+              </a>
+              <div class="gallery-post__wrap-text">
+                <a href="#" class="teg-category"><span>Национальные проекты</span></a>
+                <a href="#" class="teg-category"><span>Образование</span></a>
+                <a href="#">
+                  <h4>Пример названия галереи</h4>
+                </a>
+                <span>05 марта 2021, 28 фото</span>
               </div>
-              <ul class="link-menu__list">
-                <li class="link-menu__item">
-                  <a href="" class="link-menu__link">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#svg--arrow-two">
-                    </svg>
-                    <span>Транспортные ворота города Авиа, ЖД и Автовокзалы</span>
-                  </a>
-                </li>
-                <li class="link-menu__item">
-                  <a href="" class="link-menu__link">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#svg--arrow-two">
-                    </svg>
-                    <span>Экскурсионные программы</span>
-                  </a>
-                </li>
-                <li class="link-menu__item">
-                  <a href="" class="link-menu__link">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#svg--arrow-two">
-                    </svg>
-                    <span>Музеи, театры</span>
-                  </a>
-                </li>
-                <li class="link-menu__item">
-                  <a href="" class="link-menu__link">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#svg--arrow-two">
-                    </svg>
-                    <span>Парки города</span>
-                  </a>
-                </li>
-              </ul>
+            </div>
+
+
+            <div class="gallery-post">
+              <a href="#" class="gallery-post__wrap-img">
+                <picture>
+                  <source srcset="img/gallery-post2.webp" type="image/webp">
+                  <source srcset="img/gallery-post2.jpg" type="image/jpeg">
+                  <img src="img/gallery-post2.jpg" alt="">
+                </picture>
+              </a>
+              <div class="gallery-post__wrap-text">
+                <a href="#" class="teg-category"><span>Национальные проекты</span></a>
+                <a href="#" class="teg-category"><span>Образование</span></a>
+                <a href="#">
+                  <h4>Пример названия галереи, название может быть длинным и идти в несколько строк</h4>
+                </a>
+                <span>05 марта 2021, 28 фото</span>
+              </div>
+            </div>
+
+
+            <div class="gallery-post">
+              <a href="#" class="gallery-post__wrap-img">
+                <picture>
+                  <source srcset="img/gallery-post3.webp" type="image/webp">
+                  <source srcset="img/gallery-post3.jpg" type="image/jpeg">
+                  <img src="img/gallery-post3.jpg" alt="">
+                </picture>
+              </a>
+              <div class="gallery-post__wrap-text">
+                <a href="#" class="teg-category"><span>Национальные проекты</span></a>
+                <a href="#" class="teg-category"><span>Образование</span></a>
+                <a href="#">
+                  <h4>Пример названия галереи</h4>
+                </a>
+                <span>05 марта 2021, 28 фото</span>
+              </div>
+            </div>
+
+
+
+            <div class="gallery-post">
+              <a href="#" class="gallery-post__wrap-img">
+                <picture>
+                  <source srcset="img/gallery-post3.webp" type="image/webp">
+                  <source srcset="img/gallery-post3.jpg" type="image/jpeg">
+                  <img src="img/gallery-post3.jpg" alt="">
+                </picture>
+              </a>
+              <div class="gallery-post__wrap-text">
+                <a href="#" class="teg-category"><span>Национальные проекты</span></a>
+                <a href="#" class="teg-category"><span>Образование</span></a>
+                <a href="#">
+                  <h4>Пример названия галереи</h4>
+                </a>
+                <span>05 марта 2021, 28 фото</span>
+              </div>
+            </div>
+
+
+            <div class="gallery-post">
+              <a href="#" class="gallery-post__wrap-img">
+                <picture>
+                  <source srcset="img/gallery-post1.webp" type="image/webp">
+                  <source srcset="img/gallery-post1.jpg" type="image/jpeg">
+                  <img src="img/gallery-post1.jpg" alt="">
+                </picture>
+              </a>
+              <div class="gallery-post__wrap-text">
+                <a href="#" class="teg-category"><span>Национальные проекты</span></a>
+                <a href="#" class="teg-category"><span>Образование</span></a>
+                <a href="#">
+                  <h4>Пример названия галереи</h4>
+                </a>
+                <span>05 марта 2021, 28 фото</span>
+              </div>
+            </div>
+
+
+            <div class="gallery-post">
+              <a href="#" class="gallery-post__wrap-img">
+                <picture>
+                  <source srcset="img/gallery-post2.webp" type="image/webp">
+                  <source srcset="img/gallery-post2.jpg" type="image/jpeg">
+                  <img src="img/gallery-post2.jpg" alt="">
+                </picture>
+              </a>
+              <div class="gallery-post__wrap-text">
+                <a href="#" class="teg-category"><span>Национальные проекты</span></a>
+                <a href="#" class="teg-category"><span>Образование</span></a>
+                <a href="#">
+                  <h4>Пример названия галереи</h4>
+                </a>
+                <span>05 марта 2021, 28 фото</span>
+              </div>
+            </div>
+
+
+
+            <div class="gallery-post">
+              <a href="#" class="gallery-post__wrap-img">
+                <picture>
+                  <source srcset="img/gallery-post3.webp" type="image/webp">
+                  <source srcset="img/gallery-post3.jpg" type="image/jpeg">
+                  <img src="img/gallery-post3.jpg" alt="">
+                </picture>
+              </a>
+              <div class="gallery-post__wrap-text">
+                <a href="#" class="teg-category"><span>Национальные проекты</span></a>
+                <a href="#" class="teg-category"><span>Образование</span></a>
+                <a href="#">
+                  <h4>Пример названия галереи</h4>
+                </a>
+                <span>05 марта 2021, 28 фото</span>
+              </div>
+            </div>
+
+
+            <div class="gallery-post">
+              <a href="#" class="gallery-post__wrap-img">
+                <picture>
+                  <source srcset="img/gallery-post1.webp" type="image/webp">
+                  <source srcset="img/gallery-post1.jpg" type="image/jpeg">
+                  <img src="img/gallery-post1.jpg" alt="">
+                </picture>
+              </a>
+              <div class="gallery-post__wrap-text">
+                <a href="#" class="teg-category"><span>Национальные проекты</span></a>
+                <a href="#" class="teg-category"><span>Образование</span></a>
+                <a href="#">
+                  <h4>Пример названия галереи</h4>
+                </a>
+                <span>05 марта 2021, 28 фото</span>
+              </div>
+            </div>
+
+
+            <div class="gallery-post">
+              <a href="#" class="gallery-post__wrap-img">
+                <picture>
+                  <source srcset="img/gallery-post2.webp" type="image/webp">
+                  <source srcset="img/gallery-post2.jpg" type="image/jpeg">
+                  <img src="img/gallery-post2.jpg" alt="">
+                </picture>
+              </a>
+              <div class="gallery-post__wrap-text">
+                <a href="#" class="teg-category"><span>Национальные проекты</span></a>
+                <a href="#" class="teg-category"><span>Образование</span></a>
+                <a href="#">
+                  <h4>Пример названия галереи</h4>
+                </a>
+                <span>05 марта 2021, 28 фото</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="pagination">
+        <div class="container">
+          <div class="pagination__wrapper">
+            <div class="pagination__left">
+              <a href="#" class="btn-white">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-two"></use>
+                </svg>
+                <span class="btn-white__text">Предыдущая</span>
+              </a>
+            </div>
+            <ul class="pagination__list">
+              <li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--active">2</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--dotted">...</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">8</a></li>
+            </ul>
+            <div class="pagination__right">
+              <a href="#" class="btn-white">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-two"></use>
+                </svg>
+                <span class="btn-white__text">Предыдущая</span>
+              </a>
             </div>
           </div>
-          <div class="inner-grid-page__right">
-            <div class="text-page center-area-one">
-              <div class="row-title">
-                <h2 class="title">Гостям города</h2>
-              </div>
-              <div class="text-page__area">
-                <picture>
-                  <source srcset="img/area-img1.webp" type="image/webp">
-                  <source srcset="img/area-img1.jpg" type="image/jpeg">
-                  <img src="img/area-img1.jpg" alt="">
-                </picture>
-                <p>Основанный казаками в 1793 году административный центр Краснодарского края - город Краснодар - является крупнейшим промышленным, транспортным, торговым, научным и культурным центром Юга России.</p>
-                <p>Город Краснодар расположен на Кубано-Приазовской (Прикубанской) низменности, на правом берегу реки Кубань, в 1539 км к югу от Москвы. На северо-востоке город Краснодар граничит с Динским районом, на западе - с Красноармейским районом Краснодарского края, на юге, по акватории реки Кубань, с Тахтамукайским районом Республики Адыгея, на востоке - с Усть-Лабинским районом Краснодарского края. Географические координаты исторического центра: 45° 2' северной широты и 39 ° восточной долготы.</p>
-                <p>Рельеф местности – степной, климат – умеренно-континентальный.</p>
-                <div class="block-link-doc">
-                  <a href="#" class="link-doc">
-                    <img src="img/svg/pdf.svg" alt="">
-                    <div class="link-doc__wrap-text">
-                      <span class="link-doc__caption">Пример заголовка документа для скачивания</span>
-                      <span class="link-doc__info">PDF (2,45 МБ)</span>
-                    </div>
-                  </a>
-                  <a href="#" class="link-doc">
-                    <img src="img/svg/doc.svg" alt="">
-                    <div class="link-doc__wrap-text">
-                      <span class="link-doc__caption">Пример длинного заголовка документа для скачивания который будет идти в несколько строк</span>
-                      <span class="link-doc__info">PDF (2,45 МБ)</span>
-                    </div>
-                  </a>
-                  <a href="#" class="link-doc">
-                    <img src="img/svg/xls.svg" alt="">
-                    <div class="link-doc__wrap-text">
-                      <span class="link-doc__caption">Пример заголовка документа для скачивания</span>
-                      <span class="link-doc__info">PDF (2,45 МБ)</span>
-                    </div>
-                  </a>
-                </div>
-                <p>Город занимает выгодное экономико-географическое положение в Южном федеральном округе, расположен на важнейших транспортных магистралях, связывающих центр России с портами Черного и Азовского морей, а также курортами черноморского побережья Кавказа. В Юго-восточной части Краснодара расположено Кубанское водохранилище, построенное в 1973 году для обеспечения выполнения производственных и мелиоративных мероприятий.</p>
-                <p>Территория в границах муниципального образования составляет 841,4 квадратных километра, или 1,1 процента территории Краснодарского края. Город разделен на четыре внутригородских округа: Западный, Карасунский, Прикубанский и Центральный. В границах муниципального образования город Краснодар находятся 5 сельских округов и 29 сельских населенных пунктов.</p>
-                <div class="block-accordions">
-                  <div class="accordion">
-                    <div class="accordion__up accordion-js">
-                      <span class="accordion__caption">Пример заголовка аккордиона</span>
-                      <svg>
-                        <use xlink:href="img/sprite.svg#svg--arrow-two">
-                      </svg>
-                    </div>
-                    <div class="accordion__down">
-                      <div class="accordion__content">
-                        <div class="accordion__area">
-                          <p>Внутри аакордиона может располататься любые элементы текстовой страницы</p>
-                          <p>Город занимает выгодное экономико-географическое положение в Южном федеральном округе, расположен на важнейших транспортных магистралях, связывающих центр России с портами Черного и Азовского морей, а также курортами черноморского побережья Кавказа. В Юго-восточной части Краснодара расположено Кубанское водохранилище, построенное в 1973 году для обеспечения выполнения производственных и мелиоративных мероприятий.</p>
-                        </div>
-                      </div>
-                    </div>
+        </div>
+      </div>
+      <div class="row-btn">
+        <div class="container">
+          <a href="#" class="btn-white"><span class="btn-white__text">Загрузить предыдущие галереи</span></a>
+        </div>
+      </div>
+    </section>
+    <div class="modal">
+      <div class="modal__overlay">
+        <div class="modal__block modal-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Календарь</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="calendar">
+                <div class="calendar__up">
+                  <div class="calendar__item active-item-tab" data-nametabs="date">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#svg--date"></use>
+                    </svg>
+                    <span>Выбор даты</span>
                   </div>
-                  <div class="accordion">
-                    <div class="accordion__up accordion-js">
-                      <span class="accordion__caption">Пример заголовка аккордиона</span>
-                      <svg>
-                        <use xlink:href="img/sprite.svg#svg--arrow-two">
-                      </svg>
-                    </div>
-                    <div class="accordion__down">
-                      <div class="accordion__content">
-                        <div class="accordion__area">
-                          <p>Внутри аакордиона может располататься любые элементы текстовой страницы</p>
-                          <p>Город занимает выгодное экономико-географическое положение в Южном федеральном округе, расположен на важнейших транспортных магистралях, связывающих центр России с портами Черного и Азовского морей, а также курортами черноморского побережья Кавказа. В Юго-восточной части Краснодара расположено Кубанское водохранилище, построенное в 1973 году для обеспечения выполнения производственных и мелиоративных мероприятий.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion">
-                    <div class="accordion__up accordion-js">
-                      <span class="accordion__caption">Пример заголовка аккордиона</span>
-                      <svg>
-                        <use xlink:href="img/sprite.svg#svg--arrow-two">
-                      </svg>
-                    </div>
-                    <div class="accordion__down">
-                      <div class="accordion__content">
-                        <div class="accordion__area">
-                          <p>Внутри аакордиона может располататься любые элементы текстовой страницы</p>
-                          <p>Город занимает выгодное экономико-географическое положение в Южном федеральном округе, расположен на важнейших транспортных магистралях, связывающих центр России с портами Черного и Азовского морей, а также курортами черноморского побережья Кавказа. В Юго-восточной части Краснодара расположено Кубанское водохранилище, построенное в 1973 году для обеспечения выполнения производственных и мелиоративных мероприятий.</p>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="calendar__item" data-nametabs="period">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#svg--period"></use>
+                    </svg>
+                    <span>Выбор периода</span>
                   </div>
                 </div>
-                <p>Город занимает выгодное экономико-географическое положение в Южном федеральном округе, расположен на важнейших транспортных магистралях, связывающих центр России с портами Черного и Азовского морей, а также курортами черноморского побережья Кавказа. В Юго-восточной части Краснодара расположено Кубанское водохранилище, построенное в 1973 году для обеспечения выполнения производственных и мелиоративных мероприятий.</p>
-                <div class="block-links-section">
-                  <a href="#" class="link-section">
-                    <span>Пример ссылки на любой раздел</span>
-                    <div class="link-section__wrap-arrow">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#svg--arrow-link-two">
-                      </svg>
-                    </div>
-                  </a>
-                  <a href="#" class="link-section">
-                    <span>Пример ссылки на любой раздел</span>
-                    <div class="link-section__wrap-arrow">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#svg--arrow-link-two">
-                      </svg>
-                    </div>
-                  </a>
-                  <a href="#" class="link-section">
-                    <span>Пример ссылки на любой раздел</span>
-                    <div class="link-section__wrap-arrow">
-                      <svg>
-                        <use xlink:href="img/sprite.svg#svg--arrow-link-two">
-                      </svg>
-                    </div>
-                  </a>
+                <div class="calendar__down">
+                  <div class="calendar__tab tab-block tab-block--date">
+                    <input type="text" class="calendar__field calendar__field-date" placeholder="Пожалуйста выберите дату">
+                  </div>
+                  <div class="calendar__tab tab-block tab-block--period">
+                    <input type="text" class="calendar__field calendar__field-period" placeholder="Пожалуйста выберите период">
+                  </div>
                 </div>
-                <ul>
-                  <li>Город занимает выгодное экономико-географическое положение </li>
-                  <li>В Южном федеральном округе, расположен на важнейших транспортных магистралях</li>
-                  <li>Связывающих центр России с портами Черного и Азовского морей</li>
-                </ul>
-                <ol>
-                  <li>Город занимает выгодное экономико-географическое положение</li>
-                  <li>В Южном федеральном округе, расположен на важнейших транспортных магистралях</li>
-                  <li>Связывающих центр России с портами Черного и Азовского морей</li>
-                </ol>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
   </main>
   <footer>
@@ -702,12 +799,26 @@
   </footer>
   <script src="js/main.js"></script>
 
+  <script src="js/flatpickr.js"></script>
+  <script src="js/flatpickr-ru.js"></script>
   <script>
-    const accUp = new Accordion(".accordion__up");
-    const accLink = new Accordion(".link-menu__up");
+    flatpickr(".calendar__field-date", {
+      inline: true,
+      "locale": "ru",
+      dateFormat: "Y-m-d H:i",
+      monthSelectorType: "static",
+      nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+      prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+    });
 
-    accUp.createAccordion();
-    accLink.createAccordion();
+    flatpickr(".calendar__field-period", {
+      inline: true,
+      "locale": "ru",
+      dateFormat: "Y-m-d H:i",
+      monthSelectorType: "static",
+      nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+      prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+    });
   </script>
 
 </body>

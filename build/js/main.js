@@ -61,3 +61,31 @@ let breadСrumbs = document.getElementsByClassName("breadcrumbs__list")[0];
 if (breadСrumbs) {
   breadСrumbs.scrollLeft = breadСrumbs.offsetWidth + 25;
 }
+
+
+// Табы
+
+function tabs() {
+  window.addEventListener("click", function (event) {
+
+    if (event.target.dataset.nametabs) {
+      const tabName = event.target.dataset.nametabs;
+      let tabActive = document.querySelectorAll(".active-item-tab");
+      let tabBlock = document.querySelectorAll(".tab-block");
+      
+      tabActive.forEach(function(item) {
+        if(item.classList.contains("active-item-tab")) {
+          item.classList.remove("active-item-tab");
+        };
+      });
+
+      console.log(tabName);
+      event.target.classList.add("active-item-tab");
+    };
+
+  });
+};
+
+tabs();
+
+// Табы - конец

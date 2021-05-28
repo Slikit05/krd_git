@@ -1,0 +1,19 @@
+{% macro galleryPost(img, caption, dateText) %}
+	<div class="gallery-post">
+		<a href="#" class="gallery-post__wrap-img">
+			<picture>
+				<source srcset="img/{{ img }}.webp" type="image/webp">
+				<source srcset="img/{{ img }}.jpg" type="image/jpeg">
+				<img src="img/{{ img }}.jpg" alt="">
+			</picture>
+		</a>
+		<div class="gallery-post__wrap-text">
+			<a href="#" class="teg-category"><span>Национальные проекты</span></a>
+			<a href="#" class="teg-category"><span>Образование</span></a>
+			<a href="#">
+				<h4>{{ caption }}</h4>
+			</a>			
+			<span>{{ dateText }}</span>
+		</div>
+	</div>
+{% endmacro %}
