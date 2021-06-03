@@ -41,11 +41,11 @@
 			<div class="row-title">
 				<h2 class="title">Фотогалереи</h2>		
 				<div class="row-title__wrap">
-					<a href="" class="link-change">
+					<a href="#" class="link-change" data-click-modal="calendar">
 						<span class="link-change__text">Календарь</span>
 						<svg><use xlink:href="img/sprite.svg#svg--calendar"></svg>
 					</a>
-					<a href="" class="link-change">
+					<a href="#" class="link-change" data-click-modal="topic">
 						<span class="link-change__text">Темы</span>
 						<svg><use xlink:href="img/sprite.svg#svg--topics"></svg>
 					</a>
@@ -113,6 +113,7 @@
 {% block Scripts %}
 	<script src="js/flatpickr.js"></script>
 	<script src="js/flatpickr-ru.js"></script>
+	<script src="js/smooth-scrollbar.js"></script>
 	<script>
 		flatpickr(".calendar__field-date", {
 			inline: true,
@@ -130,6 +131,14 @@
 			monthSelectorType: "static",
 			nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
 			prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+			mode: "range"
 		});
+
+		tabs();
+
+		let Scrollbar = window.Scrollbar;
+
+  	Scrollbar.init(document.querySelector('.topic-block__scroll'));
+
 	</script>
 {% endblock %}

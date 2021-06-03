@@ -1,0 +1,117 @@
+{% extends "__layout.njk" %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Структура администрации</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="inner-grid-page">
+		<div class="container">
+			<div class="inner-grid-page__wrapper">
+				<div class="inner-grid-page__left">
+					<div class="link-menu">
+						<div class="link-menu__up">
+							<span class="link-menu__caption">Структура администрации</span>
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-one">
+							</svg>
+						</div>
+						<ul class="link-menu__list">
+							<li class="link-menu__item link-menu__item--active">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Структура администрации</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Структурные подразделения администрации</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Администрации внутригородских округов</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Контрольно - счетная палата Краснодара</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inner-grid-page__right">
+					<div class="center-area-one">
+						<div class="row-title">
+							<h2 class="title">Структура администрации</h2>		
+						</div>
+						<div class="human-post human-post--lg">
+							<div class="human-post__wrap-img">
+								<picture>
+									<source srcset="img/human-lg1.webp" type="image/webp">
+									<source srcset="img/human-lg1.jpg" type="image/jpeg">
+									<img src="img/human-lg1.jpg" alt="">
+								</picture>
+							</div>
+							<div class="human-post__wrap-text">
+								<h3>Первышов Евгений Алексеевич</h3>
+								<p>Глава муниципального образования город Краснодар</p>
+							</div>
+						</div>
+						<h3 class="md-title">Заместители главы муниципального образования город Краснодар</h3>
+						<div class="grid-two-column">
+							{{ mixin.humanPostMd('human-md1', 'Наумов Евгений Михайлович', 'Первый заместитель главы муниципального образования город Краснодар. Координирует работу по вопросам архитектуры и строительства') }}
+							{{ mixin.humanPostMd('human-md2', 'Доронин Артем Эдуардович', 'Заместитель главы муниципального образования город Краснодар, координирует работу по вопросам транспорта и дорожного хозяйства') }}
+						</div>
+						{{ mixin.humanList() }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block Scripts %}
+	<script>
+		
+	</script>
+{% endblock %}

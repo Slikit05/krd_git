@@ -17,3 +17,144 @@
 		</div>
 	</div>
 {% endmacro %}
+
+{% macro itemCategory() %}
+	<li class="topic-block__item">
+		<label class="check-row">
+			<input type="checkbox">
+			<div class="check-row__wrap">
+				<span class="check-row__square"></span>
+				<span class="check-row__text">Евгений Первышов (2155)</span>
+			</div>
+		</label>
+	</li>
+{% endmacro %}
+
+{% macro newsPost() %}
+	<div class="news-post">
+		<div class="news-post__wrapper">
+			<div class="news-post__row">
+				<span class="info-text date">10 февраля 2021,</span>
+				<div class="topic-item topic-item--change">
+					<div class="topic-item__wrapper">
+						<span class="topic-item__text">Национальные проекты</span>
+					</div>
+				</div>
+				<div class="topic-item topic-item--change">
+					<div class="topic-item__wrapper">
+						<span class="topic-item__text">Образование</span>
+					</div>
+				</div>
+			</div>
+			<div class="news-post__wrap-img">
+				<picture>
+					<source srcset="img/news-post1.webp" type="image/webp">
+					<source srcset="img/news-post1.jpg" type="image/jpeg">
+					<img src="img/news-post1.jpg" alt="">
+				</picture>
+			</div>
+			<div class="news-post__wrap-text">
+				<h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
+				<p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro humanPostMd(img, caption, text) %}
+	<div class="human-post human-post--md">
+		<div class="human-post__wrap-img">
+			<picture>
+				<source srcset="img/{{ img }}.webp" type="image/webp">
+				<source srcset="img/{{ img }}.jpg" type="image/jpeg">
+				<img src="img/{{ img }}.jpg" alt="">
+			</picture>
+		</div>
+		<div class="human-post__wrap-text">
+			<h3>{{ caption }}</h3>
+			<p>{{ text }}</p>
+			<a href="#" class="btn-white">
+				<span class="btn-white__text">Курируемые направления</span>
+			</a>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro humanPostMd(img, caption, text) %}
+	<div class="human-post human-post--md">
+		<div class="human-post__wrap-img">
+			<picture>
+				<source srcset="img/{{ img }}.webp" type="image/webp">
+				<source srcset="img/{{ img }}.jpg" type="image/jpeg">
+				<img src="img/{{ img }}.jpg" alt="">
+			</picture>
+		</div>
+		<div class="human-post__wrap-text">
+			<h3>{{ caption }}</h3>
+			<p>{{ text }}</p>
+			<a href="#" class="btn-white">
+				<span class="btn-white__text">Курируемые направления</span>
+			</a>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro humanPostSm(img, caption, text) %}
+	<div class="human-post human-post--sd">
+		<div class="human-post__wrap-img">
+			<picture>
+				<source srcset="img/{{ img }}.webp" type="image/webp">
+				<source srcset="img/{{ img }}.jpg" type="image/jpeg">
+				<img src="img/{{ img }}.jpg" alt="">
+			</picture>
+		</div>
+		<div class="human-post__wrap-text">
+			<h3>{{ caption }}</h3>
+			<p>{{ text }}</p>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro humanList() %}
+	<div class="human-list">
+		<div class="human-post human-post--sm">
+			<div class="human-post__wrap-img">
+				<picture>
+					<source srcset="img/human-sm1.webp" type="image/webp">
+					<source srcset="img/human-sm1.jpg" type="image/jpeg">
+					<img src="img/human-sm1.jpg" alt="">
+				</picture>
+			</div>
+			<div class="human-post__wrap-text">
+				<h3>Белый Владислав Владимирович</h3>
+				<p>Директор департамента городского хозяйства и топливно-энергетического комплекса</p>
+			</div>
+		</div>
+		<div class="human-post human-post--sm">
+			<div class="human-post__wrap-img">
+				<picture>
+					<source srcset="img/human-sm2.webp" type="image/webp">
+					<source srcset="img/human-sm2.jpg" type="image/jpeg">
+					<img src="img/human-sm2.jpg" alt="">
+				</picture>
+			</div>
+			<div class="human-post__wrap-text">
+				<h3>Бурлаков Сергей Александрович</h3>
+				<p>Начальник управления сельского хозяйства</p>
+			</div>
+		</div>
+		<div class="human-post human-post--sm">
+			<div class="human-post__wrap-img">
+				<picture>
+					<source srcset="img/human-sm3.webp" type="image/webp">
+					<source srcset="img/human-sm3.jpg" type="image/jpeg">
+					<img src="img/human-sm3.jpg" alt="">
+				</picture>
+			</div>
+			<div class="human-post__wrap-text">
+				<h3>Казликин Виталий Александрович</h3>
+				<p>Начальник управления гражданской защиты</p>
+			</div>
+		</div>
+	</div>
+{% endmacro %}

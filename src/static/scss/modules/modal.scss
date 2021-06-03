@@ -609,7 +609,11 @@
 	right: 0;
 	bottom: 0;
 	z-index: 100;
-	// display: none;
+	display: none;
+
+	&--open {
+		display: block;
+	}
 
 	&__overlay {
 		height: 100%;
@@ -617,6 +621,8 @@
 		background-color: rgba($color: #F5F5F7, $alpha: 0.9);
 		overflow-y: auto;
 		text-align: center;
+		white-space: nowrap;
+		padding: 15px 15px;
 
 		&::before {
 			content: '';
@@ -630,7 +636,7 @@
 
 	&__block {
 		background-color: #fff;
-		margin: 3.5rem auto;
+		margin: 0;
 		display: inline-block;
 		vertical-align: middle;
 		text-align: left;
@@ -640,6 +646,10 @@
 		line-height: 0;
 		padding: 44px 56px 56px;
 		position: relative;
+		white-space: pre-wrap;
+		@media (max-width: 767px) {
+			// max-width: 100% !important;
+		}
 	}
 
 	&__up {
@@ -892,7 +902,6 @@
 				color: #fff;
 			}
 
-
 			.flatpickr-day.today {
 				background-color: #F5F5F7;
 				color: #0050B2;
@@ -903,6 +912,112 @@
 					border: 1px solid rgba($color: #D9D9DE, $alpha: 1);
 				}
 			}
+
+			.startRange,
+			.endRange {
+				border-radius: 0 !important;
+				border: 1px solid #0061d9;
+				box-shadow: none !important;
+			}
+
+			.inRange {
+				box-shadow: none;
+				background-color: #0061d9;
+				color: #fff;
+				border: 1px solid #0061d9;
+			}
+		}
+		.rangeMode .flatpickr-day {
+			margin-top: 0;
 		}
 	}
+
+	&__field {
+		width: 100%;
+	}
 }
+
+.modal-topic {
+	max-width: 852px;
+	padding: 44px 56px 44px;
+}
+
+.topic-block {
+	&__up {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 24px;
+	}
+
+	&__caption {
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 28px;
+		margin-right: 22px;
+	}
+
+	&__field-wrap {
+		flex-grow: 1;
+		position: relative;
+	}
+
+	&__btn-search {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 48px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		svg {
+			width: 16px;
+			height: 16px;
+			stroke: #000000;
+			stroke-width: 2px;
+		}
+	}
+
+	&__field {
+		border: 1px solid #A7A8AB;
+		border-radius: 4px;
+		font-size: 18px;
+		line-height: 28px;
+		width: 100%;
+		padding: 8px 24px 10px;
+
+		&::placeholder {
+			color: #76767A;
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+	&__middle {
+		margin-bottom: 32px;
+	}
+	&__scroll {
+		overflow: auto;
+	}
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 32px;
+		row-gap: 12px;
+		padding-right: 40px;
+		max-height: 350px;
+		@media (max-width: 767px) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__left {
+		margin-right: 32px;
+		flex-grow: 1;
+	}
+}
+

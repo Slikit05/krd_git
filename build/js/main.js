@@ -56,12 +56,10 @@ accFooter.createAccordion();
 // акордионы  - конец
 
 let breadСrumbs = document.getElementsByClassName("breadcrumbs__list")[0];
-// console.log(breadСrumbs.offsetWidth);
 
 if (breadСrumbs) {
   breadСrumbs.scrollLeft = breadСrumbs.offsetWidth + 25;
 }
-
 
 // Табы
 
@@ -70,8 +68,9 @@ function tabs() {
 
     if (event.target.dataset.nametabs) {
       const tabName = event.target.dataset.nametabs;
-      let tabActive = document.querySelectorAll(".active-item-tab");
-      let tabBlock = document.querySelectorAll(".tab-block");
+      const tabActive = document.querySelectorAll(".active-item-tab");
+      const tabWrapper = event.target.closest(".tab-wrapper");
+      const tabBlock = tabWrapper.querySelectorAll(".tab-block");
       
       tabActive.forEach(function(item) {
         if(item.classList.contains("active-item-tab")) {
@@ -79,13 +78,46 @@ function tabs() {
         };
       });
 
-      console.log(tabName);
+      tabBlock.forEach(function(item) {
+        item.classList.remove("tab-block--active");
+        if(item.dataset.tabcontent == tabName) {
+          item.classList.add("tab-block--active");
+        };
+      });      
+
       event.target.classList.add("active-item-tab");
     };
 
   });
 };
 
-tabs();
-
 // Табы - конец
+
+// Модалки
+
+(function () {
+  window.addEventListener("click", function (event) {
+
+    if (event.target.dataset.clickModal) {
+      event.preventDefault();
+
+      const btnName = event.target.dataset.clickModal;
+
+      document.querySelector("#" + btnName).classList.add("modal--open");
+      document.querySelector("html").classList.add("hiden");
+
+      console.log(btnName);
+    };
+
+    if (event.target.classList.contains("modal__overlay")) {
+      event.target.closest(".modal").classList.remove("modal--open");
+      document.querySelector("html").classList.remove("hiden");
+    } else if (event.target.classList.contains("close")) {
+      event.target.closest(".modal").classList.remove("modal--open");
+      document.querySelector("html").classList.remove("hiden");
+    };
+
+  });
+})();
+
+// Модалки - конец

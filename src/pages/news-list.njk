@@ -1,0 +1,146 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	<link rel="stylesheet" href="css/flatpickr.min.css">
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Главные новости</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="content-page">
+		<div class="container">
+			<div class="row-title">
+				<h2 class="title">Фотогалереи</h2>		
+				<div class="row-title__wrap">
+					<a href="#" class="link-change" data-click-modal="calendar">
+						<span class="link-change__text">Календарь</span>
+						<svg><use xlink:href="img/sprite.svg#svg--calendar"></svg>
+					</a>
+					<a href="#" class="link-change" data-click-modal="topic">
+						<span class="link-change__text">Темы</span>
+						<svg><use xlink:href="img/sprite.svg#svg--topics"></svg>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="news-grid">
+			<div class="container">
+				<div class="news-grid__wrapper">
+					{{ mixin.newsPost() }}
+					{{ mixin.newsPost() }}
+					{{ mixin.newsPost() }}
+					{{ mixin.newsPost() }}
+					{{ mixin.newsPost() }}
+					{{ mixin.newsPost() }}
+					{{ mixin.newsPost() }}
+					{{ mixin.newsPost() }}
+					{{ mixin.newsPost() }}
+					{{ mixin.newsPost() }}
+				</div>
+				<a href="#" class="btn-block">
+					<span class="btn-block__text">Подписаться на рассылку новостей</span>
+				</a>
+			</div>
+		</div>
+		<div class="pagination">
+			<div class="container">
+				<div class="pagination__wrapper">
+					<div class="pagination__left">
+						<a href="#" class="btn-white">
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-two"></use>
+							</svg>
+							<span class="btn-white__text">Предыдущая</span>
+						</a>
+					</div>
+					<ul class="pagination__list">
+						<li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link pagination__link--active">2</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link pagination__link--dotted">...</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">8</a></li>
+					</ul>
+					<div class="pagination__right">
+						<a href="#" class="btn-white">
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-two"></use>
+							</svg>
+							<span class="btn-white__text">Предыдущая</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row-btn">
+			<div class="container">
+				<a href="#" class="btn-white"><span class="btn-white__text">Загрузить предыдущие галереи</span></a>
+			</div>
+		</div>
+	</section>
+	{% include "include/modal.njk" %}
+{% endblock %}
+
+{% block Scripts %}
+	<script src="js/flatpickr.js"></script>
+	<script src="js/flatpickr-ru.js"></script>
+	<script src="js/smooth-scrollbar.js"></script>
+	<script>
+		flatpickr(".calendar__field-date", {
+			inline: true,
+			"locale": "ru",
+			dateFormat: "Y-m-d H:i",
+			monthSelectorType: "static",
+			nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+			prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+		});
+		
+		flatpickr(".calendar__field-period", {
+			inline: true,
+			"locale": "ru",
+			dateFormat: "Y-m-d H:i",
+			monthSelectorType: "static",
+			nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+			prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+			mode: "range"
+		});
+
+		tabs();
+
+		let Scrollbar = window.Scrollbar;
+
+  	Scrollbar.init(document.querySelector('.topic-block__scroll'));
+
+	</script>
+{% endblock %}
