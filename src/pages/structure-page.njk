@@ -37,7 +37,7 @@
 			<div class="inner-grid-page__wrapper">
 				<div class="inner-grid-page__left">
 					<div class="link-menu">
-						<div class="link-menu__up">
+						<div class="link-menu__up accordion-js">
 							<span class="link-menu__caption">Структура администрации</span>
 							<svg>
 								<use xlink:href="img/sprite.svg#svg--arrow-one">
@@ -84,7 +84,7 @@
 						<div class="row-title">
 							<h2 class="title">Структура администрации</h2>		
 						</div>
-						<div class="human-post human-post--lg">
+						<a href="#" class="human-post human-post--lg">
 							<div class="human-post__wrap-img">
 								<picture>
 									<source srcset="img/human-lg1.webp" type="image/webp">
@@ -96,13 +96,106 @@
 								<h3>Первышов Евгений Алексеевич</h3>
 								<p>Глава муниципального образования город Краснодар</p>
 							</div>
-						</div>
+						</a>
 						<h3 class="md-title">Заместители главы муниципального образования город Краснодар</h3>
 						<div class="grid-two-column">
-							{{ mixin.humanPostMd('human-md1', 'Наумов Евгений Михайлович', 'Первый заместитель главы муниципального образования город Краснодар. Координирует работу по вопросам архитектуры и строительства', 'onegrid') }}
-							{{ mixin.humanPostMd('human-md2', 'Доронин Артем Эдуардович', 'Заместитель главы муниципального образования город Краснодар, координирует работу по вопросам транспорта и дорожного хозяйства', 'twogrid') }}
+							{{ mixin.humanPostMd('human-md1', 'Наумов Евгений Михайлович', 'Первый заместитель главы муниципального образования город Краснодар. Координирует работу по вопросам архитектуры и строительства', '1grid') }}
+							{{ mixin.humanList('1grid') }}
+							{{ mixin.humanPostMd('human-md2', 'Доронин Артем Эдуардович', 'Заместитель главы муниципального образования город Краснодар, координирует работу по вопросам транспорта и дорожного хозяйства', '2grid') }}							
+							{{ mixin.humanList('2grid') }}
 						</div>
-						{{ mixin.humanList('onegrid', 'twogrid') }}
+						<div class="grid-two-column">
+							{{ mixin.humanPostMd('human-md3', 'Дорошев Андрей Александрович', 'Заместитель главы муниципального образования город Краснодар, координирует работу по вопросам городского хозяйства, топливно - энергетического комплекса, вопросам сельского хозяйства, информационных технологий и гражданской защиты', '3grid') }}
+							{{ mixin.humanList('3grid') }}
+							{{ mixin.humanPostMd('human-md4', 'Егорова Лилиана Николаевна', 'Заместитель главы муниципального образования город Краснодар, координирует работу по социальным вопросам, вопросам здравоохранения', '4grid') }}							
+							{{ mixin.humanList('4grid') }}
+						</div>
+						<h3 class="md-title">Подразделения прямого подчинения главе г.Краснодара</h3>
+						<div class="grid-four-column">
+							{{ mixin.humanPostSm('human-sm1', 'Дорошев Андрей Александрович', 'Заместитель главы муниципального образования город Краснодар, управляющий делами') }}							
+							{{ mixin.humanPostSm('human-sm2', 'Егорова Лилиана Николаевна', 'Начальник управления общественной безопасности и правопорядка администрации муниципального образования город Краснодар') }}
+							{{ mixin.humanPostSm('human-sm3', 'Егорова Лилиана Николаевна', 'Начальник отдела по мобилизационной работе') }}
+							{{ mixin.humanPostSm('human-sm1', 'Егорова Лилиана Николаевна', 'Начальник управления контроля и протокола') }}
+						</div>
+						<h3 class="md-title">Главы администраций внутригородских округов</h3>
+						<div class="grid-four-column">
+							{# {{ mixin.humanPostSm('human-sm1', 'Дорошев Андрей Александрович', 'Заместитель главы муниципального образования город Краснодар, управляющий делами') }}							 #}
+
+							<a href="#" class="human-post human-post--sm">
+								<div class="human-post__wrap-img">
+									<picture>
+										<source srcset="img/human-sm2.webp" type="image/webp">
+										<source srcset="img/human-sm2.jpg" type="image/jpeg">
+										<img src="img/human-sm2.jpg" alt="">
+									</picture>
+								</div>
+								<div class="human-post__wrap-text">
+									<h3>Дорошев Андрей Александрович</h3>
+									<p>Заместитель главы муниципального образования город Краснодар, управляющий делами</p>
+									<button class="btn-white arrow-animate" data-namebtn="10grid">
+										<span class="btn-white__text">Курируемые направления</span>
+										<span class="btn-white__text text-change">Закрыть</span>
+										<span class="close"></span>
+									</button>
+								</div>
+							</a>
+							{{ mixin.humanList('10grid') }}
+
+							<a href="#" class="human-post human-post--sm">
+								<div class="human-post__wrap-img">
+									<picture>
+										<source srcset="img/human-sm2.webp" type="image/webp">
+										<source srcset="img/human-sm2.jpg" type="image/jpeg">
+										<img src="img/human-sm2.jpg" alt="">
+									</picture>
+								</div>
+								<div class="human-post__wrap-text">
+									<h3>Дорошев Андрей Александрович</h3>
+									<p>Заместитель главы муниципального образования город Краснодар, управляющий делами</p>
+									<button class="btn-white arrow-animate" data-namebtn="5grid">
+										<span class="btn-white__text">Курируемые направления</span>
+										<span class="btn-white__text text-change">Закрыть</span>
+										<span class="close"></span>
+									</button>
+								</div>
+							</a>
+							{{ mixin.humanList('5grid') }}
+							{{ mixin.humanPostSm('human-sm3', 'Егорова Лилиана Николаевна', 'Начальник отдела по мобилизационной работе') }}
+							<a href="#" class="human-post human-post--sm">
+								<div class="human-post__wrap-img">
+									<picture>
+										<source srcset="img/human-sm1.webp" type="image/webp">
+										<source srcset="img/human-sm1.jpg" type="image/jpeg">
+										<img src="img/human-sm1.jpg" alt="">
+									</picture>
+								</div>
+								<div class="human-post__wrap-text">
+									<h3>Дорошев Андрей Александрович</h3>
+									<p>Заместитель главы муниципального образования город Краснодар, управляющий делами</p>
+									<button class="btn-white arrow-animate" data-namebtn="6grid">
+										<span class="btn-white__text">Курируемые направления</span>
+										<span class="btn-white__text text-change">Закрыть</span>
+										<span class="close"></span>
+									</button>
+								</div>
+							</a>
+							{{ mixin.humanList('6grid') }}
+						</div>
+						<h3 class="md-title">Руководители отраслевых и функциональных органов</h3>
+						<div class="grid-four-column">
+							{{ mixin.humanPostSm('human-sm1', 'Дорошев Андрей Александрович', 'Заместитель главы муниципального образования город Краснодар, управляющий делами') }}							
+							{{ mixin.humanPostSm('human-sm2', 'Егорова Лилиана Николаевна', 'Начальник управления общественной безопасности и правопорядка администрации муниципального образования город Краснодар') }}
+							{{ mixin.humanPostSm('human-sm3', 'Егорова Лилиана Николаевна', 'Начальник отдела по мобилизационной работе') }}
+							{{ mixin.humanPostSm('human-sm1', 'Егорова Лилиана Николаевна', 'Начальник управления контроля и протокола') }}
+							{{ mixin.humanPostSm('human-sm1', 'Дорошев Андрей Александрович', 'Заместитель главы муниципального образования город Краснодар, управляющий делами') }}							
+							{{ mixin.humanPostSm('human-sm2', 'Егорова Лилиана Николаевна', 'Начальник управления общественной безопасности и правопорядка администрации муниципального образования город Краснодар') }}
+							{{ mixin.humanPostSm('human-sm3', 'Егорова Лилиана Николаевна', 'Начальник отдела по мобилизационной работе') }}
+							{{ mixin.humanPostSm('human-sm1', 'Егорова Лилиана Николаевна', 'Начальник управления контроля и протокола') }}
+							{{ mixin.humanPostSm('human-sm1', 'Дорошев Андрей Александрович', 'Заместитель главы муниципального образования город Краснодар, управляющий делами') }}							
+							{{ mixin.humanPostSm('human-sm2', 'Егорова Лилиана Николаевна', 'Начальник управления общественной безопасности и правопорядка администрации муниципального образования город Краснодар') }}
+							{{ mixin.humanPostSm('human-sm3', 'Егорова Лилиана Николаевна', 'Начальник отдела по мобилизационной работе') }}
+							{{ mixin.humanPostSm('human-sm1', 'Егорова Лилиана Николаевна', 'Начальник управления контроля и протокола') }}
+						</div>
 					</div>
 				</div>
 			</div>
@@ -112,6 +205,6 @@
 
 {% block Scripts %}
 	<script>
-		tabs();
+		openList();
 	</script>
 {% endblock %}

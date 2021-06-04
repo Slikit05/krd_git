@@ -1,0 +1,142 @@
+{% extends "__layout.njk" %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Гостям города</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="inner-grid-page">
+		<div class="container">			
+			<div class="text-page">
+				<div class="center-area-two">
+					<div class="text-page__up">
+						<a href="#" class="link-more">
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-two">
+							</svg>
+							<span>Назад к списку</span>
+						</a>
+						<span class="md-text">Заместитель главы муниципального образования город Краснодар</span>
+						<span class="info-text">Координирует работу по вопросам городского хозяйства, топливно-энергетического комплекса, вопросам сельского хозяйства, информационных технологий и гражданской защиты</span>
+						<h2 class="title">Дорошев Андрей Александрович</h2>
+					</div>
+					<div class="human-info-block">
+						<div class="center-area-one center-one-change-tablet">
+							<div class="human-info-block__wrapper">
+								<div class="human-info-block__wrap-img">
+									<picture>
+										<source srcset="img/human-md3.webp" type="image/webp">
+										<source srcset="img/human-md3.jpg" type="image/jpeg">
+										<img src="img/human-md3.jpg" alt="">
+									</picture>
+								</div>
+								<div class="human-info-block__wrap-content">
+									<div class="human-info-block__wrap">
+										<div class="human-info-block__row">
+											<span class="human-info-block__caption">Адрес:</span>
+											<span class="human-info-block__text">350000, ул. Красная, 122, этаж 5, кабинет, 533</span>
+										</div>
+										<div class="human-info-block__row">
+											<span class="human-info-block__caption">Телефон:</span>
+											<a href="tel:+78612597188" class="human-info-block__link">(861) 259-71-88</a>
+										</div>
+										<div class="human-info-block__row">
+											<span class="human-info-block__caption">Приемная:</span>
+											<span class="human-info-block__text">Балашова Евгения Анатольевна</span>
+										</div>
+									</div>									
+									<div class="human-info-block__down">
+										<a href="#" class="btn-white" data-click-modal="calendar2">
+											<span class="btn-white__text">График приема граждан</span>
+										</a>
+										<a href="#" class="btn-block">
+											<span class="btn-block__text">Направить обращение</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-page__area">
+						<div class="text-page__wrap">
+							<div class="center-area-one center-one-change-tablet">
+								<p>Родился 4 декабря 1980 года г.Краснодар, Краснодарский край, РФ. Детство и юность прожил в городе Краснодаре. Окончил среднюю школу № 73.</p>
+								<p><b>Имеет высшее образование:</b></p>
+								<p>2002г. – Белгородский университет потребительской кооперации (менеджер);</p>
+								<p>2010г. – НОУ ВПО «Международный институт менеджмента ЛИНК» (профессиональная переподготовка);</p>
+								<p>1999г. – начал свою трудовую деятельность в ОАО «Кубаньхлебопродукт»;</p>
+								<p>2003-2006 – работал в ГУП КК «Кубанский продовольственный фонд», ООО «Кубаньзернопродукт», ООО «Юг Руси Агро», ГУП КК «Кубаньплемподдержка»;</p>
+								<p>2006-2008 – работал на должностях государственной гражданской службы в администрации Краснодарского края (департамент внешнеэкономической деятельности Краснодарского края).</p>
+								<p>С января 2008 года работает в администрации Пашковского сельского округа муниципального образования город Краснодар в должности заместителя главы администрации;</p>
+								<p>В июне 2011 года назначен главой администрации Пашковского сельского округа муниципального образования город Краснодар.</p>
+								<p>С 5 февраля 2016 года назначен на должность главы администрации Прикубанского внутригородского округа города Краснодара.</p>
+								<p>С 15 октября 2018 года назначен на долность заместителя главы муниципального образования город Краснодар.</p>
+								<p>В 2018 году награждён медалью «За выдающийся вклад в развитие Кубани» III степени.</p>
+								<p>Женат, имеет двоих сыновей.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="center-area-two center-two-change-tablet offset-area">
+					<div class="row-title">
+						<h3 class="md-title">Курируемые подразделения</h3>
+					</div>
+					<div class="grid-two-column">
+						{{ mixin.humanPostSm('human-sm1', 'Наумов Евгений Михайлович', 'Первый заместитель главы муниципального образования город Краснодар. Координирует работу по вопросам архитектуры и строительства') }}
+						{{ mixin.humanPostSm('human-sm2', 'Доронин Артем Эдуардович', 'Заместитель главы муниципального образования город Краснодар, координирует работу по вопросам транспорта и дорожного хозяйства') }}
+						{{ mixin.humanPostSm('human-sm2', 'Доронин Артем Эдуардович', 'Заместитель главы муниципального образования город Краснодар, координирует работу по вопросам транспорта и дорожного хозяйства') }}
+					</div>
+				</div>
+			</div>			
+		</div>
+	</section>
+	{% include "include/modal.njk" %}
+{% endblock %}
+
+{% block Scripts %}
+	<script src="js/flatpickr.js"></script>
+	<script src="js/flatpickr-ru.js"></script>
+	<script src="js/smooth-scrollbar.js"></script>
+	<script>
+		flatpickr(".calendar__field-date", {
+			inline: true,
+			"locale": "ru",
+			dateFormat: "Y-m-d H:i",
+			monthSelectorType: "static",
+			nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+			prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+		});
+
+		let Scrollbar = window.Scrollbar;
+
+  	Scrollbar.init(document.querySelector('.topic-block__scroll'));
+
+	</script>
+{% endblock %}

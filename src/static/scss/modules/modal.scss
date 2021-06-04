@@ -781,6 +781,8 @@
 					font-weight: 600;
 					font-size: 22px;
 					line-height: 28px;
+					max-width: 70px;
+					margin-bottom: 0;
 				}
 
 				.arrowUp,
@@ -855,6 +857,7 @@
 
 			.flatpickr-days {
 				width: 100%;
+				text-align: center;
 			}
 
 			.dayContainer {
@@ -934,6 +937,11 @@
 
 	&__field {
 		width: 100%;
+	}
+	.btn-white {
+		margin-top: 24px;
+		width: 100%;
+		display: none;
 	}
 }
 

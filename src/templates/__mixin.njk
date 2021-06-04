@@ -61,27 +61,8 @@
 	</div>
 {% endmacro %}
 
-{# {% macro humanPostMd(img, caption, text) %}
-	<div class="human-post human-post--md">
-		<div class="human-post__wrap-img">
-			<picture>
-				<source srcset="img/{{ img }}.webp" type="image/webp">
-				<source srcset="img/{{ img }}.jpg" type="image/jpeg">
-				<img src="img/{{ img }}.jpg" alt="">
-			</picture>
-		</div>
-		<div class="human-post__wrap-text">
-			<h3>{{ caption }}</h3>
-			<p>{{ text }}</p>
-			<a href="#" class="btn-white">
-				<span class="btn-white__text">Курируемые направления</span>
-			</a>
-		</div>
-	</div>
-{% endmacro %} #}
-
 {% macro humanPostMd(img, caption, text, nameTab) %}
-	<div class="human-post human-post--md">
+	<a href="#" class="human-post human-post--md">
 		<div class="human-post__wrap-img">
 			<picture>
 				<source srcset="img/{{ img }}.webp" type="image/webp">
@@ -92,16 +73,17 @@
 		<div class="human-post__wrap-text">
 			<h3>{{ caption }}</h3>
 			<p>{{ text }}</p>
-			<a href="#" class="btn-white" data-namebtn="{{ nameTab }}">
+			<button class="btn-white arrow-animate" data-namebtn="{{ nameTab }}">
 				<span class="btn-white__text">Курируемые направления</span>
+				<span class="btn-white__text text-change">Закрыть</span>
 				<span class="close"></span>
-			</a>
+			</button>
 		</div>
-	</div>
+	</a>
 {% endmacro %}
 
 {% macro humanPostSm(img, caption, text) %}
-	<div class="human-post human-post--sd">
+	<a href="#" class="human-post human-post--sm">
 		<div class="human-post__wrap-img">
 			<picture>
 				<source srcset="img/{{ img }}.webp" type="image/webp">
@@ -113,55 +95,12 @@
 			<h3>{{ caption }}</h3>
 			<p>{{ text }}</p>
 		</div>
-	</div>
+	</a>
 {% endmacro %}
 
-{% macro humanList(nameTabOne, nameTabTwo) %}
-	<div class="human-list">
-		<div class="human-list__wrapper" data-namelist="{{ nameTabOne }}">
-			<div class="human-list__grid">
-				<div class="human-post human-post--sm">
-					<div class="human-post__wrap-img">
-						<picture>
-							<source srcset="img/human-sm1.webp" type="image/webp">
-							<source srcset="img/human-sm1.jpg" type="image/jpeg">
-							<img src="img/human-sm1.jpg" alt="">
-						</picture>
-					</div>
-					<div class="human-post__wrap-text">
-						<h3>Белый Владислав Владимирович</h3>
-						<p>Директор департамента городского хозяйства и топливно-энергетического комплекса</p>
-					</div>
-				</div>
-				<div class="human-post human-post--sm">
-					<div class="human-post__wrap-img">
-						<picture>
-							<source srcset="img/human-sm2.webp" type="image/webp">
-							<source srcset="img/human-sm2.jpg" type="image/jpeg">
-							<img src="img/human-sm2.jpg" alt="">
-						</picture>
-					</div>
-					<div class="human-post__wrap-text">
-						<h3>Бурлаков Сергей Александрович</h3>
-						<p>Начальник управления сельского хозяйства</p>
-					</div>
-				</div>
-				<div class="human-post human-post--sm">
-					<div class="human-post__wrap-img">
-						<picture>
-							<source srcset="img/human-sm3.webp" type="image/webp">
-							<source srcset="img/human-sm3.jpg" type="image/jpeg">
-							<img src="img/human-sm3.jpg" alt="">
-						</picture>
-					</div>
-					<div class="human-post__wrap-text">
-						<h3>Казликин Виталий Александрович</h3>
-						<p>Начальник управления гражданской защиты</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="human-list__wrapper" data-namelist="{{ nameTabTwo }}">
+{% macro humanList(nameTab) %}
+	<div class="human-list " >
+		<div class="human-list__wrapper animate-hate" data-namelist="{{ nameTab }}">
 			<div class="human-list__grid">
 				<div class="human-post human-post--sm">
 					<div class="human-post__wrap-img">

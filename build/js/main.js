@@ -49,9 +49,11 @@ class Accordion {
 
 const accMobMenu = new Accordion(".menu-nav__up");
 const accFooter = new Accordion(".page-footer__row-up");
+const accSidebar = new Accordion(".link-menu__up");
 
 accMobMenu.createAccordion();
 accFooter.createAccordion();
+accSidebar.createAccordion();
 
 // акордионы  - конец
 
@@ -87,6 +89,46 @@ function tabs() {
       });      
 
       event.target.classList.add("active-item-tab");
+    };
+
+  });
+};
+
+
+function openList() {
+  window.addEventListener("click", function (event) {
+
+    if (event.target.dataset.namebtn) {
+      const listName = event.target.dataset.namebtn;
+      const btnOpen = document.querySelectorAll(".open-btn");
+      const listGroup = document.querySelectorAll(".human-list__wrapper");
+      
+      if(event.target.classList.contains('open-btn')) {
+        event.target.classList.remove("open-btn");
+
+        listGroup.forEach(function(item) {
+          item.classList.remove("animate-hate--open");
+          item.style.maxHeight = null;
+        });
+      } else {
+        btnOpen.forEach(function(item) {
+          if(item.classList.contains("open-btn")) {
+            item.classList.remove("open-btn");
+          };
+        });
+        event.target.classList.add("open-btn");
+
+        listGroup.forEach(function(item) {
+          item.classList.remove("animate-hate--open");
+          item.style.maxHeight = null;
+          if(item.dataset.namelist == listName) {
+            item.classList.add("animate-hate--open");
+            item.style.maxHeight = item.scrollHeight + "px";
+          };
+        });
+      };
+
+      event.preventDefault();
     };
 
   });
