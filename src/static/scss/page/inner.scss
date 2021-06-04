@@ -146,7 +146,7 @@
             stroke: #000;
           }
           span {
-            color: #0050B2;
+            color: #0050b2;
           }
         }
       }
@@ -204,7 +204,7 @@
   }
 
   &__up {
-    border-bottom: 1px solid #D9D9DE;
+    border-bottom: 1px solid #d9d9de;
     padding-bottom: 15px;
     margin-bottom: 40px;
     @media (max-width: 767px) {
@@ -237,7 +237,7 @@
 .text-page {
   &__up {
     padding-bottom: 24px;
-    border-bottom: 1px solid #D9D9DE;
+    border-bottom: 1px solid #d9d9de;
     margin-bottom: 40px;
 
     @media (max-width: 767px) {
@@ -252,13 +252,13 @@
         transform: rotate(180deg);
         margin: 0;
         stroke-width: 1px;
-        stroke: #0061D9;
+        stroke: #0061d9;
         margin-right: 12px;
         margin-left: -27px;
       }
 
       span {
-        color: #0061D9;
+        color: #0061d9;
       }
     }
   }
@@ -383,7 +383,7 @@
   }
 
   &__wrap {
-    border-bottom: 1px solid #D9D9DE;
+    border-bottom: 1px solid #d9d9de;
     padding-bottom: 40px;
     margin-bottom: 40px;
 
@@ -408,7 +408,7 @@
 
 .news-row-wrap {
   border-top: 2px solid #000000;
-  border-bottom: 1px solid #D9D9DE;
+  border-bottom: 1px solid #d9d9de;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
@@ -488,7 +488,7 @@
 
   @media (max-width: 767px) {
     margin-bottom: 20px;
-    border-bottom: 1px solid #D9D9DE;
+    border-bottom: 1px solid #d9d9de;
   }
 
   &__wrap-img {
@@ -505,7 +505,7 @@
   &__wrap-text {
     margin-left: 20px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #D9D9DE;
+    border-bottom: 1px solid #d9d9de;
     flex-grow: 1;
 
     @media (max-width: 767px) {
@@ -529,7 +529,7 @@
   &__text {
     font-size: 14px;
     line-height: 24px;
-    color: #76767A;
+    color: #76767a;
   }
 }
 
@@ -676,13 +676,13 @@
     justify-content: space-between;
     align-items: baseline;
     padding: 12px 0;
-    border-bottom: 1px solid #D9D9DE;
+    border-bottom: 1px solid #d9d9de;
   }
 
   &__text {
     font-size: 14px;
     line-height: 20px;
-    color: #76767A;
+    color: #76767a;
   }
 
   &__fraction {
@@ -768,8 +768,8 @@
 }
 
 .teg-category {
-  background: #FFFFFF;
-  border: 1px solid #B3CBE8;
+  background: #ffffff;
+  border: 1px solid #b3cbe8;
   border-radius: 4px;
   padding: 7px 12px;
 
@@ -777,7 +777,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: #0061D9;
+    color: #0061d9;
     display: inline !important;
   }
 }
@@ -937,6 +937,121 @@
   .center-area-one {
     @media (max-width: 1079px) {
       max-width: inherit;
+    }
+  }
+}
+
+.inner-grid-page {
+  .md-title {
+    margin-bottom: 28px;
+  }
+}
+
+.human-list {
+  &__wrapper {
+    display: none;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 64px;
+    row-gap: 50px;
+    margin-top: 36px;
+    padding: 40px 0;
+    border-top: 1px solid #d9d9de;
+    border-bottom: 1px solid #d9d9de;
+    margin-bottom: 56px;
+  }
+  .tab-block--active {
+    display: block;
+  }
+}
+
+.human-post {
+  &__wrap-img {
+    img {
+      width: 100%;
+    }
+  }
+  &__wrap-text {
+    h3 {
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 5px;
+    }
+    p {
+      color: #333333;
+    }
+    .btn-white {
+      display: inline-flex;
+      justify-content: center;
+      padding: 5px 12px;
+      &__text {
+        font-size: 14px;
+        line-height: 20px;
+        pointer-events: none;
+      }
+      .close {
+        margin-left: 8px;
+        display: none;
+        position: relative;
+        right: auto;
+        top: auto;
+        pointer-events: none;
+        &::before,
+        &::after {
+          background-color: #a7a8ab;
+        }
+      }
+    }
+  }
+  &--lg {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    .human-post {
+      &__wrap-img {
+        max-width: 296px;
+        flex-shrink: 0;
+      }
+      &__wrap-text {
+        padding-left: 40px;
+        h3 {
+          font-size: 28px;
+          line-height: 36px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  &--md {
+    .human-post {
+      &__wrap-img {
+        max-width: 160px;
+        margin-bottom: 22px;
+      }
+      &__wrap-text {
+        h3 {
+          font-size: 22px;
+          line-height: 28px;
+          margin-bottom: 8px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  &--sm {
+    .human-post {
+      &__wrap-img {
+        max-width: 160px;
+      }
     }
   }
 }

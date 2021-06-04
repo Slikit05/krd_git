@@ -67,6 +67,7 @@ function tabs() {
   window.addEventListener("click", function (event) {
 
     if (event.target.dataset.nametabs) {
+      event.preventDefault();
       const tabName = event.target.dataset.nametabs;
       const tabActive = document.querySelectorAll(".active-item-tab");
       const tabWrapper = event.target.closest(".tab-wrapper");
