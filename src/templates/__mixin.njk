@@ -18,20 +18,20 @@
 	</div>
 {% endmacro %}
 
-{% macro itemCategory() %}
-	<li class="topic-block__item">
+{% macro itemCategory(text, id) %}
+	<li class="topic-block__item" id="{{ id }}">
 		<label class="check-row">
 			<input type="checkbox">
 			<div class="check-row__wrap">
 				<span class="check-row__square"></span>
-				<span class="check-row__text">Евгений Первышов (2155)</span>
+				<span class="check-row__text">{{ text }}</span>
 			</div>
 		</label>
 	</li>
 {% endmacro %}
 
 {% macro newsPost() %}
-	<div class="news-post">
+	<a href="#" class="news-post">
 		<div class="news-post__wrapper">
 			<div class="news-post__row">
 				<span class="info-text date">10 февраля 2021,</span>
@@ -58,7 +58,7 @@
 				<p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
 			</div>
 		</div>
-	</div>
+	</a>
 {% endmacro %}
 
 {% macro humanPostMd(img, caption, text, nameTab) %}
@@ -100,9 +100,9 @@
 
 {% macro humanList(nameTab) %}
 	<div class="human-list " >
-		<div class="human-list__wrapper animate-hate" data-namelist="{{ nameTab }}">
+		<div class="human-list__wrapper animate-hate list-accordeon" data-namelist="{{ nameTab }}">
 			<div class="human-list__grid">
-				<div class="human-post human-post--sm">
+				<a href="#" class="human-post human-post--sm">
 					<div class="human-post__wrap-img">
 						<picture>
 							<source srcset="img/human-sm1.webp" type="image/webp">
@@ -114,8 +114,8 @@
 						<h3>Белый Владислав Владимирович</h3>
 						<p>Директор департамента городского хозяйства и топливно-энергетического комплекса</p>
 					</div>
-				</div>
-				<div class="human-post human-post--sm">
+				</a>
+				<a href="#" class="human-post human-post--sm">
 					<div class="human-post__wrap-img">
 						<picture>
 							<source srcset="img/human-sm2.webp" type="image/webp">
@@ -127,8 +127,8 @@
 						<h3>Бурлаков Сергей Александрович</h3>
 						<p>Начальник управления сельского хозяйства</p>
 					</div>
-				</div>
-				<div class="human-post human-post--sm">
+				</a>
+				<a href="#" class="human-post human-post--sm">
 					<div class="human-post__wrap-img">
 						<picture>
 							<source srcset="img/human-sm3.webp" type="image/webp">
@@ -140,8 +140,28 @@
 						<h3>Казликин Виталий Александрович</h3>
 						<p>Начальник управления гражданской защиты</p>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
+	</div>
+{% endmacro %}
+
+{% macro lgSlide(img) %}
+	<div class="slider-gallery__slide swiper-slide">
+		<picture>
+			<source srcset="img/{{ img }}.webp" type="image/webp">
+			<source srcset="img/{{ img }}.jpg" type="image/jpeg">
+			<img src="img/{{ img }}.jpg" alt="">
+		</picture>
+	</div>
+{% endmacro %}
+
+{% macro smSlide(img) %}
+	<div class="slider-sm-galery__slide swiper-slide">
+		<picture>
+			<source srcset="img/{{ img }}.webp" type="image/webp">
+			<source srcset="img/{{ img }}.jpg" type="image/jpeg">
+			<img src="img/{{ img }}.jpg" alt="">
+		</picture>
 	</div>
 {% endmacro %}

@@ -117,24 +117,34 @@
 	<script src="js/flatpickr-ru.js"></script>
 	<script src="js/smooth-scrollbar.js"></script>
 	<script>
-		flatpickr(".calendar__field-date", {
+		let calendarDateOne = flatpickr("#date1", {
 			inline: true,
 			"locale": "ru",
-			dateFormat: "Y-m-d H:i",
+			dateFormat: "Y-m-d",
 			monthSelectorType: "static",
 			nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
 			prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+			onValueUpdate: function() {
+				const btnClear = this.calendarContainer.nextElementSibling;
+				btnClear.style.display = "flex";				
+    	},
 		});
+		clearCalendar(calendarDateOne);
 		
-		flatpickr(".calendar__field-period", {
+		let calendarPeriod = flatpickr("#period1", {
 			inline: true,
 			"locale": "ru",
-			dateFormat: "Y-m-d H:i",
+			dateFormat: "Y-m-d",
 			monthSelectorType: "static",
 			nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
 			prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
-			mode: "range"
+			mode: "range",
+			onValueUpdate: function() {
+				const btnClearTwo = this.calendarContainer.nextElementSibling;
+				btnClearTwo.style.display = "flex";
+    	},
 		});
+		clearCalendar(calendarPeriod);
 
 		tabs();
 

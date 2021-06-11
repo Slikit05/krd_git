@@ -51,6 +51,9 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 15px 0;
+		@media (max-width: 1079px) {
+			padding: 9.5px 0;
+		}
 	}
 
 	&__left {
@@ -109,6 +112,10 @@
 		font-size: 16px;
 		line-height: 24px;
 		color: #000;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			color: #003B83;
+		}
 	}
 }
 
@@ -166,7 +173,7 @@
 
 			&:hover {
 				span {
-					color: #0050B2;
+					color: #003B83;
 					transform: translateX(0);
 				}
 
@@ -179,7 +186,7 @@
 		svg {
 			max-width: 15px;
 			max-height: 15px;
-			stroke: #0050b2;
+			stroke: #003B83;
 			stroke-width: 2px;
 			margin-top: 3px;
 			transform: translateX(-100%);
@@ -208,6 +215,10 @@
 		stroke: #000000;
 		stroke-width: 2px;
 		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			stroke: #003B83;
+		}
 	}
 }
 

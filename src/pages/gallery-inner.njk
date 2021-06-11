@@ -1,0 +1,352 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	<link rel="stylesheet" href="css/swiper.css">
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Гостям города</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="inner-grid-page">
+		<div class="container">
+			<div class="inner-post">
+				<div class="text-page center-area-two">
+					<div class="text-page__up">
+						<a href="#" class="link-more">
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-two">
+							</svg>
+							<span>Главные новости</span>
+						</a>
+						<h2 class="title">В Краснодаре выбрали лучший эскизный проект для создания Политехнического сквера</h2>
+						<span class="info-text date">10 февраля 2021</span>
+					</div>
+					<div class="slider-gallery">
+						<div class="center-area-one">
+							<div class="slider-gallery__up">
+								<div class="slider-gallery__container swiper-container">
+									<div class="slider-gallery__wrapper swiper-wrapper">
+										{{ mixin.lgSlide('slider-gallery-img1') }}
+										{{ mixin.lgSlide('slider-gallery-img1') }}
+										{{ mixin.lgSlide('slider-gallery-img1') }}
+										{{ mixin.lgSlide('slider-gallery-img1') }}
+										
+										{{ mixin.lgSlide('slider-gallery-img1') }}
+										{{ mixin.lgSlide('slider-gallery-img1') }}
+										{{ mixin.lgSlide('slider-gallery-img1') }}
+										{{ mixin.lgSlide('slider-gallery-img1') }}
+
+										{{ mixin.lgSlide('slider-gallery-img1') }}
+										{{ mixin.lgSlide('slider-gallery-img1') }}
+									</div>
+								</div>
+								<div class="slider-gallery__arrow slider-gallery__arrow--prev">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-one">
+									</svg>
+								</div>
+								<div class="slider-gallery__arrow slider-gallery__arrow--next">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-one">
+									</svg>
+								</div>
+							</div>				
+							<div class="slider-gallery__down">
+								<a href="#" class="btn-white">
+									<span class="btn-white__text">Скачать фото 2,4 мб</span>
+								</a>
+								<div class="slider-gallery__left">
+									<span class="slider-gallery__text">Фотограф: <span>Иванов И. И.</span> Пример описания фото </span>
+								</div>
+								<div class="slider-gallery__right">
+									<div class="slider-gallery__fraction"></div>
+								</div>
+								<div class="slider-sm-galery">
+									<div class="slider-sm-galery__arrow slider-sm-galery__arrow--prev">
+										<svg>
+											<use xlink:href="img/sprite.svg#svg--arrow-one">
+										</svg>
+									</div>
+									<div class="slider-sm-galery__container swiper-container">
+										<div class="slider-sm-galery__wrapper swiper-wrapper">
+											{{ mixin.smSlide('sm-gallery1') }}
+											{{ mixin.smSlide('sm-gallery2') }}
+											{{ mixin.smSlide('sm-gallery3') }}
+
+											{{ mixin.smSlide('sm-gallery1') }}
+											{{ mixin.smSlide('sm-gallery2') }}
+											{{ mixin.smSlide('sm-gallery3') }}
+
+											{{ mixin.smSlide('sm-gallery1') }}
+											{{ mixin.smSlide('sm-gallery2') }}
+
+											{{ mixin.smSlide('sm-gallery1') }}
+											{{ mixin.smSlide('sm-gallery2') }}
+											
+										</div>
+									</div>
+									<div class="slider-sm-galery__arrow slider-sm-galery__arrow--next">
+										<svg>
+											<use xlink:href="img/sprite.svg#svg--arrow-one">
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="text-page__area">
+						<p>
+							<span>
+								По итогам первого студенческого архитектурного воркшопа «Полисквер», финал которого прошел на базе Кубанского государственного технологического университета 27 ноября, определена лучшая эскизная работа. По предложению главы города на ее основе будет разработан проект нового городского сквера. Евгений Первышов сегодня принял участие в итоговой защите проектов.
+							</span>
+						</p>
+						<div class="text-page__wrap">
+							<div class="center-area-one">
+								<p>В мероприятии также приняли участие руководитель департамента по архитектуре и градостроительству Краснодарского края Илья Поздняков, врио ректора Кубанского государственного технологического университета Михаил Барышев, президент КубГТУ, председатель Совета ректоров вузов Краснодарского края и Республики Адыгея Владимир Лобанов, а также главы Усть-Лабинска, Кореновска и Тимашевского района.</p>
+								<p>Обучающий студенческий архитектурный воркшоп «Полисквер» проходил с 23 по 27 ноября на базе КубГТУ. Организаторы — департамент архитектуры и градостроительства г. Краснодара и Кубанский государственный технологический университет.</p>
+							</div>
+						</div>
+						
+						
+						<div class="post-inner-down">
+							<div class="center-area-one">
+								<ul class="share-social share-social--mob">
+									<li class="share-social__item">
+										<a href="#" class="share-social__link">
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--vk">
+											</svg>
+										</a>
+									</li>
+									<li class="share-social__item">
+										<a href="#" class="share-social__link">
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--facebook">
+											</svg>
+										</a>
+									</li>
+									<li class="share-social__item">
+										<a href="#" class="share-social__link">
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--twit">
+											</svg>
+										</a>
+									</li>
+									<li class="share-social__item">
+										<a href="#" class="share-social__link">
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--telegram">
+											</svg>
+										</a>
+									</li>
+								</ul>
+								<a href="#" class="btn-block">
+									<span class="btn-block__text">Читайте новости Краснодара в нашем канале Telegram</span>
+								</a>
+								<div class="topic-row">
+									<span class="topic-row__caption">Темы новости</span>
+									<div class="topic-row__wrapper">
+										<div class="topic-item topic-item--change">
+											<div class="topic-item__wrapper">
+												<span class="topic-item__text">Дороги</span>
+											</div>
+										</div>
+										<div class="topic-item topic-item--change">
+											<div class="topic-item__wrapper">
+												<span class="topic-item__text">Национальные проекты</span>
+											</div>
+										</div>
+										<div class="topic-item topic-item--change">
+											<div class="topic-item__wrapper">
+												<span class="topic-item__text">Евгений Первышов</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="interaction-post">
+									<div class="interaction-post__left">
+										<div class="wrap-disabled">
+											<input type="text" class="field-over" value="krd.ru/n/67017">
+										</div>
+										<a href="#" class="btn-white">
+											<span class="btn-white__text">Копировать URL</span>
+										</a>
+									</div>
+									<div class="interaction-post__right">
+										<a href="#" class="btn-white">
+											<span class="btn-white__text">Распечатать</span>
+											<svg class="btn-white__icon">
+												<use xlink:href="img/sprite.svg#svg--print">
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+				<div class="sticy-block">
+					<div class="sticy-block__wrap">
+						<ul class="share-social">
+							<li class="share-social__item">
+								<a href="#" class="share-social__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--vk">
+									</svg>
+								</a>
+							</li>
+							<li class="share-social__item">
+								<a href="#" class="share-social__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--facebook">
+									</svg>
+								</a>
+							</li>
+							<li class="share-social__item">
+								<a href="#" class="share-social__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--twit">
+									</svg>
+								</a>
+							</li>
+							<li class="share-social__item">
+								<a href="#" class="share-social__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--telegram">
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>					
+				</div>
+			</div>
+			<div class="about-topic">
+				<div class="center-area-one">
+
+					<div class="about-topic__up">
+						<h3 class="title">Так же по теме</h3>
+					</div>
+
+					<div class="about-topic__down">
+						<a href="#" class="md-block-news">
+							<div class="md-block-news__wrapper">
+								<div class="md-block-news__wrap-img">
+									<picture>
+										<source srcset="img/sm-news5.webp" type="image/webp">
+										<source srcset="img/sm-news5.jpg" type="image/jpeg">
+										<img src="img/sm-news5.jpg" alt="">
+									</picture>
+								</div>
+								<div class="md-block-news__down">
+									<div class="md-block-news__wrap-text">
+										<h3>Детские площадки — безопасность превыше всего</h3>
+									</div>
+									<div class="md-block-news__row">
+										<span class="info-text date">10 февраля 2021,</span>
+										<span class="info-text time">10:24</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="md-block-news">
+							<div class="md-block-news__wrapper">
+								<div class="md-block-news__wrap-img">
+									<picture>
+										<source srcset="img/sm-news5.webp" type="image/webp">
+										<source srcset="img/sm-news5.jpg" type="image/jpeg">
+										<img src="img/sm-news5.jpg" alt="">
+									</picture>
+								</div>
+								<div class="md-block-news__down">
+									<div class="md-block-news__wrap-text">
+										<h3>Детские площадки — безопасность превыше всего</h3>
+									</div>
+									<div class="md-block-news__row">
+										<span class="info-text date">10 февраля 2021,</span>
+										<span class="info-text time">10:24</span>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block Scripts %}
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper2 = new Swiper(".slider-sm-galery__container", {
+			spaceBetween: 28,
+			slidesPerView: 8,
+			freeMode: true,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			navigation: {
+				nextEl: ".slider-sm-galery__arrow--next",
+				prevEl: ".slider-sm-galery__arrow--prev",
+			},
+			breakpoints: {
+				1080: {
+					slidesPerView: 8,
+				},
+				768: {
+					slidesPerView: 6,
+				}
+			}
+		});
+		var swiper = new Swiper(".slider-gallery__container", {
+			loop: true,
+			pagination: {
+				el: ".slider-gallery__fraction",
+				type: "fraction",
+				renderFraction: function (currentClass, totalClass) {
+					return '<span class="' + currentClass + '"></span>' +
+									' из ' +
+									'<span class="' + totalClass + '"></span>';
+				}
+			},
+			navigation: {
+				nextEl: ".slider-gallery__arrow--next",
+				prevEl: ".slider-gallery__arrow--prev",
+			},
+			thumbs: {
+				swiper: swiper2,
+			},
+		});
+
+	</script>
+{% endblock %}

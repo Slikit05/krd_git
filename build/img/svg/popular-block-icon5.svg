@@ -1,14 +1,1 @@
-<svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M32 27L38 21V18H23H8V21L14 27" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M14 32V22" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M32 32V22" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M31 18V14C31 11.552 24.913 10 23 10C21.086 10 15 11.552 15 14V18" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M23 9.99997C25.29 9.99997 27 8.27298 27 6.14398V4.85696C27 2.72696 25.29 1.00098 23 1.00098C20.71 1.00098 19 2.72796 19 4.85696V6.14398C19 8.27298 20.71 9.99997 23 9.99997Z" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M43 47V45.103C43 42.285 40.792 40 38 40V39C38 36.183 35.792 33.897 33 33.897C30.208 33.897 28 36.182 28 39C28 36.183 25.792 33.897 23 33.897C20.208 33.897 18 36.182 18 39C18 36.183 15.792 33.897 13 33.897C10.208 33.897 8 36.182 8 39V40C5.208 40 3 42.284 3 45.103V47" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M13 47V45.102C13 42.285 10.792 40 8 40" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M23 47V45.102C23 42.285 20.792 40 18 40C15.208 40 13 42.284 13 45.102V47" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M33 47V45.102C33 42.285 30.792 40 28 40C25.208 40 23 42.284 23 45.102V47" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M38 40C35.208 40 33 42.284 33 45.102V47" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M0 47H47" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M18 32V23H28V32" stroke="#0061D9" stroke-width="2" stroke-miterlimit="10"/>
-</svg>
+<svg width="47" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 27l6-6v-3H8v3l6 6m0 5V22m18 10V22m-1-4v-4c0-2.448-6.087-4-8-4-1.914 0-8 1.552-8 4v4m8-8c2.29 0 4-1.727 4-3.856V4.857c0-2.13-1.71-3.856-4-3.856s-4 1.727-4 3.856v1.287C19 8.273 20.71 10 23 10zm20 37v-1.897C43 42.285 40.792 40 38 40v-1c0-2.817-2.208-5.103-5-5.103S28 36.182 28 39c0-2.817-2.208-5.103-5-5.103S18 36.182 18 39c0-2.817-2.208-5.103-5-5.103S8 36.182 8 39v1c-2.792 0-5 2.284-5 5.103V47"/><path d="M13 47v-1.898C13 42.285 10.792 40 8 40m15 7v-1.898C23 42.285 20.792 40 18 40s-5 2.284-5 5.102V47m20 0v-1.898C33 42.285 30.792 40 28 40s-5 2.284-5 5.102V47m15-7c-2.792 0-5 2.284-5 5.102V47M0 47h47M18 32v-9h10v9"/></svg>

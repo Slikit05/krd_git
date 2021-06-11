@@ -2,6 +2,16 @@
   display: flex;
   align-items: center;
 
+  &:hover {
+    span {
+      color: #003B83;
+    }
+
+    svg {
+      stroke: #003B83;
+    }
+  }
+
   svg {
     width: 16px;
     height: 16px;
@@ -9,12 +19,14 @@
     flex-shrink: 0;
     margin-right: 8px;
     stroke-width: 2px;
+    transition: all 0.3s ease-in-out;
   }
 
   span {
     font-size: 14px;
     line-height: 20px;
     color: #0050b2;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -46,6 +58,7 @@
 
 .blue-line {
   background-color: #00ace3;
+  display: block;
 
   &:last-child {
     margin-bottom: 56px;
@@ -118,6 +131,11 @@
 
   .btn-block {
     border-radius: 0;
+    height: 100%;
+
+    &:focus {
+      box-shadow: none;
+    }
 
     &__text {
       font-size: 14px;
@@ -131,13 +149,28 @@
 }
 
 .btn-block {
-  padding: 14px 30px;
+  padding: 11px 30px 13px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #0061d9;
   cursor: pointer;
   border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #004EAE;
+  }
+
+  &:active {
+    background-color: #004498;
+  }
+
+  &:focus {
+    background-color: #0061D9;
+    // outline: 4px solid #99C0F0;
+    box-shadow: 0 0 0 4px #99C0F0;
+  }
 
   &__text {
     font-weight: 500;
@@ -196,12 +229,20 @@
     }
   }
 
+  .title {
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .md-title {
     margin-bottom: 0;
   }
 }
-
-
 
 .title {
   font-weight: 600;
@@ -331,12 +372,35 @@ ul.share-social--mob li.share-social__item {
   display: flex;
   align-items: center;
 
+  &:hover {
+    span {
+      color: #003B83;
+      border-bottom: 1px solid #003B83;
+    }
+
+    svg {
+      stroke: #003B83;
+    }
+  }
+
+  &:active {
+    span {
+      color: #00387D;
+    }
+
+    svg {
+      stroke: #00387D;
+    }
+  }
+
   span {
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
     color: #0050b2;
     margin-right: 11px;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid transparent;
 
     @media (max-width: 767px) {
       font-size: 16px;
@@ -345,27 +409,33 @@ ul.share-social--mob li.share-social__item {
   }
 
   svg {
-    max-width: 15px;
-    max-height: 15px;
+    max-width: 18px;
+    max-height: 10px;
     stroke: #0050b2;
     stroke-width: 2px;
+    margin-top: 2px;
+    transition: all 0.3s ease-in-out;
   }
 }
 
 .lg-block-news {
+  display: block;
+
+
   &__wrapper {
     @media (max-width: 1200px) {
       display: flex;
       align-items: center;
     }
 
-    @media (max-width: 1079px) {
+    @media (max-width: 991px) {
       display: block;
     }
   }
 
   &__wrap-img {
     margin-bottom: 22px;
+    overflow: hidden;
 
     @media (max-width: 1200px) {
       width: 65.716%;
@@ -373,7 +443,7 @@ ul.share-social--mob li.share-social__item {
       margin-bottom: 0;
     }
 
-    @media (max-width: 1079px) {
+    @media (max-width: 991px) {
       width: auto;
       margin-bottom: 22px;
     }
@@ -383,6 +453,7 @@ ul.share-social--mob li.share-social__item {
 
       img {
         width: 100%;
+        transition: transform .3s ease;
       }
     }
   }
@@ -394,7 +465,7 @@ ul.share-social--mob li.share-social__item {
       padding-right: 10px;
     }
 
-    @media (max-width: 1079px) {
+    @media (max-width: 991px) {
       padding-left: 0;
     }
   }
@@ -406,21 +477,46 @@ ul.share-social--mob li.share-social__item {
       line-height: 28px;
       color: #000;
       margin-bottom: 12px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &:hover {
+    .lg-block-news__wrap-text {
+      h3 {
+        color: #003B83;
+      }
+    }
+
+    .lg-block-news__wrap-img {
+      img {
+        transform: scale(1.05);
+        transition: transform .7s ease;
+      }
     }
   }
 }
 
 .md-block-news {
+  display: block;
+
   &__wrap-img {
     margin-bottom: 18px;
+    overflow: hidden;
 
     picture {
       width: 100%;
 
       img {
         width: 100%;
+        transition: transform .3s ease;
       }
     }
+  }
+
+  .teg-category {
+    display: inline-block;
+    margin-bottom: 10px;
   }
 
   &__wrap-text {
@@ -430,6 +526,22 @@ ul.share-social--mob li.share-social__item {
       line-height: 24px;
       color: #000;
       margin-bottom: 12px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &:hover {
+    .md-block-news__wrap-text {
+      h3 {
+        color: #003B83;
+      }
+    }
+
+    .md-block-news__wrap-img {
+      img {
+        transform: scale(1.05);
+        transition: transform .7s ease;
+      }
     }
   }
 }
@@ -437,12 +549,22 @@ ul.share-social--mob li.share-social__item {
 .info-text {
   font-size: 14px;
   line-height: 20px;
+  font-weight: 500;
   color: rgba($color: #000000, $alpha: 0.6);
 }
 
 .services-post {
   border-bottom: 1px solid #d9d9de;
   padding-bottom: 32px;
+
+  &:hover {
+    .services-post__wrap-text {
+      h3 {
+        color: #003b83;
+        border-color: #003b83;
+      }
+    }
+  }
 
   @media (max-width: 767px) {
     padding-bottom: 16px;
@@ -461,15 +583,29 @@ ul.share-social--mob li.share-social__item {
       width: 100%;
     }
   }
-}
 
-.red {
-  color: #d51a1a;
+  &__wrap-text {
+    align-self: center;
+
+    h3 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      color: #000;
+      transition: all 0.3s ease-in-out;
+      border-bottom: 1px solid transparent;
+      display: inline;
+    }
+  }
 }
 
 .important-block {
   .row-title {
     margin-bottom: 25px;
+  }
+
+  &__up {
+    margin-bottom: 10px;
   }
 
   &__caption {
@@ -478,6 +614,21 @@ ul.share-social--mob li.share-social__item {
     line-height: 28px;
     margin-bottom: 10px;
     display: block;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid transparent;
+    display: inline;
+
+    &:hover {
+      color: #003b83;
+      border-color: #003b83;
+    }
+  }
+}
+.red {
+  color: #d51a1a;
+  &:hover {
+    color: #d51a1a;
+    border-color: #d51a1a;
   }
 }
 
@@ -703,6 +854,17 @@ a.link-doc img {
   display: flex;
   align-items: center;
 
+  &:hover {
+    .link-change__text {
+      color: #003B83;
+      border-color: #003B83;
+    }
+
+    svg {
+      stroke: #0050b2;
+    }
+  }
+
   &__text {
     font-weight: 500;
     font-size: 18px;
@@ -710,6 +872,8 @@ a.link-doc img {
     color: #0050b2;
     margin-right: 13px;
     pointer-events: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
   }
 
   svg {
@@ -719,6 +883,7 @@ a.link-doc img {
     stroke-width: 2px;
     flex-shrink: 0;
     pointer-events: none;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -731,7 +896,6 @@ a.link-doc img {
   }
 
   .btn-white {
-
     @media (max-width: 767px) {
       height: 38px;
       padding: 0;
@@ -877,7 +1041,17 @@ a.link-doc img {
   align-items: center;
   background-color: #fff;
   cursor: pointer;
-  // position: relative;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #F2F6FB;
+    border-color: #0050B2;
+  }
+
+  &:active {
+    background-color: #E6EEF7;
+    border-color: #0050B2;
+  }
 
   @media (max-width: 1079px) {
     padding: 11px 24px;
@@ -905,6 +1079,12 @@ a.link-doc img {
     stroke: #a7a8ab;
     stroke-width: 2px;
     margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    .btn-white__icon {
+      stroke: #0050B2;
+    }
   }
 }
 
@@ -943,6 +1123,7 @@ a.link-doc img {
 
 .check-row {
   display: block;
+  // pointer-events: unset;
 
   input {
     display: none;
@@ -956,6 +1137,7 @@ a.link-doc img {
     border-radius: 4px;
     padding: 10px 12px;
     border: 2px solid transparent;
+    // pointer-events: unset;
   }
 
   &__square {
@@ -967,6 +1149,7 @@ a.link-doc img {
     position: relative;
     flex-shrink: 0;
     display: block;
+    pointer-events: unset;
 
     &::before {
       content: "";
@@ -979,6 +1162,7 @@ a.link-doc img {
       background-size: contain;
       background-repeat: no-repeat;
       opacity: 0;
+      pointer-events: unset;
     }
   }
 
@@ -987,6 +1171,7 @@ a.link-doc img {
     color: #000000;
     font-size: 16px;
     line-height: 24px;
+    pointer-events: unset;
   }
 }
 
@@ -1013,6 +1198,7 @@ a.link-doc img {
 .topic-item {
   padding: 0 6px;
   margin-bottom: 12px;
+  cursor: pointer;
 
   &__wrapper {
     display: flex;
@@ -1020,6 +1206,12 @@ a.link-doc img {
     border: 1px solid #b3cbe8;
     border-radius: 4px;
     padding: 10px 24px 12px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #F2F6FB;
+      border-color: #0050B2;
+    }
   }
 
   &__text {

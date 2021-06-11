@@ -129,7 +129,7 @@ button {
 
 .hiden {
   overflow: hidden;
-  @media (min-width: 1024px) {
+  @media (min-width: 1080px) {
     padding-right: 17px;
   }
 }
@@ -149,6 +149,6 @@ button {
   cite {
     font-weight: 400;
     font-size: 14px;
-    color: #3a4558;
+    color: $mainFontColor;
   }
 }

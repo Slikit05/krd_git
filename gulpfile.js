@@ -45,7 +45,7 @@ gulp.task('scss', function(){
           }))
         .pipe(plugLoader.csso({
             restructure: false,
-            sourceMap: false,
+            sourceMap: true,
             debug: false
         }))
         .pipe(plugLoader.sourcemaps.write())

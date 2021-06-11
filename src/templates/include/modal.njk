@@ -24,14 +24,14 @@
 						</div>
 						<div class="calendar__down">
 							<div class="calendar__tab tab-block tab-block--active" data-tabcontent="date">
-								<input type="text" class="calendar__field calendar__field-date" placeholder="Пожалуйста выберите дату">
-								<button class="btn-white" data-cancel>
+								<input type="text" class="calendar__field calendar__field-date" placeholder="Пожалуйста выберите дату" id="date1">
+								<button class="btn-white btn-cancel">
 									<span class="btn-white__text">Отмена</span>
 								</button>
 							</div>
 							<div class="calendar__tab tab-block tab-block--period flatpickr" data-tabcontent="period">
-								<input type="text" class="calendar__field calendar__field-period" placeholder="Пожалуйста выберите период">
-								<button class="btn-white" title="clear" data-clear>
+								<input type="text" class="calendar__field calendar__field-period" placeholder="Пожалуйста выберите период" id="period1">
+								<button class="btn-white btn-cancel">
 									<span class="btn-white__text">Отмена</span>
 								</button>
 							</div>
@@ -55,7 +55,10 @@
 					<div class="calendar tab-wrapper">
 						<div class="calendar__down">
 							<div class="calendar__tab" >
-								<input type="text" class="calendar__field calendar__field-date" placeholder="Пожалуйста выберите дату">
+								<input type="text" class="calendar__field calendar__field-date" placeholder="Пожалуйста выберите дату" id="date2">
+								<button class="btn-white btn-cancel">
+									<span class="btn-white__text">Отмена</span>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -78,7 +81,7 @@
 						<div class="topic-block__up">
 							<span class="topic-block__caption">Поиск темы</span>
 							<div class="topic-block__field-wrap">
-								<input type="text" class="topic-block__field" placeholder="Введите название темы">
+								<input type="text" id="filter" class="topic-block__field" placeholder="Введите название темы">
 								<div class="topic-block__btn-search">
 									<svg>
 										<use xlink:href="img/sprite.svg#svg--search">
@@ -88,28 +91,11 @@
 						</div>
 						<div class="topic-block__middle">
 							<div class="topic-block__scroll">
-								<ul class="topic-block__list">
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
-									{{ mixin.itemCategory() }}
+								<ul class="topic-block__list" id="items">
+									{{ mixin.itemCategory('Евгений Первышов (2155)', 'item1') }}
+									{{ mixin.itemCategory('Городское хозяйство (1423)', 'item2') }}
+									{{ mixin.itemCategory('Транспорт (1755)', 'item3') }}
+									
 								</ul>
 							</div>
 						</div>
@@ -117,18 +103,12 @@
 							<div class="topic-block__flex">
 								<div class="topic-block__left">
 									<div class="wrapper-topic">
-										<div class="topic-item">
+										{# <div class="topic-item" id="">
 											<div class="topic-item__wrapper">
 												<span class="topic-item__text">Транспорт</span>
 												<span class="topic-item__close"></span>
 											</div>
-										</div>
-										<div class="topic-item">
-											<div class="topic-item__wrapper">
-												<span class="topic-item__text">Транспорт</span>
-												<span class="topic-item__close"></span>
-											</div>
-										</div>
+										</div> #}
 									</div>
 								</div>
 								<div class="topic-block__right">
