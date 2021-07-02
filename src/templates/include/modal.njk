@@ -55,7 +55,7 @@
 					<div class="calendar tab-wrapper">
 						<div class="calendar__down">
 							<div class="calendar__tab" >
-								<input type="text" class="calendar__field calendar__field-date" placeholder="Пожалуйста выберите дату" id="date2">
+								<input type="text" class="calendar__field calendar__field-date calendar__field--change" placeholder="Пожалуйста выберите дату" id="date2">
 								<button class="btn-white btn-cancel">
 									<span class="btn-white__text">Отмена</span>
 								</button>
@@ -81,7 +81,7 @@
 						<div class="topic-block__up">
 							<span class="topic-block__caption">Поиск темы</span>
 							<div class="topic-block__field-wrap">
-								<input type="text" id="filter" class="topic-block__field" placeholder="Введите название темы">
+								<input type="text" id="filter" value="" class="topic-block__field" placeholder="Введите название темы">
 								<div class="topic-block__btn-search">
 									<svg>
 										<use xlink:href="img/sprite.svg#svg--search">
@@ -95,6 +95,22 @@
 									{{ mixin.itemCategory('Евгений Первышов (2155)', 'item1') }}
 									{{ mixin.itemCategory('Городское хозяйство (1423)', 'item2') }}
 									{{ mixin.itemCategory('Транспорт (1755)', 'item3') }}
+									
+									{{ mixin.itemCategory('Евген Первышов (2155)', 'item4') }}
+									{{ mixin.itemCategory('Городское хозяйство (1423)', 'item5') }}
+									{{ mixin.itemCategory('Транспорт (1755)', 'item6') }}
+
+									{{ mixin.itemCategory('Евгений Первышов (2155)', 'item7') }}
+									{{ mixin.itemCategory('Городское хозяйство (1423)', 'item8') }}
+									{{ mixin.itemCategory('Транспорт (1755)', 'item9') }}
+
+									{{ mixin.itemCategory('Евгений Первышов (2155)', 'item10') }}
+									{{ mixin.itemCategory('Городское хозяйство (1423)', 'item11') }}
+									{{ mixin.itemCategory('Транспорт (1755)', 'item12') }}
+
+									{{ mixin.itemCategory('Евгений Первышов (2155)', 'item13') }}
+									{{ mixin.itemCategory('Городское хозяйство (1423)', 'item14') }}
+									{{ mixin.itemCategory('Транспорт (1755)', 'item15') }}
 									
 								</ul>
 							</div>
@@ -112,7 +128,7 @@
 									</div>
 								</div>
 								<div class="topic-block__right">
-									<a href="#" class="btn-block">
+									<a href="#" class="btn-block" data-btn-show>
 										<span class="btn-block__text">Показать</span>
 									</a>
 								</div>

@@ -33,6 +33,11 @@ class Accordion {
         let panel = this.nextElementSibling;
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
+        } else if (panel.closest(".open-accordion")) {
+          // console.log(this);
+          let parentAccordion = this.closest("[data-accordion-content]");
+          parentAccordion.style.maxHeight = parentAccordion.scrollHeight + panel.scrollHeight + "px";
+          panel.style.maxHeight = panel.scrollHeight + "px";
         } else {
           panel.style.maxHeight = panel.scrollHeight + "px";
         }
@@ -57,11 +62,15 @@ accSidebar.createAccordion();
 
 // акордионы  - конец
 
-let breadСrumbs = document.getElementsByClassName("breadcrumbs__list")[0];
+let breadСrumbs = document.querySelector(".breadcrumbs__list");
 
-if (breadСrumbs) {
-  breadСrumbs.scrollLeft = breadСrumbs.offsetWidth + 25;
-}
+setTimeout(function () {
+  if (breadСrumbs) {
+    // console.log(breadСrumbs.offsetWidth + 25);
+    // const scrollWidthLeft =  + 1000000;
+    breadСrumbs.scrollLeft = breadСrumbs.offsetWidth;
+  }
+}, 100);
 
 // Табы
 
@@ -179,88 +188,3 @@ function clearCalendar(itemCalendar) {
 };
 
 // Очистка календаря - конец
-
-
-// Поиск темы
-
-function changeTopic() {
-  const parentLi = document.querySelector("#items");
-  const filter = document.querySelector("#filter");
-
-  filter.addEventListener("keyup", filterItems);
-
-  function filterItems(event) {
-    const searchedText = event.target.value.toLowerCase();
-    const items = parentLi.querySelectorAll("li");
-
-
-    items.forEach(function (item) {
-      // Получаем текст задачи из списка и переводим в нижний регистр
-      const itemText = item.querySelector(".check-row__text").textContent.toLowerCase();
-
-      // Проверяем вхождение искомой подстроки в текст задачи
-      if (itemText.indexOf(searchedText) != -1) {
-        // Если вхождение есть - показываем элемент с задачей
-        item.style.display = "block";
-        item.classList.add("show-item");
-      } else {
-        // Если вхождения нет - скрываем элемент с задачей
-        item.style.display = "none";
-        item.classList.remove("show-item");
-      };
-    });
-
-    const classTest = parentLi.querySelectorAll(".show-item");
-    const addLi = '<span class="mesage-find">Не найдено!</span>';
-    const classAddLi = document.querySelector(".topic-block").querySelectorAll(".mesage-find");
-
-    if (classTest.length == 0 && classAddLi.length < 1) {
-      document.querySelector(".topic-block__scroll").insertAdjacentHTML('afterend', addLi);
-    } else if (classTest.length > 0) {
-      document.querySelector(".topic-block").querySelector(".mesage-find").remove();
-    };
-  };
-};
-
-function addTopic() {
-  const parenTopicHtml = document.querySelector(".wrapper-topic");
-  const inputCheck = document.querySelectorAll(".check-row input");
-  let arrChecked = [];
-
-  inputCheck.forEach(function (item) {
-    item.addEventListener("change", function (event) {
-      const textItem = item.closest(".check-row").querySelector(".check-row__text").textContent.replace(/\s*\(.+?\)$/gm, '');
-      let itemObj = {
-        id: item.closest(".topic-block__item").getAttribute('id'),
-        text: textItem
-      };
-
-      function checkArrChecked(i) {
-        return i.id === itemObj.id;
-      };
-
-      if (item.checked) {
-        if (arrChecked.find(checkArrChecked)) {
-        } else {
-          arrChecked.push(itemObj);
-        }
-      } else {
-        if (arrChecked.find(checkArrChecked)) {
-          const indexItem = arrChecked.indexOf(arrChecked.find(checkArrChecked));
-          arrChecked.splice(indexItem, 1);
-        };
-      };
-      console.log(arrChecked);
-
-      
-
-      arrChecked.forEach(function(arrItem) {
-        console.log(arrItem.id, arrItem.text);
-        parenTopicHtml.innerHTML = "";
-        parenTopicHtml.insertAdjacentHTML('beforeend', `<div class="topic-item" id="${arrItem.id}"><div class="topic-item__wrapper"><span class="topic-item__text">${arrItem.text}</span><span class="topic-item__close"></span></div></div>`);
-      });
-    });
-  });
-};
-
-// Поиск темы - конец

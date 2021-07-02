@@ -10,9 +10,11 @@
 		<div class="gallery-post__wrap-text">
 			<a href="#" class="teg-category"><span>Национальные проекты</span></a>
 			<a href="#" class="teg-category"><span>Образование</span></a>
-			<a href="#">
-				<h4>{{ caption }}</h4>
-			</a>			
+			<div class="gallery-post__row-title">
+				<a href="#">
+					<h4>{{ caption }}</h4>
+				</a>
+			</div>	
 			<span>{{ dateText }}</span>
 		</div>
 	</div>
@@ -31,34 +33,34 @@
 {% endmacro %}
 
 {% macro newsPost() %}
-	<a href="#" class="news-post">
+	<div class="news-post">
 		<div class="news-post__wrapper">
 			<div class="news-post__row">
-				<span class="info-text date">10 февраля 2021,</span>
-				<div class="topic-item topic-item--change">
+				<span class="info-text date">05 марта 2021, 10:24</span>
+				<a href="#" class="topic-item topic-item--change">
 					<div class="topic-item__wrapper">
 						<span class="topic-item__text">Национальные проекты</span>
 					</div>
-				</div>
-				<div class="topic-item topic-item--change">
+				</a>
+				<a href="#" class="topic-item topic-item--change">
 					<div class="topic-item__wrapper">
 						<span class="topic-item__text">Образование</span>
 					</div>
-				</div>
+				</a>
 			</div>
-			<div class="news-post__wrap-img">
+			<a href="#" class="news-post__wrap-img">
 				<picture>
 					<source srcset="img/news-post1.webp" type="image/webp">
 					<source srcset="img/news-post1.jpg" type="image/jpeg">
 					<img src="img/news-post1.jpg" alt="">
 				</picture>
-			</div>
-			<div class="news-post__wrap-text">
+			</a>
+			<a href="#" class="news-post__wrap-text">				
 				<h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
 				<p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
-			</div>
+			</a>
 		</div>
-	</a>
+	</div>
 {% endmacro %}
 
 {% macro humanPostMd(img, caption, text, nameTab) %}
@@ -164,4 +166,21 @@
 			<img src="img/{{ img }}.jpg" alt="">
 		</picture>
 	</div>
+{% endmacro %}
+
+
+{% macro smRowHuman(caption, text) %}
+	<a href="#" class="human-row-sm">
+		<div class="human-row-sm__wrap-img">
+			<picture>
+				<source srcset="img/blockquote-img1.webp" type="image/webp">
+				<source srcset="img/blockquote-img1.png" type="image/png">
+				<img src="img/blockquote-img1.png" alt="">
+			</picture>
+		</div>
+		<span class="human-row-sm__wrap-text">
+			<h4>{{ caption }}</h4>
+			<p>{{ text }}</p>
+		</span>
+	</a>
 {% endmacro %}

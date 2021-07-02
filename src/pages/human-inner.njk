@@ -4,29 +4,31 @@
 	{% include "include/blue-line.njk" %}
 	<div class="breadcrumbs">
 		<div class="container">
-			<ul class="breadcrumbs__list">
-				<li class="breadcrumbs__item">
-					<a href="" class="breadcrumbs__link">Главная</a>
-					<svg>
-						<use xlink:href="img/sprite.svg#svg--arrow-two">
-					</svg>
-				</li>
-				<li class="breadcrumbs__item">
-					<a href="" class="breadcrumbs__link">Пункт меню</a>
-					<svg>
-						<use xlink:href="img/sprite.svg#svg--arrow-two">
-					</svg>
-				</li>
-				<li class="breadcrumbs__item">
-					<a href="" class="breadcrumbs__link">Пункт меню</a>
-					<svg>
-						<use xlink:href="img/sprite.svg#svg--arrow-two">
-					</svg>
-				</li>
-				<li class="breadcrumbs__item">
-					<span class="breadcrumbs__link">Гостям города</span>
-				</li>
-			</ul>
+			<div class="breadcrumbs__scroll">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Главная</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Пункт меню</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Пункт меню</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<span class="breadcrumbs__link">Гостям города</span>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 {% endblock %}
@@ -35,8 +37,8 @@
 	<section class="inner-grid-page">
 		<div class="container">			
 			<div class="text-page">
-				<div class="center-area-two">
-					<div class="text-page__up">
+				<div class="center-area-two center-area-two--change">
+					<div class="text-page__up text-page__up--change">
 						<a href="#" class="link-more">
 							<svg>
 								<use xlink:href="img/sprite.svg#svg--arrow-two">
@@ -104,7 +106,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="center-area-two center-two-change-tablet offset-area">
+				<div class="center-area-two center-two-change-tablet offset-area offset-area--change">
 					<div class="row-title">
 						<h3 class="md-title">Курируемые подразделения</h3>
 					</div>
@@ -132,16 +134,12 @@
 			monthSelectorType: "static",
 			nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
 			prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
-			onValueUpdate: function() {
+			{# onValueUpdate: function() {
 				const btnClearTwo = this.calendarContainer.nextElementSibling;
-				btnClearTwo.style.display = "flex";
-    	},
+				btnClearTwo.style.display = "block";
+    	}, #}
 		});
-		clearCalendar(calendarDateTwo);
-
-		let Scrollbar = window.Scrollbar;
-
-  	Scrollbar.init(document.querySelector('.topic-block__scroll'));
+		{# clearCalendar(calendarDateTwo); #}
 
 	</script>
 {% endblock %}

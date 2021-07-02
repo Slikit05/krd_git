@@ -8,29 +8,31 @@
 	{% include "include/blue-line.njk" %}
 	<div class="breadcrumbs">
 		<div class="container">
-			<ul class="breadcrumbs__list">
-				<li class="breadcrumbs__item">
-					<a href="" class="breadcrumbs__link">Главная</a>
-					<svg>
-						<use xlink:href="img/sprite.svg#svg--arrow-two">
-					</svg>
-				</li>
-				<li class="breadcrumbs__item">
-					<a href="" class="breadcrumbs__link">Пункт меню</a>
-					<svg>
-						<use xlink:href="img/sprite.svg#svg--arrow-two">
-					</svg>
-				</li>
-				<li class="breadcrumbs__item">
-					<a href="" class="breadcrumbs__link">Пункт меню</a>
-					<svg>
-						<use xlink:href="img/sprite.svg#svg--arrow-two">
-					</svg>
-				</li>
-				<li class="breadcrumbs__item">
-					<span class="breadcrumbs__link">Главные новости</span>
-				</li>
-			</ul>
+			<div class="breadcrumbs__scroll">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Главная</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Пункт меню</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Пункт меню</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<span class="breadcrumbs__link">Главные новости</span>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 {% endblock %}
@@ -65,6 +67,9 @@
 
 					{{ mixin.galleryPost('gallery-post3', 'Пример названия галереи', '05 марта 2021, 28 фото') }}
 					{{ mixin.galleryPost('gallery-post1', 'Пример названия галереи', '05 марта 2021, 28 фото') }}
+					{{ mixin.galleryPost('gallery-post2', 'Пример названия галереи', '05 марта 2021, 28 фото') }}
+					{{ mixin.galleryPost('gallery-post2', 'Пример названия галереи', '05 марта 2021, 28 фото') }}
+					{{ mixin.galleryPost('gallery-post2', 'Пример названия галереи', '05 марта 2021, 28 фото') }}
 					{{ mixin.galleryPost('gallery-post2', 'Пример названия галереи', '05 марта 2021, 28 фото') }}
 				</div>
 			</div>
@@ -146,13 +151,135 @@
 
 		tabs();
 
-		changeTopic();
-
-		addTopic();
-
 		let Scrollbar = window.Scrollbar;
 
   	Scrollbar.init(document.querySelector('.topic-block__scroll'));
+
+		// Поиск темы
+
+		function changeTopic() {
+			const parentLi = document.querySelector("#items");
+			const filter = document.querySelector("#filter");
+
+			filter.addEventListener("keyup", filterItems);
+
+			function filterItems(event) {
+				const searchedText = event.target.value.toLowerCase();
+				const items = parentLi.querySelectorAll("li");
+
+
+				items.forEach(function (item) {
+					// Получаем текст задачи из списка и переводим в нижний регистр
+					const itemText = item.querySelector(".check-row__text").textContent.toLowerCase();
+
+					// Проверяем вхождение искомой подстроки в текст задачи
+					if (itemText.indexOf(searchedText) != -1) {
+						// Если вхождение есть - показываем элемент с задачей
+						item.style.display = "block";
+						item.classList.add("show-item");
+					} else {
+						// Если вхождения нет - скрываем элемент с задачей
+						item.style.display = "none";
+						item.classList.remove("show-item");
+					};
+				});
+
+				const classTest = parentLi.querySelectorAll(".show-item");
+				const addLi = '<span class="mesage-find">Не найдено!</span>';
+				const classAddLi = document.querySelector(".topic-block").querySelectorAll(".mesage-find");
+
+				if (classTest.length == 0 && classAddLi.length < 1) {
+					document.querySelector(".topic-block__scroll").insertAdjacentHTML('afterend', addLi);
+				} else if (classTest.length > 0) {
+					document.querySelector(".topic-block").querySelector(".mesage-find").remove();
+				};
+			};
+		};
+
+		const arrChecked = [];
+
+		function addTopic() {
+			const parenTopicHtml = document.querySelector(".wrapper-topic");
+			const inputCheck = document.querySelectorAll(".check-row input");
+
+			inputCheck.forEach(function (item) {
+				item.addEventListener("change", function (event) {
+					const textItem = item.closest(".check-row").querySelector(".check-row__text").textContent.replace(/\s*\(.+?\)$/gm, '');
+					let itemObj = {
+						id: item.closest(".topic-block__item").getAttribute('id'),
+						text: textItem
+					};
+
+					function checkArrChecked(i) {
+						return i.id === itemObj.id;
+					};
+
+					if (item.checked) {
+						if (arrChecked.find(checkArrChecked)) {} else {
+							arrChecked.push(itemObj);
+						}
+					} else {
+						if (arrChecked.find(checkArrChecked)) {
+							const indexItem = arrChecked.findIndex(checkArrChecked);
+							arrChecked.splice(indexItem, 1);
+						};
+					};
+
+					parenTopicHtml.innerHTML = "";
+
+					arrChecked.forEach(function (arrItem) {
+						parenTopicHtml.insertAdjacentHTML('beforeend', `<div class="topic-item" data-id="${arrItem.id}"><div class="topic-item__wrapper"><span class="topic-item__text">${arrItem.text}</span><span class="topic-item__close"></span></div></div>`);
+					});
+					// return arrChecked;
+				});
+			});
+
+			const arrTopic = document.querySelectorAll(".topic-block__item");
+
+			parenTopicHtml.addEventListener("click", function (event) {
+				if (event.target.classList.contains("topic-item__close")) {
+					let topicItemId = event.target.closest(".topic-item").dataset.id;
+					const parentLi = document.querySelector("#items");
+
+					arrChecked.forEach(function (i) {
+						function checkArrChecked(item) {
+							return i.id === item.id;
+						};
+						if (i.id === topicItemId) {
+							const indexItem = arrChecked.findIndex(checkArrChecked);
+							arrChecked.splice(indexItem, 1);
+						}
+					});
+
+					arrTopic.forEach(function (i) {
+						if (i.getAttribute("id") === topicItemId) {
+							i.querySelector('input').checked = false;
+						}
+					});
+
+					event.target.closest(".topic-item").remove();
+				};
+			});
+			return arrChecked;
+		};
+
+		(function () {
+			if (document.querySelector("[data-btn-show]")) {
+				
+				const btnShow = document.querySelector("[data-btn-show]");
+
+				btnShow.addEventListener("click", function (event) {
+					console.log(addTopic());
+				})
+			}
+		})();
+
+		// Поиск темы - конец
+
+
+		changeTopic();
+
+		addTopic();
 
 	</script>
 {% endblock %}

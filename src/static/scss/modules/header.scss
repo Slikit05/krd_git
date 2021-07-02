@@ -184,12 +184,12 @@
 		}
 
 		svg {
-			max-width: 15px;
-			max-height: 15px;
+			max-width: 18px;
+			max-height: 10px;
 			stroke: #003B83;
 			stroke-width: 2px;
-			margin-top: 3px;
-			transform: translateX(-100%);
+			margin-top: 5px;
+			transform: translateX(-26px);
 			transition: all 0.3s ease-in-out;
 			margin-right: 8px;
 		}
@@ -198,8 +198,9 @@
 			font-size: 16px;
 			line-height: normal;
 			color: #000000;
-			transform: translateX(-23px);
+			transform: translateX(-26px);
 			transition: all 0.3s ease-in-out;
+			// margin-left: 8px;
 		}
 	}
 }

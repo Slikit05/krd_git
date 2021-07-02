@@ -206,7 +206,7 @@
             <div class="menu-nav__up">
               <span class="menu-nav__caption">О Краснодаре</span>
               <svg>
-                <use xlink:href="img/sprite.svg#svg--arrow-one">
+                <use xlink:href="img/sprite.svg#svg--arrow-three">
               </svg>
             </div>
             <div class="menu-nav__dropdown">
@@ -228,7 +228,7 @@
             <div class="menu-nav__up">
               <span class="menu-nav__caption">Горожанам</span>
               <svg>
-                <use xlink:href="img/sprite.svg#svg--arrow-one">
+                <use xlink:href="img/sprite.svg#svg--arrow-three">
               </svg>
             </div>
           </div>
@@ -236,7 +236,7 @@
             <div class="menu-nav__up">
               <span class="menu-nav__caption">Администрация</span>
               <svg>
-                <use xlink:href="img/sprite.svg#svg--arrow-one">
+                <use xlink:href="img/sprite.svg#svg--arrow-three">
               </svg>
             </div>
           </div>
@@ -244,7 +244,7 @@
             <div class="menu-nav__up">
               <span class="menu-nav__caption">Городская Дума</span>
               <svg>
-                <use xlink:href="img/sprite.svg#svg--arrow-one">
+                <use xlink:href="img/sprite.svg#svg--arrow-three">
               </svg>
             </div>
           </div>
@@ -252,7 +252,7 @@
             <div class="menu-nav__up">
               <span class="menu-nav__caption">Документы</span>
               <svg>
-                <use xlink:href="img/sprite.svg#svg--arrow-one">
+                <use xlink:href="img/sprite.svg#svg--arrow-three">
               </svg>
             </div>
           </div>
@@ -324,29 +324,31 @@
     </a>
     <div class="breadcrumbs">
       <div class="container">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a href="" class="breadcrumbs__link">Главная</a>
-            <svg>
-              <use xlink:href="img/sprite.svg#svg--arrow-two">
-            </svg>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="" class="breadcrumbs__link">Пункт меню</a>
-            <svg>
-              <use xlink:href="img/sprite.svg#svg--arrow-two">
-            </svg>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="" class="breadcrumbs__link">Пункт меню</a>
-            <svg>
-              <use xlink:href="img/sprite.svg#svg--arrow-two">
-            </svg>
-          </li>
-          <li class="breadcrumbs__item">
-            <span class="breadcrumbs__link">Гостям города</span>
-          </li>
-        </ul>
+        <div class="breadcrumbs__scroll">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="" class="breadcrumbs__link">Главная</a>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--arrow-two">
+              </svg>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="" class="breadcrumbs__link">Пункт меню</a>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--arrow-two">
+              </svg>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="" class="breadcrumbs__link">Пункт меню</a>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--arrow-two">
+              </svg>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link">Гостям города</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -356,8 +358,8 @@
     <section class="inner-grid-page">
       <div class="container">
         <div class="text-page">
-          <div class="center-area-two">
-            <div class="text-page__up">
+          <div class="center-area-two center-area-two--change">
+            <div class="text-page__up text-page__up--change">
               <a href="#" class="link-more">
                 <svg>
                   <use xlink:href="img/sprite.svg#svg--arrow-two">
@@ -425,7 +427,7 @@
               </div>
             </div>
           </div>
-          <div class="center-area-two center-two-change-tablet offset-area">
+          <div class="center-area-two center-two-change-tablet offset-area offset-area--change">
             <div class="row-title">
               <h3 class="md-title">Курируемые подразделения</h3>
             </div>
@@ -537,7 +539,7 @@
               <div class="calendar tab-wrapper">
                 <div class="calendar__down">
                   <div class="calendar__tab">
-                    <input type="text" class="calendar__field calendar__field-date" placeholder="Пожалуйста выберите дату" id="date2">
+                    <input type="text" class="calendar__field calendar__field-date calendar__field--change" placeholder="Пожалуйста выберите дату" id="date2">
                     <button class="btn-white btn-cancel">
                       <span class="btn-white__text">Отмена</span>
                     </button>
@@ -563,7 +565,7 @@
                 <div class="topic-block__up">
                   <span class="topic-block__caption">Поиск темы</span>
                   <div class="topic-block__field-wrap">
-                    <input type="text" id="filter" class="topic-block__field" placeholder="Введите название темы">
+                    <input type="text" id="filter" value="" class="topic-block__field" placeholder="Введите название темы">
                     <div class="topic-block__btn-search">
                       <svg>
                         <use xlink:href="img/sprite.svg#svg--search">
@@ -608,6 +610,142 @@
                       </li>
 
 
+
+                      <li class="topic-block__item" id="item4">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евген Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item5">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item6">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+
+                      <li class="topic-block__item" id="item7">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евгений Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item8">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item9">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+
+                      <li class="topic-block__item" id="item10">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евгений Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item11">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item12">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+
+                      <li class="topic-block__item" id="item13">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евгений Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item14">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item15">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
                     </ul>
                   </div>
                 </div>
@@ -619,7 +757,7 @@
                       </div>
                     </div>
                     <div class="topic-block__right">
-                      <a href="#" class="btn-block">
+                      <a href="#" class="btn-block" data-btn-show>
                         <span class="btn-block__text">Показать</span>
                       </a>
                     </div>
@@ -648,7 +786,7 @@
               <div class="page-footer__row-up">
                 <span class="page-footer__caption">О Краснодаре</span>
                 <svg>
-                  <use xlink:href="img/sprite.svg#svg--arrow-one">
+                  <use xlink:href="img/sprite.svg#svg--arrow-three">
                 </svg>
               </div>
               <ul class="page-footer__list">
@@ -670,7 +808,7 @@
               <div class="page-footer__row-up">
                 <span class="page-footer__caption">Горожанам</span>
                 <svg>
-                  <use xlink:href="img/sprite.svg#svg--arrow-one">
+                  <use xlink:href="img/sprite.svg#svg--arrow-three">
                 </svg>
               </div>
               <ul class="page-footer__list">
@@ -696,7 +834,7 @@
               <div class="page-footer__row-up">
                 <span class="page-footer__caption">Администрация</span>
                 <svg>
-                  <use xlink:href="img/sprite.svg#svg--arrow-one">
+                  <use xlink:href="img/sprite.svg#svg--arrow-three">
                 </svg>
               </div>
               <ul class="page-footer__list">
@@ -713,7 +851,7 @@
               <div class="page-footer__row-up">
                 <span class="page-footer__caption">Горожанам</span>
                 <svg>
-                  <use xlink:href="img/sprite.svg#svg--arrow-one">
+                  <use xlink:href="img/sprite.svg#svg--arrow-three">
                 </svg>
               </div>
               <ul class="page-footer__list">
@@ -732,7 +870,7 @@
               <div class="page-footer__row-up">
                 <span class="page-footer__caption">Документы</span>
                 <svg>
-                  <use xlink:href="img/sprite.svg#svg--arrow-one">
+                  <use xlink:href="img/sprite.svg#svg--arrow-three">
                 </svg>
               </div>
               <ul class="page-footer__list">
@@ -766,7 +904,7 @@
           </ul>
         </div>
         <div class="page-footer__row">
-          <span class="page-footer__text">2021</span>
+          <span class="page-footer__text">2021 ©</span>
           <span class="page-footer__text"><span>Официальный Интернет-портал администрации муниципального образования город Краснодар и городской Думы Краснодара.</span></span>
         </div>
         <div class="page-footer__row">
@@ -812,16 +950,8 @@
       monthSelectorType: "static",
       nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
       prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
-      onValueUpdate: function() {
-        const btnClearTwo = this.calendarContainer.nextElementSibling;
-        btnClearTwo.style.display = "flex";
-      },
+
     });
-    clearCalendar(calendarDateTwo);
-
-    let Scrollbar = window.Scrollbar;
-
-    Scrollbar.init(document.querySelector('.topic-block__scroll'));
   </script>
 
 </body>
