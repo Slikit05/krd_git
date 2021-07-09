@@ -77,6 +77,9 @@
         }
       }
     }
+    &--change {
+      grid-template-columns: repeat(3,1fr);
+    }
   }
 
   .btn-block {
@@ -274,8 +277,6 @@
 
 .news-tabs__item.open-btn {
   &::before {
-    // left: 1px;
-    // right: 2px;
     opacity: 1;
   }
 }
@@ -440,6 +441,10 @@
   padding-bottom: 35px;
   border-bottom: 1px solid #d9d9de;
 
+  @media (max-width: 1023px) {
+    padding-bottom: 27px;
+  }
+
   @media (max-width: 767px) {
     padding-bottom: 20px;
   }
@@ -488,6 +493,10 @@
 .services-to-citizens {
   margin-bottom: 105px;
 
+  &--change-offset {
+    margin-bottom: 75px;
+  }
+
   .row-title {
     @media (max-width: 767px) {
       margin-bottom: 15px;
@@ -515,6 +524,10 @@
       column-gap: 15px;
       margin-bottom: 50px;
       row-gap: 15px;
+    }
+    &--change {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 0;
     }
   }
 

@@ -1,0 +1,93 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	<link rel="stylesheet" href="css/flatpickr.min.css">
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Главные новости</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="content-page">
+		<div class="container">
+			<div class="row-title">
+				<h2 class="title">Структурные подразделения администрации</h2>
+			</div>
+		</div>
+		<div class="container">
+			<div class="popular-grid">
+				{{ mixin.popularBlock('Департамент архитектуры и градостроительства') }}
+				{{ mixin.popularBlock('Департамент городского хозяйства и топливно-энергетического комплекса') }}
+				{{ mixin.popularBlock('Департамент муниципальной собственности и городских земель') }}
+				{{ mixin.popularBlock('Департамент строительства') }}
+				{{ mixin.popularBlock('Управление по социальным вопросам') }}
+				{{ mixin.popularBlock('Управление торговли и бытового обслуживания населения') }}
+				{{ mixin.popularBlock('Управление экономики') }}
+				{{ mixin.popularBlock('Управление инвестиций и развития малого и среднего предпринимательства') }}
+				{{ mixin.popularBlock('Правовой департамент') }}
+				{{ mixin.popularBlock('Управление муниципального контроля') }}
+				{{ mixin.popularBlock('Департамент финансов') }}
+
+				{{ mixin.popularBlock('Департамент транспорта и дорожного хозяйства') }}
+				{{ mixin.popularBlock('Управление делами') }}
+				{{ mixin.popularBlock('Управление цен и тарифов') }}
+				{{ mixin.popularBlock('Управление гражданской защиты') }}
+				{{ mixin.popularBlock('Управление кадровой политики и муниципальной службы') }}
+				{{ mixin.popularBlock('Управление информационно- коммуникационных технологий и связи') }}
+				{{ mixin.popularBlock('Департамент внутренней политики') }}
+				{{ mixin.popularBlock('Управление общественной безопасности и правопорядка') }}
+				{{ mixin.popularBlock('Департамент информационной политики') }}
+				{{ mixin.popularBlock('Департамент по физической культуре и спорту') }}
+				{{ mixin.popularBlock('Отдел по вопросам в сфере охраны здоровья граждан') }}
+
+				{{ mixin.popularBlock('Управление культуры') }}
+				{{ mixin.popularBlock('Департамент образования') }}
+				{{ mixin.popularBlock('Управление по делам молодежи') }}
+				{{ mixin.popularBlock('Управление по вопросам семьи и детства') }}
+				{{ mixin.popularBlock('Управление сельского хозяйства') }}
+				{{ mixin.popularBlock('Управление по делам молодежи') }}
+				{{ mixin.popularBlock('Управление по вопросам семьи и детства') }}
+				{{ mixin.popularBlock('Управление сельского хозяйства') }}
+				{{ mixin.popularBlock('Управление по жилищным вопросам') }}
+				{{ mixin.popularBlock('Управление закупок') }}
+				{{ mixin.popularBlock('Управление по делам казачества и военнослужащих') }}
+
+				{{ mixin.popularBlock('Отдел по мобилизационной работе') }}
+				{{ mixin.popularBlock('Управление контроля и протокола') }}
+			</div>
+		</div>
+	</section>
+	{% include "include/modal.njk" %}
+{% endblock %}
+
+{% block Scripts %}
+	
+{% endblock %}

@@ -184,3 +184,41 @@
 		</span>
 	</a>
 {% endmacro %}
+
+{% macro smRowHumanTwo(caption, text) %}
+	<div class="human-row-sm">
+		<div class="human-row-sm__wrap-img">
+			<picture>
+				<source srcset="img/blockquote-img1.webp" type="image/webp">
+				<source srcset="img/blockquote-img1.png" type="image/png">
+				<img src="img/blockquote-img1.png" alt="">
+			</picture>
+		</div>
+		<span class="human-row-sm__wrap-text">
+			<h4>{{ caption }}</h4>
+			<p>{{ text }}</p>
+		</span>
+	</div>
+{% endmacro %}
+
+{% macro fieldText(description, important, placeholder) %}
+	<div class="wrap-field">
+		<label>
+			<span class="wrap-field__description">{{ description }}<span class="red">{{ important }}</span>:</span>
+			<input type="text" class="wrap-field__field" placeholder="{{ placeholder }}">
+		</label>
+	</div>
+{% endmacro %}
+
+{% macro popularBlock(caption) %}
+	<a href="#" class="post-popular-block">
+		<div class="post-popular-block__wrap-img">
+			<svg>
+				<use xlink:href="img/sprite.svg#svg--popular-block-icon1">
+			</svg>
+		</div>
+		<div class="post-popular-block__wrap-text">
+			<span class="post-popular-block__caption">{{ caption }}</span>
+		</div>
+	</a>
+{% endmacro %}
