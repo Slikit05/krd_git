@@ -484,7 +484,7 @@
     }
 
     span.info-text {
-      color: rgba(0,0,0,.6);
+      color: rgba(0, 0, 0, .6);
     }
 
     a {
@@ -2080,6 +2080,8 @@
 
 .wrap-field {
   margin-bottom: 22px;
+  position: relative;
+  
 
   &:last-child {
     margin-bottom: 0;
@@ -2102,11 +2104,23 @@
     width: 100%;
     padding: 11px 14px;
     border: 1px solid #A7A8AB;
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+    }
+    @media (max-width: 767px) {
+      padding: 7px 14px;
+      font-size: 16px;
+      line-height: 24px;
+    }
 
     &::placeholder {
       font-size: 18px;
       line-height: 28px;
       color: #76767A;
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
 
     &:focus {
@@ -2134,6 +2148,16 @@
 
     &:focus {
       box-shadow: 0 0 0 4px #99A9F8;
+    }
+  }
+  svg {
+    position: absolute;
+    bottom: 17px;
+    right: 14px;
+    width: 17px;
+    height: 17px;
+    @media (max-width: 767px) {
+      bottom: 12px;
     }
   }
 }
@@ -2261,6 +2285,11 @@
 .news-slider {
   position: relative;
   margin-bottom: 40px;
+  @media (max-width: 767px) {
+    margin: 0 -24px 40px;
+    padding: 0 24px;
+    overflow: hidden;
+  }
 
   &__container {
     max-width: 100%;
@@ -2270,6 +2299,10 @@
   &__wrap {
     display: grid;
     align-items: flex-end;
+
+    @media (max-width: 767px) {
+      display: block;
+    }
 
     &:hover {
       img {
@@ -2284,6 +2317,11 @@
     overflow: hidden;
     position: relative;
     border-radius: 4px;
+
+    @media (max-width: 767px) {
+      grid-area: inherit;
+      margin-bottom: 15px;
+    }
 
     &::before {
       content: "";
@@ -2307,6 +2345,11 @@
     position: relative;
     z-index: 1;
     padding: 25px 32px;
+
+    @media (max-width: 767px) {
+      grid-area: inherit;
+      padding: 0;
+    }
   }
 
   &__caption {
@@ -2316,6 +2359,13 @@
     color: #fff;
     display: block;
     margin-bottom: 12px;
+
+    @media (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+      color: #000000;
+      margin-bottom: 0;
+    }
   }
 
   &__text {
@@ -2323,6 +2373,12 @@
     line-height: 28px;
     color: #FFFFFF;
     display: block;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+      line-height: 24px;
+      color: #0050B2;
+    }
   }
 
   &__arrow {
@@ -2343,6 +2399,10 @@
       width: 60px;
       height: 60px;
       top: calc(50% - 30px);
+    }
+
+    @media (max-width: 767px) {
+      top: 36px;
     }
 
     &:hover {
@@ -2376,6 +2436,9 @@
       @media (max-width: 1300px) {
         left: -30px;
       }
+      @media (max-width: 767px) {
+        left: -6px;
+      }
     }
 
     &--next {
@@ -2383,6 +2446,35 @@
 
       @media (max-width: 1300px) {
         right: -30px;
+      }
+      @media (max-width: 767px) {
+        right: -6px;
+      }
+    }
+  }
+}
+
+.documentation-sect {
+  margin-bottom: 50px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    @media (max-width: 767px) {
+      row-gap: 32px;
+    }
+    .news-post {
+      &__row {
+        min-width: 210px;
+        @media (max-width: 1300px) {
+          margin-bottom: 0;
+        }
+      }
+      &__wrap-text {
+        @media (max-width: 1300px) {
+          padding: 0;
+          width: auto;
+        }
       }
     }
   }
