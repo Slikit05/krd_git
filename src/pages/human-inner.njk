@@ -125,21 +125,37 @@
 {% block Scripts %}
 	<script src="js/flatpickr.js"></script>
 	<script src="js/flatpickr-ru.js"></script>
-	<script src="js/smooth-scrollbar.js"></script>
 	<script>
+		const funcDays = function(arrDay) {
+			fetch('js/calendarEvents.json').then(response => response.json()).then(data => {
+				data.forEach(function(item) {
+					const labelDays = arrDay.getAttribute("aria-label");
+					if (item.date === labelDays) {
+						arrDay.classList.add("event-day");
+						if (!arrDay.querySelector(".event-text-hiden")) {
+							arrDay.insertAdjacentHTML('beforeend', `<span class='event-text-hiden'>${item.text}</span>`);
+						}
+					}
+				});
+			});
+		};
+
+
 		let calendarDateTwo = flatpickr("#date2", {
 			inline: true,
 			"locale": "ru",
-			dateFormat: "Y-m-d H:i",
+			dateFormat: "Y-m-d",
 			monthSelectorType: "static",
 			nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
 			prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
-			{# onValueUpdate: function() {
-				const btnClearTwo = this.calendarContainer.nextElementSibling;
-				btnClearTwo.style.display = "block";
-    	}, #}
+			onDayCreate: function(dObj, dStr, fp, dayElem){
+				funcDays(dayElem);
+			},
+			onChange: function(date, str, inst) {
+				const days = inst.days.children;
+				console.log(date.length);
+			},
 		});
-		{# clearCalendar(calendarDateTwo); #}
-
+		
 	</script>
 {% endblock %}

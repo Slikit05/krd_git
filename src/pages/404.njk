@@ -1,0 +1,38 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	<link rel="stylesheet" href="css/flatpickr.min.css">
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+{% endblock %}
+
+{% block Content %}
+	<section class="content-page">
+		<div class="container">
+			<div class="not-found-page">
+				<div class="not-found-page__left">
+					<img src="img/svg/404.svg" alt="">
+				</div>
+				<div class="not-found-page__right">
+					<div class="row-title">
+						<h2 class="title">Ошибка 404. Страница не найдена!</h2>		
+					</div>
+					<div class="not-found-page__area">
+						<p>Уважаемый посетитель, если вы уверены, что такой страницы нет по нашей вине, пожалуйста, <a href="#">сообщите нам</a> об этом и не забудьте указать адрес, с которого вы сюда попали.</p>
+						<h4>Что делать:</h4>
+						<p>Если вы вводили адрес вручную в адресной строке браузера, проверьте, всё ли вы написали правильно.</p>
+						<p>Если вы перешли по ссылке с другого сайта, попробуйте перейти на первую страницу <a href="#">krd.ru</a> и найти нужный вам материал там.</p>
+						<a href="#" class="btn-white">
+							<span class="btn-white__text">Перейти на главную</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block Scripts %}
+{% endblock %}

@@ -158,7 +158,6 @@ function openList() {
 
       document.querySelector("#" + btnName).classList.add("modal--open");
       document.querySelector("html").classList.add("hiden");
-
     };
 
     if (event.target.classList.contains("modal__overlay")) {
@@ -188,3 +187,104 @@ function clearCalendar(itemCalendar) {
 };
 
 // Очистка календаря - конец
+
+
+// Модальное окно с официальными сайтами
+
+const arrNameSites = [];
+
+(function () {
+
+  const arrFiltrSites = document.querySelectorAll(".sites-modal__item input");
+
+  arrFiltrSites.forEach(function (item) {
+    item.addEventListener("change", function (event) {
+      const idItem = item.closest(".sites-modal__item").dataset.sites;
+      const bloksSites = document.querySelectorAll(".sites-block");
+
+      function showBlocksSites() {
+        bloksSites.forEach(function (i) {
+          i.style.display = "none";
+        });
+
+        arrNameSites.forEach(function (nameSites) {
+          document.querySelector("#" + nameSites).style.display = "block";
+        })
+      }
+
+      if (event.target.checked) {
+        arrNameSites.push(idItem);
+        showBlocksSites();
+      } else if(!event.target.checked) {
+        const indexItem = arrNameSites.indexOf(idItem);
+        arrNameSites.splice(indexItem, 1);
+        showBlocksSites();
+      };
+
+      if (arrNameSites.length === 0) {
+        bloksSites.forEach(function(i) {
+          i.style.display = "block";
+        });
+      }      
+    });
+  });
+
+})();
+
+let ScrollbarModal = window.Scrollbar;
+
+ScrollbarModal.init(document.querySelector('.sites-modal__left'));
+ScrollbarModal.init(document.querySelector('.sites-modal__right'));
+
+// Модальное окно с официальными сайтами - конец
+
+
+
+// days.forEach(function(itemDay) {
+//   if(itemDay.classList.contains("event-day")) {
+//     console.log("Есть текст")
+//   }
+// });
+
+// (function() {
+//   window.addEventListener("click", function (event) {
+//     if (event.target.classList.contains("event-day")) {
+//       //console.log(event.target.querySelector(".event-text-hiden").textcontent)
+//       console.log("fire")
+//     };
+//   });
+// })();
+
+// onChange: function(selectedDates, dateStr, instance) {
+//   const days = instance.days.children;
+  
+  //console.log(days)
+  //funcDays(days);	
+  
+// },
+// onReady: function() {
+//   console.log("fire")
+// }
+
+
+// (function() {
+//   const days = calendarDateTwo.days.children;
+//   //console.log(days);
+//   window.addEventListener("click", function(event) {
+//     setTimeout(function(){
+//       if (event.target.classList.contains("flatpickr-day")) {
+//         console.log("fire");
+//       }
+//     }, 500)
+//   });
+// })();
+
+
+// for (let day of days) {
+//   funcDays(day);
+//   setTimeout(function() {
+//     if (day.classList.contains("event-day")){
+//       console.log("нашел")
+//     }
+//   }, 500)
+// }

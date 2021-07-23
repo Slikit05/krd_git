@@ -118,7 +118,6 @@
 {% block Scripts %}
 	<script src="js/flatpickr.js"></script>
 	<script src="js/flatpickr-ru.js"></script>
-	<script src="js/smooth-scrollbar.js"></script>
 	<script>
 		let calendarDateOne = flatpickr("#date1", {
 			inline: true,
@@ -129,7 +128,7 @@
 			prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
 			onValueUpdate: function() {
 				const btnClear = this.calendarContainer.nextElementSibling;
-				btnClear.style.display = "flex";				
+				btnClear.style.display = "flex";
     	},
 		});
 		clearCalendar(calendarDateOne);
@@ -170,7 +169,7 @@
 
 				items.forEach(function (item) {
 					// Получаем текст задачи из списка и переводим в нижний регистр
-					const itemText = item.querySelector(".check-row__text").textContent.toLowerCase();
+					const itemText = item.querySelector(".topic-block__item .check-row__text").textContent.toLowerCase();
 
 					// Проверяем вхождение искомой подстроки в текст задачи
 					if (itemText.indexOf(searchedText) != -1) {
@@ -200,11 +199,11 @@
 
 		function addTopic() {
 			const parenTopicHtml = document.querySelector(".wrapper-topic");
-			const inputCheck = document.querySelectorAll(".check-row input");
+			const inputCheck = document.querySelectorAll(".topic-block__item input");
 
 			inputCheck.forEach(function (item) {
 				item.addEventListener("change", function (event) {
-					const textItem = item.closest(".check-row").querySelector(".check-row__text").textContent.replace(/\s*\(.+?\)$/gm, '');
+					const textItem = item.closest(".topic-block__item").querySelector(".check-row__text").textContent.replace(/\s*\(.+?\)$/gm, '');
 					let itemObj = {
 						id: item.closest(".topic-block__item").getAttribute('id'),
 						text: textItem

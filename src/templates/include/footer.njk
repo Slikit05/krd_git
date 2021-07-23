@@ -1,5 +1,5 @@
 <section class="page-footer">
-	<a href="#" class="btn-block">
+	<a href="#" class="btn-block" data-click-modal="sites">
 		<span class="btn-block__text">Официальные сайты</span>
 		<svg>
 			<use xlink:href="img/sprite.svg#svg--arrow-link">
@@ -162,3 +162,83 @@
 		</div>
 	</div>
 </section>
+
+<div class="modal" id="sites">
+	<div class="modal__overlay">
+		<div class="modal__block sites-modal">
+			<div class="modal__up">
+				<h4 class="modal__caption">Официальные сайты</h4>
+				<span class="close"></span>
+			</div>
+			<div class="modal__down">
+				<div class="modal__content">
+					<div class="sites-modal__wrapper">
+						<div class="sites-modal__left">
+							<ul class="sites-modal__list">
+								{{ mixin.itemSites('Государственные сайты (6)', 'sitesFilter1') }}
+								{{ mixin.itemSites('Городская власть (45)', 'sitesFilter2') }}
+								{{ mixin.itemSites('Городские сферы (45)', 'sitesFilter3') }}
+								{{ mixin.itemSites('Здравоохранение (31)', 'sitesFilter4') }}
+								{{ mixin.itemSites('Туризм и отдых (12)', 'sitesFilter5') }}
+								{{ mixin.itemSites('Спорт (42)', 'sitesFilter6') }}
+								{{ mixin.itemSites('Образование (120)', 'sitesFilter7') }}
+								{{ mixin.itemSites('Библиотеки (15)', 'sitesFilter8') }}
+								{{ mixin.itemSites('Вуз (14)', 'sitesFilter9') }}
+								{{ mixin.itemSites('Кинотеатры (4)', 'sitesFilter10') }}
+								{{ mixin.itemSites('Кинотеатры (4)', 'sitesFilter11') }}
+								{{ mixin.itemSites('Тест1 (14)', 'sitesFilter12') }}
+								{{ mixin.itemSites('Тест2 (4)', 'sitesFilter13') }}
+								{{ mixin.itemSites('Тест3 (4)', 'sitesFilter14') }}
+							</ul>
+						</div>
+						<div class="sites-modal__right">
+							<div class="sites-block" id="sitesFilter1">
+								<div class="sites-block__up">
+									<h2 class="sites-block__title">Государственные сайты (6)</h2>
+								</div>
+								<div class="sites-block__down">
+									{{ mixin.sitesItem('Президент РФ', 'kremlin.ru') }}
+									{{ mixin.sitesItem('Правительство РФ', 'government.ru') }}
+									{{ mixin.sitesItem('Совет федерации федерального собрания РФ', 'council.gov.ru') }}
+									{{ mixin.sitesItem('Государственная дума РФ', 'duma.gov.ru') }}
+									{{ mixin.sitesItem('Конституционный суд РФ', 'ksrf.ru') }}
+									{{ mixin.sitesItem('Верховный суд РФ', 'vsrf.ru') }}
+								</div>
+							</div>
+							<div class="sites-block" id="sitesFilter2">
+								<div class="sites-block__up">
+									<h2 class="sites-block__title">Городские сферы (45)</h2>
+								</div>
+								<div class="sites-block__down">
+									{{ mixin.sitesItem('Уполномоченный по правам человека', 'kubanombudsman.org') }}
+									{{ mixin.sitesItem('Уполномоченный по правам ребёнка в Краснодарском крае', 'куб.дети') }}
+									{{ mixin.sitesItem('Совет федерации федерального собрания РФ', 'council.gov.ru') }}
+									{{ mixin.sitesItem('Государственная дума РФ', 'duma.gov.ru') }}
+									{{ mixin.sitesItem('Конституционный суд РФ', 'ksrf.ru') }}
+									{{ mixin.sitesItem('Верховный суд РФ', 'vsrf.ru') }}
+								</div>
+							</div>
+							<div class="sites-block" id="sitesFilter3">
+								<div class="sites-block__up">
+									<h2 class="sites-block__title">Тест1 (4)</h2>
+								</div>
+								<div class="sites-block__down">
+									{{ mixin.sitesItem('Президент РФ', 'kremlin.ru') }}
+									{{ mixin.sitesItem('Правительство РФ', 'government.ru') }}
+									{{ mixin.sitesItem('Совет федерации федерального собрания РФ', 'council.gov.ru') }}
+									{{ mixin.sitesItem('Государственная дума РФ', 'duma.gov.ru') }}
+									{{ mixin.sitesItem('Конституционный суд РФ', 'ksrf.ru') }}
+									{{ mixin.sitesItem('Верховный суд РФ', 'vsrf.ru') }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	
+</script>

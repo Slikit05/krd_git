@@ -1,0 +1,238 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Структура администрации</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="inner-grid-page">
+		<div class="container">
+			<div class="inner-grid-page__wrapper">
+				<div class="inner-grid-page__left">
+					<div class="link-menu">
+						<div class="link-menu__up accordion-js">
+							<span class="link-menu__caption">Популярные услуги</span>
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-three">
+							</svg>
+						</div>
+						<ul class="link-menu__list">
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Бургас</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Феррара</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Таллахасси</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Карлсруэ</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Харбин</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Ноттингем</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Сухум</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Ереван</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Нанси</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Вельс</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Ларнака</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inner-grid-page__right">
+					<div class="text-page center-area-one">
+						<div class="row-title">
+							<h2 class="title">Города-побратимы и города-партнёры</h2>
+						</div>
+						<div class="text-page__area">
+							<div class="map" id="map"></div>
+							<p>В настоящее время у города Краснодара восемь городов-побратимов:Бургас (Болгария), Феррара (Италия), Таллахасси (США),Карлсруэ (ФРГ), Харбин (КНР), Сухум (Абхазия), Вельс (Австрия), Нанси (Франция) </p>
+							<p>и три города-партнёра: Ноттингем (Великобритания), Ереван (Армения), Ларнака (Кипр).</p>
+							<p>Побратимские связи города Краснодара находятся в постоянном развитии.</p>
+							<h3>Краснодар - Бургас (1974)</h3>
+							<p>Краснодар установил дружественные связи с Бургасским округом НРБ в 1962 г. по инициативе партийных органов Бургаса.</p>
+							<p>Начиная с 1970-х гг. в Краснодаре проводились «Дни болгарской культуры», в Бургасе - «Дни русской культуры». В 2007 году в Краснодаре проходили «Дни Болгарии». С того же года официальная делегация из администрации Бургаса принимает активное участия в праздновании Дня города Краснодара (2007,2010,2011,2013, 2014,2018).</p>
+							<p>В 2010 году в рамках празднования Дня города Краснодара был подписан Договор о возобновлении побратимских связей с болгарским городом Бургасом.</p>
+							<p>В 2011 году делегация города Краснодара приняла участие в праздновании Дня города Бургаса. В том же году в Бургасе ансамбль казачьей песни «Казачья удаль» выступил на 39-ом Международном фольклорном фестивале «Сохраним завещанное дедами и передадим детям!».</p>
+							<p>В 2013 году в Краснодаре была организована выставка бургаской художницы Анамарии Коевой «Настроение».</p>
+							<p>В 2015 году на торжественном закрытии Дней культуры в Бургасе выступал вокально-хореографический ансамбль «Родник» из города Краснодара.</p>
+							<p>В сентябре 2016 года Краснодар посетил мэр Бургаса Димитр Николов. Он принял участие в торжественных мероприятиях, посвященных Дню города.</p>
+							<p>В декабре 2018 года делегация Краснодара приняла участие в мероприятиях, посвященных празднованию Дня города Бургаса.</p>
+							<h3>Краснодар - Феррара (1965)</h3>
+							<p>Феррара – один из первых городов-побратимов города Краснодара, с которым были установлены побратимские связи в 1965 г. Укрепляя и развивая дружественные связи города-побратимы обменивались информацией о планах и работе городского хозяйства и благоустройства городов.</p>
+							<p>В 1966 г. жители Краснодара оказали помощь населению породненного города, пострадавшему от наводнения.</p>
+							<p>С особым размахом проводились дни «Дружбы с Италией», дни «Дружбы с Феррарой», кинофестивали, недели итальянской книги и читательские конференции в библиотеках города. Постоянно поддерживались связи между родственными организациями: больницей Хлопчатобумажного комбината и госпиталем Св. Анны, КубГУ и феррарским университетом, средней школой № 48 и лицеем-гимназией «Ариосто» и др.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block Scripts %}
+<script src="https://api-maps.yandex.ru/2.1/?apikey=fc075a8b-9c59-4b8d-b8cb-0172442a14a7&amp;lang=ru_RU" type="text/javascript"></script>
+<script>
+	ymaps.ready(function () {
+			var myMap = new ymaps.Map('map', {
+							center: [55.751574, 37.573856],
+							zoom: 25
+					}, {
+							searchControlProvider: 'yandex#search'
+					}),
+					clusterer = new ymaps.Clusterer({
+							preset: 'islands#blueIcon',
+							clusterHideIconOnBalloonOpen: false,
+							geoObjectHideIconOnBalloonOpen: false
+					});
+
+			clusterer.events
+					
+					.add(['mouseenter', 'mouseleave'], function (e) {
+							var target = e.get('target'),
+									type = e.get('type');
+							if (typeof target.getGeoObjects != 'undefined') {
+									
+									if (type == 'mouseenter') {
+											target.options.set('preset', 'islands#blueIcon');
+									} else {
+											target.options.set('preset', 'islands#blueIcon');
+									}
+							} else {
+									if (type == 'mouseenter') {
+											target.options.set('preset', 'islands#blueIcon');
+									} else {
+											target.options.set('preset', 'islands#blueIcon');
+									}
+							}
+					});
+
+			var getPointData = function (index) {
+							return {
+									balloonContentBody: 'балун <strong>метки ' + index + '</strong>',
+									clusterCaption: 'метка <strong>' + index + '</strong>'
+							};
+					},
+					getPointOptions = function () {
+							return {
+									preset: 'islands#blueIcon'
+							};
+					},
+					points = [
+							[55.831903,37.411961], [55.763338,37.565466], [55.763338,37.565466], [55.744522,37.616378], [55.780898,37.642889], [55.793559,37.435983], [55.800584,37.675638], [55.716733,37.589988], [55.775724,37.560840], [55.822144,37.433781], [55.874170,37.669838], [55.716770,37.482338], [55.780850,37.750210], [55.810906,37.654142], [55.865386,37.713329], [55.847121,37.525797], [55.778655,37.710743], [55.623415,37.717934], [55.863193,37.737000], [55.866770,37.760113], [55.698261,37.730838], [55.633800,37.564769], [55.639996,37.539400], [55.690230,37.405853], [55.775970,37.512900], [55.775777,37.442180], [55.811814,37.440448], [55.751841,37.404853], [55.627303,37.728976], [55.816515,37.597163], [55.664352,37.689397], [55.679195,37.600961], [55.673873,37.658425], [55.681006,37.605126], [55.876327,37.431744], [55.843363,37.778445], [55.875445,37.549348], [55.662903,37.702087], [55.746099,37.434113], [55.838660,37.712326], [55.774838,37.415725], [55.871539,37.630223], [55.657037,37.571271], [55.691046,37.711026], [55.803972,37.659610], [55.616448,37.452759], [55.781329,37.442781], [55.844708,37.748870], [55.723123,37.406067], [55.858585,37.484980]
+					],
+					geoObjects = [];
+
+			for(var i = 0, len = points.length; i < len; i++) {
+					geoObjects[i] = new ymaps.Placemark(points[i], getPointData(i), getPointOptions());
+			}
+
+			clusterer.add(geoObjects);
+			myMap.geoObjects.add(clusterer);
+
+			myMap.setBounds(clusterer.getBounds(), {
+					checkZoomRange: true
+			});
+	});
+</script>
+{% endblock %}

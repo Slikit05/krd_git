@@ -11,6 +11,11 @@
     @media (max-width: 575px) {
       margin-bottom: 25px;
     }
+    &--change {
+      @media (max-width: 767px) {
+        margin-bottom: 40px;
+      }
+    }
   }
 
   &__grid {
@@ -503,7 +508,7 @@
   border-bottom: 1px solid #d9d9de;
 
   @media (max-width: 1023px) {
-    padding-bottom: 27px;
+    padding-bottom: 30px;
   }
 
   @media (max-width: 767px) {
@@ -518,6 +523,7 @@
 
     svg {
       stroke: #003B83;
+      fill: #003B83;
     }
   }
 
@@ -529,6 +535,7 @@
       max-width: 48px;
       max-height: 48px;
       stroke: #0061D9;
+      fill: #0061D9;
       stroke-width: 2px;
       transition: all 0.3s ease-in-out;
     }
@@ -555,7 +562,13 @@
   margin-bottom: 105px;
 
   &--change-offset {
-    margin-bottom: 75px;
+    margin-bottom: 95px;
+    @media (max-width: 1079px) {
+      margin-bottom: 80px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 50px;
+    }
   }
 
   .row-title {

@@ -529,7 +529,7 @@
 
     <div class="modal" id="calendar2">
       <div class="modal__overlay">
-        <div class="modal__block modal-calendar">
+        <div class="modal__block modal-calendar event-calendar">
           <div class="modal__up">
             <h4 class="modal__caption">Календарь</h4>
             <span class="close"></span>
@@ -551,6 +551,32 @@
         </div>
       </div>
     </div>
+
+    <div class="modal" id="calendar3">
+      <div class="modal__overlay">
+        <div class="modal__block modal-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Календарь</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="calendar tab-wrapper">
+                <div class="calendar__down">
+                  <div class="calendar__tab">
+                    <input type="text" class="calendar__field calendar__field-date calendar__field--change" placeholder="Пожалуйста выберите дату" id="period2">
+                    <button class="btn-white btn-cancel">
+                      <span class="btn-white__text">Отмена</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <div class="modal" id="topic">
       <div class="modal__overlay">
@@ -770,10 +796,12 @@
       </div>
     </div>
 
+
+
   </main>
   <footer>
     <section class="page-footer">
-      <a href="#" class="btn-block">
+      <a href="#" class="btn-block" data-click-modal="sites">
         <span class="btn-block__text">Официальные сайты</span>
         <svg>
           <use xlink:href="img/sprite.svg#svg--arrow-link">
@@ -936,21 +964,442 @@
         </div>
       </div>
     </section>
+
+    <div class="modal" id="sites">
+      <div class="modal__overlay">
+        <div class="modal__block sites-modal">
+          <div class="modal__up">
+            <h4 class="modal__caption">Официальные сайты</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="sites-modal__wrapper">
+                <div class="sites-modal__left">
+                  <ul class="sites-modal__list">
+
+                    <li class="sites-modal__item" data-sites="sitesFilter1">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Государственные сайты (6)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter2">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Городская власть (45)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter3">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Городские сферы (45)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter4">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Здравоохранение (31)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter5">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Туризм и отдых (12)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter6">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Спорт (42)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter7">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Образование (120)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter8">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Библиотеки (15)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter9">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Вуз (14)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter10">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Кинотеатры (4)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter11">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Кинотеатры (4)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter12">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Тест1 (14)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter13">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Тест2 (4)</span>
+                        </div>
+                      </label>
+                    </li>
+
+
+                    <li class="sites-modal__item" data-sites="sitesFilter14">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Тест3 (4)</span>
+                        </div>
+                      </label>
+                    </li>
+
+                  </ul>
+                </div>
+                <div class="sites-modal__right">
+                  <div class="sites-block" id="sitesFilter1">
+                    <div class="sites-block__up">
+                      <h2 class="sites-block__title">Государственные сайты (6)</h2>
+                    </div>
+                    <div class="sites-block__down">
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Президент РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">kremlin.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Правительство РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">government.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Совет федерации федерального собрания РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">council.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Государственная дума РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">duma.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Конституционный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">ksrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Верховный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">vsrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+                    </div>
+                  </div>
+                  <div class="sites-block" id="sitesFilter2">
+                    <div class="sites-block__up">
+                      <h2 class="sites-block__title">Городские сферы (45)</h2>
+                    </div>
+                    <div class="sites-block__down">
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Уполномоченный по правам человека</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">kubanombudsman.org</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Уполномоченный по правам ребёнка в Краснодарском крае</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">куб.дети</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Совет федерации федерального собрания РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">council.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Государственная дума РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">duma.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Конституционный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">ksrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Верховный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">vsrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+                    </div>
+                  </div>
+                  <div class="sites-block" id="sitesFilter3">
+                    <div class="sites-block__up">
+                      <h2 class="sites-block__title">Тест1 (4)</h2>
+                    </div>
+                    <div class="sites-block__down">
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Президент РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">kremlin.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Правительство РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">government.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Совет федерации федерального собрания РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">council.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Государственная дума РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">duma.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Конституционный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">ksrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Верховный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">vsrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+    </script>
   </footer>
+  <script src="js/smooth-scrollbar.js"></script>
   <script src="js/main.js"></script>
 
   <script src="js/flatpickr.js"></script>
   <script src="js/flatpickr-ru.js"></script>
-  <script src="js/smooth-scrollbar.js"></script>
   <script>
+    const funcDays = function(arrDay) {
+      fetch('js/calendarEvents.json').then(response => response.json()).then(data => {
+        data.forEach(function(item) {
+          const labelDays = arrDay.getAttribute("aria-label");
+          if (item.date === labelDays) {
+            arrDay.classList.add("event-day");
+            if (!arrDay.querySelector(".event-text-hiden")) {
+              arrDay.insertAdjacentHTML('beforeend', `<span class='event-text-hiden'>${item.text}</span>`);
+            }
+          }
+        });
+      });
+    };
+
+
     let calendarDateTwo = flatpickr("#date2", {
       inline: true,
       "locale": "ru",
-      dateFormat: "Y-m-d H:i",
+      dateFormat: "Y-m-d",
       monthSelectorType: "static",
       nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
       prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
-
+      onDayCreate: function(dObj, dStr, fp, dayElem) {
+        funcDays(dayElem);
+      },
+      onChange: function(date, str, inst) {
+        const days = inst.days.children;
+        console.log(date.length);
+      },
     });
   </script>
 

@@ -1,0 +1,112 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	<link rel="stylesheet" href="css/flatpickr.min.css">
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs__scroll">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Главная</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Пункт меню</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Пункт меню</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<span class="breadcrumbs__link">Главные новости</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="content-page">
+		<div class="container">
+			<div class="row-title">
+				<h2 class="title">Почетные граждане, руководители, герои</h2>
+			</div>
+			<div class="honorary-citizens">
+				<div class="honorary-citizens__wrapper">
+					{{ mixin.honoraryCitizens('Фролов Константин Иванович', 'honorary-citizens1', 'Фролов Константин Иванович', 'апрель 1868 - декабрь 1870') }}
+					{{ mixin.honoraryCitizens('Сквориков Даниил Никитич', 'honorary-citizens2', 'Сквориков Даниил Никитич', 'декабрь 1870 - июнь 1874') }}
+					{{ mixin.honoraryCitizens('Якунинский Петр Иванович', 'honorary-citizens3', 'Якунинский Петр Иванович', 'июнь 1874 - октябрь 1875') }}
+					{{ mixin.honoraryCitizens('Фролов Константин Иванович', 'honorary-citizens1', 'Фролов Константин Иванович', 'апрель 1868 - декабрь 1870') }}
+					{{ mixin.honoraryCitizens('Сквориков Даниил Никитич', 'honorary-citizens2', 'Сквориков Даниил Никитич', 'декабрь 1870 - июнь 1874') }}
+					{{ mixin.honoraryCitizens('Якунинский Петр Иванович', 'honorary-citizens3', 'Якунинский Петр Иванович', 'июнь 1874 - октябрь 1875') }}
+					{{ mixin.honoraryCitizens('Фролов Константин Иванович', 'honorary-citizens1', 'Фролов Константин Иванович', 'апрель 1868 - декабрь 1870') }}
+					{{ mixin.honoraryCitizens('Сквориков Даниил Никитич', 'honorary-citizens2', 'Сквориков Даниил Никитич', 'декабрь 1870 - июнь 1874') }}
+					{{ mixin.honoraryCitizens('Якунинский Петр Иванович', 'honorary-citizens3', 'Якунинский Петр Иванович', 'июнь 1874 - октябрь 1875') }}
+					{{ mixin.honoraryCitizens('Фролов Константин Иванович', 'honorary-citizens1', 'Фролов Константин Иванович', 'апрель 1868 - декабрь 1870') }}
+					{{ mixin.honoraryCitizens('Сквориков Даниил Никитич', 'honorary-citizens2', 'Сквориков Даниил Никитич', 'декабрь 1870 - июнь 1874') }}
+					{{ mixin.honoraryCitizens('Якунинский Петр Иванович', 'honorary-citizens3', 'Якунинский Петр Иванович', 'июнь 1874 - октябрь 1875') }}
+					{{ mixin.honoraryCitizens('Фролов Константин Иванович', 'honorary-citizens1', 'Фролов Константин Иванович', 'апрель 1868 - декабрь 1870') }}
+					{{ mixin.honoraryCitizens('Сквориков Даниил Никитич', 'honorary-citizens2', 'Сквориков Даниил Никитич', 'декабрь 1870 - июнь 1874') }}
+					{{ mixin.honoraryCitizens('Якунинский Петр Иванович', 'honorary-citizens3', 'Якунинский Петр Иванович', 'июнь 1874 - октябрь 1875') }}
+					{{ mixin.honoraryCitizens('Фролов Константин Иванович', 'honorary-citizens1', 'Фролов Константин Иванович', 'апрель 1868 - декабрь 1870') }}
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="modal" id="citizens">
+		<div class="modal__overlay">
+			<div class="modal__block modal-citizens">
+				<div class="modal__up">
+					<h4 class="modal__caption"></h4>
+					<span class="info-text date"></span>
+					<span class="close"></span>
+				</div>
+				<div class="modal__down">
+					<div class="modal__content">
+						<div class="citizens-area">							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Scripts %}
+	<script>
+		const parentCitizensBlock = document.querySelector(".honorary-citizens__wrapper");
+
+		parentCitizensBlock.addEventListener("click", function(event) {
+			if(event.target.classList.contains("honorary-citizens-block")) {
+				const nameCitizen = event.target.dataset.name;
+				fetch('js/arrCitizens.json').then(response => response.json()).then(data => {
+					data.forEach(function(item) {
+						if (item.name === nameCitizen) {
+							//console.log(item);
+							const modalCitizens = document.querySelector("#citizens");
+							modalCitizens.querySelector(".modal__caption").innerHTML = item.name;
+							modalCitizens.querySelector(".date").innerHTML = item.date;
+							modalCitizens.querySelector(".citizens-area").innerHTML = '';
+							modalCitizens.querySelector(".citizens-area").insertAdjacentHTML(
+								'afterbegin', 
+								`<picture><source srcset="img/${item.img}.webp" type="image/webp"><source srcset="img/${item.img}.jpg" type="image/jpeg"><img src="img/${item.img}.jpg" alt="" align="left"></picture>${item.text}`
+								);
+						}
+					})
+				});
+			};
+		});
+	</script>
+{% endblock %}

@@ -1,0 +1,421 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	<link rel="stylesheet" href="css/flatpickr.min.css">
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs__scroll">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Главная</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Пункт меню</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Пункт меню</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<span class="breadcrumbs__link">Главные новости</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="content-page">
+		<div class="container">
+			<h2 class="title">Результаты поиска</h2>
+			<span class="info-text date">Найдено 4275 совпадений</span>
+
+			<div class="input-search-sect">
+				<form action="" class="input-search-sect__form">
+					<div class="input-search-sect__wrap">
+						<label>
+							<input type="text" class="input-search-sect__field" placeholder="Поиск">
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--search">
+							</svg>
+						</label>
+					</div>
+					<div class="input-search-sect__down">
+						<div class="wrap-field-check">
+							<label class="check-row">
+								<input type="checkbox">
+								<div class="check-row__wrap">
+									<span class="check-row__square"></span>
+									<span class="check-row__text">искать по главным новостям</span>
+								</div>
+							</label>
+						</div>
+						<div class="wrap-field-check">
+							<label class="check-row">
+								<input type="checkbox">
+								<div class="check-row__wrap">
+									<span class="check-row__square"></span>
+									<span class="check-row__text">искать в документах</span>
+								</div>
+							</label>
+						</div>
+					</div>					
+				</form>
+			</div>
+			<div class="search-result">
+				<div class="search-result__up">
+					<div class="search-result__left">
+						<span class="search-result__text">Сортировать по:</span>
+						<div class="search-result__wrap">
+							<div class="wrap-field-check">
+								<label>
+									<input type="radio" name="filter">
+									<div class="wrap-field-check__field">
+										<span class="wrap-field-check__icon"></span>
+										<span class="wrap-field__description">релевантности</span>
+									</div>
+								</label>
+							</div>
+							<div class="wrap-field-check">
+								<label>
+									<input type="radio" name="filter">
+									<div class="wrap-field-check__field">
+										<span class="wrap-field-check__icon"></span>
+										<span class="wrap-field__description">дате</span>
+									</div>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="search-result__right">
+						<a href="#" class="link-change" data-click-modal="calendar3">
+							<span class="link-change__text">Выбрать период</span>
+							<svg><use xlink:href="img/sprite.svg#svg--calendar"></svg>
+						</a>
+					</div>
+				</div>
+				<div class="search-result__wrapper">
+					<ol class="search-result-list">
+						<li class="search-result-list__item">
+							<div class="search-result-list__wrap">
+								<h4 class="search-result-list__caption">Перечень <a href="#">документов</a>, предоставляемых в Комиссию кандидатом на включение в Резерв</h4>
+								<p class="search-result-list__text">... информация. Для исполнения исполнительного <a href="#">документа</a> (исполнительный лист, судебный приказ) ... необходимо представить следующие <a href="#">документы</a>: 1. Заявление взыскателя с ... копию доверенности или иного <a href="#">документа</a>, удостоверяющего полномочия представителя. 5 ...</p>
+								<div class="breadcrumbs">
+									<div class="breadcrumbs__list">
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Главная</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<span class="breadcrumbs__link">Главные новости</span>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</li>
+						<li class="search-result-list__item">
+							<div class="search-result-list__wrap">
+								<h4 class="search-result-list__caption">Перечень <a href="#">документов</a>, предоставляемых в Комиссию кандидатом на включение в Резерв</h4>
+								<p class="search-result-list__text">... информация. Для исполнения исполнительного <a href="#">документа</a> (исполнительный лист, судебный приказ) ... необходимо представить следующие <a href="#">документы</a>: 1. Заявление взыскателя с ... копию доверенности или иного <a href="#">документа</a>, удостоверяющего полномочия представителя. 5 ...</p>
+								<div class="breadcrumbs">
+									<div class="breadcrumbs__list">
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Главная</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<span class="breadcrumbs__link">Главные новости</span>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</li>
+						<li class="search-result-list__item">
+							<div class="search-result-list__wrap">
+								<h4 class="search-result-list__caption">Перечень <a href="#">документов</a>, предоставляемых в Комиссию кандидатом на включение в Резерв</h4>
+								<p class="search-result-list__text">... информация. Для исполнения исполнительного <a href="#">документа</a> (исполнительный лист, судебный приказ) ... необходимо представить следующие <a href="#">документы</a>: 1. Заявление взыскателя с ... копию доверенности или иного <a href="#">документа</a>, удостоверяющего полномочия представителя. 5 ...</p>
+								<div class="breadcrumbs">
+									<div class="breadcrumbs__list">
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Главная</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<span class="breadcrumbs__link">Главные новости</span>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</li>
+						<li class="search-result-list__item">
+							<div class="search-result-list__wrap">
+								<h4 class="search-result-list__caption">Перечень <a href="#">документов</a>, предоставляемых в Комиссию кандидатом на включение в Резерв</h4>
+								<p class="search-result-list__text">... информация. Для исполнения исполнительного <a href="#">документа</a> (исполнительный лист, судебный приказ) ... необходимо представить следующие <a href="#">документы</a>: 1. Заявление взыскателя с ... копию доверенности или иного <a href="#">документа</a>, удостоверяющего полномочия представителя. 5 ...</p>
+								<div class="breadcrumbs">
+									<div class="breadcrumbs__list">
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Главная</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<span class="breadcrumbs__link">Главные новости</span>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</li>
+						<li class="search-result-list__item">
+							<div class="search-result-list__wrap">
+								<h4 class="search-result-list__caption">Перечень <a href="#">документов</a>, предоставляемых в Комиссию кандидатом на включение в Резерв</h4>
+								<p class="search-result-list__text">... информация. Для исполнения исполнительного <a href="#">документа</a> (исполнительный лист, судебный приказ) ... необходимо представить следующие <a href="#">документы</a>: 1. Заявление взыскателя с ... копию доверенности или иного <a href="#">документа</a>, удостоверяющего полномочия представителя. 5 ...</p>
+								<div class="breadcrumbs">
+									<div class="breadcrumbs__list">
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Главная</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<span class="breadcrumbs__link">Главные новости</span>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</li>
+						<li class="search-result-list__item">
+							<div class="search-result-list__wrap">
+								<h4 class="search-result-list__caption">Перечень <a href="#">документов</a>, предоставляемых в Комиссию кандидатом на включение в Резерв</h4>
+								<p class="search-result-list__text">... информация. Для исполнения исполнительного <a href="#">документа</a> (исполнительный лист, судебный приказ) ... необходимо представить следующие <a href="#">документы</a>: 1. Заявление взыскателя с ... копию доверенности или иного <a href="#">документа</a>, удостоверяющего полномочия представителя. 5 ...</p>
+								<div class="breadcrumbs">
+									<div class="breadcrumbs__list">
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Главная</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<span class="breadcrumbs__link">Главные новости</span>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</li>
+						<li class="search-result-list__item">
+							<div class="search-result-list__wrap">
+								<h4 class="search-result-list__caption">Перечень <a href="#">документов</a>, предоставляемых в Комиссию кандидатом на включение в Резерв</h4>
+								<p class="search-result-list__text">... информация. Для исполнения исполнительного <a href="#">документа</a> (исполнительный лист, судебный приказ) ... необходимо представить следующие <a href="#">документы</a>: 1. Заявление взыскателя с ... копию доверенности или иного <a href="#">документа</a>, удостоверяющего полномочия представителя. 5 ...</p>
+								<div class="breadcrumbs">
+									<div class="breadcrumbs__list">
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Главная</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<span class="breadcrumbs__link">Главные новости</span>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</li>
+						<li class="search-result-list__item">
+							<div class="search-result-list__wrap">
+								<h4 class="search-result-list__caption">Перечень <a href="#">документов</a>, предоставляемых в Комиссию кандидатом на включение в Резерв</h4>
+								<p class="search-result-list__text">... информация. Для исполнения исполнительного <a href="#">документа</a> (исполнительный лист, судебный приказ) ... необходимо представить следующие <a href="#">документы</a>: 1. Заявление взыскателя с ... копию доверенности или иного <a href="#">документа</a>, удостоверяющего полномочия представителя. 5 ...</p>
+								<div class="breadcrumbs">
+									<div class="breadcrumbs__list">
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Главная</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<a href="" class="breadcrumbs__link">Пункт меню</a>
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two">
+											</svg>
+										</div>
+										<div class="breadcrumbs__item">
+											<span class="breadcrumbs__link">Главные новости</span>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="pagination">
+				<div class="pagination__wrapper">
+					<div class="pagination__left">
+						<a href="#" class="btn-white">
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-two"></use>
+							</svg>
+							<span class="btn-white__text">Предыдущая</span>
+						</a>
+					</div>
+					<ul class="pagination__list">
+						<li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link pagination__link--active">2</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link pagination__link--dotted">...</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">8</a></li>
+					</ul>
+					<div class="pagination__right">
+						<a href="#" class="btn-white">
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-two"></use>
+							</svg>
+							<span class="btn-white__text">Предыдущая</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row-btn">
+				<a href="#" class="btn-white"><span class="btn-white__text">Загрузить предыдущие галереи</span></a>
+			</div>
+		</div>
+	</section>
+	{% include "include/modal.njk" %}
+{% endblock %}
+
+{% block Scripts %}
+	<script src="js/flatpickr.js"></script>
+	<script src="js/flatpickr-ru.js"></script>
+
+	<script>
+		let calendarPeriod = flatpickr("#period2", {
+			inline: true,
+			"locale": "ru",
+			dateFormat: "Y-m-d",
+			monthSelectorType: "static",
+			nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+			prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+			mode: "range",
+			onValueUpdate: function() {
+				const btnClearTwo = this.calendarContainer.nextElementSibling;
+				btnClearTwo.style.display = "flex";
+    	},
+		});
+		clearCalendar(calendarPeriod);
+	</script>
+{% endblock %}

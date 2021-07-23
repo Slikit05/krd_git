@@ -32,6 +32,30 @@
 	</li>
 {% endmacro %}
 
+{% macro itemSites(text, id) %}
+	<li class="sites-modal__item" data-sites="{{ id }}">
+		<label class="check-row">
+			<input type="checkbox">
+			<div class="check-row__wrap">
+				<span class="check-row__square"></span>
+				<span class="check-row__text">{{ text }}</span>
+			</div>
+		</label>
+	</li>
+{% endmacro %}
+
+{% macro sitesItem(caption, text) %}
+	<a href="#" class="sites-block__item">
+		<span class="sites-block__caption">{{ caption }}</span>
+		<span class="sites-block__row">
+			<span class="sites-block__text">{{ text }}</span>
+			<svg>
+				<use xlink:href="img/sprite.svg#svg--go-to">
+			</svg>
+		</span>
+	</a>
+{% endmacro %}
+
 {% macro newsPost() %}
 	<div class="news-post">
 		<div class="news-post__wrapper">
@@ -219,6 +243,47 @@
 		</div>
 		<div class="post-popular-block__wrap-text">
 			<span class="post-popular-block__caption">{{ caption }}</span>
+		</div>
+	</a>
+{% endmacro %}
+
+{% macro honoraryCitizens(name, img, caption, text) %}
+	<div class="honorary-citizens-block" data-name="{{ name }}" data-click-modal="citizens">
+		<div class="honorary-citizens-block__wrap-img">
+			<picture>
+				<source srcset="img/{{ img }}.webp" type="image/webp">
+				<source srcset="img/{{ img }}.jpg" type="image/jpeg">
+				<img src="img/{{ img }}.jpg" alt="">
+			</picture>
+		</div>
+		<div class="honorary-citizens-block__wrap-text">
+			<span class="honorary-citizens-block__caption">{{ caption }}</span>
+			<span class="honorary-citizens-block__text">{{ text }}</span>
+		</div>
+	</div>
+{% endmacro %}
+
+
+{% macro conferencesPost(img, caption, text) %}
+	<a href="#" class="upcoming-conferences-post">
+		<div class="upcoming-conferences-post__wrapper">
+			<div class="upcoming-conferences-post__left">
+				<span class="info-text date">05 марта 2021, с 11:00 до 12:00</span>
+			</div>
+			<div class="upcoming-conferences-post__right">
+				<div class="upcoming-conferences-post__wrap-img">
+					<picture>
+						<source srcset="img/{{ img }}.webp" type="image/webp">
+						<source srcset="img/{{ img }}.jpg" type="image/jpeg">
+						<img src="img/{{ img }}.jpg" alt="">
+					</picture>
+				</div>
+				<div class="upcoming-conferences-post__wrap-text">
+					<span class="info-text date">05 марта 2021, с 11:00 до 12:00</span>
+					<h3>{{ caption }}</h3>
+					<p>{{ text }}</p>
+				</div>
+			</div>
 		</div>
 	</a>
 {% endmacro %}
