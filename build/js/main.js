@@ -383,6 +383,3 @@ function myFunction() {
 //     this.scroll(this.person);
 //   }
 // });
-
-
-

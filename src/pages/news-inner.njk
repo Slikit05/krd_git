@@ -39,9 +39,9 @@
 {% block Content %}
 	<section class="inner-grid-page">
 		<div class="infinite-scroll-page" id="scrollPage">
-			<div class="infinite-scroll-page__wrapper" v-for="person in persons">
+			<div class="infinite-scroll-page__wrapper" v-for="page in pages">
 				{% raw %}
-					<div v-html="person"></div>
+					<div v-html="page"></div>
 				{% endraw %}
 				{# <div class="container">
 					<div class="inner-post">
@@ -369,8 +369,7 @@
 		new Vue({
 			el: '#scrollPage',
 			data: {
-				value: 'Vue Template',
-				persons: []
+				pages: []
 			},
 			methods: {
 				appendUser () {
@@ -379,18 +378,18 @@
 						.then(response => {
 							const arrTest = [];
 							response.data.forEach(function(i) {
-								//console.log(i.content);
+								console.log(i.content);
 								arrTest.push(i.content);
 							});
 							console.log(arrTest)
-							this.persons.push(arrTest);
-						});
-						
+							this.pages = arrTest;
+						});						
 				},
 				getInitialUsers () {
 					this.appendUser()
+					//console.log(this.pages);
 				},
-				scroll (person) {
+				scroll (page) {
 					window.onscroll = () => {
 						let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
 						console.log('If bottom', bottomOfWindow)
@@ -407,7 +406,7 @@
 				this.getInitialUsers();
 			},
 			mounted() {
-				this.scroll(this.person);
+				this.scroll(this.page);
 			}
 		});
 	</script>
