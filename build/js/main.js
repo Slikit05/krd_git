@@ -170,6 +170,28 @@ function openList() {
   });
 })();
 
+(function () {
+  window.addEventListener("click", function (event) {
+
+    if (event.target.dataset.clickSearch) {
+      event.preventDefault();
+
+      const btnName = event.target.dataset.clickSearch;
+
+      document.querySelector("#" + btnName).classList.add("search-modal--open");
+      document.querySelector("html").classList.add("hiden");
+    };
+
+    if (event.target.classList.contains("search-modal__overlay")) {
+      event.target.closest(".search-modal").classList.remove("search-modal--open");
+      document.querySelector("html").classList.remove("hiden");
+    } else if (event.target.classList.contains("close-search")) {
+      event.target.closest(".search-modal").classList.remove("search-modal--open");
+      document.querySelector("html").classList.remove("hiden");
+    };
+  });
+})();
+
 // Модалки - конец
 
 // Очистка календаря
@@ -231,12 +253,37 @@ const arrNameSites = [];
 
 })();
 
-let ScrollbarModal = window.Scrollbar;
+if (document.querySelector(".sites-modal")) {
+  let ScrollbarModal = window.Scrollbar;
 
-ScrollbarModal.init(document.querySelector('.sites-modal__left'));
-ScrollbarModal.init(document.querySelector('.sites-modal__right'));
+  ScrollbarModal.init(document.querySelector('.sites-modal__left'));
+  ScrollbarModal.init(document.querySelector('.sites-modal__right'));
+}
 
 // Модальное окно с официальными сайтами - конец
+
+// Фиксированная шапка
+
+window.onscroll = function () {
+  myFunction();
+};
+
+let header = document.getElementById("myHeader");
+let sticky = header.offsetTop;
+const parentHeaderInner = header.parentNode;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    const heightHeader = parentHeaderInner.offsetHeight;
+    parentHeaderInner.style.minHeight = heightHeader + 'px';
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+    parentHeaderInner.style.minHeight = '';
+  }
+}
+
+// Фиксированная шапка - конец
 
 
 
@@ -288,3 +335,54 @@ ScrollbarModal.init(document.querySelector('.sites-modal__right'));
 //     }
 //   }, 500)
 // }
+
+
+
+
+//-----------------------------------
+
+// new Vue({
+//   el: '#scrollPage',
+//   data: {
+//     value: 'Vue Template',
+//     persons: []
+//   },
+//   methods: {
+//     appendUser () {
+//       axios.get(`https://randomuser.me/api/`)
+//         .then(response => { this.persons.push(response.data.results[0]); });
+//     },
+//     getInitialUsers () {
+//       for (var i = 0; i < 10; i++) {
+//         // Grabbing six users at once since the API only returns one at a time.
+//         this.appendUser()
+//       }
+//     },
+//     scroll (person) {
+//       window.onscroll = () => {
+//         const scrollPage = document.querySelector("#scrollPage");
+//         //console.log(document.documentElement.scrollTop + scrollPage.innerHeight)
+//         //let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === scrollPage.scrollHeight;
+//         let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight;
+//         let bottomOfPage = scrollPage.scrollHeight;
+//         //console.log('If bottom', bottomOfWindow);
+//         console.log(bottomOfWindow);
+//         if (bottomOfWindow) {
+//         // Append an additional row of users
+//           for(var i = 0; i < 5; i++){
+//             this.appendUser()
+//           }
+//         }
+//       };
+//     },
+//   },
+//   beforeMount() {
+//     this.getInitialUsers();
+//   },
+//   mounted() {
+//     this.scroll(this.person);
+//   }
+// });
+
+
+

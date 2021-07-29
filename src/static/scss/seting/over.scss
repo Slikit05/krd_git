@@ -732,6 +732,9 @@ ul.share-social--mob li.share-social__item {
 .important-block {
   .row-title {
     margin-bottom: 25px;
+    .title {
+      margin-bottom: 0;
+    }
   }
 
   &__up {

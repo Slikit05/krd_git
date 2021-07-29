@@ -24,8 +24,14 @@
 
         {% endblock %}
     </main>
+
+    
     <footer>
-        {% include "include/footer.njk" %}
+        {% if noFooter %}
+            
+        {% else %}
+            {% include "include/footer.njk" %}
+        {% endif %}
     </footer>
     <script src="js/smooth-scrollbar.js"></script>
     <script src="js/main.js"></script>

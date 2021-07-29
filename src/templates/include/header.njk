@@ -49,7 +49,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="page-header__down">
+	<div class="page-header__down" id="myHeader">
 		<div class="container">
 			<div class="page-header__wrapper-down">
 				<div class="page-header__left">
@@ -155,13 +155,12 @@
 							<li class="nav__item"><a href="#" class="nav__link"><span class="nav__text">Документы</span></a></li>
 						</ul>
 					</nav>
-					<div class="search">
+					<div class="search" data-click-search="search1">
 						<div class="search__wrap-icon">
 							<svg>
 								<use xlink:href="img/sprite.svg#svg--search">
 							</svg>
 						</div>
-						{# <div class="search__wrapper"></div> #}
 					</div>
 				</div>
 				<div class="burger">
@@ -173,3 +172,52 @@
 		</div>
 	</div>
 </section>
+
+<div class="search-modal" id="search1">
+	<div class="search-modal__overlay">
+		<div class="search-modal__block">
+			<div class="container">
+				<div class="search-modal__wrapper">
+					<div class="close-search">
+						<span class="close-search__text">Закрыть</span>
+						<span class="close-search__icon"></span>
+					</div>				
+					<h4 class="search-modal__caption">Поиск по сайту</h4>
+					<span class="search-modal__text">Введите запрос для поиска например, структура администрации</span>
+					<div class="input-search-sect">
+						<form action="" class="input-search-sect__form">
+							<div class="input-search-sect__wrap">
+								<label>
+									<input type="text" class="input-search-sect__field" placeholder="Поиск">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--search">
+									</svg>
+								</label>
+							</div>
+							<div class="input-search-sect__down">
+								<div class="wrap-field-check">
+									<label class="check-row">
+										<input type="checkbox">
+										<div class="check-row__wrap">
+											<span class="check-row__square"></span>
+											<span class="check-row__text">искать по главным новостям</span>
+										</div>
+									</label>
+								</div>
+								<div class="wrap-field-check">
+									<label class="check-row">
+										<input type="checkbox">
+										<div class="check-row__wrap">
+											<span class="check-row__square"></span>
+											<span class="check-row__text">искать в документах</span>
+										</div>
+									</label>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>

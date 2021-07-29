@@ -1,3 +1,4 @@
+{% set noFooter = "true" %}
 {% extends "__layout.njk" %}
 
 {% block Link %}
@@ -39,7 +40,10 @@
 	<section class="inner-grid-page">
 		<div class="infinite-scroll-page" id="scrollPage">
 			<div class="infinite-scroll-page__wrapper" v-for="person in persons">
-				<div class="container">
+				{% raw %}
+					<div v-html="person"></div>
+				{% endraw %}
+				{# <div class="container">
 					<div class="inner-post">
 						<div class="text-page center-area-two">
 							<div class="text-page__up">
@@ -334,8 +338,8 @@
 
 						</div>
 					</div>
-				</div>
-			</div>			
+				</div> #}
+			</div>
 		</div>		
 	</section>
 {% endblock %}
@@ -370,30 +374,32 @@
 			},
 			methods: {
 				appendUser () {
-					axios.get(`https://randomuser.me/api/`)
-						.then(response => { this.persons.push(response.data.results[0]); });
+					axios
+						.get('js/arrPage.json')
+						.then(response => {
+							const arrTest = [];
+							response.data.forEach(function(i) {
+								//console.log(i.content);
+								arrTest.push(i.content);
+							});
+							console.log(arrTest)
+							this.persons.push(arrTest);
+						});
+						
 				},
 				getInitialUsers () {
-					for (var i = 0; i < 1; i++) {
-						// Grabbing six users at once since the API only returns one at a time.
-						this.appendUser()
-					}
+					this.appendUser()
 				},
 				scroll (person) {
 					window.onscroll = () => {
-						const scrollPage = document.querySelector("#scrollPage");
-						//console.log(document.documentElement.scrollTop + scrollPage.innerHeight)
-						//let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === scrollPage.scrollHeight;
-						let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight;
-						let bottomOfPage = scrollPage.scrollHeight;
-						//console.log('If bottom', bottomOfWindow);
-						console.log(bottomOfWindow);
-						{# if (bottomOfWindow) {
+						let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
+						console.log('If bottom', bottomOfWindow)
+						if (bottomOfWindow) {
 						// Append an additional row of users
 							for(var i = 0; i < 1; i++){
 								this.appendUser()
 							}
-						} #}
+						}
 					};
 				},
 			},
