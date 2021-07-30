@@ -979,7 +979,7 @@ a.link-doc img {
     &:first-child {
       .accordion__up {
         @media (max-width: 1200px) {
-          padding-top: 0;
+          // padding-top: 0;
         }
       }
     }
@@ -2294,7 +2294,7 @@ html .scrollbar-track {
 .end-sect {
   margin-bottom: 32px;
   @media (max-width: 767px) {
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
   }
 }
 
@@ -2494,6 +2494,10 @@ html .scrollbar-track {
 
   &--change {
     margin-bottom: 50px;
+
+    @media (max-width: 1079px) {
+      margin-bottom: 10px;
+    }
 
     @media (max-width: 767px) {
       margin-bottom: 0;

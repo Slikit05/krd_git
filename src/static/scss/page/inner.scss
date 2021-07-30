@@ -87,19 +87,23 @@
 
   &__right {
     min-width: 1px;
+
     .post-popular-block {
       &:last-child {
         padding-bottom: 0;
       }
     }
+
     .row-btn {
       @media (max-width: 767px) {
         margin-bottom: 20px;
       }
     }
+
     .block-text-area {
       &:last-child {
         margin-bottom: 45px;
+
         @media (max-width: 767px) {
           margin-bottom: 35px;
         }
@@ -206,13 +210,15 @@
           }
         }
       }
+
       .link-menu__link:hover {
         background-color: transparent;
         border-color: transparent;
+
         span {
           color: #0050b2;
         }
-  
+
         svg {
           stroke: #000;
         }
@@ -521,10 +527,19 @@
       color: #fff;
     }
 
+    .btn-white {
+      align-self: stretch;
+    }
+
     span.btn-white__text {
       font-size: 18px;
       line-height: 24px;
       color: #0061D9;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
 
     span.info-text {
@@ -616,6 +631,7 @@
           line-height: normal;
           color: #0061d9;
           display: block;
+
           @media (max-width: 767px) {
             font-size: 16px;
           }
@@ -1491,6 +1507,18 @@
     margin-bottom: 0;
   }
 
+  &--lg-bottom {
+    @media (max-width: 767px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &--sm-bottom {
+    @media (max-width: 767px) {
+      margin-bottom: 8px;
+    }
+  }
+
   .row-title {
     .md-title {
       margin-bottom: 0;
@@ -1915,6 +1943,7 @@
 
     span.red {
       color: #d51a1a;
+
       b {
         color: #d51a1a;
       }
@@ -2104,10 +2133,11 @@
     padding: 10px 14px;
     border: 2px solid #F5F5F7;
     transition: all 0.3s ease-in-out;
+
     @media (max-width: 767px) {
       padding: 6px 14px;
     }
-    
+
   }
 
   &__icon {
@@ -2192,6 +2222,7 @@
     width: 100%;
     padding: 11px 14px;
     border: 1px solid #A7A8AB;
+
     &:hover {
       border-color: #333333;
     }
@@ -2233,6 +2264,7 @@
     border: 1px solid #A7A8AB;
     resize: none;
     min-height: 160px;
+
     &:hover {
       border-color: #333333;
     }
@@ -2377,6 +2409,15 @@
 
     @media (max-width: 767px) {
       margin-bottom: 40px;
+    }
+  }
+  .post-popular-block:last-child {
+    padding-bottom: 35px;
+    @media (max-width: 1023px) {
+      padding-bottom: 30px;
+    }
+    @media (max-width: 767px) {
+      padding-bottom: 20px;
     }
   }
 }
@@ -2564,6 +2605,7 @@
 
 .documentation-sect {
   margin-bottom: 50px;
+
   @media (max-width: 767px) {
     margin-bottom: 35px;
   }
@@ -2581,6 +2623,7 @@
       .info-text {
         margin-top: 0;
       }
+
       &__row {
         min-width: 210px;
 
@@ -2601,6 +2644,10 @@
 
 .honorary-citizens {
   margin-bottom: 50px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
 
   &__wrapper {
     display: grid;
@@ -2667,9 +2714,11 @@
     padding: 19px 60px 23px 32px;
     margin-bottom: 24px;
     transition: all 0.3s ease-in-out;
+
     &:hover {
       border-color: #333;
     }
+
     &:focus {
       box-shadow: 0 0 0 4px #99a9f8;
     }
@@ -2908,6 +2957,7 @@ $tableWidthProcent: 250px;
 
     @media (max-width: 767px) {
       display: block;
+      margin-bottom: 40px;
 
       .btn-block {
         display: none;
@@ -2925,19 +2975,20 @@ $tableWidthProcent: 250px;
       border-radius: 4px;
       bottom: 10px;
       position: sticky;
-    
+
       .scrollbar-thumb {
         background-color: #0061d9;
         height: auto;
         top: 0;
         bottom: 0;
         transition: top 0.3s ease-in-out, bottom 0.3s ease-in-out;
-        
+
         &:hover {
           top: -2px;
           bottom: -2px;
           background-color: #003B83;
         }
+
         &:active {
           top: -2px;
           bottom: -2px;
@@ -2953,6 +3004,7 @@ $tableWidthProcent: 250px;
     @media (max-width: 1360px) {
       margin: 0 -32px;
       position: static !important;
+
       .scrollbar-track {
         left: 32px;
         right: 32px;
@@ -3046,11 +3098,15 @@ $tableWidthProcent: 250px;
             background-color: rgba($color: #F5F5F7, $alpha: 0.5);
           }
         }
+
         &:last-child {
-          th, td {
+
+          th,
+          td {
             border: none;
           }
         }
+
         &:hover {
           td {
             background-color: rgba($color: #E5E5EB, $alpha: 0.5);
@@ -3206,6 +3262,9 @@ $tableWidthProcent: 250px;
 
   @media (max-width: 767px) {
     padding: 30px 0 24px;
+    &:last-child {
+      padding: 30px 0 40px;
+    }    
   }
 
   .row-btn {
@@ -3447,10 +3506,18 @@ $tableWidthProcent: 250px;
   &__right {
     .row-title {
       margin-bottom: 30px;
+
+      @media (max-width: 767px) {
+        margin-bottom: 24px;
+      }
     }
   }
 
   &__area {
+    @media (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+
     p {
       font-size: 18px;
       line-height: 28px;
@@ -3471,6 +3538,11 @@ $tableWidthProcent: 250px;
       text-decoration-line: underline;
       color: #0050B2;
       transition: all 0.3s ease-in-out;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
 
       &:hover {
         color: #003B83;
