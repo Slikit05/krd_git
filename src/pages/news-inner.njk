@@ -39,11 +39,11 @@
 {% block Content %}
 	<section class="inner-grid-page">
 		<div class="infinite-scroll-page" id="scrollPage">
+			{% raw %}
 			<div class="infinite-scroll-page__wrapper" v-for="page in pages">
-				{% raw %}
-					<div v-html="page"></div>
-				{% endraw %}
-				{# <div class="container">
+				<div v-html="pageHtml" v-bind:data-url="page.url" v-bind:data-id="page.idpage"></div>
+				
+				<!--<div class="container">
 					<div class="inner-post">
 						<div class="text-page center-area-two">
 							<div class="text-page__up">
@@ -338,8 +338,9 @@
 
 						</div>
 					</div>
-				</div> #}
+				</div>-->
 			</div>
+			{% endraw %}
 		</div>		
 	</section>
 {% endblock %}
@@ -349,45 +350,27 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 	<script>
-		var swiper = new Swiper(".slider-gallery__container", {
-			loop: true,
-			pagination: {
-				el: ".slider-gallery__fraction",
-				type: "fraction",
-				renderFraction: function (currentClass, totalClass) {
-					return '<span class="' + currentClass + '"></span>' +
-									' из ' +
-									'<span class="' + totalClass + '"></span>';
-				}
-			},
-			navigation: {
-				nextEl: ".slider-gallery__arrow--next",
-				prevEl: ".slider-gallery__arrow--prev",
-			},
-		});
-
 		new Vue({
 			el: '#scrollPage',
 			data: {
-				pages: []
+				pages: [],
+				pageHtml: '',
+				idPage: '',
+				swiper: null
 			},
 			methods: {
 				appendUser () {
 					axios
 						.get('js/arrPage.json')
 						.then(response => {
-							const arrTest = [];
-							response.data.forEach(function(i) {
-								console.log(i.content);
-								arrTest.push(i.content);
-							});
-							console.log(arrTest)
-							this.pages = arrTest;
-						});						
+							this.pages.push(response.data.page[0]);
+							this.pageHtml = response.data.page[0].content;
+							this.idPage = response.data.page[0].idpage;
+						});
 				},
 				getInitialUsers () {
-					this.appendUser()
-					//console.log(this.pages);
+					this.appendUser();
+					
 				},
 				scroll (page) {
 					window.onscroll = () => {
@@ -407,7 +390,30 @@
 			},
 			mounted() {
 				this.scroll(this.page);
+			},
+			updated: function () {
+				this.$nextTick(function () {
+					this.swiper = new Swiper(`[data-id='${this.idPage}'] .slider-gallery__container`, {
+						loop: true,
+						observer: true,
+						pagination: {
+							el: `[data-id='${this.idPage}'] .slider-gallery__fraction`,
+							type: "fraction",
+							renderFraction: function (currentClass, totalClass) {
+								return '<span class="' + currentClass + '"></span>' +
+												' из ' +
+												'<span class="' + totalClass + '"></span>';
+							}
+						},
+						navigation: {
+							nextEl: `[data-id='${this.idPage}'] .slider-gallery__arrow--next`,
+							prevEl: `[data-id='${this.idPage}'] .slider-gallery__arrow--prev`,
+						},
+					});
+				})
 			}
 		});
+
+		
 	</script>
 {% endblock %}
