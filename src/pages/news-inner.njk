@@ -40,8 +40,8 @@
 	<section class="inner-grid-page">
 		<div class="infinite-scroll-page" id="scrollPage">
 			{% raw %}
-			<div class="infinite-scroll-page__wrapper" v-for="page in pages">
-				<div v-html="pageHtml" v-bind:data-url="page.url" v-bind:data-id="page.idpage"></div>
+			<div class="infinite-scroll-page__wrapper" v-for="page in pages" v-bind:data-url="page.url" v-bind:data-id="page.idpage" v-show="show" v-observe-visibility="visibilityChanged">
+				<div v-html="pageHtml"></div>
 				
 				<!--<div class="container">
 					<div class="inner-post">
@@ -348,17 +348,25 @@
 {% block Scripts %}
 	<script src="js/swiper.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+	<script src="https://unpkg.com/vue-observe-visibility/dist/vue-observe-visibility.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 	<script>
+
+		function processAjaxData(titleName, urlPath){
+			window.history.pushState({"pageTitle":titleName}, titleName, urlPath);
+			document.title = titleName;
+		};
 		new Vue({
 			el: '#scrollPage',
-			data: {
+			data: () => ({
 				pages: [],
 				pageHtml: '',
 				idPage: '',
-				swiper: null
-			},
-			methods: {
+				swiper: null,
+				show: true,
+    		isVisible: true,
+			}),
+			methods: {				
 				appendUser () {
 					axios
 						.get('js/arrPage.json')
@@ -370,26 +378,38 @@
 				},
 				getInitialUsers () {
 					this.appendUser();
-					
 				},
 				scroll (page) {
 					window.onscroll = () => {
 						let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
-						console.log('If bottom', bottomOfWindow)
 						if (bottomOfWindow) {
-						// Append an additional row of users
 							for(var i = 0; i < 1; i++){
 								this.appendUser()
 							}
 						}
 					};
 				},
+				visibilityChanged (isVisible, entry) {
+					this.isVisible = isVisible
+					
+					console.log(this.isVisible)
+					if (isVisible) {
+						console.log("Берем адрес");
+						entry.target.classList.add("animate-page");
+						const urlPage = entry.target.dataset.url;
+						const titlePage = entry.target.querySelector(".title").textContent;
+						console.log(urlPage);
+						console.log(titlePage);
+						processAjaxData(titlePage, urlPage);
+					}
+				},
 			},
 			beforeMount() {
 				this.getInitialUsers();
 			},
 			mounted() {
-				this.scroll(this.page);
+				this.scroll(this.pages);
+				
 			},
 			updated: function () {
 				this.$nextTick(function () {
@@ -411,9 +431,9 @@
 						},
 					});
 				})
-			}
+			},			
 		});
 
-		
+
 	</script>
 {% endblock %}

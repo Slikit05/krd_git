@@ -16,6 +16,15 @@
         margin-bottom: 40px;
       }
     }
+    &--change-two {
+      margin-bottom: 90px;
+      @media (max-width: 1079px) {
+        margin-bottom: 70px;
+      }
+      @media (max-width: 767px) {
+        margin-bottom: 50px;
+      }
+    }
   }
 
   &__grid {
@@ -503,7 +512,7 @@
 
 .post-popular-block {
   display: flex;
-  align-items: center;
+  // align-items: center;
   padding-bottom: 35px;
   border-bottom: 1px solid #d9d9de;
 
@@ -541,6 +550,10 @@
     }
   }
 
+  &__wrap-text {
+    align-self: center;
+  }
+
   &__caption {
     font-weight: 600;
     font-size: 18px;
@@ -562,7 +575,7 @@
   margin-bottom: 105px;
 
   &--change-offset {
-    margin-bottom: 95px;
+    margin-bottom: 90px;
     @media (max-width: 1079px) {
       margin-bottom: 80px;
     }

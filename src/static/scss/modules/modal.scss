@@ -636,6 +636,11 @@
 			height: 100%;
 			font-size: 0;
 			line-height: 0;
+			width: 0;
+
+			@media (max-width: 1100px) {
+				margin-left: -4px;
+			}
 
 			@media (max-width: 767px) {
 				margin-left: -4px;
@@ -975,6 +980,10 @@
 .modal-citizens {
 	max-width: 1192px;
 	padding: 38px 56px;
+
+	@media (max-width: 767px) {
+		padding: 38px 24px 24px;
+	}
 }
 
 .modal--open .modal-citizens {
@@ -1027,7 +1036,7 @@
 		font-size: 18px;
 		line-height: 28px;
 		margin-bottom: 40px;
-		word-break: break-all;
+		// word-break: break-all;
 		white-space: pre-wrap;
 		display: block;
 
@@ -1054,15 +1063,32 @@
 .sites-modal {
 	max-width: 1360px;
 
+	@media (max-width: 1200px) {
+		padding: 44px 24px 24px;
+	}
+
 	&__wrapper {
 		display: flex;
-		max-height: 642px;
+		max-height: calc(100vh - 200px);
+		@media (max-width: 1200px) {
+			// max-height: 600px;
+		}
+
+		@media (max-width: 767px) {
+			display: block;
+			max-height: inherit;
+		}
 	}
 
 	&__left {
 		width: 336px;
 		flex-shrink: 0;
 		overflow: auto;
+
+		@media (max-width: 1200px) {
+			width: 320px;
+		}
+
 		@media (max-width: 767px) {
 			width: auto;
 		}
@@ -1070,6 +1096,14 @@
 
 	&__list {
 		padding-right: 40px;
+
+		@media (max-width: 1200px) {
+			padding-right: 24px;
+		}
+
+		@media (max-width: 767px) {
+			padding-right: 0;
+		}
 	}
 
 	&__item {
@@ -1086,22 +1120,72 @@
 		padding-left: 32px;
 		margin-right: -30px;
 		padding-right: 30px;
+
+		@media (max-width: 1200px) {
+			padding-left: 24px;
+			padding-right: 24px;
+			margin-right: 0;
+		}
+
 		@media (max-width: 767px) {
 			margin-right: 0;
+			// max-height: 600px;
+			padding-left: 0;
 			padding-right: 0;
+		}
+	}
+
+	.accordion {
+		@media (max-width: 767px) {
+			border-top: 1px solid #D9D9DE;
+			border-bottom: 1px solid #D9D9DE;
+			margin-bottom: 20px;
+		}
+
+		&__up {
+			display: none;
+
+			@media (max-width: 767px) {
+				display: flex;
+			}
+		}
+
+		&__down {
+			max-height: inherit;
+
+			@media (max-width: 767px) {
+				max-height: 0;
+			}
+		}
+
+		&__content {
+			padding-left: 0;
+
+			@media (max-width: 767px) {
+				padding-bottom: 24px;
+			}
 		}
 	}
 }
 
 .sites-block {
 	margin-bottom: 42px;
+	@media (max-width: 767px) {
+		margin-bottom: 30px;
+	}
+
 	&:last-child {
 		margin-bottom: 0;
 	}
+
 	&__up {
 		padding-bottom: 15px;
 		border-bottom: 1px solid #D9D9DE;
 		margin-bottom: 32px;
+		@media (max-width: 767px) {
+			margin-bottom: 15px;
+			padding-bottom: 10px;
+		}
 	}
 
 	&__title {
@@ -1109,6 +1193,11 @@
 		font-size: 28px;
 		line-height: 36px;
 		color: #000000;
+
+		@media (max-width: 767px) {
+			font-size: 22px;
+			line-height: 28px;
+		}
 	}
 
 	&__down {
@@ -1116,8 +1205,12 @@
 		grid-template-columns: 1fr 1fr;
 		column-gap: 24px;
 		row-gap: 24px;
+
 		@media (max-width: 1079px) {
 			grid-template-columns: 1fr;
+		}
+		@media (max-width: 767px) {
+			row-gap: 16px;
 		}
 	}
 
@@ -1133,17 +1226,25 @@
 		flex-direction: column;
 		justify-content: space-between;
 		background-color: #fff;
+		@media (max-width: 767px) {
+			min-height: 72px;
+			padding: 15px;
+		}
+
 		&:hover {
 			border-color: transparent;
 			box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2);
+
 			.sites-block__text {
 				color: #0050B2;
 			}
+
 			svg {
 				opacity: 1;
 			}
 		}
 	}
+
 	&__caption {
 		font-weight: 600;
 		font-size: 18px;
@@ -1153,6 +1254,7 @@
 		max-width: 80%;
 		transition: all 0.3s ease-in-out;
 	}
+
 	&__row {
 		display: flex;
 		justify-content: space-between;
@@ -1164,6 +1266,7 @@
 		line-height: 24px;
 		color: #333333;
 	}
+
 	svg {
 		width: 16px;
 		height: 16px;
@@ -1179,6 +1282,7 @@
 .event-calendar {
 	.dayContainer {
 		position: relative;
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -1189,12 +1293,32 @@
 			z-index: 1;
 		}
 	}
+
+	.flatpickr-current-month {
+		* {
+			pointer-events: none;
+		}
+	}
+
 	.event-day {
-		background-color: #0061d9;
-    color: #fff !important;
+		background-color: #0061D9 !important;
+		color: #fff !important;
 		position: relative;
 		z-index: 2;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			background-color: #003B83 !important;
+		}
 	}
+
+	.flatpickr-day.selected {
+		background-color: #0061D9 !important;
+		&:hover {
+			background-color: #003B83 !important;
+		}
+	}
+
 	.event-text-hiden {
 		display: none;
 	}

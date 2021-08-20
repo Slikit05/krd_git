@@ -66,8 +66,6 @@ let breadСrumbs = document.querySelector(".breadcrumbs__list");
 
 setTimeout(function () {
   if (breadСrumbs) {
-    // console.log(breadСrumbs.offsetWidth + 25);
-    // const scrollWidthLeft =  + 1000000;
     breadСrumbs.scrollLeft = breadСrumbs.offsetWidth;
   }
 }, 100);
@@ -79,7 +77,6 @@ function tabs() {
 
     if (event.target.dataset.nametabs) {
       event.preventDefault();
-      console.log("fire")
       const tabName = event.target.dataset.nametabs;
       const tabActive = document.querySelectorAll(".active-item-tab");
       const tabWrapper = event.target.closest(".tab-wrapper");
@@ -166,6 +163,10 @@ function openList() {
     } else if (event.target.classList.contains("close")) {
       event.target.closest(".modal").classList.remove("modal--open");
       document.querySelector("html").classList.remove("hiden");
+      if (document.querySelector(".event-text")) {
+        document.querySelector(".event-text").innerHTML = "";
+        document.querySelector(".event-text").classList.remove("event-text--change");
+      }
     };
   });
 })();
@@ -200,7 +201,6 @@ function clearCalendar(itemCalendar) {
   window.addEventListener("click", function (event) {
 
     if (event.target.classList.contains("btn-cancel")) {
-      console.log(itemCalendar);
       itemCalendar.clear();
 
       event.target.style.display = "none";
@@ -256,8 +256,10 @@ const arrNameSites = [];
 if (document.querySelector(".sites-modal")) {
   let ScrollbarModal = window.Scrollbar;
 
-  ScrollbarModal.init(document.querySelector('.sites-modal__left'));
-  ScrollbarModal.init(document.querySelector('.sites-modal__right'));
+  if (document.documentElement.clientWidth >= 768) {
+    ScrollbarModal.init(document.querySelector('.sites-modal__left'));
+    ScrollbarModal.init(document.querySelector('.sites-modal__right'));
+  }
 }
 
 // Модальное окно с официальными сайтами - конец
@@ -287,99 +289,6 @@ function myFunction() {
 
 
 
-// days.forEach(function(itemDay) {
-//   if(itemDay.classList.contains("event-day")) {
-//     console.log("Есть текст")
-//   }
-// });
+const accModalUp = new Accordion(".modal-accordion-up");
 
-// (function() {
-//   window.addEventListener("click", function (event) {
-//     if (event.target.classList.contains("event-day")) {
-//       //console.log(event.target.querySelector(".event-text-hiden").textcontent)
-//       console.log("fire")
-//     };
-//   });
-// })();
-
-// onChange: function(selectedDates, dateStr, instance) {
-//   const days = instance.days.children;
-  
-  //console.log(days)
-  //funcDays(days);	
-  
-// },
-// onReady: function() {
-//   console.log("fire")
-// }
-
-
-// (function() {
-//   const days = calendarDateTwo.days.children;
-//   //console.log(days);
-//   window.addEventListener("click", function(event) {
-//     setTimeout(function(){
-//       if (event.target.classList.contains("flatpickr-day")) {
-//         console.log("fire");
-//       }
-//     }, 500)
-//   });
-// })();
-
-
-// for (let day of days) {
-//   funcDays(day);
-//   setTimeout(function() {
-//     if (day.classList.contains("event-day")){
-//       console.log("нашел")
-//     }
-//   }, 500)
-// }
-
-
-
-
-//-----------------------------------
-
-// new Vue({
-//   el: '#scrollPage',
-//   data: {
-//     value: 'Vue Template',
-//     persons: []
-//   },
-//   methods: {
-//     appendUser () {
-//       axios.get(`https://randomuser.me/api/`)
-//         .then(response => { this.persons.push(response.data.results[0]); });
-//     },
-//     getInitialUsers () {
-//       for (var i = 0; i < 10; i++) {
-//         // Grabbing six users at once since the API only returns one at a time.
-//         this.appendUser()
-//       }
-//     },
-//     scroll (person) {
-//       window.onscroll = () => {
-//         const scrollPage = document.querySelector("#scrollPage");
-//         //console.log(document.documentElement.scrollTop + scrollPage.innerHeight)
-//         //let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === scrollPage.scrollHeight;
-//         let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight;
-//         let bottomOfPage = scrollPage.scrollHeight;
-//         //console.log('If bottom', bottomOfWindow);
-//         console.log(bottomOfWindow);
-//         if (bottomOfWindow) {
-//         // Append an additional row of users
-//           for(var i = 0; i < 5; i++){
-//             this.appendUser()
-//           }
-//         }
-//       };
-//     },
-//   },
-//   beforeMount() {
-//     this.getInitialUsers();
-//   },
-//   mounted() {
-//     this.scroll(this.person);
-//   }
-// });
+accModalUp.createAccordion();
