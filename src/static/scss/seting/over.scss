@@ -2909,6 +2909,7 @@ body {
       height: auto;
       position: static;
       cursor: pointer;
+
       &:hover {
         svg {
           stroke: #003B83;
@@ -3147,6 +3148,7 @@ body {
   line-height: 28px;
   color: #000000;
   display: block;
+
   &--change {
     margin-top: 15px;
   }
@@ -3157,13 +3159,16 @@ body {
   animation: shadow 1.5s ease-in-out;
   box-shadow: 0 -10px 15px 1px rgba(255, 255, 255, 1), 0 2px 15px 1px rgba(0, 0, 0, 0.1);
   padding-top: 50px;
+
   &:first-child {
     padding-top: 0;
   }
+
   .about-topic {
     margin-bottom: 0;
     padding-bottom: 50px;
   }
+
   &:first-child {
     animation: none;
   }
@@ -3171,6 +3176,69 @@ body {
 
 
 @keyframes shadow {
-  0% { box-shadow: inset 0 100000px 0 0 rgba($color: #F5F5F7, $alpha: 0.9) }
-  100% { box-shadow: inset 0 100000px 0 0 rgba($color: #F5F5F7, $alpha: 0) }
- }
+  0% {
+    box-shadow: inset 0 100000px 0 0 rgba($color: #F5F5F7, $alpha: 0.9)
+  }
+
+  100% {
+    box-shadow: inset 0 100000px 0 0 rgba($color: #F5F5F7, $alpha: 0)
+  }
+}
+
+.error-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #E52E2E;
+  margin-bottom: 10px;
+  display: none;
+  position: relative;
+  z-index: 1;
+}
+
+.errow-field {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    bottom: -15px;
+    right: -15px;
+    background-color: #F5E3E3;
+  }
+  .accordion__caption {
+    color: #000;
+  }
+  .accordion__up svg {
+    stroke: #000;
+  }
+  .error-text {
+    display: block;
+  }
+}
+
+.radio-accordions {
+  .accordion__caption,
+  .accordion__title {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.radio-accordions {
+  .error-text {
+    margin-bottom: 0;
+  }
+}
+
+.accordion.errow-field.open-accordion {
+  &::before {
+    background-color: transparent;
+  }
+  .accordion__caption {
+    color: #0050b2;
+  }
+  .accordion__up svg {
+    stroke: #0050b2;
+  }
+}

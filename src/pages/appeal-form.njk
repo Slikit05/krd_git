@@ -79,16 +79,17 @@
 								<h3>Персональные данные</h3>
 							</div>
 							<div class="form-over__grid">
-								{{ mixin.fieldText('Фамилия', '*', 'Введите Вашу Фамилию') }}
+								{{ mixin.fieldText('Фамилия', '*', 'Введите Вашу Фамилию', 'data-name=Фамилия') }}
 								<div class="wrap-field">
 									<label>
 										<span class="wrap-field__description">Телефон<span class="red">*</span>:</span>
-										<input type="tel" class="wrap-field__field" placeholder="Необходим для связи с Вами">
+										<span class="error-text">Ошибка: заполните поле</span>
+										<input type="tel" class="wrap-field__field" placeholder="Необходим для связи с Вами" data-name="Телефон">
 									</label>
 								</div>
-								{{ mixin.fieldText('Имя', '*', 'Введите Вашу Имя') }}
-								{{ mixin.fieldText('E-mail', '*', 'Нужен для отправки ответа') }}
-								{{ mixin.fieldText('Отчество', '*', 'Введите Отчество если есть') }}
+								{{ mixin.fieldText('Имя', '*', 'Введите Ваше Имя', 'data-name=Имя') }}
+								{{ mixin.fieldText('E-mail', '*', 'Нужен для отправки ответа', 'data-name=E-mail') }}
+								{{ mixin.fieldText('Отчество', '*', 'Введите Отчество если есть', 'data-name=Отчество') }}
 							</div>
 						</div>
 						<div class="form-over__row">
@@ -107,9 +108,12 @@
 							</div>
 						</div>
 						<div class="block-accordions border-block">
-							<div class="accordion">
+							<div class="accordion radio-accordions" data-radio-wrapper>
 								<div class="accordion__up accordion-js">
-									<span class="accordion__caption">Выберите адресата вашего обращения</span>
+									<div class="accordion__wrap-text">
+										<span class="accordion__caption">Выберите адресата вашего обращения</span>
+										<span class="error-text">Ошибка: заполните поле</span>
+									</div>
 									<svg>
 										<use xlink:href="img/sprite.svg#svg--arrow-two">
 									</svg>
@@ -119,14 +123,14 @@
 										<div class="accordion__wrap">
 											<div class="accordion__offset">
 												<label class="radio-wrap">
-													<input type="radio" name="addressee">
+													<input type="radio" name="addressee" data-radio>
 													<div class="radio-wrap__block">
 														<div class="radio-wrap__icon"></div>
 														{{ mixin.smRowHumanTwo('Первышов Евгений Алексеевич', 'Глава муниципального образования город Краснодар') }}
 													</div>
 												</label>
 												<label class="radio-wrap">
-													<input type="radio" name="addressee">
+													<input type="radio" name="addressee" data-radio>
 													<div class="radio-wrap__block">
 														<div class="radio-wrap__icon"></div>
 														{{ mixin.smRowHumanTwo('Галушко Вера Федоровна', 'Председатель городской Думы Краснодара') }}
@@ -138,14 +142,14 @@
 											<h4 class="accordion__title accordion__title--change">Заместители главы МО город Краснодар:</h4>
 											<div class="accordion__offset">
 												<label class="radio-wrap">
-													<input type="radio" name="addressee">
+													<input type="radio" name="addressee" data-radio>
 													<div class="radio-wrap__block">
 														<div class="radio-wrap__icon"></div>
 														{{ mixin.smRowHumanTwo('Первышов Евгений Алексеевич', 'Глава муниципального образования город Краснодар') }}
 													</div>
 												</label>
 												<label class="radio-wrap">
-													<input type="radio" name="addressee">
+													<input type="radio" name="addressee" data-radio>
 													<div class="radio-wrap__block">
 														<div class="radio-wrap__icon"></div>
 														{{ mixin.smRowHumanTwo('Галушко Вера Федоровна', 'Председатель городской Думы Краснодара') }}
@@ -162,14 +166,15 @@
 								<h3>Текст вашего обращения<span class="red">*</span></h3>
 							</div>
 							<div class="wrap-field">
-								<label>							
-									<textarea class="wrap-field__textarea" placeholder="Напишите Ваше обращение"></textarea>
+								<label>
+									<span class="error-text">Ошибка: заполните поле</span>
+									<textarea class="wrap-field__textarea" placeholder="Напишите Ваше обращение" data-name="Текст вашего обращения"></textarea>
 								</label>
 							</div>
 						</div>
 						<div class="form-over__row">
 							<div class="form-over__wrap-title">
-								<h3>Прикрепить файл<span class="red">**</span></h3>
+								<h3>Прикрепить файл<span>**</span></h3>
 							</div>
 							<div class="attach-file">
 								<label class="download-file attach-file__block">
@@ -191,7 +196,7 @@
 						</div>
 						<div class="form-over__border">
 							<div class="form-over__wrap-btn">
-								<div class="btn-white">
+								<div class="btn-white" data-btn-clear>
 									<span class="btn-white__text">Очистить</span>
 								</div>
 								<div class="btn-white">
@@ -203,7 +208,7 @@
 							</div>
 						</div>
 						<div class="form-over__area">
-							<p><span class="red">**</span> - Гарантированная передача файла(ов) вложения на почтовый сервер зависит от пропускной способности сети «Интернет» пользователя, а получение – от объёма обрабатываемых почтовым сервером переданных файлов.</p>
+							<p><span>**</span> - Гарантированная передача файла(ов) вложения на почтовый сервер зависит от пропускной способности сети «Интернет» пользователя, а получение – от объёма обрабатываемых почтовым сервером переданных файлов.</p>
 							<p>При подключении оборудования пользователя к сети «Интернет» по выделенным каналам связи с использованием технологий ADSL, 3G, 4G, WiFi и иных технологий, обеспечивающих аналогичные скорости передачи данных в сети «Интернет», передача и обработка файла(ов) с суммарным размером:</p>
 							<ul>
 								<li>до 5 Мб осуществляется, как правило, без задержки во времени;</li>
@@ -253,5 +258,113 @@
 		);
 		
 		document.querySelector(".filepond--credits").remove();
+
+
+		// Проверка формы на заполненость и очистка при нажатии на кнопку
+		const formAppeal = document.querySelector(".form-over__form");
+
+		// Проверка формы на заполненость
+		formAppeal.addEventListener("submit", function (event) {
+			let arrSuccessful = [];
+			const arrInpute = document.querySelectorAll("[data-name]");
+			const arrRadio = document.querySelectorAll("[data-radio]");
+
+			arrInpute.forEach(function(item) {
+				let fieldSuccessful = {
+					nameField: '',
+					successful: false,
+				};
+
+				fieldSuccessful.nameField = item.dataset.name
+
+				if (item.value == '') {
+					if (item.classList.contains("wrap-field__textarea")) {
+						item.closest(".form-over__row").classList.add("errow-field");
+					} else {
+						item.closest(".wrap-field").classList.add("errow-field");
+					};
+
+					fieldSuccessful.successful = false;
+
+				} else {
+					if (item.closest(".errow-field")) {
+						item.closest(".errow-field").querySelector(".error-text").remove();
+						item.closest(".errow-field").classList.remove("errow-field");
+					}
+					fieldSuccessful.successful = true;
+				};
+
+				arrSuccessful.push(fieldSuccessful);
+			});
+
+			(function() {
+				let fieldSuccessful = {
+					nameField: '',
+					successful: false,
+				};
+
+				fieldSuccessful.nameField = document.querySelector("[data-radio-wrapper]").querySelector(".accordion__caption").textContent;
+
+				for (let i = 0; i < arrRadio.length; i++) {
+					if (arrRadio[i].checked) {
+						console.log("Выбран адресат");
+						fieldSuccessful.successful = true;
+						break;
+					} else {
+						console.log("Не выбран адресат");
+						fieldSuccessful.successful = false;
+					}
+				};
+
+				if (!fieldSuccessful.successful) {
+					document.querySelector("[data-radio-wrapper]").classList.add("errow-field");
+					//document.querySelector("[data-radio-wrapper]").querySelector(".accordion__wrap-text").style.display = "block";
+
+				} else {
+					document.querySelector("[data-radio-wrapper]").classList.remove("errow-field");
+					//document.querySelector("[data-radio-wrapper]").querySelector(".accordion__wrap-text").style.display = "none";
+				}
+
+				arrSuccessful.push(fieldSuccessful);
+			})();
+
+			for (let i = 0; i < arrSuccessful.length; i++) {
+				if (!arrSuccessful[i].successful) {
+					console.log(arrSuccessful[i].nameField + ": не заполнено!");
+					event.preventDefault();
+					break;
+				};
+			};
+
+			console.log(arrSuccessful);
+		});
+		// Проверка формы на заполненость--конец
+
+		// Очистка при нажатии на кнопку
+
+		(function() {
+			const btnClear = document.querySelector("[data-btn-clear]");
+
+			btnClear.addEventListener("click", function(event) {				
+				const arrInput = formAppeal.querySelectorAll("input");
+				const arrErrow = formAppeal.querySelectorAll(".errow-field");
+				arrInput.forEach(function(item) {
+					if(item.getAttribute("type") === "radio") {
+						item.checked = false;
+					} else {
+						item.value = "";
+					};
+				});
+				arrErrow.forEach(function(item) {
+					item.classList.remove("errow-field");
+				});
+				formAppeal.querySelector("textarea").value = "";
+				pond.removeFiles();
+			});
+		})();
+
+		// Очистка при нажатии на кнопку -- конец
+
+		// Проверка формы на заполненость и очистка при нажатии на кнопку --- конец
 	</script>
 {% endblock %}

@@ -225,11 +225,12 @@
 	</div>
 {% endmacro %}
 
-{% macro fieldText(description, important, placeholder) %}
+{% macro fieldText(description, important, placeholder, dataAtr) %}
 	<div class="wrap-field">
 		<label>
 			<span class="wrap-field__description">{{ description }}<span class="red">{{ important }}</span>:</span>
-			<input type="text" class="wrap-field__field" placeholder="{{ placeholder }}">
+			<span class="error-text">Ошибка: заполните поле</span>
+			<input type="text" class="wrap-field__field" placeholder="{{ placeholder }}" {{ dataAtr }}>
 		</label>
 	</div>
 {% endmacro %}
