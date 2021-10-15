@@ -47,15 +47,15 @@
 			<div class="container">
 				<form action="" class="filter-documentation__form">
 					<div class="filter-documentation__wrapper">
-						<div class="filter-documentation__wrap filter-documentation__wrap--select">
-							<span class="wrap-field__description">Категория:</span>
-							<div class="select-wrap">
-								<select class="select" placeholder="Все документы">
-									<option value="Все документы"></option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
+						<div class='filter-documentation__wrap filter-documentation__wrap--select'>
+							<span class='wrap-field__description'>Категория:</span>
+							<div class='select-wrap' id='category'>
+								<select class='select select-category-document'>
+									<option placeholder>Все документы</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
 								</select>
 							</div>
 						</div>
@@ -231,6 +231,52 @@
 			nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
 			prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
 		});
+
+		(function () {
+			fetch('js/categoryDocument.json').then(response => response.json()).then(data => {
+					let choicesTwo;
+					window.addEventListener("change", function (event) {
+						if (event.target.classList.contains('select-category-document')) {
+							const selectWrap = document.querySelector('#category');
+							const resultSelectCategory = selectWrap.querySelector('.choices__item--selectable');
+
+							if(document.querySelector('[data-new-list]')) {
+								choicesTwo.destroy();
+								document.querySelector('[data-new-list]').remove();
+								document.querySelector('.filter-documentation__wrap--name').classList.remove('filter-documentation__wrap--change-width');
+							}
+
+							data.forEach(function(item) {
+								if (item.nameCategory === resultSelectCategory.textContent) {
+									selectWrap.closest('.filter-documentation__wrap--select').insertAdjacentHTML(
+									'afterend', 
+									`<div class='filter-documentation__wrap filter-documentation__wrap--select' data-new-list><div class='select-wrap'><select class='select' placeholder='Документы категория'></select></div></div>`
+									);
+
+									const newList = document.querySelector('[data-new-list] select');
+									newList.insertAdjacentHTML('afterbegin', `<option placeholder value='Выберите документ'>Выберите документ</option>`);
+									
+									item.listDocument.forEach(function(document) {
+										console.log(document);
+										newList.insertAdjacentHTML('beforeend', `<option value='${document}'>${document}</option>`);
+									});
+
+									choicesTwo = new Choices('[data-new-list] select', {
+										itemSelectText: '',
+										searchEnabled: false,
+										placeholder: true,
+									});
+
+									if (document.querySelector('[data-new-list]').nextElementSibling.classList.contains('filter-documentation__wrap--name')) {
+										document.querySelector('[data-new-list]').nextElementSibling.classList.add('filter-documentation__wrap--change-width')
+									}
+								}
+							});
+						};
+					});
+				});			
+		})();		
+		
 	</script>
 	
 {% endblock %}

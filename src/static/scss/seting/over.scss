@@ -161,6 +161,7 @@
   align-items: center;
   background-color: #0061d9;
   cursor: pointer;
+  text-align: center;
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
 
@@ -2566,14 +2567,93 @@ html .scrollbar-track {
     }
   }
 
-  span {
+  span,
+  p {
     font-size: 18px;
     line-height: 28px;
     color: #333333;
+    display: block;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @media (max-width: 767px) {
       font-size: 16px;
       line-height: 24px;
+    }
+  }
+
+  a {
+    font-size: 18px;
+    line-height: normal;
+    color: #0050b2;
+    display: inline;
+    transition: all 0.3s ease-in-out;
+
+    span {
+      font-size: 18px;
+      line-height: normal;
+      color: #0050b2;
+      transition: all 0.3s ease-in-out;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &:hover {
+        color: #003b83;
+      }
+    }
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &:hover {
+      color: #003b83;
+    }
+  }
+  ul {
+    margin-bottom: 40px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 24px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    li {
+      font-size: 18px;
+      line-height: normal;
+      color: #333333;
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 32px;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        margin-bottom: 26px;
+        padding-left: 32px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: 12px;
+        height: 2px;
+        background-color: #0061d9;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -2585,7 +2665,8 @@ html .scrollbar-track {
     margin-bottom: 15px;
   }
 
-  span {
+  span,
+  p {
     font-size: 18px;
     line-height: normal;
     color: #333333;
@@ -2597,11 +2678,12 @@ html .scrollbar-track {
       line-height: 24px;
     }
 
-    span {
+    b {
       color: #76767a;
       font-size: 18px;
       line-height: normal;
       display: inline;
+      font-weight: normal;
 
       @media (max-width: 767px) {
         font-size: 16px;
@@ -2616,6 +2698,23 @@ html .scrollbar-track {
     color: #0050b2;
     display: inline;
     transition: all 0.3s ease-in-out;
+
+    span {
+      font-size: 18px;
+      line-height: normal;
+      color: #0050b2;
+      transition: all 0.3s ease-in-out;
+      display: inline;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &:hover {
+        color: #003b83;
+      }
+    }
 
     @media (max-width: 767px) {
       font-size: 16px;
@@ -2663,7 +2762,10 @@ html .scrollbar-track {
     }
 
     &--select {
-      width: 33.34%;
+      width: 33.33%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
 
       @media (max-width: 1200px) {
         width: 33.33%;
@@ -2674,6 +2776,46 @@ html .scrollbar-track {
       }
 
       @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+
+    &--select-two {
+      width: 41.67%;
+
+      @media (max-width: 1200px) {
+        width: 33.33%;
+      }
+
+      @media (max-width: 1024px) {
+        width: 50%;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+
+    &--btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 16.6%;
+
+      .btn-block {
+        padding: 13px 30px 15px;
+        width: 100%;
+
+        @media (max-width: 767px) {
+          padding: 7px 12px 9px;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        width: 33.33%;
+      }
+
+      @media (max-width: 1024px) {
         width: 100%;
       }
     }
@@ -2724,6 +2866,10 @@ html .scrollbar-track {
       @media (max-width: 767px) {
         width: 100%;
       }
+    }
+
+    &--change-width {
+      width: 33.33%;
     }
   }
 }
@@ -2793,14 +2939,19 @@ html .scrollbar-track {
           line-height: 24px;
         }
       }
+
+      .choices__placeholder {
+        opacity: 1;
+      }
     }
 
     &--dropdown {
       transition: all 0.3s ease-in-out;
       background-color: #F5F5F7;
+      z-index: 10 !important;
 
       .choices__item {
-        &:last-child {
+        &:first-child {
           display: none;
         }
       }
@@ -3197,6 +3348,7 @@ body {
 
 .errow-field {
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -3206,18 +3358,22 @@ body {
     right: -15px;
     background-color: #F5E3E3;
   }
+
   .accordion__caption {
     color: #000;
   }
+
   .accordion__up svg {
     stroke: #000;
   }
+
   .error-text {
     display: block;
   }
 }
 
 .radio-accordions {
+
   .accordion__caption,
   .accordion__title {
     position: relative;
@@ -3235,10 +3391,116 @@ body {
   &::before {
     background-color: transparent;
   }
+
   .accordion__caption {
     color: #0050b2;
   }
+
   .accordion__up svg {
     stroke: #0050b2;
+  }
+}
+
+.block-list {
+
+  // padding-top: 33px;
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 25px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__number {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+    min-width: 72px;
+    margin-right: 40px;
+    flex-shrink: 0;
+    margin-top: 37px;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 24px;
+      min-width: 32px;
+      margin-right: 8px;
+      margin-top: -1px;
+    }
+  }
+
+  &__time {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.6;
+    display: block;
+    margin-bottom: 15px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__caption {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 15px;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 28px;
+    color: #333333;
+    display: block;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.two-column-grid {
+  grid-column: span 2 / auto;
+
+  @media (max-width: 1200px) {
+    grid-column: span 1 / auto;
+  }
+
+  @media (max-width: 1023px) {
+    grid-column: span 2 / auto;
+  }
+}
+
+.mob-none {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.mob-block {
+  @media (max-width: 767px) {
+    display: block !important;
   }
 }
