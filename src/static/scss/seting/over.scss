@@ -410,7 +410,7 @@
   }
 }
 
-#share-social-sticy {
+.sticy-block {
   .ya-share2__title {
     font-size: 0;
     line-height: 0;
@@ -420,9 +420,23 @@
   }
 
   .ya-share2__item {
-    background-color: #000;
+    
     transition: all 0.3s ease-in-out;
     margin-bottom: 40px;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 0;
+      bottom: 0;
+      right: -6px;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      background-color: #000;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -433,20 +447,20 @@
     }
   }
 
-  .ya-share2__item.ya-share2__item_service_vkontakte {
-    mask: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--vk);
+  .ya-share2__item.ya-share2__item_service_vkontakte::before {
+    mask-image: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--vk);
   }
 
-  .ya-share2__item.ya-share2__item_service_facebook {
-    mask: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--facebook);
+  .ya-share2__item.ya-share2__item_service_facebook::before {
+    mask-image: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--facebook);
   }
 
-  .ya-share2__item.ya-share2__item_service_twitter {
-    mask: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--twit);
+  .ya-share2__item.ya-share2__item_service_twitter::before {
+    mask-image: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--twit);
   }
 
-  .ya-share2__item.ya-share2__item_service_telegram {
-    mask: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--telegram);
+  .ya-share2__item.ya-share2__item_service_telegram::before {
+    mask-image: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--telegram);
   }
 }
 
@@ -2870,6 +2884,14 @@ html .scrollbar-track {
 
     &--change-width {
       width: 33.33%;
+
+      @media (max-width: 1079px) {
+        width: 50%;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
     }
   }
 }

@@ -2046,6 +2046,22 @@
     column-gap: 40px;
     row-gap: 22px;
     margin-bottom: 22px;
+    &--change {
+      .wrap-field {
+        @media(max-width: 767px) {
+          order: 4;
+          &:nth-child(1) {
+            order: 1;
+          }
+          &:nth-child(3) {
+            order: 2;
+          }
+          &:nth-child(5) {
+            order: 3;
+          }
+        }
+      }
+    }
 
     @media(max-width: 767px) {
       grid-template-columns: 1fr;

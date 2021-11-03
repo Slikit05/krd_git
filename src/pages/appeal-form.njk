@@ -44,7 +44,7 @@
 					<h2 class="title">Обращение</h2>
 				</div>
 				<div class="form-over">
-					<form action="" class="form-over__form">
+					<form enctype="multipart/form-data" action="/upload/image" method="post" class="form-over__form">
 						<div class="form-over__area">
 							<p><b>Поля, отмеченные звездочкой <span class="red"><b>*</b></span>, обязательны для заполнения.</b></p>
 							<span>Ответ автору обращения, запроса может быть направлен в форме электронного документа (при наличии адреса электронной почты) или в письменной форме (при наличии корректного почтового адреса).</span>
@@ -78,13 +78,13 @@
 							<div class="form-over__wrap-title">
 								<h3>Персональные данные</h3>
 							</div>
-							<div class="form-over__grid">
+							<div class="form-over__grid form-over__grid--change">
 								{{ mixin.fieldText('Фамилия', '*', 'Введите Вашу Фамилию', 'data-name=Фамилия') }}
 								<div class="wrap-field">
 									<label>
 										<span class="wrap-field__description">Телефон<span class="red">*</span>:</span>
 										<span class="error-text">Ошибка: заполните поле</span>
-										<input type="tel" class="wrap-field__field" placeholder="Необходим для связи с Вами" data-name="Телефон">
+										<input type="tel" class="wrap-field__field" name="phone" placeholder="Необходим для связи с Вами" data-name="Телефон">
 									</label>
 								</div>
 								{{ mixin.fieldText('Имя', '*', 'Введите Ваше Имя', 'data-name=Имя') }}
@@ -123,14 +123,14 @@
 										<div class="accordion__wrap">
 											<div class="accordion__offset">
 												<label class="radio-wrap">
-													<input type="radio" name="addressee" data-radio>
+													<input type="radio" name="addressee" value="test" data-radio>
 													<div class="radio-wrap__block">
 														<div class="radio-wrap__icon"></div>
 														{{ mixin.smRowHumanTwo('Первышов Евгений Алексеевич', 'Глава муниципального образования город Краснодар') }}
 													</div>
 												</label>
 												<label class="radio-wrap">
-													<input type="radio" name="addressee" data-radio>
+													<input type="radio" name="addressee" value="test" data-radio>
 													<div class="radio-wrap__block">
 														<div class="radio-wrap__icon"></div>
 														{{ mixin.smRowHumanTwo('Галушко Вера Федоровна', 'Председатель городской Думы Краснодара') }}
@@ -142,14 +142,14 @@
 											<h4 class="accordion__title accordion__title--change">Заместители главы МО город Краснодар:</h4>
 											<div class="accordion__offset">
 												<label class="radio-wrap">
-													<input type="radio" name="addressee" data-radio>
+													<input type="radio" name="addressee" value="test" data-radio>
 													<div class="radio-wrap__block">
 														<div class="radio-wrap__icon"></div>
 														{{ mixin.smRowHumanTwo('Первышов Евгений Алексеевич', 'Глава муниципального образования город Краснодар') }}
 													</div>
 												</label>
 												<label class="radio-wrap">
-													<input type="radio" name="addressee" data-radio>
+													<input type="radio" name="addressee" value="test" data-radio>
 													<div class="radio-wrap__block">
 														<div class="radio-wrap__icon"></div>
 														{{ mixin.smRowHumanTwo('Галушко Вера Федоровна', 'Председатель городской Думы Краснодара') }}
@@ -168,7 +168,7 @@
 							<div class="wrap-field">
 								<label>
 									<span class="error-text">Ошибка: заполните поле</span>
-									<textarea class="wrap-field__textarea" placeholder="Напишите Ваше обращение" data-name="Текст вашего обращения"></textarea>
+									<textarea class="wrap-field__textarea" name='textarea' placeholder="Напишите Ваше обращение" data-name="Текст вашего обращения"></textarea>
 								</label>
 							</div>
 						</div>
@@ -181,7 +181,7 @@
 									<div class="btn-white" type="submit">
 										<span class="btn-white__text">Выберите файл</span>
 									</div>
-									<input class="filepond" type="file" multiple>
+									<input id="filePush" class="filepond" type="file" multiple>
 									<div class="attach-file__block"></div>
 								</label>
 							</div>
@@ -231,6 +231,7 @@
 	<script src="js/inputmask.js"></script>
 	<script src="js/filepond.min.js"></script>
 	<script src="js/filepond-plugin-file-encode.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script>
 		const accUp = new Accordion(".accordion__up");
 
@@ -265,35 +266,60 @@
 
 		// Проверка формы на заполненость
 		formAppeal.addEventListener("submit", function (event) {
+			event.preventDefault();
+			let checkCurent = 0;
 			let arrSuccessful = [];
-			const arrInpute = document.querySelectorAll("[data-name]");
+			const form = document.querySelector('.form-over');
+			const arrInpute = document.querySelectorAll(".wrap-field");
 			const arrRadio = document.querySelectorAll("[data-radio]");
+			const formCallAction = form.getAttribute('action');
 
-			arrInpute.forEach(function(item) {
+			//console.log(arrInpute);
+			arrInpute.forEach(function(i) {
 				let fieldSuccessful = {
 					nameField: '',
-					successful: false,
+					//successful: false,
+					nameInput: '',
+					value: '',
 				};
 
-				fieldSuccessful.nameField = item.dataset.name
+				if ( i.querySelector('input') ) {
 
-				if (item.value == '') {
-					if (item.classList.contains("wrap-field__textarea")) {
-						item.closest(".form-over__row").classList.add("errow-field");
+					fieldSuccessful.nameField = i.querySelector('input').dataset.name;
+					fieldSuccessful.nameInput = i.querySelector('input').getAttribute('name');
+					fieldSuccessful.value = i.querySelector('input').value;
+
+					if ( i.querySelector('input').dataset.name ) {
+						fieldSuccessful.important = true;
+
+						//console.log("Важный input");
+						if ( i.querySelector('input').value == '' ) {
+							i.classList.add("errow-field");
+							fieldSuccessful.successful = false;
+						} else {
+							i.classList.remove("errow-field");
+							fieldSuccessful.successful = true;
+						}
+
 					} else {
-						item.closest(".wrap-field").classList.add("errow-field");
-					};
-
-					fieldSuccessful.successful = false;
-
-				} else {
-					if (item.closest(".errow-field")) {
-						//item.closest(".errow-field").querySelector(".error-text").remove();
-						item.closest(".errow-field").classList.remove("errow-field");
+						//console.log("Не важный input");
 					}
-					fieldSuccessful.successful = true;
+				} else if ( i.querySelector('textarea').dataset.name ) {
+					fieldSuccessful.nameField = i.querySelector('textarea').dataset.name;
+					fieldSuccessful.nameInput = i.querySelector('textarea').getAttribute('name');
+					fieldSuccessful.value = i.querySelector('textarea').value;
+					fieldSuccessful.important = true;
+
+					if (i.querySelector('textarea').value == '') {
+						i.closest('.form-over__row').classList.add("errow-field");
+						fieldSuccessful.successful = false;
+					} else {
+						i.closest('.form-over__row').classList.remove("errow-field");
+						fieldSuccessful.successful = true;
+					}
 				};
 
+				//console.log(fieldSuccessful);
 				arrSuccessful.push(fieldSuccessful);
 			});
 
@@ -301,42 +327,59 @@
 				let fieldSuccessful = {
 					nameField: '',
 					successful: false,
+					destination: '',
+					value: '',
 				};
 
 				fieldSuccessful.nameField = document.querySelector("[data-radio-wrapper]").querySelector(".accordion__caption").textContent;
 
 				for (let i = 0; i < arrRadio.length; i++) {
+					fieldSuccessful.important = true;
 					if (arrRadio[i].checked) {
-						console.log("Выбран адресат");
+						const wrapRadio = arrRadio[i].closest('.radio-wrap');
+						//console.log("Выбран адресат");
 						fieldSuccessful.successful = true;
+						fieldSuccessful.destination = wrapRadio.querySelector('input').getAttribute('name');
+						fieldSuccessful.value = wrapRadio.querySelector('input').getAttribute('value');
 						break;
 					} else {
-						console.log("Не выбран адресат");
+						//console.log("Не выбран адресат");
 						fieldSuccessful.successful = false;
 					}
 				};
 
 				if (!fieldSuccessful.successful) {
 					document.querySelector("[data-radio-wrapper]").classList.add("errow-field");
-					//document.querySelector("[data-radio-wrapper]").querySelector(".accordion__wrap-text").style.display = "block";
-
 				} else {
 					document.querySelector("[data-radio-wrapper]").classList.remove("errow-field");
-					//document.querySelector("[data-radio-wrapper]").querySelector(".accordion__wrap-text").style.display = "none";
 				}
 
 				arrSuccessful.push(fieldSuccessful);
 			})();
 
 			for (let i = 0; i < arrSuccessful.length; i++) {
-				if (!arrSuccessful[i].successful) {
+				if (arrSuccessful[i].important && !arrSuccessful[i].successful) {
 					console.log(arrSuccessful[i].nameField + ": не заполнено!");
-					event.preventDefault();
+					checkCurent = 0;
 					break;
+				} else {
+					checkCurent = 1;
 				};
 			};
-
-			console.log(arrSuccessful);
+			
+			if (checkCurent === 1) {
+				console.log(arrSuccessful);
+				console.log('Форма отправится');
+				axios({
+					method: 'post',
+					url: formCallAction,
+					data: {arrSuccessful}
+				}).then(function (response) {
+					console.log(response);
+				}).catch(function (error) {
+					console.log(error);
+				});
+			}
 		});
 		// Проверка формы на заполненость--конец
 

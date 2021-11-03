@@ -406,7 +406,7 @@
       <div class="infinite-scroll-page" id="scrollPage">
 
         <div class="infinite-scroll-page__wrapper" v-for="page in pages" v-bind:data-url="page.url" v-bind:data-id="page.idpage" v-show="show" v-observe-visibility="visibilityChanged">
-          <div v-html="pageHtml"></div>
+          <div v-html="page.content"></div>
 
           <!--<div class="container">
 					<div class="inner-post">
@@ -731,11 +731,11 @@
       }, titleName, urlPath);
       document.title = titleName;
     };
+
     new Vue({
       el: '#scrollPage',
       data: () => ({
         pages: [],
-        pageHtml: '',
         idPage: '',
         swiper: null,
         show: true,
@@ -747,9 +747,9 @@
             .get('js/arrPage.json')
             .then(response => {
               this.pages.push(response.data.page[0]);
-              this.pageHtml = response.data.page[0].content;
-              this.idPage = response.data.page[0].idpage;
+              this.idPage = response.data.page.idpage;
             });
+          console.log(this.pages);
         },
         getInitialUsers() {
           this.appendUser();
@@ -758,16 +758,16 @@
           window.onscroll = () => {
             let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
             if (bottomOfWindow) {
+              console.log(bottomOfWindow)
               for (var i = 0; i < 1; i++) {
                 this.appendUser()
-              }
+              };
             }
           };
         },
         visibilityChanged(isVisible, entry) {
           this.isVisible = isVisible
 
-          console.log(this.isVisible)
           if (isVisible) {
             console.log("Берем адрес");
             entry.target.classList.add("animate-page");
@@ -783,8 +783,7 @@
         this.getInitialUsers();
       },
       mounted() {
-        this.scroll(this.pages);
-
+        this.scroll();
       },
       updated: function() {
         this.$nextTick(function() {

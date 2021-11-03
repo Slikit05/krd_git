@@ -292,5 +292,3 @@ function myFunction() {
 const accModalUp = new Accordion(".modal-accordion-up");
 
 accModalUp.createAccordion();
-
-
