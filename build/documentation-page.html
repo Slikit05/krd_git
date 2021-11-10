@@ -170,7 +170,91 @@
                   <li class="nav__item"><a href="#" class="nav__link"><span class="nav__text">Горожанам</span></a></li>
                   <li class="nav__item"><a href="#" class="nav__link"><span class="nav__text">Администрация</span></a></li>
                   <li class="nav__item"><a href="#" class="nav__link"><span class="nav__text">Городская Дума</span></a></li>
-                  <li class="nav__item"><a href="#" class="nav__link"><span class="nav__text">Документы</span></a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link"><span class="nav__text">Документы</span></a>
+                    <ul class="dropdown-list">
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Главные новости</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>История города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Символика</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Руководители города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Почетные граждане города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Герои Великой Отечественной Войны</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Гостям города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Виртуальные экскурсии</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Фотогалереи</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Международные связи</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
               </nav>
               <div class="search" data-click-search="search1">
@@ -388,13 +472,13 @@
             </svg>
           </li>
           <li class="breadcrumbs__item">
-            <a href="" class="breadcrumbs__link">Пункт меню</a>
+            <a href="" class="breadcrumbs__link">Пункт меню Пункт меню Пункт меню Пункт меню Пункт меню</a>
             <svg>
               <use xlink:href="img/sprite.svg#svg--arrow-two">
             </svg>
           </li>
           <li class="breadcrumbs__item">
-            <span class="breadcrumbs__link">Главные новости</span>
+            <span class="breadcrumbs__link">Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости</span>
           </li>
         </ul>
       </div>
@@ -416,7 +500,7 @@
               <div class='filter-documentation__wrap filter-documentation__wrap--select'>
                 <span class='wrap-field__description'>Категория:</span>
                 <div class='select-wrap' id='category'>
-                  <select class='select select-category-document'>
+                  <select class='select select-category-document' name="all-documents">
                     <option placeholder>Все документы</option>
                     <option value='1'>1</option>
                     <option value='2'>2</option>
@@ -429,7 +513,7 @@
                 <div class="wrap-field">
                   <label>
                     <span class="wrap-field__description">Название документа:</span>
-                    <input type="text" class="wrap-field__field" placeholder="Введите название">
+                    <input type="text" class="wrap-field__field" name='name-doc' placeholder="Введите название">
                   </label>
                 </div>
               </div>
@@ -437,7 +521,7 @@
                 <div class="wrap-field">
                   <label>
                     <span class="wrap-field__description">Дата подписания с:</span>
-                    <input type="tel" id="date-from" class="wrap-field__field" placeholder="ДД.ММ.ГГГГ">
+                    <input type="tel" id="date-from" name="date-from" class="wrap-field__field" placeholder="ДД.ММ.ГГГГ">
                     <svg>
                       <use xlink:href="img/sprite.svg#svg--calendar-icon">
                     </svg>
@@ -448,7 +532,7 @@
                 <div class="wrap-field">
                   <label>
                     <span class="wrap-field__description">по:</span>
-                    <input type="tel" id="date-to" class="wrap-field__field" placeholder="ДД.ММ.ГГГГ">
+                    <input type="tel" id="date-to" name="date-to" class="wrap-field__field" placeholder="ДД.ММ.ГГГГ">
                     <svg>
                       <use xlink:href="img/sprite.svg#svg--calendar-icon">
                     </svg>
@@ -458,8 +542,8 @@
               <div class="filter-documentation__wrap filter-documentation__wrap--number">
                 <div class="wrap-field">
                   <label>
-                    <span class="wrap-field__description">Название документа:</span>
-                    <input type="text" class="wrap-field__field" placeholder="Введите номер">
+                    <span class="wrap-field__description">Номер документа:</span>
+                    <input type="text" class="wrap-field__field" name='numb-doc' placeholder="Введите номер">
                   </label>
                 </div>
               </div>
@@ -543,8 +627,8 @@
               </a>
             </div>
             <ul class="pagination__list">
-              <li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
-              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--active">2</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--active">1</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
               <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
               <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
               <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
@@ -557,7 +641,7 @@
                 <svg>
                   <use xlink:href="img/sprite.svg#svg--arrow-two"></use>
                 </svg>
-                <span class="btn-white__text">Предыдущая</span>
+                <span class="btn-white__text">Следующая</span>
               </a>
             </div>
           </div>
@@ -1471,6 +1555,7 @@
   <script src="js/flatpickr.js"></script>
   <script src="js/flatpickr-ru.js"></script>
   <script src="js/choices.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
     const choices = new Choices('.select', {
       itemSelectText: '',
@@ -1511,7 +1596,7 @@
               if (item.nameCategory === resultSelectCategory.textContent) {
                 selectWrap.closest('.filter-documentation__wrap--select').insertAdjacentHTML(
                   'afterend',
-                  `<div class='filter-documentation__wrap filter-documentation__wrap--select' data-new-list><div class='select-wrap'><select class='select' placeholder='Документы категория'></select></div></div>`
+                  `<div class='filter-documentation__wrap filter-documentation__wrap--select' data-new-list><div class='select-wrap'><select class='select' name='documents-category' placeholder='Документы категория'></select></div></div>`
                 );
 
                 const newList = document.querySelector('[data-new-list] select');
@@ -1541,45 +1626,200 @@
     (function() {
       const filterForm = document.querySelector('.filter-documentation__form');
       const listDocument = document.querySelector('.documentation-sect__wrapper');
+      const paginationList = document.querySelector('.pagination__list');
+      const changeItem = paginationList.querySelectorAll('li').length;
       let count;
       let interval;
+      let arrField = [];
 
-      function timer() {
+      function generatePagination(arr) {
+        paginationList.querySelectorAll('li .pagination__link').forEach(function(item) {
+          item.textContent = '';
+          item.classList.remove('pagination__link--active');
+        });
+
+        //console.log(paginationList.querySelectorAll('li').length);
+
+        //console.log(changeItem - 2)
+
+        for (let i = 0; i < changeItem; i++) {
+          if (i < (changeItem - 2)) {
+            paginationList.querySelectorAll('li .pagination__link')[i].textContent = (i + 1);
+            if (i === 0) {
+              paginationList.querySelectorAll('li .pagination__link')[i].classList.add('pagination__link--active');
+            }
+          } else if (i < (changeItem - 1)) {
+            paginationList.querySelectorAll('li')[changeItem - 2].querySelector('.pagination__link').textContent = '...';
+          } else if (i < (changeItem)) {
+            paginationList.querySelectorAll('li')[changeItem - 1].querySelector('.pagination__link').textContent = arr.pagination;
+          }
+        };
+      };
+
+      function createListDocuments(arr) {
+        console.log(arr);
+
+        arr.documents.forEach(function(item) {
+          function addCategory(nameCategory) {
+            let result = '';
+            nameCategory.forEach(function(i) {
+              result += `<a href='#' class='topic-item topic-item--change topic-item--change-collor'><div class='topic-item__wrapper'><span class='topic-item__text'>${i}</span></div></a>`;
+            });
+            return result;
+          };
+
+          listDocument.insertAdjacentHTML('beforeend', `<div class='documentation-sect__row'><div class='news-post'><div class='news-post__wrapper'><div class='news-post__row'><span class='info-text date'>${item.date}</span>${addCategory(item.category)}</div><a href='#' class='news-post__wrap-text'><h3>${item.nameDocument}</h3></a></div></div></div>`);
+        });
+      };
+
+      function timer(arrFilter) {
         clearInterval(interval);
         count = 12;
         interval = setInterval(() => {
           count--;
           console.log('count: ', count--);
-
           if (count <= 0) {
             clearInterval(interval);
-            // Здесь скрипт обращения к json
+            // Здесь скрипт очиски списка документов и получение данных
             listDocument.querySelectorAll('*').forEach(function(i) {
               i.remove();
             });
 
-            fetch('js/documentList.json').then(response => response.json()).then(data => {
-              data.forEach(function(item) {
-                console.log(item.category);
-                console.log(item.date);
-                console.log(item.listDocument);
-                listDocument.insertAdjacentHTML('beforeend', `<div class='documentation-sect__row'><div class='news-post'><div class='news-post__wrapper'><div class='news-post__row'><span class='info-text date'>${item.date}</span><a href='#' class='topic-item topic-item--change topic-item--change-collor'><div class='topic-item__wrapper'><span class='topic-item__text'></span></div></a></div><a href='#' class='news-post__wrap-text'><h3></h3></a></div></div></div>`)
-              })
+            axios({
+              method: 'post',
+              url: '',
+              data: {
+                arrFilter
+              }
+            }).then(function(response) {
+              console.log(response);
+            }).catch(function(error) {
+              console.log(error);
             });
 
-            // Здесь скрипт обращения к json -- end
+            fetch('js/documentList.json').then(response => response.json()).then(data => {
+              createListDocuments(data);
+              // генерация пагинации
+              generatePagination(data)
+              // генерация пагинации --- конец
+            });
+            // Здесь скрипт очиски списка документов и получение данных -- end
           }
         }, 200);
-      }
+      };
 
-      document.addEventListener('input', function(event) {
-        timer()
+      function cicleField() {
+        arrField = [];
+        filterForm.querySelectorAll('input').forEach(function(i) {
+          let fieldSuccessful = {
+            nameInput: '',
+            value: '',
+          };
+          fieldSuccessful.nameInput = i.getAttribute('name');
+          fieldSuccessful.value = i.value;
+          arrField.push(fieldSuccessful);
+        });
+      };
+
+      filterForm.addEventListener('input', function(event) {
+
+        cicleField();
+        //console.log(arrField);
+        timer(arrField);
       });
 
-      document.addEventListener('change', function(event) {
-        timer()
+      filterForm.addEventListener('change', function(event) {
+        if (event.target.classList.contains('select')) {
+          console.log('селект изменился');
+          cicleField();
+          filterForm.querySelectorAll('select').forEach(function(i) {
+            let fieldSuccessful = {
+              nameInput: '',
+              value: '',
+            };
+            fieldSuccessful.nameInput = i.getAttribute('name');
+            fieldSuccessful.value = i.value;
+            arrField.push(fieldSuccessful);
+          });
+          //console.log(arrField);
+          timer(arrField);
+        }
       });
 
+      function activeLinkPage(parent, target) {
+        parent.querySelectorAll('.pagination__link').forEach(function(i) {
+          i.classList.remove('pagination__link--active');
+        });
+
+        target.classList.add('pagination__link--active')
+      };
+
+      paginationList.addEventListener('click', function(event) {
+        event.preventDefault();
+        let index = [...this.querySelectorAll('.pagination__link')].findIndex(el => el == event.target);
+        console.log(index + ':' + (changeItem - 4));
+
+        if (event.target.classList.contains('pagination__link--dotted')) {
+
+          console.log('Это точки, действия при клике не нужно');
+
+        } else if (event.target.classList.contains('pagination__link--active')) {
+
+          console.log('Это активная ссылка, ничего не жмется');
+
+        } else if (index < (changeItem - 4) && index > -1) {
+
+          console.log('Не надо менять пагинацию, но надо подгружать новые документы');
+          activeLinkPage(this, event.target);
+          listDocument.querySelectorAll('*').forEach(function(i) {
+            i.remove();
+          });
+          fetch('js/documentList.json').then(response => response.json()).then(data => {
+            createListDocuments(data);
+
+          });
+
+        } else if (index >= (changeItem - 4) && index < (changeItem - 2) && index > -1) {
+
+          console.log('Надо менять пагинацию и надо подгружать новые документы');
+          console.log(index);
+          listDocument.querySelectorAll('*').forEach(function(i) {
+            i.remove();
+          });
+          fetch('js/documentList.json').then(response => response.json()).then(data => {
+            createListDocuments(data);
+          });
+          paginationList.querySelectorAll('li .pagination__link').forEach(function(item) {
+            item.textContent = '';
+            item.classList.remove('pagination__link--active');
+
+          });
+          paginationList.querySelectorAll('li .pagination__link')[0].classList.add('pagination__link--active');
+          paginationList.querySelectorAll('li .pagination__link')[0].textContent = '1';
+          paginationList.querySelectorAll('li .pagination__link')[1].classList.add('pagination__link--dotted');
+          paginationList.querySelectorAll('li .pagination__link')[1].textContent = '...';
+
+          if (index === 4) {
+            console.log('пятая ссылка')
+            console.log((index - 1));
+            for (let i = 2; i < (changeItem - 2); i++) {
+              paginationList.querySelectorAll('li .pagination__link')[i].textContent = (i + 2);
+            }
+          } else if (index === 5) {
+            console.log('шестая ссылка')
+            for (let i = 2; i < (changeItem - 2); i++) {
+              paginationList.querySelectorAll('li .pagination__link')[i].textContent = (i + 3);
+            }
+          }
+
+          paginationList.querySelectorAll('li')[changeItem - 2].querySelector('.pagination__link').textContent = '...';
+
+        } else if ((index + 1) === changeItem && index > -1) {
+
+          console.log('Это последняя ссылка в пагинации');
+
+        }
+      });
 
     })();
   </script>

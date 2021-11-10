@@ -62,6 +62,8 @@ accSidebar.createAccordion();
 
 // акордионы  - конец
 
+// Хлебные крошки
+
 let breadСrumbs = document.querySelector(".breadcrumbs__list");
 
 setTimeout(function () {
@@ -69,6 +71,27 @@ setTimeout(function () {
     breadСrumbs.scrollLeft = breadСrumbs.offsetWidth;
   }
 }, 100);
+
+if (document.querySelector('.breadcrumbs')) {
+  (function () {
+
+    const cropElement = document.querySelectorAll('.breadcrumbs__link'), // выбор элементов 
+          size = 100 // кол-во символов 
+          endCharacter = '...'; // окончание 
+
+    cropElement.forEach(el => {
+        let text = el.innerHTML;
+
+        if (el.innerHTML.length > size) {
+            text = text.substr(0, size);
+            el.innerHTML = text + endCharacter;
+        }
+    });
+
+  }());
+}
+
+// Хлебные крошки -- конец
 
 // Табы
 

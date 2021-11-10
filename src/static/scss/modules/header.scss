@@ -120,6 +120,16 @@
 				opacity: 1;
 			}
 		}
+		&:last-child {
+			.dropdown-list {
+				left: auto;
+				right: 0;
+				&::after {
+					left: auto;
+					right: 34px;
+				}
+			}
+		}
 	}
 
 	&__text {

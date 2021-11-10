@@ -14,11 +14,13 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
 
     @media (max-width: 1079px) {
       padding: 0 25px 0 25px;
       width: 100%;
       overflow: auto;
+      flex-wrap: nowrap;
     }
   }
 
@@ -83,6 +85,10 @@
     background-color: #fff;
     position: relative;
     z-index: 20;
+    margin-bottom: 50px;
+    @media (max-width: 1023px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__right {
