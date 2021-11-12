@@ -367,7 +367,7 @@
 
 .sticy-block {
   position: sticky;
-  top: 20px;
+  top: 80px;
 
   &__wrap {
     position: relative;
@@ -438,6 +438,7 @@
     mask-repeat: no-repeat;
     mask-size: contain;
     position: relative;
+    cursor: pointer;
 
     &::before {
       content: '';
@@ -449,6 +450,7 @@
       mask-repeat: no-repeat;
       mask-size: contain;
       background-color: #000;
+      transition: all 0.3s ease-in-out;
     }
 
     &:last-child {
@@ -456,7 +458,9 @@
     }
 
     &:hover {
-      background-color: #003b83;
+      &::before {
+        background-color: #003b83;
+      }
     }
   }
 
@@ -1018,6 +1022,237 @@ a.link-doc img {
         }
       }
     }
+  }
+}
+
+.togglelist {
+  border-bottom: 1px solid #e5e5eb;
+  &__head {
+    // display: flex;
+    // justify-content: space-between;
+    // flex-direction: row-reverse;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+    padding-right: 42px;
+    @media (max-width: 767px) {
+      padding: 16px 0;
+    }
+    &:hover {
+      .togglelist__title {
+        color: #003b83;
+      }
+
+      svg {
+        stroke: #003b83;
+      }
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #0050b2;
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  &__icon {
+    width: 14px;
+    height: 14px;
+    transition: all 0.3s ease-in-out;
+    top: 28px;
+    right: 12px;
+    position: absolute;
+    @media (max-width: 767px) {
+      margin-top: 7px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      mask-image: url(https://dev.krd.ru/local/templates/vg/img/svg/arrow-two-fill.svg);
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+      background-color: #0061d9;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      &::before {
+        background-color: #003b83;
+      }
+    }
+  }
+  &__body {
+    padding-left: 32px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      color: #333333;
+      margin-bottom: 35px;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    div {
+      margin-bottom: 32px;
+
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        margin-bottom: 0;
+      }
+    }
+
+    span {
+      font-size: 18px;
+      line-height: 28px;
+      display: block;
+      margin-bottom: 15px;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        font-size: 18px;
+        line-height: 28px;
+        color: #76767a;
+        display: inline;
+        margin-bottom: 0;
+
+        @media (max-width: 767px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    a {
+      font-size: 18px;
+      line-height: 32px;
+      color: #0050b2;
+      transition: all 0.3s ease-in-out;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &:hover {
+        color: #003b83;
+      }
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 28px;
+      margin-bottom: 30px;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    h5 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 15px;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    ul {
+      li {
+        font-size: 18px;
+        line-height: 28px;
+        padding-left: 32px;
+        position: relative;
+        color: #333333;
+        margin-bottom: 25px;
+
+        @media (max-width: 767px) {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 20px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 13px;
+          width: 12px;
+          height: 2px;
+          background-color: #0061d9;
+
+          @media (max-width: 767px) {
+            top: 11px;
+          }
+        }
+      }
+    }
+  }
+  .link-section {
+    span {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      color: #0050b2;
+      margin-bottom: 0;
+
+      @media (max-width: 767px) {
+        // font-size: 16px;
+        // line-height: 24px;
+      }
+    }
+  }
+}
+
+.togglelist__head.active {
+  .togglelist__icon {
+    transform: rotate(-180deg);
   }
 }
 
@@ -1676,6 +1911,9 @@ a.link-doc img {
   &__item {
     padding: 0 20px;
     cursor: pointer;
+    &--hide {
+      display: none;
+    }
 
     &:hover {
       @media (min-width: 1023px) {
@@ -1704,11 +1942,11 @@ a.link-doc img {
 
       &:nth-child(5),
       &:nth-child(6) {
-        display: none;
+        // display: none;
       }
 
       &:last-child {
-        display: block;
+        // display: block;
       }
     }
 
@@ -1720,7 +1958,7 @@ a.link-doc img {
       padding: 0 2px;
 
       &:nth-child(4) {
-        display: none;
+        // display: none;
       }
     }
   }
@@ -3564,4 +3802,32 @@ body {
   @media (max-width: 767px) {
     display: block !important;
   }
+}
+
+.inner-post .text-page .youtube-wrap{
+  position: relative;
+  width: 100%;
+  padding-bottom: calc(900% / 16);
+  margin-bottom: 27px;
+
+  @media (max-width: 1079px) {
+    margin-bottom: 27px;
+    padding: 0 32px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 9px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 359px) {
+    margin: 0;
+  }
+}
+.inner-post .text-page .youtube-wrap > iframe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }

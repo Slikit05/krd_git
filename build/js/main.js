@@ -55,10 +55,12 @@ class Accordion {
 const accMobMenu = new Accordion(".menu-nav__up");
 const accFooter = new Accordion(".page-footer__row-up");
 const accSidebar = new Accordion(".link-menu__up");
+const togglelist = new Accordion(".togglelist__head");
 
 accMobMenu.createAccordion();
 accFooter.createAccordion();
 accSidebar.createAccordion();
+togglelist.createAccordion();
 
 // акордионы  - конец
 
@@ -76,16 +78,16 @@ if (document.querySelector('.breadcrumbs')) {
   (function () {
 
     const cropElement = document.querySelectorAll('.breadcrumbs__link'), // выбор элементов 
-          size = 100 // кол-во символов 
-          endCharacter = '...'; // окончание 
+      size = 100 // кол-во символов 
+    endCharacter = '...'; // окончание 
 
     cropElement.forEach(el => {
-        let text = el.innerHTML;
+      let text = el.innerHTML;
 
-        if (el.innerHTML.length > size) {
-            text = text.substr(0, size);
-            el.innerHTML = text + endCharacter;
-        }
+      if (el.innerHTML.length > size) {
+        text = text.substr(0, size);
+        el.innerHTML = text + endCharacter;
+      }
     });
 
   }());
@@ -260,17 +262,17 @@ const arrNameSites = [];
       if (event.target.checked) {
         arrNameSites.push(idItem);
         showBlocksSites();
-      } else if(!event.target.checked) {
+      } else if (!event.target.checked) {
         const indexItem = arrNameSites.indexOf(idItem);
         arrNameSites.splice(indexItem, 1);
         showBlocksSites();
       };
 
       if (arrNameSites.length === 0) {
-        bloksSites.forEach(function(i) {
+        bloksSites.forEach(function (i) {
           i.style.display = "block";
         });
-      }      
+      }
     });
   });
 
@@ -315,3 +317,316 @@ function myFunction() {
 const accModalUp = new Accordion(".modal-accordion-up");
 
 accModalUp.createAccordion();
+
+/////////////////////////////////////////////////////////////
+
+const filterForm = document.querySelector('.filter-documentation__form');
+const listDocument = document.querySelector('.documentation-sect__wrapper');
+const paginationList = document.querySelector('.pagination__list');
+const arrLinnks = paginationList.querySelectorAll('li .pagination__link');
+let count;
+let interval;
+let arrField = [];
+let leftBorder;
+let rightBorder;
+
+
+const changeDocument = {
+  prevNomer: 0,
+  nomer: 1,
+  show: 8,
+  count: 20,
+  items: ['1', '2', '3', '4', '5', '6', '7', '20'],
+  go: function (nomer) {
+    this.prevNomer = this.nomer;
+    this.nomer = nomer;
+    this.render();
+  },
+  render: function () {
+    //console.clear();
+
+    var nomer = this.nomer;
+    var show = this.show;
+    var count = this.count;
+
+    leftBorder = 2;
+    rightBorder = count - 1;
+    var showLeftDots = false;
+    var showRightDots = false;
+
+
+    if (show < count) {
+
+      var devide = Math.floor((show - 2) / 2);
+
+      var leftBorder = nomer - devide;
+      var rightBorder = nomer + devide - 1;
+
+      if (leftBorder < 2) {
+        showRightDots = true;
+        leftBorder = 2;
+        rightBorder = leftBorder + (show - 2) - 1;
+      } else if (rightBorder > count - 1) {
+        showLeftDots = true;
+        rightBorder = count - 1;
+        leftBorder = rightBorder - (show - 2) + 1;
+      } else {
+        showLeftDots = true;
+
+        showRightDots = true;
+      }
+    };
+
+    console.log(this);
+    console.log('leftBorder ' + leftBorder, showLeftDots);
+    console.log('rightBorder ' + rightBorder, showRightDots);
+    this.items = [];
+
+    var length = show;
+    if (length > count) {
+      length = count;
+    }
+
+    for (i = 1; i <= length; i++) {
+
+      if (i == 1) {
+        this.items.push(i);
+      } else if (i == length) {
+        this.items.push(count);
+      } else {
+        if (showLeftDots && showRightDots) {
+          // this.items.push(leftBorder++);
+        } else {
+          // this.items.push(leftBorder++);
+        }
+        this.items.push(leftBorder++);
+      };
+    };
+
+
+
+    // if ((rightBorder - leftBorder) < 4) {
+    //   if (showLeftDots && showRightDots) {
+    //     if (rightBorder + 1 == count) {
+    //       showRightDots = false;
+    //     } else {
+    //       for (i = 2, l = this.items.length - 2; i <= l; i++) {
+    //         this.items[i]++;
+    //       }
+    //     }
+    //   }
+    // }
+
+
+    if (showLeftDots) {
+      this.items[1] = '...';
+    };
+
+    if (showRightDots) {
+      this.items[(this.items.length - 2)] = '...';
+    };
+    console.log(this.items);
+  },
+
+  refreshPagination: function (arr) {
+    arrLinnks.forEach(function (item) {
+      item.textContent = '';
+      item.classList.remove('pagination__link--active');
+    });
+
+    for (let i = 0; i < arrLinnks.length; i++) {
+      arrLinnks[i].textContent = arr[i];
+      arrLinnks[i].classList.remove('pagination__link--dotted');
+      if (arrLinnks[i].textContent === '') {
+        arrLinnks[i].closest('.pagination__item').classList.add('pagination__item--hide');
+      } else if (arrLinnks[i].textContent === '...') {
+        arrLinnks[i].classList.add('pagination__link--dotted');
+      }
+    }
+  },
+  createListDocuments: function (arr) {
+    console.log(arr);
+
+    arr.documents.forEach(function (item) {
+      function addCategory(nameCategory) {
+        let result = '';
+        nameCategory.forEach(function (i) {
+          result += `<a href='#' class='topic-item topic-item--change topic-item--change-collor'><div class='topic-item__wrapper'><span class='topic-item__text'>${i}</span></div></a>`;
+        });
+        return result;
+      };
+
+      listDocument.insertAdjacentHTML('beforeend', `<div class='documentation-sect__row'><div class='news-post'><div class='news-post__wrapper'><div class='news-post__row'><span class='info-text date'>${item.date}</span>${addCategory(item.category)}</div><a href='#' class='news-post__wrap-text'><h3>${item.nameDocument}</h3></a></div></div></div>`);
+    });
+  },
+  cicleField: function () {
+    arrField = [];
+    filterForm.querySelectorAll('input').forEach(function (i) {
+      let fieldSuccessful = {
+        nameInput: '',
+        value: '',
+      };
+      fieldSuccessful.nameInput = i.getAttribute('name');
+      fieldSuccessful.value = i.value;
+      arrField.push(fieldSuccessful);
+    });
+  },
+  timer: function (arrFilter) {
+    clearInterval(interval);
+    count = 12;
+    interval = setInterval(() => {
+      count--;
+      console.log('count: ', count--);
+      if (count <= 0) {
+        clearInterval(interval);
+        // Здесь скрипт очиски списка документов и получение данных
+
+        listDocument.querySelectorAll('*').forEach(function (i) {
+          i.remove();
+        });
+
+        axios({
+          method: 'post',
+          url: '',
+          data: {
+            arrFilter
+          }
+        }).then(function (response) {
+          console.log(response);
+        }).catch(function (error) {
+          console.log(error);
+        });
+
+        fetch('js/documentList.json').then(response => response.json()).then(data => {
+          this.createListDocuments(data);
+          this.count = data.pagination;
+
+
+          // генерация пагинации
+          if (document.documentElement.clientWidth < 768) {
+            console.log('меньше 768')
+            this.show = 5;
+            this.nomer = 1;
+            this.render();
+            this.refreshPagination(this.items);
+          } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 767) {
+            console.log('меньше 1300')
+            this.show = 6;
+            this.nomer = 1;
+            this.render();
+            this.refreshPagination(this.items);
+          } else {
+            console.log(this.count);
+            this.nomer = 1;
+            this.render();
+            this.refreshPagination(this.items);
+          }
+          arrLinnks[0].classList.add('pagination__link--active');
+          // генерация пагинации --- конец
+        });
+
+        // Здесь скрипт очиски списка документов и получение данных -- end
+      }
+    }, 200);
+  },
+  clickFunction: function (elem, target) {
+    // let index = [...elem.querySelectorAll('.pagination__link')].findIndex(el => el == event.target);
+    paginationList.querySelectorAll('.pagination__link').forEach(function (i) {
+      i.classList.remove('pagination__link--active');
+    });
+
+    if (target.classList.contains('pagination__link--dotted') || target.classList.contains('pagination__link--active')) {} else {
+      // console.log('fire')
+      this.go(Number(target.textContent));
+      this.refreshPagination(this.items);
+      // console.log(this.nomer);
+    };
+  },
+};
+
+
+(function () {
+  filterForm.addEventListener('input', function (event) {
+
+    changeDocument.cicleField();
+    //console.log(arrField);
+    changeDocument.timer(arrField);
+  });
+
+  filterForm.addEventListener('change', function (event) {
+    if (event.target.classList.contains('select')) {
+      console.log('селект изменился');
+      changeDocument.cicleField();
+      filterForm.querySelectorAll('select').forEach(function (i) {
+        let fieldSuccessful = {
+          nameInput: '',
+          value: '',
+        };
+        fieldSuccessful.nameInput = i.getAttribute('name');
+        fieldSuccessful.value = i.value;
+        arrField.push(fieldSuccessful);
+      });
+      //console.log(arrField);
+      changeDocument.timer(arrField);
+    }
+  });
+
+  // function activeLinkPage(parent, target) {
+  //   parent.querySelectorAll('.pagination__link').forEach(function (i) {
+  //     i.classList.remove('pagination__link--active');
+  //   });
+  //   console.log(parent);
+
+  //   target.classList.add('pagination__link--active');
+  // };
+
+  paginationList.addEventListener('click', function (event) {
+    event.preventDefault();
+    // let index = [...this.querySelectorAll('.pagination__link')].findIndex(el => el == event.target);
+    // activeLinkPage(this, event.target);
+    if (document.documentElement.clientWidth < 768) {
+      console.log('меньше 767')
+      changeDocument.show = 5;
+    } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 767) {
+      console.log('меньше 1300')
+      changeDocument.show = 6;
+    } else {
+      console.log(changeDocument.nomer)
+    };
+
+    changeDocument.clickFunction(this, event.target);
+
+    arrLinnks.forEach(function (i) {
+      if (i.textContent === String(changeDocument.nomer)) {
+        console.log(i)
+        i.classList.add('pagination__link--active');
+      }
+    });
+
+    // if (event.target)
+
+  });
+
+})();
+
+// генерация пагинации
+if (document.documentElement.clientWidth < 768) {
+  console.log('меньше 768')
+  changeDocument.show = 5;
+  changeDocument.nomer = 1;
+  changeDocument.render();
+  changeDocument.refreshPagination(changeDocument.items);
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 767) {
+  console.log('меньше 1300')
+  changeDocument.show = 6;
+  changeDocument.nomer = 1;
+  changeDocument.render();
+  changeDocument.refreshPagination(changeDocument.items);
+} else {
+  console.log(changeDocument.count);
+  changeDocument.nomer = 1;
+  changeDocument.render();
+  changeDocument.refreshPagination(changeDocument.items);
+}
+arrLinnks[0].classList.add('pagination__link--active');
+// генерация пагинации --- конец

@@ -86,6 +86,7 @@
     position: relative;
     z-index: 20;
     margin-bottom: 50px;
+
     @media (max-width: 1023px) {
       margin-bottom: 40px;
     }
@@ -451,6 +452,10 @@
   &__area {
     margin-bottom: 52px;
 
+    nobr {
+      display: inline;
+    }
+
     @media (max-width: 767px) {
       margin-bottom: 30px;
     }
@@ -530,6 +535,52 @@
           font-size: 16px;
         }
       }
+    }
+
+    span.accordion__caption {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 28px;
+      color: #0050b2;
+      transition: all 0.3s ease-in-out;
+
+      @media (max-width: 767px) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    .accordion__area p {
+      font-size: 18px;
+      line-height: 28px;
+      color: #333;
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .togglelist__body p {
+      font-size: 18px;
+      line-height: 28px;
+      color: #333;
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+
+    span.link-section__caption {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 28px;
+      color: #0050b2;
+      transition: all .3s ease-in-out;
+      border-bottom: 1px solid transparent;
+      display: block;
+      margin-bottom: 12px;
     }
 
     span.btn-block__text {
@@ -703,6 +754,12 @@
       @media (max-width: 767px) {
         text-align: center;
         margin-bottom: 20px;
+      }
+    }
+    table {
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
@@ -2052,16 +2109,20 @@
     column-gap: 40px;
     row-gap: 22px;
     margin-bottom: 22px;
+
     &--change {
       .wrap-field {
         @media(max-width: 767px) {
           order: 4;
+
           &:nth-child(1) {
             order: 1;
           }
+
           &:nth-child(3) {
             order: 2;
           }
+
           &:nth-child(5) {
             order: 3;
           }
@@ -3329,7 +3390,7 @@ table {
       }
     }
   }
-} 
+}
 
 
 .upcoming-conferences-page {
@@ -3534,6 +3595,7 @@ table {
         justify-content: center;
         width: 100%;
         margin: 0 0 22px;
+
         img {
           max-width: 144px;
           margin: 0 10px 0;
@@ -3554,12 +3616,14 @@ table {
   .btn-block {
     margin-bottom: 30px;
     text-align: center;
+
     &:last-of-type {
       margin-bottom: 56px;
     }
 
     @media (max-width: 767px) {
       margin-bottom: 10px;
+
       &:last-of-type {
         margin-bottom: 20px;
       }
