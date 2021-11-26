@@ -88,10 +88,11 @@
 	<script>
 		const parentCitizensBlock = document.querySelector(".honorary-citizens__wrapper");
 
-		parentCitizensBlock.addEventListener("click", function(event) {
-			if(event.target.classList.contains("honorary-citizens-block")) {
-				const nameCitizen = event.target.dataset.name;
-				fetch('js/arrCitizens.json').then(response => response.json()).then(data => {
+		fetch('js/arrCitizens.json').then(response => response.json()).then(data => {
+			parentCitizensBlock.addEventListener("click", function(event) {
+				if(event.target.classList.contains("honorary-citizens-block")) {
+					const nameCitizen = event.target.dataset.name;
+						
 					data.forEach(function(item) {
 						if (item.name === nameCitizen) {
 							//console.log(item);
@@ -105,8 +106,9 @@
 								);
 						}
 					})
-				});
-			};
+
+				};
+			});
 		});
 	</script>
 {% endblock %}

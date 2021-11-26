@@ -1,0 +1,111 @@
+{% extends "__layout.njk" %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Структура администрации</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="inner-grid-page inner-grid-page--sm-bottom">
+		<div class="container">
+			<div class="inner-grid-page__wrapper">
+				<div class="inner-grid-page__left">
+					<div class="link-menu">
+						<div class="link-menu__up accordion-js">
+							<span class="link-menu__caption">Музеи, театры</span>
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-three">
+							</svg>
+						</div>
+						<ul class="link-menu__list">
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Транспортные ворота города Авиа, ЖД и Автовокзалы</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Экскурсионные программы</span>
+								</a>
+							</li>
+							<li class="link-menu__item link-menu__item--active">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Музеи, театры</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Парки города</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inner-grid-page__right">
+					<div class="center-area-one">
+						<div class="row-title">
+							<h2 class="title">Гостям города</h2>		
+						</div>
+            <div class="gallery-grid">
+              <div class="gallery-grid__wrapper gallery-grid__wrapper--two-collumn">
+                {{ mixin.galleryPost2('gallery-post1', 'Краснодарская филармония (Концертный зал им. Г.Ф. Пономаренко)') }}
+                {{ mixin.galleryPost2('gallery-post1', 'Краснодарская филармония (Концертный зал им. Г.Ф. Пономаренко)') }}
+                {{ mixin.galleryPost2('gallery-post1', 'Краснодарская филармония (Концертный зал им. Г.Ф. Пономаренко)') }}
+                {{ mixin.galleryPost2('gallery-post1', 'Краснодарская филармония (Концертный зал им. Г.Ф. Пономаренко)') }}
+                {{ mixin.galleryPost2('gallery-post1', 'Краснодарская филармония (Концертный зал им. Г.Ф. Пономаренко)') }}
+                {{ mixin.galleryPost2('gallery-post1', 'Краснодарская филармония (Концертный зал им. Г.Ф. Пономаренко)') }}
+                {{ mixin.galleryPost2('gallery-post1', 'Краснодарская филармония (Концертный зал им. Г.Ф. Пономаренко)') }}
+                {{ mixin.galleryPost2('gallery-post1', 'Краснодарская филармония (Концертный зал им. Г.Ф. Пономаренко)') }}
+                {{ mixin.galleryPost2('gallery-post1', 'Краснодарская филармония (Концертный зал им. Г.Ф. Пономаренко)') }}
+                {{ mixin.galleryPost2('gallery-post1', 'Краснодарская филармония (Концертный зал им. Г.Ф. Пономаренко)') }}
+              </div>
+            </div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block Scripts %}
+	<script>
+	</script>
+{% endblock %}

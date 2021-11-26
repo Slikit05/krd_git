@@ -88,7 +88,7 @@
     margin-bottom: 50px;
 
     @media (max-width: 1023px) {
-      margin-bottom: 40px;
+      margin-bottom: 0;
     }
   }
 
@@ -361,6 +361,10 @@
   }
 }
 
+
+
+
+
 .text-page {
   &__up {
     padding-bottom: 20px;
@@ -448,6 +452,8 @@
       }
     }
   }
+  flex-direction: column;
+  align-content: space-between;
 
   &__area {
     margin-bottom: 52px;
@@ -487,10 +493,15 @@
       color: #000;
     }
 
+    .togglelist + p {
+      margin-top: 40px;
+    }
+
     p {
       font-size: 18px;
       line-height: 28px;
       color: #333333;
+      @include centerText;
       margin-bottom: 40px;
 
       @media (max-width: 767px) {
@@ -511,11 +522,16 @@
       }
     }
 
+    .table-page__scroll-wrap {
+      padding-bottom: 40px;
+    }
+
     span {
       font-size: 18px;
       line-height: 28px;
       color: #333333;
       display: block;
+      @include centerText;
 
       &:last-child {
         margin-bottom: 0;
@@ -537,12 +553,23 @@
       }
     }
 
+    .topic-row__caption {
+      margin: 0;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 28px;
+      margin-right: 15px;
+      flex-shrink: 0;
+      margin-bottom: 18px;
+    }
+
     span.accordion__caption {
       font-weight: 600;
       font-size: 22px;
       line-height: 28px;
       color: #0050b2;
       transition: all 0.3s ease-in-out;
+      max-width: inherit;
 
       @media (max-width: 767px) {
         font-size: 18px;
@@ -554,6 +581,7 @@
       font-size: 18px;
       line-height: 28px;
       color: #333;
+      max-width: inherit;
       margin-bottom: 35px;
 
       &:last-child {
@@ -565,6 +593,7 @@
       font-size: 18px;
       line-height: 28px;
       color: #333;
+      max-width: inherit;
       margin-bottom: 35px;
 
       &:last-child {
@@ -580,21 +609,37 @@
       transition: all .3s ease-in-out;
       border-bottom: 1px solid transparent;
       display: block;
+      max-width: inherit;
       margin-bottom: 12px;
     }
 
     span.btn-block__text {
       color: #fff;
+      max-width: inherit;
     }
 
     .btn-white {
       align-self: stretch;
     }
 
+    .link-doc {
+      &__flex {
+        .btn-white {
+          align-self: center;
+
+          &__text {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+
     span.btn-white__text {
       font-size: 18px;
       line-height: 24px;
       color: #0061D9;
+      max-width: inherit;
 
       @media (max-width: 767px) {
         font-size: 16px;
@@ -665,6 +710,7 @@
           font-size: 18px;
           line-height: normal;
           color: #333333;
+          margin: 0;
 
           @media (max-width: 767px) {
             font-size: 16px;
@@ -700,10 +746,16 @@
         &:last-child {
           margin-bottom: 0;
         }
-      }
 
-      ul {
-        margin-top: 32px;
+        ul {
+          margin-top: 32px;
+
+          li {
+            &::before {
+              counter-increment: none;
+            }
+          }
+        }
       }
     }
 
@@ -749,24 +801,41 @@
     }
 
     .btn-block {
-      margin-bottom: 32px;
+      // margin-bottom: 32px;
 
       @media (max-width: 767px) {
         text-align: center;
         margin-bottom: 20px;
       }
     }
+
+    .blockquote-row__caption {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #000;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
     table {
       margin-bottom: 40px;
+
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    &--change {
+      span {
+        display: inline;
       }
     }
   }
 
   &__wrap {
-    border-bottom: 1px solid #d9d9de;
-    padding-bottom: 40px;
+    border-top: 1px solid #d9d9de;
+    padding-top: 40px;
     margin-bottom: 40px;
 
     &:last-child {
@@ -780,6 +849,9 @@
     }
 
     p {
+      max-width: inherit;
+      // margin: auto;
+
       b {
         font-size: 24px;
         line-height: 32px;
@@ -788,6 +860,28 @@
           font-size: 18px;
           line-height: 28px;
         }
+      }
+    }
+
+    span {
+      max-width: inherit;
+    }
+
+    &:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    &--change {
+      padding-bottom: 40px;
+      border-bottom: 1px solid #d9d9de;
+    }
+
+    &--bold {
+      p {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
       }
     }
   }
@@ -969,6 +1063,7 @@
   display: flex;
   margin-bottom: 20px;
   align-items: center;
+  margin-top: 30px;
 
   @media (max-width: 767px) {
     display: block;
@@ -982,6 +1077,7 @@
   }
 
   &__caption {
+    margin: 0;
     font-weight: 600;
     font-size: 22px;
     line-height: 28px;
@@ -1251,6 +1347,15 @@
       grid-template-columns: repeat(1, 1fr);
       row-gap: 25px;
     }
+
+    &--two-collumn {
+      grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 25px;
+      }
+    }
   }
 }
 
@@ -1316,6 +1421,26 @@
       &:last-child {
         margin-right: 0;
       }
+    }
+  }
+
+  .block-text-area {
+    margin-bottom: 0 !important;
+
+    p,
+    b,
+    a {
+      font-size: 16px;
+      line-height: normal;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    strong {
+      color: #333333;
+      font-weight: 700;
     }
   }
 
@@ -1927,6 +2052,31 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: normal;
+      color: #333333;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 16px;
+      }
+
+      span {
+        font-size: 18px;
+        line-height: normal;
+        color: #76767A;
+
+        @media (max-width: 575px) {
+          font-size: 16px;
+        }
+      }
     }
   }
 
@@ -3087,6 +3237,40 @@ $tableWidthProcent: 250px;
       @media (max-width: 1023px) {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+      }
+    }
+
+    &--change-two {
+      grid-template-columns: repeat(4, 1fr);
+
+      .btn-white {
+        grid-column: span 2 / auto;
+      }
+
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+
+        .btn-white {
+          grid-column: span 1 / auto;
+        }
+      }
+
+      @media (max-width: 1023px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      @media (max-width: 767px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        .btn-white {
+          display: none;
+        }
+
+        .btn-block {
+          display: block;
+        }
       }
     }
   }

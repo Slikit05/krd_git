@@ -1,10 +1,14 @@
+nobr {
+	display: inline;
+}
+
 .modal {
 	position: fixed;
 	left: 0;
 	top: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 100;
+	z-index: 110;
 	display: none;
 	overflow: hidden;
 
@@ -62,11 +66,23 @@
 			// max-width: 100% !important;
 			padding: 24px;
 		}
+
+		* {
+			font-size: initial;
+			line-height: normal;
+			white-space: normal;
+			vertical-align: initial;
+		}
 	}
 
 	&__up {
 		margin-bottom: 20px;
 		vertical-align: inherit;
+
+		@media (max-width: 767px) {
+			border-bottom: 1px solid #D9D9DE;
+			padding-bottom: 14px;
+		}
 	}
 
 	&__down {
@@ -402,6 +418,9 @@
 }
 
 .citizens-area {
+	font-size: 18px;
+	line-height: 28px;
+
 	picture {
 		float: left;
 		max-width: 296px;
@@ -466,6 +485,7 @@
 	&__wrapper {
 		display: flex;
 		max-height: calc(100vh - 200px);
+
 		@media (max-width: 1200px) {
 			// max-height: 600px;
 		}
@@ -566,6 +586,7 @@
 
 .sites-block {
 	margin-bottom: 42px;
+
 	@media (max-width: 767px) {
 		margin-bottom: 30px;
 	}
@@ -578,6 +599,7 @@
 		padding-bottom: 15px;
 		border-bottom: 1px solid #D9D9DE;
 		margin-bottom: 32px;
+
 		@media (max-width: 767px) {
 			margin-bottom: 15px;
 			padding-bottom: 10px;
@@ -605,6 +627,7 @@
 		@media (max-width: 1079px) {
 			grid-template-columns: 1fr;
 		}
+
 		@media (max-width: 767px) {
 			row-gap: 16px;
 		}
@@ -622,6 +645,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		background-color: #fff;
+
 		@media (max-width: 767px) {
 			min-height: 72px;
 			padding: 15px;
@@ -703,6 +727,7 @@
 		z-index: 2;
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
+
 		&:hover {
 			background-color: #003B83 !important;
 		}
@@ -710,6 +735,7 @@
 
 	.flatpickr-day.selected {
 		background-color: #0061D9 !important;
+
 		&:hover {
 			background-color: #003B83 !important;
 		}
@@ -718,4 +744,8 @@
 	.event-text-hiden {
 		display: none;
 	}
+}
+
+.social-modal {
+	max-width: 1360px;
 }

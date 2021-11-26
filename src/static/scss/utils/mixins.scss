@@ -10,7 +10,7 @@
   @return $pixels / $context * 1rem;
 }
 
-@mixin size($width,$height: $width) {
+@mixin size($width, $height: $width) {
   width: $width;
   height: $height;
 }
@@ -20,9 +20,25 @@
   padding-bottom: $paddingBottom;
 }
 
+@mixin centerText {
+  max-width: 856px;
+  margin: 0 auto;
+}
+
 @mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
+  ::-webkit-input-placeholder {
+    @content
+  }
+
+  :-moz-placeholder {
+    @content
+  }
+
+  ::-moz-placeholder {
+    @content
+  }
+
+  :-ms-input-placeholder {
+    @content
+  }
 }

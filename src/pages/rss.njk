@@ -1,0 +1,120 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	<link rel="stylesheet" href="css/swiper.css">
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+{% endblock %}
+
+{% block Content %}
+	<section class="wrapper-blockadd wrapper-blockadd--no-offset">
+		<div class="container">
+			<div class="wrapper-blockadd__wrap">
+				<picture>
+					<source srcset="img/baadd2.jpg" type="image/jpeg" media="(max-width: 400px)">
+					<img src="img/baadd1.jpg" alt="">
+				</picture>
+			</div>
+		</div>
+	</section>
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Связь с администрацией</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<section class="content-page">
+		<div class="container">
+			<div class="row-title">
+				<h2 class="title">RSS экспорт новостей</h2>				
+			</div>
+			<div class="center-area-two center-area-two--change offset-area">
+				<div class="block-link-doc">
+					<div class="link-doc">
+						<div class="link-doc__wrap-icon">
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--doc">
+							</svg>
+							<span class="link-doc__file-name">xls</span>
+						</div>
+						<div class="link-doc__flex">
+							<div class="link-doc__wrap-text">
+								<div class="link-doc__row-caption">
+									<a href="#" class="link-doc__caption">Главная новостная лента</a>                    
+								</div>
+							</div>
+							<a href="#" class="btn-white">
+								<span class="btn-white__text">Смотреть RSS</span>
+							</a>
+						</div>
+					</div>
+					<div class="link-doc">
+						<div class="link-doc__wrap-icon">
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--doc">
+							</svg>
+							<span class="link-doc__file-name">xls</span>
+						</div>
+						<div class="link-doc__flex">
+							<div class="link-doc__wrap-text">
+								<div class="link-doc__row-caption">
+									<a href="#" class="link-doc__caption">Главная новостная лента</a>                    
+								</div>
+							</div>
+							<a href="#" class="btn-white">
+								<span class="btn-white__text">Смотреть RSS</span>
+							</a>
+						</div>
+					</div>
+					<div class="link-doc">
+						<div class="link-doc__wrap-icon">
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--doc">
+							</svg>
+							<span class="link-doc__file-name">xls</span>
+						</div>
+						<div class="link-doc__flex">
+							<div class="link-doc__wrap-text">
+								<div class="link-doc__row-caption">
+									<a href="#" class="link-doc__caption">Новости городской Думы</a>
+								</div>
+							</div>
+							<a href="#" class="btn-white">
+								<span class="btn-white__text">Смотреть RSS</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block Scripts %}
+	<script>
+
+	</script>
+{% endblock %}

@@ -20,6 +20,30 @@
 	</div>
 {% endmacro %}
 
+{% macro galleryPost2(img, caption) %}
+	<div class="gallery-post">
+		<a href="#" class="gallery-post__wrap-img">
+			<picture>
+				<source srcset="img/{{ img }}.webp" type="image/webp">
+				<source srcset="img/{{ img }}.jpg" type="image/jpeg">
+				<img src="img/{{ img }}.jpg" alt="">
+			</picture>
+		</a>
+		<div class="gallery-post__wrap-text">
+			<div class="gallery-post__row-title">
+				<a href="#">
+					<h4>{{ caption }}</h4>
+				</a>
+			</div>	
+			<div class="block-text-area">
+				<p><b>Телефон:</b> <strong>(861) 268-44-26</strong></p>
+				<p><b>Адрес:</b> Краснодар, ул. Красная, 5</p>
+				<p><b>Сайт:</b> <a href="#">www.kkx.ru</a></p>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
 {% macro itemCategory(text, id) %}
 	<li class="topic-block__item" id="{{ id }}">
 		<label class="check-row">

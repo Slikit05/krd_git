@@ -120,7 +120,8 @@
 				opacity: 1;
 			}
 		}
-		&:last-child {
+		&:last-child,
+		&:nth-last-child(2) {
 			.dropdown-list {
 				left: auto;
 				right: 0;
@@ -160,6 +161,16 @@
 	pointer-events: none;
 	transform: translateY(30px);
 	opacity: 0;
+	&--two-column {
+		min-width: 600px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 16px;
+		row-gap: 28px;
+		li {
+			margin-bottom: 0;
+		}
+	}
 
 	&::before {
 		content: "";

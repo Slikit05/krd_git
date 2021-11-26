@@ -1,0 +1,321 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	<link rel="stylesheet" href="css/flatpickr.min.css">
+	<link rel="stylesheet" href="css/choices.min.css">
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню Пункт меню Пункт меню Пункт меню Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости Главные новости</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="content-page">
+		<div class="container">
+			<div class="row-title row-title--change">
+				<h2 class="title">Реестр субъектов малого и среднего предпринимательства – получателей поддержки</h2>
+			</div>
+		</div>
+		<div class="filter-documentation gray-bg">
+			<div class="container">
+				<form action="" class="filter-documentation__form">
+					<div class="filter-documentation__wrapper">
+						<div class='filter-documentation__wrap filter-documentation__wrap--select-two'>
+							<span class='wrap-field__description'>Выбрать записи, содержащие:</span>
+							<div class='select-wrap' id='category'>
+								<select class='select select-category-document' name="all-documents">
+									<option placeholder>Документ</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+								</select>
+							</div>
+						</div>
+            <div class='filter-documentation__wrap filter-documentation__wrap--select-two'>
+							<span class='wrap-field__description'>Выбрать записи, содержащие:</span>
+							<div class='select-wrap' id='category'>
+								<select class='select select-category-document' name="all-documents">
+									<option placeholder>Документ</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+								</select>
+							</div>
+						</div>
+            <div class="filter-documentation__wrap filter-documentation__wrap--btn">
+              <button href="#" class="btn-block" data-btn-push>
+                <span class="btn-block__text">Найти</span>
+              </button>
+            </div>
+					</div>
+				</form>
+			</div>
+		</div>
+    <div class="table-page">
+			<div class="container">
+				<div class="table-page__row-btn table-page__row-btn--change-two">
+          <a href="#" class="btn-block" >
+						<span class="btn-block__text">Скачать PDF (1,2 МБ)</span>
+					</a>
+          <a href="#" class="btn-block" >
+						<span class="btn-block__text">Распечатать справку</span>
+					</a>
+					<a href="#" class="btn-white" data-click-modal="table"><span class="btn-white__text">Развернуть на весь экран</span></a>					
+				</div>
+				<div class="table-page__wrap-table" id="table-scroll-one">
+					<div class="table-page__scroll-wrap">
+						<table>
+							<tr>
+								<th>№ ОИО</th>
+								<th>Ф.И.О.депутата</th>
+								<th>Дни приёма граждан</th>
+								<th>Часы приёма граждан</th>
+								<th>Адрес приёмной депутата, телефон</th>
+								<th>Пример скрытого ранее столбца</th>
+								<th>Пример скрытого ранее столбца</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>Муравьёв Евгений Иванович</td>
+								<td>первый и третий четверг месяца</td>
+								<td>13.00 – 15.00</td>
+								<td>ул. Октябрьская, 21, каб. № 7, тел. 267-06-07</td>
+								<td>Пример информации в строке может быть длинной</td>
+								<td>Пример информации в строке может быть длинной</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Самойленко Михаил Валерьевич</td>
+								<td>каждый третий четверг месяца</td>
+								<td>15.00 – 17.00</td>
+								<td>ул. Северная, 324, оф. 83, тел. 8-918-034-31-13</td>
+								<td>Пример информации в строке может быть длинной</td>
+								<td>Пример информации в строке может быть длинной</td>
+							</tr>
+							<tr>
+								<td rowspan="2">3</td>
+								<td rowspan="2">Самохин Игорь Вячеславович</td>
+								<td>2-я среда месяца</td>
+								<td>12.00 – 14.00</td>
+								<td>ул. Северная, 279, кабинет 65 (6 этаж), тел. 259-04-04</td>
+								<td>Пример информации в строке может быть длинной</td>
+								<td>Пример информации в строке может быть длинной</td>
+							</tr>
+							<tr>
+								<td>4-я среда месяца</td>
+								<td>11.00 – 13.00</td>
+								<td>ул. Парковая, 9, тел. 259-04-04</td>
+								<td>Пример информации в строке может быть длинной</td>
+								<td>Пример информации в строке может быть длинной</td>
+							</tr>
+							<tr>
+								<td colspan="7"><h4>Пример подзаголовка в таблице</h4></td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Самойленко Михаил Валерьевич</td>
+								<td>первый и третий четверг месяца</td>
+								<td>13.00 – 15.00</td>
+								<td>ул. Октябрьская, 21, каб. № 7, тел. 267-06-07</td>
+								<td>Пример информации в строке может быть длинной</td>
+								<td>Пример информации в строке может быть длинной</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>Самохин Игорь Вячеславович</td>
+								<td>первый и третий четверг месяца</td>
+								<td>13.00 – 15.00</td>
+								<td>ул. Октябрьская, 21, каб. № 7, тел. 267-06-07</td>
+								<td>Пример информации в строке может быть длинной</td>
+								<td>Пример информации в строке может быть длинной</td>
+							</tr>
+						</table>
+					</div>					
+				</div>
+			</div>
+		</div>		
+	</section>
+  <div class="modal" id="table">
+		<div class="modal__overlay">
+			<div class="modal__block modal-table">
+				<div class="modal__up">
+					<h4 class="modal__caption">Реестр субъектов малого и среднего предпринимательства – получателей поддержки</h4>
+					<span class="close"></span>
+				</div>
+				<div class="modal__down">
+					<div class="modal__content">
+						<div class="table-page__wrap-table" id="table-scroll-two">
+							<div class="table-page__scroll-wrap">
+								<table>
+									<tr>
+										<th>№ ОИО</th>
+										<th>Ф.И.О.депутата</th>
+										<th>Дни приёма граждан</th>
+										<th>Часы приёма граждан</th>
+										<th>Адрес приёмной депутата, телефон</th>
+										<th>Пример скрытого ранее столбца</th>
+										<th>Пример скрытого ранее столбца</th>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>Муравьёв Евгений Иванович</td>
+										<td>первый и третий четверг месяца</td>
+										<td>13.00 – 15.00</td>
+										<td>ул. Октябрьская, 21, каб. № 7, тел. 267-06-07</td>
+										<td>Пример информации в строке может быть длинной</td>
+										<td>Пример информации в строке может быть длинной</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Самойленко Михаил Валерьевич</td>
+										<td>каждый третий четверг месяца</td>
+										<td>15.00 – 17.00</td>
+										<td>ул. Северная, 324, оф. 83, тел. 8-918-034-31-13</td>
+										<td>Пример информации в строке может быть длинной</td>
+										<td>Пример информации в строке может быть длинной</td>
+									</tr>
+									<tr>
+										<td rowspan="2">3</td>
+										<td rowspan="2">Самохин Игорь Вячеславович</td>
+										<td>2-я среда месяца</td>
+										<td>12.00 – 14.00</td>
+										<td>ул. Северная, 279, кабинет 65 (6 этаж), тел. 259-04-04</td>
+										<td>Пример информации в строке может быть длинной</td>
+										<td>Пример информации в строке может быть длинной</td>
+									</tr>
+									<tr>
+										<td>4-я среда месяца</td>
+										<td>11.00 – 13.00</td>
+										<td>ул. Парковая, 9, тел. 259-04-04</td>
+										<td>Пример информации в строке может быть длинной</td>
+										<td>Пример информации в строке может быть длинной</td>
+									</tr>
+									<tr>
+										<td colspan="7"><h4>Пример подзаголовка в таблице</h4></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Самойленко Михаил Валерьевич</td>
+										<td>первый и третий четверг месяца</td>
+										<td>13.00 – 15.00</td>
+										<td>ул. Октябрьская, 21, каб. № 7, тел. 267-06-07</td>
+										<td>Пример информации в строке может быть длинной</td>
+										<td>Пример информации в строке может быть длинной</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>Самохин Игорь Вячеславович</td>
+										<td>первый и третий четверг месяца</td>
+										<td>13.00 – 15.00</td>
+										<td>ул. Октябрьская, 21, каб. № 7, тел. 267-06-07</td>
+										<td>Пример информации в строке может быть длинной</td>
+										<td>Пример информации в строке может быть длинной</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Scripts %}
+	<script src="js/choices.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+    const elements = document.querySelectorAll('.select');
+    const filterForm = document.querySelector('.filter-documentation__form');
+    const wrapTable = document.querySelectorAll('.table-page__scroll-wrap');
+    let nameSelect;
+    let arrField = [];
+
+    let Scrollbar = window.Scrollbar;
+
+		Scrollbar.init(document.querySelector('#table-scroll-one'));
+
+    (function() {
+      for (let i = 0, customName = 1; i < elements.length; i++) {
+        elements[i].setAttribute('data-name', `select${customName}`);
+        nameSelect = elements[i].getAttribute('data-name');
+
+
+        const example = new Choices(`[data-name='${nameSelect}']`, {
+          itemSelectText: '',
+          searchEnabled: false,
+          placeholder: false,
+        });
+
+        customName++;
+      };
+
+      document.addEventListener('submit', function (event) {        
+        event.preventDefault();
+
+        arrField = [];
+        filterForm.querySelectorAll('select').forEach(function (i) {
+          let fieldSuccessful = {
+            nameInput: '',
+            value: '',
+          };
+          fieldSuccessful.nameInput = i.getAttribute('name');
+          fieldSuccessful.value = i.value;
+          arrField.push(fieldSuccessful);
+        });
+        //console.log(arrField);
+
+        axios({
+          method: 'post',
+          url: '',
+          data: {
+            arrField
+          }
+        }).then(function (response) {
+          console.log(response);
+        }).catch(function (error) {
+          console.log(error);
+        });
+    
+        fetch('js/tableInfo.json').then(response => response.json()).then(data => {
+          //console.log(data.table);
+
+          //console.log(wrapTable);
+          wrapTable.forEach(function (item) {
+            item.innerHTML = data.table;
+          });
+        });
+			});
+    })();
+	</script>
+	
+{% endblock %}

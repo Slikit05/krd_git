@@ -37,7 +37,7 @@
                   Версия для слабовидящих
                 </span>
               </a>
-              <a href="#" class="link-over link-social">
+              <a href="#" class="link-over link-social" data-click-modal="social-modal">
                 <svg>
                   <use xlink:href="img/sprite.svg#svg--Icon-social">
                 </svg>
@@ -323,6 +323,81 @@
         </div>
       </div>
     </div>
+
+    <div class="modal" id="social-modal">
+      <div class="modal__overlay">
+        <div class="modal__block social-modal">
+          <div class="modal__up">
+            <h4 class="modal__caption">Социальные сети</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="social-group">
+                <div class="social-group__grid">
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--vk">
+                      </svg>
+                      <span class="social-group__caption">Вконтакте</span>
+                    </span><span class="social-group__text">vk.com/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--facebook">
+                      </svg>
+                      <span class="social-group__caption">Facebook</span>
+                    </span><span class="social-group__text">facebook.com/krdcity</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--twit">
+                      </svg>
+                      <span class="social-group__caption">Twitter</span>
+                    </span><span class="social-group__text">twitter.com/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--odnoklassniki">
+                      </svg>
+                      <span class="social-group__caption">Одноклассники</span>
+                    </span><span class="social-group__text">ok.ru/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--youtube">
+                      </svg>
+                      <span class="social-group__caption">Youtube</span>
+                    </span><span class="social-group__text">youtube.com/user/krasnodaradm</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--telegram">
+                      </svg>
+                      <span class="social-group__caption">Telegram</span>
+                    </span><span class="social-group__text">telegram.me/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--instagram">
+                      </svg>
+                      <span class="social-group__caption">Instagram</span>
+                    </span><span class="social-group__text">instagram.com/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--rss">
+                      </svg>
+                      <span class="social-group__caption">RSS</span>
+                    </span><span class="social-group__text">krd.ru/rss</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="mob-menu" data-mobile-menu>
       <div class="mob-menu__up">
         <a href="#" class="logo">
@@ -409,7 +484,7 @@
             Версия для слабовидящих
           </span>
         </a>
-        <a href="#" class="link-over link-social">
+        <a href="#" class="link-over link-social" data-click-modal="social-modal">
           <svg>
             <use xlink:href="img/sprite.svg#svg--Icon-social">
           </svg>
@@ -619,7 +694,7 @@
         <div class="container">
           <div class="pagination__wrapper">
             <div class="pagination__left">
-              <a href="#" class="btn-white">
+              <a href="#" class="btn-white" data-btn-pagination="prev">
                 <svg>
                   <use xlink:href="img/sprite.svg#svg--arrow-two"></use>
                 </svg>
@@ -637,7 +712,7 @@
               <li class="pagination__item"><a href="#" class="pagination__link">10</a></li>
             </ul>
             <div class="pagination__right">
-              <a href="#" class="btn-white">
+              <a href="#" class="btn-white" data-btn-pagination="next">
                 <svg>
                   <use xlink:href="img/sprite.svg#svg--arrow-two"></use>
                 </svg>
@@ -649,7 +724,7 @@
       </div>
       <div class="row-btn">
         <div class="container">
-          <a href="#" class="btn-white"><span class="btn-white__text">Загрузить предыдущие документы</span></a>
+          <a href="#" class="btn-white btn-more" data-btn-more><span class="btn-white__text">Загрузить предыдущие документы</span></a>
         </div>
       </div>
     </section>
@@ -1545,9 +1620,6 @@
       </div>
     </div>
 
-    <script>
-    </script>
-
   </footer>
   <script src="js/smooth-scrollbar.js"></script>
   <script src="js/main.js"></script>
@@ -1557,6 +1629,16 @@
   <script src="js/choices.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
+    const filterForm = document.querySelector('.filter-documentation__form');
+    const listDocument = document.querySelector('.documentation-sect__wrapper');
+    const paginationList = document.querySelector('.pagination__list');
+    const arrLinnks = paginationList.querySelectorAll('li .pagination__link');
+    let count;
+    let interval;
+    let arrField = [];
+    let leftBorder;
+    let rightBorder;
+
     const choices = new Choices('.select', {
       itemSelectText: '',
       searchEnabled: false,
@@ -1577,6 +1659,249 @@
       nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
       prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
     });
+
+    const changeDocument = {
+      prevNomer: 0,
+      nomer: 1,
+      show: 8,
+      count: 20,
+      items: ['1', '2', '3', '4', '5', '6', '7', '20'],
+      go: function(nomer) {
+        this.prevNomer = this.nomer;
+        this.nomer = nomer;
+        this.render();
+      },
+      render: function() {
+
+        var nomer = this.nomer;
+        var show = this.show;
+        var count = this.count;
+
+        leftBorder = 2;
+        rightBorder = count - 1;
+        var showLeftDots = false;
+        var showRightDots = false;
+
+
+        if (show < count) {
+
+          var devide = Math.floor((show - 2) / 2);
+
+          var leftBorder = nomer - devide;
+          var rightBorder = nomer + devide - 1;
+
+          if (leftBorder < 2) {
+            showRightDots = true;
+            leftBorder = 2;
+            rightBorder = leftBorder + (show - 2) - 1;
+          } else if (rightBorder > count - 1) {
+            showLeftDots = true;
+            rightBorder = count - 1;
+            leftBorder = rightBorder - (show - 2) + 1;
+          } else {
+            showLeftDots = true;
+
+            showRightDots = true;
+          }
+        };
+
+        console.log(this);
+        console.log('leftBorder ' + leftBorder, showLeftDots);
+        console.log('rightBorder ' + rightBorder, showRightDots);
+        this.items = [];
+
+        var length = show;
+        if (length > count) {
+          length = count;
+        }
+
+        for (i = 1; i <= length; i++) {
+
+          if (i == 1) {
+            this.items.push(i);
+          } else if (i == length) {
+            this.items.push(count);
+          } else {
+            if (showLeftDots && showRightDots) {
+              // this.items.push(leftBorder++);
+            } else {
+              // this.items.push(leftBorder++);
+            }
+            this.items.push(leftBorder++);
+          };
+        };
+
+
+        if (document.documentElement.clientWidth > 767) {
+          if ((rightBorder - leftBorder) < 4) {
+            if (showLeftDots && showRightDots) {
+              if (rightBorder + 1 == count) {
+                showRightDots = false;
+              } else {
+                for (i = 2, l = this.items.length - 2; i <= l; i++) {
+                  this.items[i]++;
+                }
+              }
+            }
+          }
+        };
+
+        if (showLeftDots) {
+          this.items[1] = '...';
+        };
+
+        if (showRightDots) {
+          this.items[(this.items.length - 2)] = '...';
+        };
+        console.log(this.items);
+      },
+
+      refreshPagination: function(arr) {
+        arrLinnks.forEach(function(item) {
+          item.textContent = '';
+          item.classList.remove('pagination__link--active');
+        });
+
+        for (let i = 0; i < arrLinnks.length; i++) {
+          arrLinnks[i].textContent = arr[i];
+          arrLinnks[i].classList.remove('pagination__link--dotted');
+          if (arrLinnks[i].textContent === '') {
+            arrLinnks[i].closest('.pagination__item').classList.add('pagination__item--hide');
+          } else if (arrLinnks[i].textContent === '...') {
+            arrLinnks[i].classList.add('pagination__link--dotted');
+          }
+        }
+      },
+      createListDocuments: function(arr) {
+        console.log(arr);
+
+        arr.documents.forEach(function(item) {
+          function addCategory(nameCategory) {
+            let result = '';
+            nameCategory.forEach(function(i) {
+              result += `<a href='#' class='topic-item topic-item--change topic-item--change-collor'><div class='topic-item__wrapper'><span class='topic-item__text'>${i}</span></div></a>`;
+            });
+            return result;
+          };
+
+          listDocument.insertAdjacentHTML('beforeend', `<div class='documentation-sect__row'><div class='news-post'><div class='news-post__wrapper'><div class='news-post__row'><span class='info-text date'>${item.date}</span>${addCategory(item.category)}</div><a href='#' class='news-post__wrap-text'><h3>${item.nameDocument}</h3></a></div></div></div>`);
+        });
+      },
+      cicleField: function() {
+        arrField = [];
+        filterForm.querySelectorAll('input').forEach(function(i) {
+          let fieldSuccessful = {
+            nameInput: '',
+            value: '',
+          };
+          fieldSuccessful.nameInput = i.getAttribute('name');
+          fieldSuccessful.value = i.value;
+          arrField.push(fieldSuccessful);
+        });
+      },
+      timer: function(arrFilter) {
+        clearInterval(interval);
+        count = 12;
+        interval = setInterval(() => {
+          count--;
+          console.log('count: ', count--);
+          if (count <= 0) {
+            clearInterval(interval);
+            // Здесь скрипт очиски списка документов и получение данных
+
+            listDocument.querySelectorAll('*').forEach(function(i) {
+              i.remove();
+            });
+
+            axios({
+              method: 'post',
+              url: '',
+              data: {
+                arrFilter
+              }
+            }).then(function(response) {
+              console.log(response);
+            }).catch(function(error) {
+              console.log(error);
+            });
+
+            fetch('js/documentList.json').then(response => response.json()).then(data => {
+              this.createListDocuments(data);
+              this.count = data.pagination;
+
+
+              // генерация пагинации
+              if (document.documentElement.clientWidth < 768) {
+                console.log('меньше 768')
+                this.show = 5;
+                this.nomer = 1;
+                this.render();
+                this.refreshPagination(this.items);
+              } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 767) {
+                console.log('меньше 1300')
+                this.show = 6;
+                this.nomer = 1;
+                this.render();
+                this.refreshPagination(this.items);
+              } else {
+                console.log(this.count);
+                this.nomer = 1;
+                this.render();
+                this.refreshPagination(this.items);
+              }
+              arrLinnks[0].classList.add('pagination__link--active');
+              // генерация пагинации --- конец
+            });
+
+            // Здесь скрипт очиски списка документов и получение данных -- end
+          }
+        }, 200);
+      },
+      clickFunction: function(elem, target) {
+        let numberItem = {
+          numberPage: '',
+        };
+        // let index = [...elem.querySelectorAll('.pagination__link')].findIndex(el => el == event.target);
+        paginationList.querySelectorAll('.pagination__link').forEach(function(i) {
+          i.classList.remove('pagination__link--active');
+        });
+
+        if (target.classList.contains('pagination__link--dotted') || target.classList.contains('pagination__link--active')) {} else {
+          this.go(Number(target.textContent));
+          this.refreshPagination(this.items);
+        };
+
+        this.cicleField();
+        filterForm.querySelectorAll('select').forEach(function(i) {
+          let fieldSuccessful = {
+            nameInput: '',
+            value: '',
+          };
+          fieldSuccessful.nameInput = i.getAttribute('name');
+          fieldSuccessful.value = i.value;
+          arrField.push(fieldSuccessful);
+        });
+        numberItem.numberPage = this.nomer;
+        arrField.push(numberItem);
+        console.log(arrField);
+
+        axios({
+          method: 'post',
+          url: '',
+          data: {
+            arrField
+          }
+        }).then(function(response) {
+          console.log(response);
+        }).catch(function(error) {
+          console.log(error);
+        });
+
+        fetch('js/documentList.json').then(response => response.json()).then(data => {
+          this.createListDocuments(data);
+        });
+      },
+    };
 
     (function() {
       fetch('js/categoryDocument.json').then(response => response.json()).then(data => {
@@ -1622,6 +1947,200 @@
         });
       });
     })();
+
+    (function() {
+      filterForm.addEventListener('input', function(event) {
+
+        changeDocument.cicleField();
+        changeDocument.timer(arrField);
+      });
+
+      filterForm.addEventListener('change', function(event) {
+        if (event.target.classList.contains('select')) {
+          console.log('селект изменился');
+          changeDocument.cicleField();
+          filterForm.querySelectorAll('select').forEach(function(i) {
+            let fieldSuccessful = {
+              nameInput: '',
+              value: '',
+            };
+            fieldSuccessful.nameInput = i.getAttribute('name');
+            fieldSuccessful.value = i.value;
+            arrField.push(fieldSuccessful);
+          });
+          //console.log(arrField);
+          changeDocument.timer(arrField);
+        }
+      });
+
+      paginationList.addEventListener('click', function(event) {
+        event.preventDefault();
+        // let index = [...this.querySelectorAll('.pagination__link')].findIndex(el => el == event.target);
+        if (document.documentElement.clientWidth < 768) {
+          changeDocument.show = 5;
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 767) {
+          changeDocument.show = 6;
+        } else {};
+
+        listDocument.querySelectorAll('*').forEach(function(i) {
+          i.remove();
+        });
+
+        changeDocument.clickFunction(this, event.target);
+
+        arrLinnks.forEach(function(i) {
+          if (i.textContent === String(changeDocument.nomer)) {
+            i.classList.add('pagination__link--active');
+          }
+        });
+      });
+
+      document.addEventListener('click', function(event) {
+        if (event.target.dataset.btnPagination) {
+          event.preventDefault();
+
+          let numberItem = {
+            numberPage: '',
+          };
+
+          function changeActive() {
+            listDocument.querySelectorAll('*').forEach(function(i) {
+              i.remove();
+            });
+            changeDocument.cicleField();
+            filterForm.querySelectorAll('select').forEach(function(i) {
+              let fieldSuccessful = {
+                nameInput: '',
+                value: '',
+              };
+              fieldSuccessful.nameInput = i.getAttribute('name');
+              fieldSuccessful.value = i.value;
+              arrField.push(fieldSuccessful);
+            });
+            numberItem.numberPage = changeDocument.nomer;
+            arrField.push(numberItem);
+            console.log(arrField);
+
+            axios({
+              method: 'post',
+              url: '',
+              data: {
+                arrField
+              }
+            }).then(function(response) {
+              console.log(response);
+            }).catch(function(error) {
+              console.log(error);
+            });
+
+            fetch('js/documentList.json').then(response => response.json()).then(data => {
+              changeDocument.createListDocuments(data);
+            });
+          }
+
+          if (event.target.dataset.btnPagination === 'prev') {
+            if (changeDocument.nomer > 1) {
+              console.log('prev');
+              console.log(--changeDocument.nomer)
+              changeDocument.go(Number(changeDocument.nomer));
+              changeDocument.refreshPagination(changeDocument.items);
+              changeActive();
+            }
+          } else if (event.target.dataset.btnPagination === 'next') {
+            if (changeDocument.nomer < changeDocument.count) {
+              console.log('next');
+              console.log(++changeDocument.nomer)
+              changeDocument.go(Number(changeDocument.nomer));
+              changeDocument.refreshPagination(changeDocument.items);
+              changeActive();
+            }
+          };
+          arrLinnks.forEach(function(i) {
+            if (i.textContent === String(changeDocument.nomer)) {
+              i.classList.add('pagination__link--active');
+            }
+          });
+
+        };
+        if (event.target.classList.contains('btn-more')) {
+          event.preventDefault();
+
+          let numberItem = {
+            numberPage: '',
+          };
+
+          function changeActive() {
+            changeDocument.cicleField();
+            filterForm.querySelectorAll('select').forEach(function(i) {
+              let fieldSuccessful = {
+                nameInput: '',
+                value: '',
+              };
+              fieldSuccessful.nameInput = i.getAttribute('name');
+              fieldSuccessful.value = i.value;
+              arrField.push(fieldSuccessful);
+            });
+            numberItem.numberPage = changeDocument.nomer;
+            arrField.push(numberItem);
+            console.log(arrField);
+
+            axios({
+              method: 'post',
+              url: '',
+              data: {
+                arrField
+              }
+            }).then(function(response) {
+              console.log(response);
+            }).catch(function(error) {
+              console.log(error);
+            });
+
+            fetch('js/documentList.json').then(response => response.json()).then(data => {
+              changeDocument.createListDocuments(data);
+            });
+          }
+
+          if (changeDocument.nomer < changeDocument.count) {
+            console.log('next');
+            console.log(++changeDocument.nomer)
+            changeDocument.go(Number(changeDocument.nomer));
+            changeDocument.refreshPagination(changeDocument.items);
+            changeActive();
+          }
+
+          arrLinnks.forEach(function(i) {
+            if (i.textContent === String(changeDocument.nomer)) {
+              i.classList.add('pagination__link--active');
+            }
+          });
+
+        };
+      });
+
+    })();
+
+    // генерация пагинации
+    if (document.documentElement.clientWidth < 768) {
+      console.log('меньше 768')
+      changeDocument.show = 5;
+      changeDocument.nomer = 1;
+      changeDocument.render();
+      changeDocument.refreshPagination(changeDocument.items);
+    } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 767) {
+      console.log('меньше 1300')
+      changeDocument.show = 6;
+      changeDocument.nomer = 1;
+      changeDocument.render();
+      changeDocument.refreshPagination(changeDocument.items);
+    } else {
+      console.log(changeDocument.count);
+      changeDocument.nomer = 1;
+      changeDocument.render();
+      changeDocument.refreshPagination(changeDocument.items);
+    };
+    arrLinnks[0].classList.add('pagination__link--active');
+    // генерация пагинации --- конец
   </script>
 
 

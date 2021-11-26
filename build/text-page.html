@@ -35,7 +35,7 @@
                   Версия для слабовидящих
                 </span>
               </a>
-              <a href="#" class="link-over link-social">
+              <a href="#" class="link-over link-social" data-click-modal="social-modal">
                 <svg>
                   <use xlink:href="img/sprite.svg#svg--Icon-social">
                 </svg>
@@ -321,6 +321,81 @@
         </div>
       </div>
     </div>
+
+    <div class="modal" id="social-modal">
+      <div class="modal__overlay">
+        <div class="modal__block social-modal">
+          <div class="modal__up">
+            <h4 class="modal__caption">Социальные сети</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="social-group">
+                <div class="social-group__grid">
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--vk">
+                      </svg>
+                      <span class="social-group__caption">Вконтакте</span>
+                    </span><span class="social-group__text">vk.com/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--facebook">
+                      </svg>
+                      <span class="social-group__caption">Facebook</span>
+                    </span><span class="social-group__text">facebook.com/krdcity</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--twit">
+                      </svg>
+                      <span class="social-group__caption">Twitter</span>
+                    </span><span class="social-group__text">twitter.com/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--odnoklassniki">
+                      </svg>
+                      <span class="social-group__caption">Одноклассники</span>
+                    </span><span class="social-group__text">ok.ru/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--youtube">
+                      </svg>
+                      <span class="social-group__caption">Youtube</span>
+                    </span><span class="social-group__text">youtube.com/user/krasnodaradm</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--telegram">
+                      </svg>
+                      <span class="social-group__caption">Telegram</span>
+                    </span><span class="social-group__text">telegram.me/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--instagram">
+                      </svg>
+                      <span class="social-group__caption">Instagram</span>
+                    </span><span class="social-group__text">instagram.com/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--rss">
+                      </svg>
+                      <span class="social-group__caption">RSS</span>
+                    </span><span class="social-group__text">krd.ru/rss</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="mob-menu" data-mobile-menu>
       <div class="mob-menu__up">
         <a href="#" class="logo">
@@ -407,7 +482,7 @@
             Версия для слабовидящих
           </span>
         </a>
-        <a href="#" class="link-over link-social">
+        <a href="#" class="link-over link-social" data-click-modal="social-modal">
           <svg>
             <use xlink:href="img/sprite.svg#svg--Icon-social">
           </svg>
@@ -590,6 +665,74 @@
                     </div>
                   </a>
                 </div>
+                <table>
+                  <tr>
+                    <th>№ ОИО</th>
+                    <th>Ф.И.О.депутата</th>
+                    <th>Дни приёма граждан</th>
+                    <th>Часы приёма граждан</th>
+                    <th>Адрес приёмной депутата, телефон</th>
+                    <th>Пример скрытого ранее столбца</th>
+                    <th>Пример скрытого ранее столбца</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Муравьёв Евгений Иванович</td>
+                    <td>первый и третий четверг месяца</td>
+                    <td>13.00 – 15.00</td>
+                    <td>ул. Октябрьская, 21, каб. № 7, тел. 267-06-07</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Самойленко Михаил Валерьевич</td>
+                    <td>каждый третий четверг месяца</td>
+                    <td>15.00 – 17.00</td>
+                    <td>ул. Северная, 324, оф. 83, тел. 8-918-034-31-13</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">3</td>
+                    <td rowspan="2">Самохин Игорь Вячеславович</td>
+                    <td>2-я среда месяца</td>
+                    <td>12.00 – 14.00</td>
+                    <td>ул. Северная, 279, кабинет 65 (6 этаж), тел. 259-04-04</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                  </tr>
+                  <tr>
+                    <td>4-я среда месяца</td>
+                    <td>11.00 – 13.00</td>
+                    <td>ул. Парковая, 9, тел. 259-04-04</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                  </tr>
+                  <tr>
+                    <td colspan="7">
+                      <h4>Пример подзаголовка в таблице</h4>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Самойленко Михаил Валерьевич</td>
+                    <td>первый и третий четверг месяца</td>
+                    <td>13.00 – 15.00</td>
+                    <td>ул. Октябрьская, 21, каб. № 7, тел. 267-06-07</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Самохин Игорь Вячеславович</td>
+                    <td>первый и третий четверг месяца</td>
+                    <td>13.00 – 15.00</td>
+                    <td>ул. Октябрьская, 21, каб. № 7, тел. 267-06-07</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                    <td>Пример информации в строке может быть длинной</td>
+                  </tr>
+                </table>
                 <p>Город занимает выгодное экономико-географическое положение в Южном федеральном округе, расположен на важнейших транспортных магистралях, связывающих центр России с портами Черного и Азовского морей, а также курортами черноморского побережья Кавказа. В Юго-восточной части Краснодара расположено Кубанское водохранилище, построенное в 1973 году для обеспечения выполнения производственных и мелиоративных мероприятий.</p>
                 <p>Территория в границах муниципального образования составляет 841,4 квадратных километра, или 1,1 процента территории Краснодарского края. Город разделен на четыре внутригородских округа: Западный, Карасунский, Прикубанский и Центральный. В границах муниципального образования город Краснодар находятся 5 сельских округов и 29 сельских населенных пунктов.</p>
                 <div class="block-accordions">
@@ -1263,9 +1406,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-    </script>
 
   </footer>
   <script src="js/smooth-scrollbar.js"></script>
