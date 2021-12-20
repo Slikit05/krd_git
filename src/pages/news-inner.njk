@@ -357,6 +357,37 @@
 			document.title = titleName;
 		};
 
+		function eventCopyUrl() {
+			let count;
+			let interval;
+
+			document.addEventListener('click', function(event) {
+				if(event.target.hasAttribute('data-copy-url')) {
+					const wrapField = event.target.closest('.interaction-post').querySelector('.wrap-disabled');
+					event.preventDefault();
+					navigator.clipboard.writeText(event.target.closest('.interaction-post').querySelector('[data-field-url]').value);
+
+					if (wrapField.querySelector('.message-copy')) {} else {
+						wrapField.insertAdjacentHTML('beforeend', '<div class="message-copy"><span>Адрес скопирован в буфер обмена.</span></div>');
+					};
+
+					clearInterval(interval);
+					count = 10;
+					interval = setInterval(() => {
+						count--;
+						console.log('count: ', count--);
+						if (count <= 0) {
+							clearInterval(interval);
+							console.log('время закончилось');
+							if (wrapField.querySelector('.message-copy')) {
+								wrapField.querySelector('.message-copy').remove();
+							};
+						}
+					}, 200);
+				};
+			});
+		};
+
 		new Vue({
 			el: '#scrollPage',
 			data: () => ({
@@ -388,6 +419,7 @@
 								this.appendUser()						
 							};
 						}
+						myFunction();
 					};
 				},
 				visibilityChanged (isVisible, entry) {
@@ -409,6 +441,7 @@
 			},
 			mounted() {
 				this.scroll();
+				eventCopyUrl();
 			},
 			updated: function () {
 				this.$nextTick(function () {

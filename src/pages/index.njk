@@ -2,6 +2,7 @@
 
 {% block Link %}
 	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" href="css/choices.min.css">
 {% endblock %}
 
 {% block Header %}
@@ -120,7 +121,7 @@
 					</a>
 				</div>
 			</div>
-			<a href="#" class="btn-block">
+			<a href="#" class="btn-block" data-click-modal="mailing">
 				<span class="btn-block__text">Подписаться на рассылку новостей</span>
 			</a>
 			<div class="news-tabs">
@@ -630,10 +631,13 @@
 			</div>
 		</div>
 	</section>
+	{% include "include/modal.njk" %}
 {% endblock %}
 
 {% block Scripts %}
 	<script src="js/swiper.min.js"></script>
+	<script src="js/choices.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script>
 		const swiper = new Swiper(".slider-news__container", {
 			slidesPerView: 3,
@@ -658,8 +662,79 @@
 				},
 			}
 		});
+		const choices = new Choices('.select', {
+			itemSelectText: '',
+			searchEnabled: false,
+			placeholder: true,
+		});
 
 		openList();
+
+
+		(function () {
+			let arrModalField = [];
+			
+      document.addEventListener('submit', function (e) {
+				if (e.target.closest('.form-modal')) {
+					const formField = e.target.querySelectorAll('input, select, textarea, .url-link');
+					console.log('formField: ', formField);
+					const formAction = e.target.getAttribute('action');
+					const messageSuccess = e.target.closest('.modal').getAttribute('data-message-success');
+					//console.log('Путь отправки: ' + formAction);
+					e.preventDefault();
+
+					//console.log(e.target);
+
+					arrModalField.splice(0, arrModalField.length);
+					
+					formField.forEach(function(item) {
+						let fieldInfo = {
+							nameField: '',
+							value: '',
+							checked: '',
+						};
+
+
+						if(item.getAttribute('type') === 'checkbox') {
+							fieldInfo.nameField = item.getAttribute('name');
+							if (item.checked) {
+								fieldInfo.checked = true;
+							} else {
+								fieldInfo.checked = false;
+							}
+						} else if(item.classList.contains('url-link')) {
+							fieldInfo.nameField = 'Адрес страницы';
+							fieldInfo.value = item.textContent;
+						} else {
+							fieldInfo.nameField = item.getAttribute('name');
+							fieldInfo.value = item.value;
+						}
+
+						console.log(fieldInfo);
+
+						arrModalField.push(fieldInfo);
+					});
+
+
+
+					console.log(arrModalField);
+
+					axios({
+						method: 'post',
+						url: formAction,
+						data: {arrModalField}
+					}).then(function (response) {
+						console.log(response);
+						e.target.insertAdjacentHTML('afterend', `<h4 class="modal__caption">${messageSuccess}</h4>`);
+						e.target.style.display = 'none';
+					}).catch(function (error) {
+						console.log(error);
+						e.target.insertAdjacentHTML('afterend', '<h4 class="modal__caption">Форма не отправилась</h4>');
+						e.target.style.display = 'none';
+					});
+				}
+      })
+    })();
 
 	</script>
 {% endblock %}

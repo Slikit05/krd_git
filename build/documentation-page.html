@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title></title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="css/style.css" media="print" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/flatpickr.min.css">
   <link rel="stylesheet" href="css/choices.min.css">
@@ -617,7 +619,7 @@
               <div class="filter-documentation__wrap filter-documentation__wrap--number">
                 <div class="wrap-field">
                   <label>
-                    <span class="wrap-field__description">Номер документа:</span>
+                    <span class="wrap-field__description">Номер документа: <span class="hint-message">?<span class="message-copy"><span>Мои полномочия на этом собственно все!</span></span></span></span>
                     <input type="text" class="wrap-field__field" name='numb-doc' placeholder="Введите номер">
                   </label>
                 </div>
@@ -1040,7 +1042,120 @@
       </div>
     </div>
 
+    <div class="modal" id="mailing" data-message-success="Вы подписались на рассылку">
+      <div class="modal__overlay">
+        <div class="modal__block mailing-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Подписка на рассылку</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="form-modal">
+                <form action="js/test.json">
+                  <div class="form-modal__wrapper">
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Введите E-mail на который хотите получать рассылку<span class="red">*</span>:</span>
+                        <span class="error-text">Ошибка: заполните поле</span>
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Рассылка' required>
+                      </label>
+                    </div>
+                    <div class="wrap-field-check wrap-field-check--offset">
+                      <label class="check-row">
+                        <input type="checkbox" name="check">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Совпадает с основным e-mail</span>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="form-over__wrap-btn">
+                      <button class="btn-white md-width-btn" type="reset">
+                        <span class="btn-white__text">Очистить</span>
+                      </button>
+                      <button type="submit" class="btn-block md-width-btn">
+                        <span class="btn-block__text">Подписаться</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+
+    <div class="modal" id="report-a-bug" data-message-success="Вы отправили сообщение об ошибке">
+      <div class="modal__overlay">
+        <div class="modal__block mailing-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Сообщить об ошибке</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="form-modal">
+                <form action="js/test.json">
+                  <div class="form-modal__wrapper">
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Контактные данные:</span>
+
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                      </label>
+                    </div>
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Электронная почта<span class="red">*</span>:</span>
+
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Рассылка' required>
+                      </label>
+                    </div>
+                    <div class="wrap-field">
+                      <div class="wrap-field__flex">
+                        <span class="wrap-field__description">Адрес страницы с ошибкой<span class="red">*</span>:</span>
+                        <a href="#" class="url-link">https://krd.ru/</a>
+                      </div>
+                    </div>
+
+                    <div class="wrap-field">
+                      <div class="wrap-field__flex">
+                        <span class="wrap-field__description">Характер ошибки<span class="red">*</span>:</span>
+                        <div class='select-wrap' id='category'>
+                          <select class='select select-category-document' name="error">
+                            <option placeholder>Выберите из списка</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="wrap-field">
+                      <span class="wrap-field__description">Описание<span class="red">*</span>:</span>
+                      <label>
+                        <textarea class="wrap-field__textarea" name='textarea' placeholder="" data-name="Описание"></textarea>
+                      </label>
+                    </div>
+
+                    <div class="form-over__wrap-btn">
+                      <button type="submit" class="btn-block md-width-btn">
+                        <span class="btn-block__text">Оправить</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
 
@@ -1175,7 +1290,7 @@
             <li class="info-list__item"><a href="" class="info-list__link">Контактная информация администрации</a></li>
             <li class="info-list__item"><a href="" class="info-list__link">Использование Cookie</a></li>
             <li class="info-list__item"><a href="" class="info-list__link">Персональные данные</a></li>
-            <li class="info-list__item"><a href="" class="info-list__link">Сообщить об ошибке</a></li>
+            <li class="info-list__item"><a href="" class="info-list__link" data-click-modal="report-a-bug">Сообщить об ошибке</a></li>
           </ul>
         </div>
         <div class="page-footer__row">
@@ -1666,6 +1781,10 @@
       show: 8,
       count: 20,
       items: ['1', '2', '3', '4', '5', '6', '7', '20'],
+      animatePreloader: function(selector) {
+        let parentPaste = document.querySelector(selector);
+        parentPaste.insertAdjacentHTML('beforeend', '<div class="preloader-wrap"><svg version="1.1" id="preloader-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"   viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#fff" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite" /></path></svg></div>');
+      },
       go: function(nomer) {
         this.prevNomer = this.nomer;
         this.nomer = nomer;
@@ -1755,7 +1874,6 @@
         };
         console.log(this.items);
       },
-
       refreshPagination: function(arr) {
         arrLinnks.forEach(function(item) {
           item.textContent = '';
@@ -1764,6 +1882,7 @@
 
         for (let i = 0; i < arrLinnks.length; i++) {
           arrLinnks[i].textContent = arr[i];
+          arrLinnks[i].closest('.pagination__item').classList.remove('pagination__item--hide');
           arrLinnks[i].classList.remove('pagination__link--dotted');
           if (arrLinnks[i].textContent === '') {
             arrLinnks[i].closest('.pagination__item').classList.add('pagination__item--hide');
@@ -1775,17 +1894,26 @@
       createListDocuments: function(arr) {
         console.log(arr);
 
-        arr.documents.forEach(function(item) {
-          function addCategory(nameCategory) {
-            let result = '';
-            nameCategory.forEach(function(i) {
-              result += `<a href='#' class='topic-item topic-item--change topic-item--change-collor'><div class='topic-item__wrapper'><span class='topic-item__text'>${i}</span></div></a>`;
-            });
-            return result;
-          };
+        if (arr.length === 0) {
+          document.querySelector('.pagination').style.display = 'none';
+          document.querySelector('.btn-more').style.display = 'none';
+          listDocument.insertAdjacentHTML('beforeend', '<h2 class="title title-message">В этом разделе нет документов</h2>');
+        } else {
+          document.querySelector('.title-message').remove();
+          arr.documents.forEach(function(item) {
+            function addCategory(nameCategory) {
+              let result = '';
+              nameCategory.forEach(function(i) {
+                result += `<a href='#' class='topic-item topic-item--change topic-item--change-collor'><div class='topic-item__wrapper'><span class='topic-item__text'>${i}</span></div></a>`;
+              });
+              return result;
+            };
 
-          listDocument.insertAdjacentHTML('beforeend', `<div class='documentation-sect__row'><div class='news-post'><div class='news-post__wrapper'><div class='news-post__row'><span class='info-text date'>${item.date}</span>${addCategory(item.category)}</div><a href='#' class='news-post__wrap-text'><h3>${item.nameDocument}</h3></a></div></div></div>`);
-        });
+            listDocument.insertAdjacentHTML('beforeend', `<div class='documentation-sect__row'><div class='news-post'><div class='news-post__wrapper'><div class='news-post__row'><span class='info-text date'>${item.date}</span>${addCategory(item.category)}</div><a href='#' class='news-post__wrap-text'><h3>${item.nameDocument}</h3></a></div></div></div>`);
+          });
+          document.querySelector('.pagination').style.display = '';
+          document.querySelector('.btn-more').style.display = '';
+        }
       },
       cicleField: function() {
         arrField = [];
@@ -1993,9 +2121,14 @@
             i.classList.add('pagination__link--active');
           }
         });
+        window.scrollTo({
+          top: document.querySelector('.documentation-sect').getBoundingClientRect().top + document.body.scrollTop,
+        })
+        console.log(document.querySelector('.documentation-sect').getBoundingClientRect().top + document.body.scrollTop);
       });
 
       document.addEventListener('click', function(event) {
+
         if (event.target.dataset.btnPagination) {
           event.preventDefault();
 
@@ -2060,7 +2193,10 @@
               i.classList.add('pagination__link--active');
             }
           });
-
+          window.scrollTo({
+            top: document.querySelector('.documentation-sect').getBoundingClientRect().top - document.body.scrollTop,
+          })
+          console.log(document.querySelector('.documentation-sect').getBoundingClientRect().top + document.body.scrollTop);
         };
         if (event.target.classList.contains('btn-more')) {
           event.preventDefault();

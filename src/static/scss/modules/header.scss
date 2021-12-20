@@ -163,13 +163,7 @@
 	opacity: 0;
 	&--two-column {
 		min-width: 600px;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		column-gap: 16px;
-		row-gap: 28px;
-		li {
-			margin-bottom: 0;
-		}
+		columns: 2;
 	}
 
 	&::before {
@@ -199,6 +193,7 @@
 		position: relative;
 		z-index: 1;
 		margin-bottom: 28px;
+		break-inside: avoid;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -229,6 +224,7 @@
 			transform: translateX(-26px);
 			transition: all 0.3s ease-in-out;
 			margin-right: 8px;
+			flex-shrink: 0;
 		}
 
 		span {

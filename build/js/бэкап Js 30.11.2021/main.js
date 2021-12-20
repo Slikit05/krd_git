@@ -4,7 +4,9 @@ for (let i = 0; i < itemsNav.length; i++) {
   let innerItems = itemsNav[i].querySelectorAll('.dropdown-list__item');
 
   for (let i = 0; i < innerItems.length; i++) {
+    console.log(innerItems[i])
     if (i > 7) {
+      console.log('ссылок больше 8');
       innerItems[i].closest('.dropdown-list').classList.add('dropdown-list--two-column')
       break;
     }
@@ -81,10 +83,11 @@ togglelist.createAccordion();
 
 let breadСrumbs = document.querySelector(".breadcrumbs__list");
 
-
-if (breadСrumbs) {
-  breadСrumbs.scrollLeft = breadСrumbs.scrollWidth;
-}
+setTimeout(function () {
+  if (breadСrumbs) {
+    breadСrumbs.scrollLeft = breadСrumbs.offsetWidth;
+  }
+}, 100);
 
 if (document.querySelector('.breadcrumbs')) {
   (function () {
@@ -302,7 +305,6 @@ if (document.querySelector(".sites-modal")) {
 // Модальное окно с официальными сайтами - конец
 
 // Фиксированная шапка
-
 
 window.onscroll = function () {
   myFunction();

@@ -196,13 +196,13 @@
 						</div>
 						<div class="form-over__border">
 							<div class="form-over__wrap-btn">
-								<div class="btn-white" data-btn-clear>
+								<button class="btn-white sm-width-btn" data-btn-clear type="reset">
 									<span class="btn-white__text">Очистить</span>
-								</div>
-								<div class="btn-white">
+								</button>
+								<div class="btn-white sm-width-btn">
 									<span class="btn-white__text">Сохранить</span>
 								</div>
-								<button type="submit" class="btn-block">
+								<button type="submit" class="btn-block md-width-btn">
 									<span class="btn-block__text">Отправить</span>
 								</button>
 							</div>
@@ -247,7 +247,7 @@
 				allowReplace: false,
 				allowRevert: false,
 				allowProcess: false,
-				onupdatefiles: (files) => {					
+				onupdatefiles: (files) => {
 					const textAddFile = document.querySelector(".filepond--drop-label");
 					if (files.length === 0) {
 						textAddFile.style.display = 'block';
@@ -385,26 +385,26 @@
 
 		// Очистка при нажатии на кнопку
 
-		(function() {
-			const btnClear = document.querySelector("[data-btn-clear]");
+		//(function() {
+			//const btnClear = document.querySelector("[data-btn-clear]");
 
-			btnClear.addEventListener("click", function(event) {				
-				const arrInput = formAppeal.querySelectorAll("input");
-				const arrErrow = formAppeal.querySelectorAll(".errow-field");
-				arrInput.forEach(function(item) {
-					if(item.getAttribute("type") === "radio") {
-						item.checked = false;
-					} else {
-						item.value = "";
-					};
-				});
-				arrErrow.forEach(function(item) {
-					item.classList.remove("errow-field");
-				});
-				formAppeal.querySelector("textarea").value = "";
-				pond.removeFiles();
-			});
-		})();
+			//btnClear.addEventListener("click", function(event) {				
+				//const arrInput = formAppeal.querySelectorAll("input");
+				//const arrErrow = formAppeal.querySelectorAll(".errow-field");
+				//arrInput.forEach(function(item) {
+					//if(item.getAttribute("type") === "radio") {
+						//item.checked = false;
+					//} else {
+						//item.value = "";
+					//};
+				//});
+				//arrErrow.forEach(function(item) {
+					//item.classList.remove("errow-field");
+				//});
+				//formAppeal.querySelector("textarea").value = "";
+				//pond.removeFiles();
+			//});
+		//})();
 
 		// Очистка при нажатии на кнопку -- конец
 

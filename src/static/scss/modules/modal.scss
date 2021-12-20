@@ -101,6 +101,9 @@ nobr {
 			line-height: 32px;
 		}
 	}
+	.form-over__wrap-btn {
+		padding-bottom: 0;
+	}
 }
 
 .close {
@@ -748,4 +751,8 @@ nobr {
 
 .social-modal {
 	max-width: 1360px;
+}
+
+.mailing-calendar {
+	max-width: 744px;
 }
