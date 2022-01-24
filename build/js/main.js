@@ -12,7 +12,7 @@ for (let i = 0; i < itemsNav.length; i++) {
 }
 
 (function () {
-  let btnBurger = document.querySelector(".burger"),
+  const btnBurger = document.querySelector(".burger"),
     btnClose = document.querySelector("[data-hide-mob-menu]"),
     mobileMenu = document.querySelector("[data-mobile-menu]");
 

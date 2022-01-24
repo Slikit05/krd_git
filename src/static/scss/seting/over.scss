@@ -469,19 +469,19 @@
   }
 
   .ya-share2__item.ya-share2__item_service_vkontakte::before {
-    mask-image: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--vk);
+    mask-image: url('/local/templates/vg/img/sprite.svg#svg--vk');
   }
 
   .ya-share2__item.ya-share2__item_service_facebook::before {
-    mask-image: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--facebook);
+    mask-image: url('/local/templates/vg/img/sprite.svg#svg--facebook');
   }
 
   .ya-share2__item.ya-share2__item_service_twitter::before {
-    mask-image: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--twit);
+    mask-image: url('/local/templates/vg/img/sprite.svg#svg--twit');
   }
 
   .ya-share2__item.ya-share2__item_service_telegram::before {
-    mask-image: url(https://dev.krd.ru/local/templates/vg/img/sprite.svg#svg--telegram);
+    mask-image: url('/local/templates/vg/img/sprite.svg#svg--telegram');
   }
 }
 
@@ -1104,7 +1104,7 @@ a.link-doc img {
       top: 0;
       bottom: 0;
       right: 0;
-      mask-image: url(https://dev.krd.ru/local/templates/vg/img/svg/arrow-two-fill.svg);
+      mask-image: url('/local/templates/vg/img/svg/arrow-two-fill.svg');
       mask-repeat: no-repeat;
       mask-size: contain;
       mask-position: center;
@@ -3415,7 +3415,7 @@ html .scrollbar-track {
     }
 
     &--number {
-      width: 49.86%;
+      width: 50%;
 
       @media (max-width: 1200px) {
         width: 33.33%;
@@ -3432,6 +3432,17 @@ html .scrollbar-track {
 
     &--change-width {
       width: 33.33%;
+
+      @media (max-width: 1079px) {
+        width: 50%;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+    &--change-width-sm {
+      width: 16.67%;
 
       @media (max-width: 1079px) {
         width: 50%;
@@ -4412,6 +4423,10 @@ body .choices__list--dropdown {
     background-color: #fff;
     transform: rotate(45deg);
     border: 1px solid #a7a8ab;
+    @media (max-width: 767px) {
+      left: auto;
+      right: 10px;
+    }
   }
 
   span {
@@ -4452,6 +4467,10 @@ body .choices__list--dropdown {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease-in-out;
+    @media (max-width: 767px) {
+      left: auto;
+      right: -12px;
+    }
   }
 }
 
@@ -4471,5 +4490,32 @@ hr {
   &:hover {
     color: #003B83;
     text-decoration: underline;
+  }
+}
+
+.appeals {
+  h3 {
+    font-size: 20px;
+    line-height: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: normal;
+    color: #333;
+    margin-bottom: 10px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  a {
+    font-size: 18px;
+    line-height: normal;
+    color: #0050b2;
+    &:hover {
+      color: #003b83;
+    }
   }
 }
