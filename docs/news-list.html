@@ -1,0 +1,1983 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="css/style.css" media="print" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/flatpickr.min.css">
+
+</head>
+
+<body>
+
+  <header>
+    <section class="page-header">
+      <div class="page-header__up">
+        <div class="container">
+          <div class="page-header__up-wrapper">
+            <div class="page-header__wrapper-left">
+              <a href="#" class="link-over language">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--Icon-lang">
+                </svg>
+                <span>
+                  English
+                </span>
+              </a>
+              <a href="#" class="link-over visually-impaired">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--Icon-glass">
+                </svg>
+                <span>
+                  Версия для слабовидящих
+                </span>
+              </a>
+              <a href="#" class="link-over link-social" data-click-modal="social-modal">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--Icon-social">
+                </svg>
+                <span>
+                  Социальные сети
+                </span>
+              </a>
+            </div>
+            <div class="page-header__wrapper-right">
+              <a href="#" class="link-over link-administration">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--Icon-connection">
+                </svg>
+                <span>
+                  Связь с администрацией
+                </span>
+              </a>
+              <a href="#" class="link-over personal-area">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--Icon-account">
+                </svg>
+                <span>
+                  Личный кабинет
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-header__down" id="myHeader">
+        <div class="container">
+          <div class="page-header__wrapper-down">
+            <div class="page-header__left">
+              <a href="#" class="logo">
+                <img src="img/logo-one.png" alt="">
+                <span class="logo__text">krd.ru</span>
+              </a>
+              <span class="sm-text">Администрация и городская Дума Краснодара</span>
+            </div>
+            <div class="page-header__right">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">
+                      <span class="nav__text">О Краснодаре</span>
+                    </a>
+                    <ul class="dropdown-list">
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Главные новости</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>История города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Символика</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Руководители города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Почетные граждане города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Герои Великой Отечественной Войны</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Гостям города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Виртуальные экскурсии</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Фотогалереи</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Международные связи</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav__item"><a href="#" class="nav__link"><span class="nav__text">Горожанам</span></a></li>
+                  <li class="nav__item"><a href="#" class="nav__link"><span class="nav__text">Администрация</span></a></li>
+                  <li class="nav__item"><a href="#" class="nav__link"><span class="nav__text">Городская Дума</span></a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link"><span class="nav__text">Документы</span></a>
+                    <ul class="dropdown-list">
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Главные новости</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>История города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Символика</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Руководители города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Почетные граждане города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Герои Великой Отечественной Войны</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Гостям города</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Виртуальные экскурсии</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Фотогалереи</span>
+                        </a>
+                      </li>
+                      <li class="dropdown-list__item">
+                        <a href="#">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--arrow-link"></use>
+                          </svg>
+                          <span>Международные связи</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <div class="search" data-click-search="search1">
+                <div class="search__wrap-icon">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#svg--search">
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="burger">
+              <div class="burger__line"></div>
+              <div class="burger__line"></div>
+              <div class="burger__line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="search-modal" id="search1">
+      <div class="search-modal__overlay">
+        <div class="search-modal__block">
+          <div class="container">
+            <div class="search-modal__wrapper">
+              <div class="close-search">
+                <span class="close-search__text">Закрыть</span>
+                <span class="close-search__icon"></span>
+              </div>
+              <h4 class="search-modal__caption">Поиск по сайту</h4>
+              <span class="search-modal__text">Введите запрос для поиска например, структура администрации</span>
+              <div class="input-search-sect">
+                <form action="" class="input-search-sect__form">
+                  <div class="input-search-sect__wrap">
+                    <label>
+                      <input type="text" class="input-search-sect__field" placeholder="Поиск">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--search">
+                      </svg>
+                    </label>
+                  </div>
+                  <div class="input-search-sect__down">
+                    <div class="wrap-field-check">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">искать по главным новостям</span>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="wrap-field-check">
+                      <label class="check-row">
+                        <input type="checkbox">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">искать в документах</span>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="social-modal">
+      <div class="modal__overlay">
+        <div class="modal__block social-modal">
+          <div class="modal__up">
+            <h4 class="modal__caption">Социальные сети</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="social-group">
+                <div class="social-group__grid">
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--vk">
+                      </svg>
+                      <span class="social-group__caption">Вконтакте</span>
+                    </span><span class="social-group__text">vk.com/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--facebook">
+                      </svg>
+                      <span class="social-group__caption">Facebook</span>
+                    </span><span class="social-group__text">facebook.com/krdcity</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--twit">
+                      </svg>
+                      <span class="social-group__caption">Twitter</span>
+                    </span><span class="social-group__text">twitter.com/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--odnoklassniki">
+                      </svg>
+                      <span class="social-group__caption">Одноклассники</span>
+                    </span><span class="social-group__text">ok.ru/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--youtube">
+                      </svg>
+                      <span class="social-group__caption">Youtube</span>
+                    </span><span class="social-group__text">youtube.com/user/krasnodaradm</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--telegram">
+                      </svg>
+                      <span class="social-group__caption">Telegram</span>
+                    </span><span class="social-group__text">telegram.me/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--instagram">
+                      </svg>
+                      <span class="social-group__caption">Instagram</span>
+                    </span><span class="social-group__text">instagram.com/krdru</span></a>
+                  <a href="" class="social-group__item">
+                    <span class="social-group__up">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--rss">
+                      </svg>
+                      <span class="social-group__caption">RSS</span>
+                    </span><span class="social-group__text">krd.ru/rss</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="mob-menu" data-mobile-menu>
+      <div class="mob-menu__up">
+        <a href="#" class="logo">
+          <img src="img/logo-one.png" alt="">
+          <span class="logo__text">krd.ru</span>
+        </a>
+        <div class="mob-menu__close-wrap" data-hide-mob-menu>
+          <span>Закрыть</span>
+          <div class="mob-menu__close"></div>
+        </div>
+      </div>
+      <div class="mob-menu__middle">
+        <nav class="menu-nav">
+          <div class="menu-nav__item">
+            <div class="menu-nav__up">
+              <span class="menu-nav__caption">О Краснодаре</span>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--arrow-three">
+              </svg>
+            </div>
+            <div class="menu-nav__dropdown">
+              <ul class="menu-nav__list">
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Главные новости</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Герои Великой Отечественной Войны</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">История города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Гостям города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Символика</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Виртуальные экскурсии</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Руководители города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Фотогалереи</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Почетные граждане города</a></li>
+                <li class="menu-nav__dropdown-item"><a href="" class="menu-nav__dropdown-link">Международные связи</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu-nav__item">
+            <div class="menu-nav__up">
+              <span class="menu-nav__caption">Горожанам</span>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--arrow-three">
+              </svg>
+            </div>
+          </div>
+          <div class="menu-nav__item">
+            <div class="menu-nav__up">
+              <span class="menu-nav__caption">Администрация</span>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--arrow-three">
+              </svg>
+            </div>
+          </div>
+          <div class="menu-nav__item">
+            <div class="menu-nav__up">
+              <span class="menu-nav__caption">Городская Дума</span>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--arrow-three">
+              </svg>
+            </div>
+          </div>
+          <div class="menu-nav__item">
+            <div class="menu-nav__up">
+              <span class="menu-nav__caption">Документы</span>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--arrow-three">
+              </svg>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="mob-menu__down">
+        <a href="#" class="link-over language">
+          <svg>
+            <use xlink:href="img/sprite.svg#svg--Icon-lang">
+          </svg>
+          <span>
+            English
+          </span>
+        </a>
+        <a href="#" class="link-over visually-impaired">
+          <svg>
+            <use xlink:href="img/sprite.svg#svg--Icon-glass">
+          </svg>
+          <span>
+            Версия для слабовидящих
+          </span>
+        </a>
+        <a href="#" class="link-over link-social" data-click-modal="social-modal">
+          <svg>
+            <use xlink:href="img/sprite.svg#svg--Icon-social">
+          </svg>
+          <span>
+            Социальные сети
+          </span>
+        </a>
+        <a href="#" class="link-over link-administration">
+          <svg>
+            <use xlink:href="img/sprite.svg#svg--Icon-connection">
+          </svg>
+          <span>
+            Связь с администрацией
+          </span>
+        </a>
+        <a href="#" class="link-over personal-area">
+          <svg>
+            <use xlink:href="img/sprite.svg#svg--Icon-account">
+          </svg>
+          <span>
+            Личный кабинет
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <a href="#" class="blue-line">
+      <div class="container">
+        <div class="blue-line__wrapper">
+          <div class="blue-line__left">
+            <picture>
+              <source srcset="img/img-blue-line1.webp" type="image/webp">
+              <source srcset="img/img-blue-line1.jpg" type="image/jpeg">
+              <img src="img/img-blue-line1.jpg" alt="">
+            </picture>
+            <span class="blue-line__text-lg">Масочный режим в Краснодаре</span>
+            <span class="blue-line__sm-text">Защити себя и окружающих людей</span>
+          </div>
+          <div class="blue-line__right">
+            <button href="#" class="btn-block">
+              <span class="btn-block__text">Подробнее</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="" class="breadcrumbs__link">Главная</a>
+            <svg>
+              <use xlink:href="img/sprite.svg#svg--arrow-two">
+            </svg>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="" class="breadcrumbs__link">Пункт меню</a>
+            <svg>
+              <use xlink:href="img/sprite.svg#svg--arrow-two">
+            </svg>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="" class="breadcrumbs__link">Пункт меню</a>
+            <svg>
+              <use xlink:href="img/sprite.svg#svg--arrow-two">
+            </svg>
+          </li>
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__link">Главные новости</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </header>
+  <main class="main">
+
+    <section class="content-page">
+      <div class="container">
+        <div class="row-title">
+          <h2 class="title">Главные новости</h2>
+          <div class="row-title__wrap">
+            <a href="#" class="link-change" data-click-modal="calendar">
+              <span class="link-change__text">Календарь</span>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--calendar">
+              </svg>
+            </a>
+            <a href="#" class="link-change" data-click-modal="topic">
+              <span class="link-change__text">Темы</span>
+              <svg>
+                <use xlink:href="img/sprite.svg#svg--topics">
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="news-grid">
+        <div class="container">
+          <div class="news-grid__wrapper">
+
+            <div class="news-post">
+              <div class="news-post__wrapper">
+                <div class="news-post__row">
+                  <span class="info-text date">05 марта 2021, 10:24</span>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Национальные проекты</span>
+                    </div>
+                  </a>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Образование</span>
+                    </div>
+                  </a>
+                </div>
+                <a href="#" class="news-post__wrap-img">
+                  <picture>
+                    <source srcset="img/news-post1.webp" type="image/webp">
+                    <source srcset="img/news-post1.jpg" type="image/jpeg">
+                    <img src="img/news-post1.jpg" alt="">
+                  </picture>
+                </a>
+                <a href="#" class="news-post__wrap-text">
+                  <h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
+                  <p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="news-post">
+              <div class="news-post__wrapper">
+                <div class="news-post__row">
+                  <span class="info-text date">05 марта 2021, 10:24</span>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Национальные проекты</span>
+                    </div>
+                  </a>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Образование</span>
+                    </div>
+                  </a>
+                </div>
+                <a href="#" class="news-post__wrap-img">
+                  <picture>
+                    <source srcset="img/news-post1.webp" type="image/webp">
+                    <source srcset="img/news-post1.jpg" type="image/jpeg">
+                    <img src="img/news-post1.jpg" alt="">
+                  </picture>
+                </a>
+                <a href="#" class="news-post__wrap-text">
+                  <h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
+                  <p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="news-post">
+              <div class="news-post__wrapper">
+                <div class="news-post__row">
+                  <span class="info-text date">05 марта 2021, 10:24</span>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Национальные проекты</span>
+                    </div>
+                  </a>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Образование</span>
+                    </div>
+                  </a>
+                </div>
+                <a href="#" class="news-post__wrap-img">
+                  <picture>
+                    <source srcset="img/news-post1.webp" type="image/webp">
+                    <source srcset="img/news-post1.jpg" type="image/jpeg">
+                    <img src="img/news-post1.jpg" alt="">
+                  </picture>
+                </a>
+                <a href="#" class="news-post__wrap-text">
+                  <h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
+                  <p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="news-post">
+              <div class="news-post__wrapper">
+                <div class="news-post__row">
+                  <span class="info-text date">05 марта 2021, 10:24</span>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Национальные проекты</span>
+                    </div>
+                  </a>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Образование</span>
+                    </div>
+                  </a>
+                </div>
+                <a href="#" class="news-post__wrap-img">
+                  <picture>
+                    <source srcset="img/news-post1.webp" type="image/webp">
+                    <source srcset="img/news-post1.jpg" type="image/jpeg">
+                    <img src="img/news-post1.jpg" alt="">
+                  </picture>
+                </a>
+                <a href="#" class="news-post__wrap-text">
+                  <h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
+                  <p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="news-post">
+              <div class="news-post__wrapper">
+                <div class="news-post__row">
+                  <span class="info-text date">05 марта 2021, 10:24</span>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Национальные проекты</span>
+                    </div>
+                  </a>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Образование</span>
+                    </div>
+                  </a>
+                </div>
+                <a href="#" class="news-post__wrap-img">
+                  <picture>
+                    <source srcset="img/news-post1.webp" type="image/webp">
+                    <source srcset="img/news-post1.jpg" type="image/jpeg">
+                    <img src="img/news-post1.jpg" alt="">
+                  </picture>
+                </a>
+                <a href="#" class="news-post__wrap-text">
+                  <h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
+                  <p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="news-post">
+              <div class="news-post__wrapper">
+                <div class="news-post__row">
+                  <span class="info-text date">05 марта 2021, 10:24</span>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Национальные проекты</span>
+                    </div>
+                  </a>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Образование</span>
+                    </div>
+                  </a>
+                </div>
+                <a href="#" class="news-post__wrap-img">
+                  <picture>
+                    <source srcset="img/news-post1.webp" type="image/webp">
+                    <source srcset="img/news-post1.jpg" type="image/jpeg">
+                    <img src="img/news-post1.jpg" alt="">
+                  </picture>
+                </a>
+                <a href="#" class="news-post__wrap-text">
+                  <h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
+                  <p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="news-post">
+              <div class="news-post__wrapper">
+                <div class="news-post__row">
+                  <span class="info-text date">05 марта 2021, 10:24</span>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Национальные проекты</span>
+                    </div>
+                  </a>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Образование</span>
+                    </div>
+                  </a>
+                </div>
+                <a href="#" class="news-post__wrap-img">
+                  <picture>
+                    <source srcset="img/news-post1.webp" type="image/webp">
+                    <source srcset="img/news-post1.jpg" type="image/jpeg">
+                    <img src="img/news-post1.jpg" alt="">
+                  </picture>
+                </a>
+                <a href="#" class="news-post__wrap-text">
+                  <h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
+                  <p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="news-post">
+              <div class="news-post__wrapper">
+                <div class="news-post__row">
+                  <span class="info-text date">05 марта 2021, 10:24</span>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Национальные проекты</span>
+                    </div>
+                  </a>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Образование</span>
+                    </div>
+                  </a>
+                </div>
+                <a href="#" class="news-post__wrap-img">
+                  <picture>
+                    <source srcset="img/news-post1.webp" type="image/webp">
+                    <source srcset="img/news-post1.jpg" type="image/jpeg">
+                    <img src="img/news-post1.jpg" alt="">
+                  </picture>
+                </a>
+                <a href="#" class="news-post__wrap-text">
+                  <h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
+                  <p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="news-post">
+              <div class="news-post__wrapper">
+                <div class="news-post__row">
+                  <span class="info-text date">05 марта 2021, 10:24</span>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Национальные проекты</span>
+                    </div>
+                  </a>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Образование</span>
+                    </div>
+                  </a>
+                </div>
+                <a href="#" class="news-post__wrap-img">
+                  <picture>
+                    <source srcset="img/news-post1.webp" type="image/webp">
+                    <source srcset="img/news-post1.jpg" type="image/jpeg">
+                    <img src="img/news-post1.jpg" alt="">
+                  </picture>
+                </a>
+                <a href="#" class="news-post__wrap-text">
+                  <h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
+                  <p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="news-post">
+              <div class="news-post__wrapper">
+                <div class="news-post__row">
+                  <span class="info-text date">05 марта 2021, 10:24</span>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Национальные проекты</span>
+                    </div>
+                  </a>
+                  <a href="#" class="topic-item topic-item--change">
+                    <div class="topic-item__wrapper">
+                      <span class="topic-item__text">Образование</span>
+                    </div>
+                  </a>
+                </div>
+                <a href="#" class="news-post__wrap-img">
+                  <picture>
+                    <source srcset="img/news-post1.webp" type="image/webp">
+                    <source srcset="img/news-post1.jpg" type="image/jpeg">
+                    <img src="img/news-post1.jpg" alt="">
+                  </picture>
+                </a>
+                <a href="#" class="news-post__wrap-text">
+                  <h3>В пяти пригородных школах Краснодара работают «Точки роста»</h3>
+                  <p>Инновационные центры цифрового и гуманитарного образования «Точки роста» созданы в рамках национального проекта «Образование» на базе школ, расположенных в пригородных населенных пунктах краевой столицы. Сейчас такие кабинеты работают в школах № 61, 68, 74, 77, 85 Краснодара — это более 6 тыс. детей. Планируется, что в 2021 году центры заработают еще в нескольких общеобразовательных учреждениях города.</p>
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <a href="#" class="btn-block">
+            <span class="btn-block__text">Подписаться на рассылку новостей</span>
+          </a>
+        </div>
+      </div>
+      <div class="pagination">
+        <div class="container">
+          <div class="pagination__wrapper">
+            <div class="pagination__left">
+              <a href="#" class="btn-white">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-two"></use>
+                </svg>
+                <span class="btn-white__text">Предыдущая</span>
+              </a>
+            </div>
+            <ul class="pagination__list">
+              <li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--active">2</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--dotted">...</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">8</a></li>
+            </ul>
+            <div class="pagination__right">
+              <a href="#" class="btn-white">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-two"></use>
+                </svg>
+                <span class="btn-white__text">Предыдущая</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row-btn">
+        <div class="container">
+          <a href="#" class="btn-white"><span class="btn-white__text">Загрузить предыдущие галереи</span></a>
+        </div>
+      </div>
+    </section>
+    <div class="modal" id="calendar">
+      <div class="modal__overlay">
+        <div class="modal__block modal-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Календарь</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="calendar tab-wrapper">
+                <div class="calendar__up">
+                  <div class="calendar__item active-item-tab" data-nametabs="date">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#svg--date"></use>
+                    </svg>
+                    <span>Выбор даты</span>
+                  </div>
+                  <div class="calendar__item" data-nametabs="period">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#svg--period"></use>
+                    </svg>
+                    <span>Выбор периода</span>
+                  </div>
+                </div>
+                <div class="calendar__down">
+                  <div class="calendar__tab tab-block tab-block--active" data-tabcontent="date">
+                    <input type="text" class="calendar__field calendar__field-date" placeholder="Пожалуйста выберите дату" id="date1">
+                    <button class="btn-white btn-cancel">
+                      <span class="btn-white__text">Отмена</span>
+                    </button>
+                  </div>
+                  <div class="calendar__tab tab-block tab-block--period flatpickr" data-tabcontent="period">
+                    <input type="text" class="calendar__field calendar__field-period" placeholder="Пожалуйста выберите период" id="period1">
+                    <button class="btn-white btn-cancel">
+                      <span class="btn-white__text">Отмена</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="calendar2">
+      <div class="modal__overlay">
+        <div class="modal__block modal-calendar event-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Календарь</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="calendar tab-wrapper">
+                <div class="calendar__down">
+                  <div class="calendar__tab">
+                    <input type="text" class="calendar__field calendar__field-date calendar__field--change" placeholder="Пожалуйста выберите дату" id="date2">
+                    <span class="event-text"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="calendar3">
+      <div class="modal__overlay">
+        <div class="modal__block modal-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Календарь</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="calendar tab-wrapper">
+                <div class="calendar__down">
+                  <div class="calendar__tab">
+                    <input type="text" class="calendar__field calendar__field-date calendar__field--change" placeholder="Пожалуйста выберите дату" id="period2">
+                    <button class="btn-white btn-cancel">
+                      <span class="btn-white__text">Отмена</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal" id="topic">
+      <div class="modal__overlay">
+        <div class="modal__block modal-topic">
+          <div class="modal__up">
+            <h4 class="modal__caption">Выберите тему</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="topic-block">
+                <div class="topic-block__up">
+                  <span class="topic-block__caption">Поиск темы</span>
+                  <div class="topic-block__field-wrap">
+                    <input type="text" id="filter" value="" class="topic-block__field" placeholder="Введите название темы">
+                    <div class="topic-block__btn-search">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--search">
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="topic-block__middle">
+                  <div class="topic-block__scroll">
+                    <ul class="topic-block__list" id="items">
+
+                      <li class="topic-block__item" id="item1">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евгений Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item2">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item3">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+
+                      <li class="topic-block__item" id="item4">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евген Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item5">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item6">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+
+                      <li class="topic-block__item" id="item7">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евгений Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item8">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item9">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+
+                      <li class="topic-block__item" id="item10">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евгений Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item11">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item12">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+
+                      <li class="topic-block__item" id="item13">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евгений Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item14">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item15">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="topic-block__down">
+                  <div class="topic-block__flex">
+                    <div class="topic-block__left">
+                      <div class="wrapper-topic">
+
+                      </div>
+                    </div>
+                    <div class="topic-block__right">
+                      <a href="#" class="btn-block" data-btn-show>
+                        <span class="btn-block__text">Показать</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="mailing" data-message-success="Вы подписались на рассылку">
+      <div class="modal__overlay">
+        <div class="modal__block mailing-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Подписка на рассылку</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="form-modal">
+                <form action="js/test.json">
+                  <div class="form-modal__wrapper">
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Введите E-mail на который хотите получать рассылку<span class="red">*</span>:</span>
+                        <span class="error-text">Ошибка: заполните поле</span>
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Рассылка' required>
+                      </label>
+                    </div>
+                    <div class="wrap-field-check wrap-field-check--offset">
+                      <label class="check-row">
+                        <input type="checkbox" name="check">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Совпадает с основным e-mail</span>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="form-over__wrap-btn">
+                      <button class="btn-white md-width-btn" type="reset">
+                        <span class="btn-white__text">Очистить</span>
+                      </button>
+                      <button type="submit" class="btn-block md-width-btn">
+                        <span class="btn-block__text">Подписаться</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal" id="report-a-bug" data-message-success="Вы отправили сообщение об ошибке">
+      <div class="modal__overlay">
+        <div class="modal__block mailing-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Сообщить об ошибке</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="form-modal">
+                <form action="js/test.json">
+                  <div class="form-modal__wrapper">
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Контактные данные:</span>
+
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                      </label>
+                    </div>
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Электронная почта<span class="red">*</span>:</span>
+
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Рассылка' required>
+                      </label>
+                    </div>
+                    <div class="wrap-field">
+                      <div class="wrap-field__flex">
+                        <span class="wrap-field__description">Адрес страницы с ошибкой<span class="red">*</span>:</span>
+                        <a href="#" class="url-link">https://krd.ru/</a>
+                      </div>
+                    </div>
+
+                    <div class="wrap-field">
+                      <div class="wrap-field__flex">
+                        <span class="wrap-field__description">Характер ошибки<span class="red">*</span>:</span>
+                        <div class='select-wrap' id='category'>
+                          <select class='select select-category-document' name="error">
+                            <option placeholder>Выберите из списка</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="wrap-field">
+                      <span class="wrap-field__description">Описание<span class="red">*</span>:</span>
+                      <label>
+                        <textarea class="wrap-field__textarea" name='textarea' placeholder="" data-name="Описание"></textarea>
+                      </label>
+                    </div>
+
+                    <div class="form-over__wrap-btn">
+                      <button type="submit" class="btn-block md-width-btn">
+                        <span class="btn-block__text">Оправить</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <section class="page-footer">
+      <a href="#" class="btn-block" data-click-modal="sites">
+        <span class="btn-block__text">Официальные сайты</span>
+        <svg>
+          <use xlink:href="img/sprite.svg#svg--arrow-link">
+        </svg>
+      </a>
+      <div class="container">
+        <div class="page-footer__grid">
+          <div class="page-footer__block">
+            <div class="page-footer__wrap">
+              <div class="page-footer__row-up">
+                <span class="page-footer__caption">О Краснодаре</span>
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-three">
+                </svg>
+              </div>
+              <ul class="page-footer__list">
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Главные новости</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">История города</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Символика</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Руководители города</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Почетные граждане города</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Герои Великой Отечественной Войны</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Гостям города</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Виртуальные экскурсии</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Фотогалереи</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Международные связи</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="page-footer__block">
+            <div class="page-footer__wrap">
+              <div class="page-footer__row-up">
+                <span class="page-footer__caption">Горожанам</span>
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-three">
+                </svg>
+              </div>
+              <ul class="page-footer__list">
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Услуги</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Интернет-приёмная</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">МФЦ города Краснодара</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Номера экстренных оперативных служб</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Номера телефонов по вопросам ЖКХ</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Госуслуги</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Интерактивные карты</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Строительство социальных объектов</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Ярмарки выходного дня</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Уборка мусора</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Уход за деревьями</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Правовое просвещение и правовое информирование граждан</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Бесплатная юридическая помощь на территории Краснодарского края</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Онлайн-конференции</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="page-footer__block">
+            <div class="page-footer__wrap">
+              <div class="page-footer__row-up">
+                <span class="page-footer__caption">Администрация</span>
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-three">
+                </svg>
+              </div>
+              <ul class="page-footer__list">
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Структура администрации</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Структурные подразделения администрации</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Администрации внутригородских округов</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Контрольно-счетная палата Краснодара</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Муниципальная служба</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="page-footer__block">
+            <div class="page-footer__wrap">
+              <div class="page-footer__row-up">
+                <span class="page-footer__caption">Горожанам</span>
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-three">
+                </svg>
+              </div>
+              <ul class="page-footer__list">
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Новости городской думы</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Структура городской Думы</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Депутатский корпус</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Комитеты городской Думы Краснодара</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Совет молодых депутатов</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Управление делами</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Материалы к очередному заседанию</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Всероссийский Совет местного самоуправления</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Онлайн-трансляции</a></li>
+              </ul>
+            </div>
+            <div class="page-footer__wrap">
+              <div class="page-footer__row-up">
+                <span class="page-footer__caption">Документы</span>
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-three">
+                </svg>
+              </div>
+              <ul class="page-footer__list">
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Новости городской думы</a></li>
+                <li class="page-footer__item"><a href="#" class="page-footer__link">Структура городской Думы</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="line-info">
+          <div class="line-info__left">
+            <img src="img/line-info-img.png" alt="">
+            <span class="line-info__caption">Опрос населения</span>
+            <span class="line-info__text">Об эффективности деятельности руководителей</span>
+          </div>
+          <div class="line-info__right">
+            <a href="#" class="btn-block">
+              <span class="btn-block__text">Подробнее</span>
+            </a>
+          </div>
+        </div>
+        <div class="info-list">
+          <ul class="info-list__wrapper">
+            <li class="info-list__item"><a href="" class="info-list__link">Редакция сайта</a></li>
+            <li class="info-list__item"><a href="" class="info-list__link">Официальный баннер</a></li>
+            <li class="info-list__item"><a href="" class="info-list__link">Технические сведения</a></li>
+            <li class="info-list__item"><a href="" class="info-list__link">Контактная информация администрации</a></li>
+            <li class="info-list__item"><a href="" class="info-list__link">Использование Cookie</a></li>
+            <li class="info-list__item"><a href="" class="info-list__link">Персональные данные</a></li>
+            <li class="info-list__item"><a href="" class="info-list__link" data-click-modal="report-a-bug">Сообщить об ошибке</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__row">
+          <span class="page-footer__text">2021 ©</span>
+          <span class="page-footer__text"><span>Официальный Интернет-портал администрации муниципального образования город Краснодар и городской Думы Краснодара.</span></span>
+        </div>
+        <div class="page-footer__row">
+          <span class="page-footer__text">Свидетельство о регистрации СМИ ЭЛ № ФС 77 - 73592 выдано Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) 31.08.2018 г.</span>
+        </div>
+        <div class="page-footer__row">
+          <span class="page-footer__text">Наименование сетевого издания «Официальный Интернет-портал администрации муниципального образования город Краснодар и городской Думы Краснодара».</span>
+          <span class="page-footer__text">Учредитель: Администрация муниципального образования город Краснодар.</span>
+        </div>
+        <div class="page-footer__row">
+          <span class="page-footer__text">
+            Главный редактор: А.Ю.Смертин
+          </span>
+          <br>
+          <span class="page-footer__text">
+            Адрес электронной почты и номер телефона главного редактора сетевого издания:
+            <a href="mailto:pressa@krd.ru">pressa@krd.ru</a>
+            <span>+7&nbsp;(861)&nbsp;259-67-71.</span>
+          </span>
+          <br>
+          <span class="page-footer__text">
+            <span>0+</span>
+          </span>
+        </div>
+        <div class="page-footer__row">
+          <span class="page-footer__text">
+            Все материалы сайта доступны по лицензии: <a href="#">Creative Common Attribution 4.0</a>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="sites">
+      <div class="modal__overlay">
+        <div class="modal__block sites-modal">
+          <div class="modal__up">
+            <h4 class="modal__caption">Официальные сайты</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="sites-modal__wrapper">
+                <div class="sites-modal__left">
+                  <div class="accordion">
+                    <div class="accordion__up accordion-js modal-accordion-up">
+                      <span class="accordion__caption">Выберите категорию</span>
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--arrow-two">
+                      </svg>
+                    </div>
+                    <div class="accordion__down">
+                      <div class="accordion__content">
+                        <ul class="sites-modal__list">
+
+                          <li class="sites-modal__item" data-sites="sitesFilter1">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Государственные сайты (6)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter2">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Городская власть (45)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter3">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Городские сферы (45)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter4">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Здравоохранение (31)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter5">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Туризм и отдых (12)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter6">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Спорт (42)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter7">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Образование (120)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter8">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Библиотеки (15)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter9">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Вуз (14)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter10">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Кинотеатры (4)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter11">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Кинотеатры (4)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter12">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Тест1 (14)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter13">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Тест2 (4)</span>
+                              </div>
+                            </label>
+                          </li>
+
+
+                          <li class="sites-modal__item" data-sites="sitesFilter14">
+                            <label class="check-row">
+                              <input type="checkbox">
+                              <div class="check-row__wrap">
+                                <span class="check-row__square"></span>
+                                <span class="check-row__text">Тест3 (4)</span>
+                              </div>
+                            </label>
+                          </li>
+
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sites-modal__right">
+                  <div class="sites-block" id="sitesFilter1">
+                    <div class="sites-block__up">
+                      <h2 class="sites-block__title">Государственные сайты (6)</h2>
+                    </div>
+                    <div class="sites-block__down">
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Президент РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">kremlin.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Правительство РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">government.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Совет федерации федерального собрания РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">council.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Государственная дума РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">duma.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Конституционный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">ksrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Верховный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">vsrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+                    </div>
+                  </div>
+                  <div class="sites-block" id="sitesFilter2">
+                    <div class="sites-block__up">
+                      <h2 class="sites-block__title">Городские сферы (45)</h2>
+                    </div>
+                    <div class="sites-block__down">
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Уполномоченный по правам человека</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">kubanombudsman.org</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Уполномоченный по правам ребёнка в Краснодарском крае</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">куб.дети</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Совет федерации федерального собрания РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">council.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Государственная дума РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">duma.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Конституционный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">ksrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Верховный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">vsrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+                    </div>
+                  </div>
+                  <div class="sites-block" id="sitesFilter3">
+                    <div class="sites-block__up">
+                      <h2 class="sites-block__title">Тест1 (4)</h2>
+                    </div>
+                    <div class="sites-block__down">
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Президент РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">kremlin.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Правительство РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">government.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Совет федерации федерального собрания РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">council.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Государственная дума РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">duma.gov.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Конституционный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">ksrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+
+                      <a href="#" class="sites-block__item">
+                        <span class="sites-block__caption">Верховный суд РФ</span>
+                        <span class="sites-block__row">
+                          <span class="sites-block__text">vsrf.ru</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#svg--go-to">
+                          </svg>
+                        </span>
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <script src="js/smooth-scrollbar.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="js/flatpickr.js"></script>
+  <script src="js/flatpickr-ru.js"></script>
+  <script>
+    let calendarDateOne = flatpickr("#date1", {
+      inline: true,
+      "locale": "ru",
+      dateFormat: "Y-m-d",
+      monthSelectorType: "static",
+      nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+      prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+      onValueUpdate: function() {
+        const btnClear = this.calendarContainer.nextElementSibling;
+        btnClear.style.display = "flex";
+      },
+    });
+    clearCalendar(calendarDateOne);
+
+    let calendarPeriod = flatpickr("#period1", {
+      inline: true,
+      "locale": "ru",
+      dateFormat: "Y-m-d",
+      monthSelectorType: "static",
+      nextArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+      prevArrow: "<svg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9 1L9 19M9 19L17 10.9543M9 19L1 10.9543' stroke-width='2' stroke-linecap='round'/></svg>",
+      mode: "range",
+      onValueUpdate: function() {
+        const btnClearTwo = this.calendarContainer.nextElementSibling;
+        btnClearTwo.style.display = "flex";
+      },
+    });
+    clearCalendar(calendarPeriod);
+
+    tabs();
+
+    let Scrollbar = window.Scrollbar;
+
+    Scrollbar.init(document.querySelector('.topic-block__scroll'));
+  </script>
+
+</body>
+
+</html>

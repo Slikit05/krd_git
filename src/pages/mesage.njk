@@ -1,0 +1,120 @@
+{% extends "__layout.njk" %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs__scroll">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Главная</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Пункт меню</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="" class="breadcrumbs__link">Пункт меню</a>
+						<svg>
+							<use xlink:href="img/sprite.svg#svg--arrow-two">
+						</svg>
+					</li>
+					<li class="breadcrumbs__item">
+						<span class="breadcrumbs__link">Гостям города</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="inner-grid-page">
+		<div class="container">			
+			<div class="text-page">
+				<div class="center-area-two center-area-two--change">
+					<div class="text-page__up text-page__up--change">
+            <div class="row-flex">
+              <a href="#" class="link-more">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--arrow-two">
+                </svg>
+                <span>Назад к списку</span>
+              </a>
+
+              <div class="row-flex__wrap">
+                <a href="#" class="link-change" data-click-modal="calendar">
+                  <span class="link-change__text">Распечатать</span>
+                  <svg><use xlink:href="img/sprite.svg#print-icon"></svg>
+                </a>
+                <a href="#" class="link-change" data-click-modal="topic">
+                  <span class="link-change__text">Удалить</span>
+                  <svg><use xlink:href="img/sprite.svg#svg--topics"></svg>
+                </a>
+              </div>
+            </div>
+						
+						<h2 class="title">Получен ответ на официальное обращение в городскую думу от 27.11.2020, 12:20</h2>
+            <span class="info-text date">10 февраля 2021, 10:24</span>
+					</div>
+					<div class="text-page__area">
+						<div class="text-page__wrap">
+							<div class="center-area-one center-one-change-tablet">
+								<p>Уважаемый Кормилето Алексей Сергеевич!</p>
+                <p>В ответ на Ваше обращение сообщаем следующее: Публичные слушания назначены постановлением администрации муниципального образования город Краснодар от 27.07.2020 № 2855 «О проведении публичных слушаний по проекту решения городской Думы Краснодара «О внесении изменений в Устав муниципального образования город Краснодар».</p>
+                <p>Тема, вопросы, вынесенные на публичные слушания: Проект решения городской Думы Краснодара «О внесении изменений в Устав муниципального образования город Краснодар».</p>
+                <p>Форма проведения публичных слушаний: собрание участников публичных слушаний. Место проведения публичных слушаний: г. Краснодар, ул. Калинина, 339 (актовый зал). Дата проведения публичных слушаний: «12» августа 2020 года</p>
+                <p>Заместитель главы муниципального образования город Краснодар Логвиненко Дмитрий Сергеевич.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+        <div class="center-area-two center-area-two--change offset-area">
+          <div class="block-link-doc">
+            <div class="link-doc">
+              <div class="link-doc__wrap-icon">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--doc">
+                </svg>
+                <span class="link-doc__file-name">xls</span>
+              </div>
+              <div class="link-doc__flex">
+                <div class="link-doc__wrap-text">
+                  <div class="link-doc__row-caption">
+                    <a href="#" class="link-doc__caption">Пример заголовка документа для скачивания</a>                    
+                  </div>
+                  <span class="link-doc__info">PDF (2,45 МБ)</span>
+                </div>
+              </div>
+            </div>
+            <div class="link-doc">
+              <div class="link-doc__wrap-icon">
+                <svg>
+                  <use xlink:href="img/sprite.svg#svg--doc">
+                </svg>
+                <span class="link-doc__file-name">xls</span>
+              </div>
+              <div class="link-doc__flex">
+                <div class="link-doc__wrap-text">
+                  <div class="link-doc__row-caption">
+                    <a href="#" class="link-doc__caption">Заключение о результатах публичных слушаний по проекту решения городской Думы Краснодара «О внесении изменений в Устав муниципального образования город Краснодар»</a>                    
+                  </div>
+                  <span class="link-doc__info">PDF (2,45 МБ)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+			</div>			
+		</div>
+	</section>
+{% endblock %}
+
+{% block Scripts %}
+{% endblock %}

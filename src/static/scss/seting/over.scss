@@ -3441,6 +3441,7 @@ html .scrollbar-track {
         width: 100%;
       }
     }
+
     &--change-width-sm {
       width: 16.67%;
 
@@ -4423,6 +4424,7 @@ body .choices__list--dropdown {
     background-color: #fff;
     transform: rotate(45deg);
     border: 1px solid #a7a8ab;
+
     @media (max-width: 767px) {
       left: auto;
       right: 10px;
@@ -4467,6 +4469,7 @@ body .choices__list--dropdown {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease-in-out;
+
     @media (max-width: 767px) {
       left: auto;
       right: -12px;
@@ -4487,6 +4490,7 @@ hr {
   line-height: 24px;
   color: #0050B2;
   transition: all 0.3s ease-in-out;
+
   &:hover {
     color: #003B83;
     text-decoration: underline;
@@ -4506,16 +4510,35 @@ hr {
     line-height: normal;
     color: #333;
     margin-bottom: 10px;
+
     &:last-child {
       margin: 0;
     }
   }
+
   a {
     font-size: 18px;
     line-height: normal;
     color: #0050b2;
+
     &:hover {
       color: #003b83;
+    }
+  }
+}
+
+.row-flex {
+  display: flex;
+  justify-content: space-between;
+
+  &__wrap {
+    display: flex;
+  }
+
+  .link-change {
+    margin-right: 27px;
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

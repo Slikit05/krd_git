@@ -1,0 +1,64 @@
+{
+	"results": [{
+		"gender": "female",
+		"name": {
+			"title": "Ms",
+			"first": "Venla",
+			"last": "Linna"
+		},
+		"location": {
+			"street": {
+				"number": 2213,
+				"name": "Mechelininkatu"
+			},
+			"city": "Saltvik",
+			"state": "Uusimaa",
+			"country": "Finland",
+			"postcode": 65477,
+			"coordinates": {
+				"latitude": "-6.2293",
+				"longitude": "80.2318"
+			},
+			"timezone": {
+				"offset": "+5:45",
+				"description": "Kathmandu"
+			}
+		},
+		"email": "venla.linna@example.com",
+		"login": {
+			"uuid": "f8ec36ce-9dea-4e7c-b555-f3f10165ee9b",
+			"username": "goldenzebra319",
+			"password": "footjob",
+			"salt": "25Q6CW0x",
+			"md5": "6fa238c8d56a84552888581833ff59de",
+			"sha1": "0cfdfd175dfb27479c9ca531e4778eaa95950b4c",
+			"sha256": "169c1a5fb5580aa76b3d54d0bb392bd3a0d4979589924f5fca1540116a5991a1"
+		},
+		"dob": {
+			"date": "1997-11-15T23:17:43.409Z",
+			"age": 24
+		},
+		"registered": {
+			"date": "2003-07-18T14:58:53.824Z",
+			"age": 18
+		},
+		"phone": "02-439-957",
+		"cell": "045-493-69-08",
+		"id": {
+			"name": "HETU",
+			"value": "NaNNA414undefined"
+		},
+		"picture": {
+			"large": "https://randomuser.me/api/portraits/women/2.jpg",
+			"medium": "https://randomuser.me/api/portraits/med/women/2.jpg",
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/2.jpg"
+		},
+		"nat": "FI"
+	}],
+	"info": {
+		"seed": "71cd55a0ce3937ff",
+		"results": 1,
+		"page": 1,
+		"version": "1.3"
+	}
+}
