@@ -1,0 +1,210 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Сообщения</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="inner-grid-page">
+		<div class="container">
+			<div class="inner-grid-page__wrapper">
+				<div class="inner-grid-page__left">
+					<div class="link-menu">
+						<div class="link-menu__up accordion-js">
+							<span class="link-menu__caption">Профиль</span>
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-three">
+							</svg>
+						</div>
+						<ul class="link-menu__list">
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Профиль</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Сообщения (3)</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Настройка оповещений</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Рассылки новостей</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Транспорт (36)</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Обращения</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Онлайн конференции</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Техническая поддержка</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Помощь</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Выход</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inner-grid-page__right">
+					<div class="personal-area">
+						<div class="personal-area__up">
+							<div class="row-title">
+								<h2 class="title">Здравствуйте, Кормилето Алексей Сергеевич</h2>
+							</div>
+						</div>
+						<div class="personal-area__down">
+							<div class="posts">
+                <div class="posts__wrap-icon">
+                  <label class="posts-check">
+                    <input type="checkbox">
+                    <span class="posts-check__icon"></span>
+                  </label>
+                  <svg stroke="#0061D9">
+                    <use xlink:href="img/sprite.svg#svg--posts-icon1">
+                  </svg>
+                </div>
+								<div class="posts__wrap-text">
+									<div class="posts__row">
+										<h4 class="posts__title">С днем рождения!</h4>
+										<p class="posts__text">Портал KRD</p>
+									</div>
+									<span class="posts__date">сегодня,<br> 10:24</span>
+								</div>
+							</div>
+							<div class="posts">
+                <div class="posts__wrap-icon">
+                  <label class="posts-check">
+                    <input type="checkbox">
+                    <span class="posts-check__icon"></span>
+                  </label>
+                  <svg stroke="#FF9500">
+                    <use xlink:href="img/sprite.svg#svg--posts-icon2">
+                  </svg>
+                </div>
+								<div class="posts__wrap-text">
+									<div class="posts__row">
+										<h4 class="posts__title">Будет произведено отключение электроэнергии</h4>
+										<p class="posts__text">Рассылки KRD</p>
+									</div>
+									<span class="posts__date">сегодня,<br> 10:24</span>
+								</div>
+							</div>
+							<div class="posts">
+                <div class="posts__wrap-icon">
+                  <label class="posts-check">
+                    <input type="checkbox">
+                    <span class="posts-check__icon"></span>
+                  </label>
+                  <svg stroke="#65B94D">
+                    <use xlink:href="img/sprite.svg#svg--posts-icon3">
+                  </svg>
+                </div>
+								<div class="posts__wrap-text">
+									<div class="posts__row">
+										<h4 class="posts__title">Создано официальное обращение в городскую думу от 27.11.2020, 12:20</h4>										
+										<p class="posts__text">Обращения</p>
+									</div>
+									<span class="posts__date">10.11.2021,<br> 10:24</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block Scripts %}
+<script>
+	const accUp = new Accordion(".accordion__up");
+
+	accUp.createAccordion();
+</script>
+{% endblock %}
