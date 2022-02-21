@@ -148,6 +148,32 @@
 	</a>
 {% endmacro %}
 
+{% macro mesage(img, caption, text, class) %}
+	<div class="posts mesage {{ class }}">
+		<div class="posts__wrap-icon">
+			<label class="posts-check">
+				<input type="checkbox">
+				<span class="posts-check__icon"></span>
+			</label>
+			<svg>
+				<use xlink:href="img/sprite.svg#svg--{{ img }}">
+			</svg>
+		</div>
+		<div class="posts__wrap-text">
+			<div class="posts__row">
+				<h4 class="posts__title">{{ caption }}</h4>				
+				{% if text %}
+					<p class="posts__text">{{ text }}</p>
+				{% endif %}
+			</div>
+			<div class="posts__wrap-end">
+				<span class="posts__date">10.11.2021,<br> 10:24</span>
+				<span class="close"></span>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
 {% macro humanList(nameTab) %}
 	<div class="human-list " >
 		<div class="human-list__wrapper animate-hate list-accordeon" data-namelist="{{ nameTab }}">

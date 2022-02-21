@@ -1,7 +1,7 @@
 {% extends "__layout.njk" %}
 
 {% block Link %}
-	
+	<link rel="stylesheet" href="css/choices.min.css">
 {% endblock %}
 
 {% block Header %}
@@ -36,7 +36,7 @@
 {% endblock %}
 
 {% block Content %}
-	<section class="inner-grid-page">
+	<section class="inner-grid-page inner-grid-page--change">
 		<div class="container">
 			<div class="inner-grid-page__wrapper">
 				<div class="inner-grid-page__left">
@@ -133,64 +133,110 @@
 				</div>
 				<div class="inner-grid-page__right">
 					<div class="personal-area">
-						<div class="personal-area__up">
+						<div class="personal-area__up personal-area__up--change">
 							<div class="row-title">
-								<h2 class="title">Здравствуйте, Кормилето Алексей Сергеевич</h2>
+								<h2 class="title">Сообщения (3)</h2>
+							</div>
+							<div class="filter-documentation filter-documentation--change">
+								<form action="" class="filter-documentation__form">
+									<div class="filter-documentation__wrapper">
+										<div class='filter-documentation__wrap'>
+											<span class='wrap-field__description'>Категория:</span>
+											<div class='select-wrap' id='category'>
+												<select class='select select-category-document' name="all-category">
+													<option placeholder>Все категории</option>
+													<option value='1'>1</option>
+													<option value='2'>2</option>
+													<option value='3'>3</option>
+													<option value='4'>4</option>
+												</select>
+											</div>
+										</div>
+										<div class="filter-documentation__wrap">
+											<div class="wrap-field">
+												<label>
+													<span class="wrap-field__description">Поиск по сообщениям:</span>
+													<input type="text" class="wrap-field__field" name='name-doc' placeholder="Введите запрос">
+												</label>
+											</div>
+										</div>
+										<div class="filter-documentation__wrap">
+											<div class="wrap-field">
+												<a href="#" class="btn-block">
+													<span class="btn-block__text">Найти</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="row-flex">
+								<label class="posts-check">
+									<input type="checkbox">
+									<span class="posts-check__icon"></span>
+								</label>
+
+								<div class="row-flex__wrap">
+									<a href="#" class="link-change print-link" data-make-unread>
+										<span class="link-change__text">Сделать непрочитанным</span>
+										<svg><use xlink:href="img/sprite.svg#svg--connection"></svg>
+									</a>
+									<a href="#" class="link-change" data-remove-mesages>
+										<span class="link-change__text">Удалить</span>
+										<svg><use xlink:href="img/sprite.svg#svg--close"></svg>
+									</a>
+								</div>
 							</div>
 						</div>
-						<div class="personal-area__down">
-							<div class="posts">
-                <div class="posts__wrap-icon">
-                  <label class="posts-check">
-                    <input type="checkbox">
-                    <span class="posts-check__icon"></span>
-                  </label>
-                  <svg stroke="#0061D9">
-                    <use xlink:href="img/sprite.svg#svg--posts-icon1">
-                  </svg>
-                </div>
-								<div class="posts__wrap-text">
-									<div class="posts__row">
-										<h4 class="posts__title">С днем рождения!</h4>
-										<p class="posts__text">Портал KRD</p>
+						<div class="personal-area__down border-top">
+							{{ mixin.mesage('posts-icon1', 'С днем рождения!', 'Портал KRD', 'mesage--not-read') }}
+							{{ mixin.mesage('posts-icon2', 'Будет произведено отключение электроэнергии', 'Портал KRD', 'mesage--not-read') }}
+							{{ mixin.mesage('posts-icon3', 'Создано официальное обращение в городскую думу от 27.11.2020, 12:20', 'Портал KRD', 'mesage--not-read') }}
+							{{ mixin.mesage('posts-icon4', 'Создан черновик вопроса на онлайн-конференцию', 'Рассылки KRD', '') }}
+							{{ mixin.mesage('posts-icon5', 'Получен ответ на обращение от 25.11.2020, 12:20', 'Обращения', '') }}
+							{{ mixin.mesage('posts-icon6', 'Задан вопрос на онлайн-конференцию Сергея Мартынова «Контрактная система – 2020, изменения в нормативном регулировании»', 'Конференции', '') }}
+							{{ mixin.mesage('posts-icon7', 'Создан черновик вопроса технической поддержке', 'Обращения', '') }}
+							{{ mixin.mesage('posts-icon8', 'Получен ответ на вопрос конференции Сергея Мартынова «Контрактная система – 2020, изменения в нормативном регулировании»', 'Конференции', '') }}
+							{{ mixin.mesage('posts-icon9', 'Задан вопрос технической поддержке на тему "Смена e-mail адреса" от 27.11.2020, 12:20', 'Техническая поддержка ', '') }}
+							{{ mixin.mesage('posts-icon10', 'Создан черновик обращения', 'Конференции', '') }}
+							{{ mixin.mesage('posts-icon11', 'Получен ответ на вопрос по теме "Смена e-mail адреса"от 27.11.2020, 12:20', 'Техническая поддержка ', '') }}
+							{{ mixin.mesage('posts-icon12', 'Штормовое предупреждение! Сегодня с 16:00 до 21:00 ожидается усиление ветра до 24,4 м/с', '') }}
+							
+						</div>
+						<div class="pagination-mesages pagination">
+							<div class="pagination-mesages__left">
+								<span class="pagination-mesages__text">1-20 из 244</span>
+								<div class="pagination-mesages__wrap">
+									<div class="pagination__left">
+										<a href="#" class="btn-white">
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two"></use>
+											</svg>
+											<span class="btn-white__text">Предыдущая</span>
+										</a>
+									</div>									
+									<input type="text" class="pagination-mesages__page-value" data-page-value value="1">
+									<div class="pagination__right">
+										<a href="#" class="btn-white">
+											<svg>
+												<use xlink:href="img/sprite.svg#svg--arrow-two"></use>
+											</svg>
+											<span class="btn-white__text">Предыдущая</span>
+										</a>
 									</div>
-									<span class="posts__date">сегодня,<br> 10:24</span>
 								</div>
 							</div>
-							<div class="posts">
-                <div class="posts__wrap-icon">
-                  <label class="posts-check">
-                    <input type="checkbox">
-                    <span class="posts-check__icon"></span>
-                  </label>
-                  <svg stroke="#FF9500">
-                    <use xlink:href="img/sprite.svg#svg--posts-icon2">
-                  </svg>
-                </div>
-								<div class="posts__wrap-text">
-									<div class="posts__row">
-										<h4 class="posts__title">Будет произведено отключение электроэнергии</h4>
-										<p class="posts__text">Рассылки KRD</p>
+							<div class="pagination-mesages__right ">
+								<span class="pagination-mesages__text">Показывать по:</span>
+								<div class="pagination-mesages__wrap">
+									<div class='select-wrap' id='category'>
+										<select class='select' name="show-number">
+											<option placeholder>20</option>
+											<option value='2'>40</option>
+											<option value='3'>60</option>
+											<option value='4'>80</option>
+										</select>
 									</div>
-									<span class="posts__date">сегодня,<br> 10:24</span>
-								</div>
-							</div>
-							<div class="posts">
-                <div class="posts__wrap-icon">
-                  <label class="posts-check">
-                    <input type="checkbox">
-                    <span class="posts-check__icon"></span>
-                  </label>
-                  <svg stroke="#65B94D">
-                    <use xlink:href="img/sprite.svg#svg--posts-icon3">
-                  </svg>
-                </div>
-								<div class="posts__wrap-text">
-									<div class="posts__row">
-										<h4 class="posts__title">Создано официальное обращение в городскую думу от 27.11.2020, 12:20</h4>										
-										<p class="posts__text">Обращения</p>
-									</div>
-									<span class="posts__date">10.11.2021,<br> 10:24</span>
 								</div>
 							</div>
 						</div>
@@ -202,9 +248,17 @@
 {% endblock %}
 
 {% block Scripts %}
+<script src="js/choices.min.js"></script>
 <script>
-	const accUp = new Accordion(".accordion__up");
+	const arrSelect = document.querySelectorAll('.select');
+	for(let select of arrSelect) {
+		const choices = new Choices(select, {
+			itemSelectText: '',
+			searchEnabled: false,
+			placeholder: true,
+		});
+	}
 
-	accUp.createAccordion();
+	
 </script>
 {% endblock %}

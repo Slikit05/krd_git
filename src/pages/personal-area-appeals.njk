@@ -1,0 +1,198 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Структура администрации</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="inner-grid-page">
+		<div class="container">
+			<div class="inner-grid-page__wrapper">
+				<div class="inner-grid-page__left">
+					<div class="link-menu">
+						<div class="link-menu__up accordion-js">
+							<span class="link-menu__caption">Профиль</span>
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-three">
+							</svg>
+						</div>
+						<ul class="link-menu__list">
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Профиль</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Сообщения (3)</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Настройка оповещений</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Рассылки новостей</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Транспорт (36)</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Обращения</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Онлайн конференции</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Техническая поддержка</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Помощь</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Выход</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inner-grid-page__right">
+					<div class="personal-area">
+						<div class="personal-area__up personal-area__up--change">
+							<div class="row-title">
+								<h2 class="title">Рассылки новостей</h2>
+							</div>
+							<div class="personal-area__grid">
+								<div class="personal-area-post">
+									<div class="personal-area-post__wrap">
+										<svg>
+											<use xlink:href="img/sprite.svg#svg--personal-icon5">
+										</svg>
+										<span class="personal-area-post__text">Написать обращение в администрацию МО город Краснодар</span>
+									</div>
+								</div>
+								<div class="personal-area-post">
+									<div class="personal-area-post__wrap">
+										<svg>
+											<use xlink:href="img/sprite.svg#svg--personal-icon6">
+										</svg>
+										<span class="personal-area-post__text">Написать обращение в городскую думу</span>
+									</div>
+								</div>
+								<div class="personal-area-post">
+									<div class="personal-area-post__wrap">
+										<svg>
+											<use xlink:href="img/sprite.svg#svg--personal-icon7">
+										</svg>
+										<span class="personal-area-post__text">Написать сообщение о фактах коррупции</span>
+									</div>
+								</div>
+							</div>
+              <div class="row-flex">
+								<label class="posts-check">
+									<input type="checkbox">
+									<span class="posts-check__icon"></span>
+								</label>
+
+								<div class="row-flex__wrap">
+									<a href="#" class="link-change print-link" data-make-unread>
+										<span class="link-change__text">Сделать непрочитанным</span>
+										<svg><use xlink:href="img/sprite.svg#svg--connection"></svg>
+									</a>
+									<a href="#" class="link-change" data-remove-mesages>
+										<span class="link-change__text">Удалить</span>
+										<svg><use xlink:href="img/sprite.svg#svg--close"></svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="personal-area__down">							
+							{{ mixin.mesage('posts-icon3', 'Создано официальное обращение в городскую думу от 27.11.2020, 12:20', '', 'mesage--not-read') }}
+              {{ mixin.mesage('posts-icon5', 'Получен ответ на обращение от 25.11.2020, 12:20', '', '') }}
+							{{ mixin.mesage('posts-icon10', 'Создан черновик вопроса на онлайн-конференцию', '', '') }}							
+							{{ mixin.mesage('posts-icon3', 'Создано официальное обращение в городскую думу от 27.11.2020, 12:20', '', '') }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block Scripts %}
+{% endblock %}
