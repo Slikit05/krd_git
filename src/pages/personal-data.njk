@@ -1,7 +1,7 @@
 {% extends "__layout.njk" %}
 
 {% block Link %}
-	
+<link rel="stylesheet" href="css/choices.min.css">
 {% endblock %}
 
 {% block Header %}
@@ -36,7 +36,7 @@
 {% endblock %}
 
 {% block Content %}
-	<section class="inner-grid-page">
+	<section class="inner-grid-page inner-grid-page--change">
 		<div class="container">
 			<div class="inner-grid-page__wrapper">
 				<div class="inner-grid-page__left">
@@ -148,33 +148,79 @@
 								<h2 class="title">Мои адреса</h2>
 							</div>
               <div class="my-addresses">
+								{# <p class="my-addresses__text">Небольшой текст о том, что еще не добавлены адреса и после их добавления Вы получите возможность получать оповещения, возможно список этих оповещений.</p> #}
                 <div class="my-addres-block">
                   <div class="my-addres-block__wrapper">
                     <div class="my-addres-block__left">
                       <div class="my-addres-block__wrap-icon">
                         <svg>
-                          <use xlink:href="img/sprite.svg#svg--{{ img }}">
+                          <use xlink:href="img/sprite.svg#svg--target-icon">
                         </svg>
                       </div>
+											<div class="my-addres-block__wrap-text">
+												<p class="my-addres-block__caption">Мои родители</p>
+												<span class="my-addres-block__subcaption">Дом</span>
+												<p class="my-addres-block__text">г. Краснодар, ул. Лизюкова, 16</p>
+											</div>
                     </div>
-                    <div class="my-addres-block__right">
-
+                    <div class="my-addres-block__right">									
+											<a href="#" class="btn-white">
+												<span class="btn-white__text">Редактировать</span>
+											</a>
+											<span class="close"></span>
+                    </div>
+                  </div>
+                </div>
+								<div class="my-addres-block">
+                  <div class="my-addres-block__wrapper">
+                    <div class="my-addres-block__left">
+                      <div class="my-addres-block__wrap-icon">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#svg--target-icon">
+                        </svg>
+                      </div>
+											<div class="my-addres-block__wrap-text">
+												<p class="my-addres-block__caption">Мои родители</p>
+												<span class="my-addres-block__subcaption">Дом</span>
+												<p class="my-addres-block__text">г. Краснодар, ул. Лизюкова, 16</p>
+											</div>
+                    </div>
+                    <div class="my-addres-block__right">									
+											<a href="#" class="btn-white">
+												<span class="btn-white__text">Редактировать</span>
+											</a>
+											<span class="close"></span>
                     </div>
                   </div>
                 </div>
               </div>
+							<button class="btn-block" data-click-modal="add-address">
+								<span class="btn-block__text">Добавить адрес</span>
+							</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	{% include "include/modal.njk" %}
 {% endblock %}
 
 {% block Scripts %}
+<script src="js/choices.min.js"></script>
 <script>
 	const accUp = new Accordion(".accordion__up");
+	const arrSelect = document.querySelectorAll('.select');
 
 	accUp.createAccordion();
+
+	
+	for(let select of arrSelect) {
+		const choices = new Choices(select, {
+			itemSelectText: '',
+			searchEnabled: false,
+			placeholder: true,
+		});
+	}
 </script>
 {% endblock %}

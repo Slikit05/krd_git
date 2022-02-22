@@ -79,11 +79,11 @@ togglelist.createAccordion();
 
 // Хлебные крошки
 
-let breadСrumbs = document.querySelector(".breadcrumbs__list");
+let breadCrumbs = document.querySelector(".breadcrumbs__list");
 
 
-if (breadСrumbs) {
-  breadСrumbs.scrollLeft = breadСrumbs.scrollWidth;
+if (breadCrumbs) {
+  breadCrumbs.scrollLeft = breadCrumbs.scrollWidth;
 }
 
 if (document.querySelector('.breadcrumbs')) {

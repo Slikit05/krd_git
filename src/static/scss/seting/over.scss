@@ -1035,6 +1035,29 @@ a.link-doc img {
 }
 
 .block-accordions {
+  &__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #000000;
+
+    @media (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+
+  &__wrap {
+    padding-left: 112px;
+
+    @media (max-width: 1200px) {
+      padding-left: 32px;
+    }
+    @media (max-width: 767px) {
+      padding-left: 0;
+    }
+  }
+
   .accordion {
     &:first-child {
       .accordion__up {
@@ -1303,7 +1326,7 @@ a.link-doc img {
   border-bottom: 1px solid #e5e5eb;
 
   &:last-child {
-    border-bottom: none;
+    // border-bottom: none;
   }
 
   &__up {
@@ -1423,6 +1446,10 @@ a.link-doc img {
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
     }
 
     p {
@@ -3101,8 +3128,10 @@ html .scrollbar-track {
         line-height: 24px;
       }
     }
+
     a {
       display: inline-block;
+
       img {
         width: 27px;
         height: auto;
@@ -3475,6 +3504,7 @@ html .scrollbar-track {
       }
     }
   }
+
   &--change {
     margin-bottom: 10px;
   }
@@ -4562,13 +4592,16 @@ hr {
 
   .link-change {
     margin-right: 27px;
+
     &:last-child {
       margin-right: 0;
     }
   }
+
   .posts-check {
     margin-right: 0;
     margin-left: 24px;
+
     @media (max-width: 767px) {
       margin: 0;
     }
@@ -4583,28 +4616,35 @@ hr {
 
 .posts-check {
   margin: 4px 24px 0 0;
+  position: relative;
+
   @media (max-width: 767px) {
     margin: 4px 0 16px 0;
   }
+
   input {
     display: none;
   }
-  input:checked + .posts-check__icon {
+
+  input:checked+.posts-check__icon {
     background-color: #0061D9;
     border-color: #0061D9;
+
     &::before {
       opacity: 1;
     }
   }
+
   &__icon {
     width: 20px;
     height: 20px;
     border: 2px solid #000000;
     border-radius: 2px;
-    display: block;    
+    display: block;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -4617,6 +4657,138 @@ hr {
       background-size: contain;
       opacity: 0;
       transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.alerts-block {
+  &__up {
+    display: flex;
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+    justify-content: flex-end;
+  }
+
+  &__row {
+    display: flex;
+    border-bottom: 1px solid #D9D9DE;
+    padding: 27px 0;
+
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    &--lg {
+      width: 60%;
+      padding-right: 32px;
+
+      @media (max-width: 1200px) {
+        width: 52%;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+    }
+
+    &--md {
+
+      // width: 16%;
+      @media (max-width: 1200px) {
+        width: 15.4%;
+        min-width: 92px;
+      }
+
+      @media (max-width: 767px) {
+        width: 33.33%;
+      }
+    }
+
+    &--sm {
+      width: 12%;
+
+      @media (max-width: 1200px) {
+        width: 16.3%;
+        min-width: 92px;
+      }
+
+      @media (max-width: 767px) {
+        width: 33.33%;
+      }
+    }
+
+    &:last-child {
+      .message-copy {
+        left: auto;
+        right: -12px;
+
+        &::after {
+          bottom: -10px;
+          left: auto;
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  &__caption {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: normal;
+    color: #333333;
+  }
+}
+
+.wrap-hint {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+
+  .message-copy {
+    top: auto;
+    bottom: 100%;
+    left: -12px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: 1080px) {
+      display: none;
+    }
+
+    &::after {
+      top: auto;
+      bottom: -10px;
+    }
+  }
+
+  .posts-check {
+    margin: 0;
+  }
+
+  &--disabled {
+    .posts-check {
+      pointer-events: none;
+
+      &__icon {
+        border: 2px solid #A7A8AB;
+      }
+    }
+
+    &:hover {
+      .message-copy {
+        opacity: 1;
+      }
     }
   }
 }

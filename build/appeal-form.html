@@ -1314,6 +1314,75 @@
       </div>
     </div>
 
+    <div class="modal" id="add-address" data-message-success="Вы отправили сообщение об ошибке">
+      <div class="modal__overlay">
+        <div class="modal__block mailing-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Сообщить об ошибке</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="form-modal">
+                <form action="js/test.json">
+                  <div class="form-modal__wrapper">
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Контактные данные:</span>
+
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                      </label>
+                    </div>
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Электронная почта<span class="red">*</span>:</span>
+
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Рассылка' required>
+                      </label>
+                    </div>
+                    <div class="wrap-field">
+                      <div class="wrap-field__flex">
+                        <span class="wrap-field__description">Адрес страницы с ошибкой<span class="red">*</span>:</span>
+                        <a href="#" class="url-link">https://krd.ru/</a>
+                      </div>
+                    </div>
+
+                    <div class="wrap-field">
+                      <div class="wrap-field__flex">
+                        <span class="wrap-field__description">Характер ошибки<span class="red">*</span>:</span>
+                        <div class='select-wrap' id='category'>
+                          <select class='select select-category-document' name="error">
+                            <option placeholder>Выберите из списка</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="wrap-field">
+                      <span class="wrap-field__description">Описание<span class="red">*</span>:</span>
+                      <label>
+                        <textarea class="wrap-field__textarea" name='textarea' placeholder="" data-name="Описание"></textarea>
+                      </label>
+                    </div>
+
+                    <div class="form-over__wrap-btn">
+                      <button type="submit" class="btn-block md-width-btn">
+                        <span class="btn-block__text">Оправить</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
 
 

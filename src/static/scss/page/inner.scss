@@ -598,6 +598,11 @@
       color: #333;
       max-width: inherit;
       margin-bottom: 35px;
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -664,6 +669,18 @@
 
     span.info-text {
       color: rgba(0, 0, 0, .6);
+    }
+
+    div.block-accordions .block-accordions__title {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 36px;
+      color: #000;
+      @media (max-width: 767px) {
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 0;
+      }
     }
 
     a {
@@ -4480,6 +4497,7 @@ table {
 
 .personal-area {
   margin-bottom: 55px;
+
   @media (max-width: 1200px) {
     margin-bottom: 40px;
   }
@@ -4539,6 +4557,7 @@ table {
 
         .wrap-field__field {
           padding: 9px 14px;
+
           @media (max-width: 767px) {
             padding: 7px 14px;
           }
@@ -4564,6 +4583,7 @@ table {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 40px;
     margin-bottom: 35px;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -4580,6 +4600,9 @@ table {
     &--change {
       grid-template-columns: 1fr;
     }
+  }
+  .btn-block {
+    width: 100%;
   }
 }
 
@@ -4632,20 +4655,23 @@ table {
 
   &__wrap-icon {
     display: flex;
+
     @media (max-width: 767px) {
       flex-direction: column;
       align-items: center;
       margin-right: 16px;
+
       svg {
         margin-right: 0;
       }
     }
-  }  
+  }
 
   &__wrap-text {
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
+
     @media (max-width: 767px) {
       display: block;
     }
@@ -4661,6 +4687,7 @@ table {
     font-weight: 600;
     display: block;
     margin-bottom: 10px;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -4669,6 +4696,7 @@ table {
       font-size: 22px;
       line-height: 28px;
     }
+
     @media(max-width: 767px) {
       margin-bottom: 5px;
       font-size: 18px;
@@ -4694,6 +4722,7 @@ table {
       @media(max-width: 1200px) {
         display: block;
       }
+
       @media(max-width: 767px) {
         display: none;
       }
@@ -4711,6 +4740,7 @@ table {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+
     @media (max-width: 767px) {
       display: block;
     }
@@ -4746,6 +4776,7 @@ table {
   margin-bottom: 0;
   position: relative;
   cursor: pointer;
+
   @media (max-width: 767px) {
     padding: 20px 0;
   }
@@ -4784,6 +4815,7 @@ table {
 
   &--not-read {
     background-color: #FAFAFB;
+
     &:first-child {
       &::before {
         border-top: 1px solid #d9d9de;
@@ -4841,6 +4873,7 @@ table {
     @media (max-width: 1200px) {
       margin: 0 28px;
     }
+
     @media (max-width: 767px) {
       padding: 5px 16px 5px 14px;
       margin: 0 8px;
@@ -4864,6 +4897,7 @@ table {
     max-width: 184px;
     flex-grow: 1;
     margin-left: 32px;
+
     @media (max-width: 767px) {
       margin-left: 28px;
     }
@@ -4876,6 +4910,7 @@ table {
   .btn-white {
     padding: 10px 32px 12px;
     min-width: 184px;
+
     @media (max-width: 767px) {
       min-width: 40px;
       padding: 0;
@@ -4899,4 +4934,124 @@ table {
 
 .pagination-mesages.pagination {
   margin-bottom: 0;
+}
+
+.my-addresses {
+  margin-bottom: 30px;
+  &__text {
+    font-size: 18px;
+    line-height: 28px;
+    color: #333333;
+    display: block;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.my-addres-block {
+  padding: 0 24px 28px;
+  border-bottom: 1px solid #D9D9DE;
+  margin-bottom: 20px;
+  @media (max-width: 767px) {
+    padding: 0 0 28px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: flex-start;
+    @media (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__wrap-icon {
+    margin-right: 24px;
+    flex-shrink: 0;
+    margin-top: 3px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .close {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #B3CBE8;
+    border-radius: 4px;
+
+    &::before,
+    &::after {
+      top: 7px;
+      bottom: 7px;
+    }
+  }
+
+  &__caption {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 10px;
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__subcaption {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba($color: #000000, $alpha: 0.5);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 28px;
+    color: #333333;
+    @media (max-width: 767px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__right {
+    display: flex;
+
+    .btn-white {
+      margin-right: 8px;
+      padding: 4px 34px 6px;
+      @media (max-width: 767px) {
+        flex-grow: 1;
+      }
+
+      &__text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
 }

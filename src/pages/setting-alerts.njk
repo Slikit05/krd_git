@@ -1,0 +1,435 @@
+{% extends "__layout.njk" %}
+
+{% block Link %}
+	
+{% endblock %}
+
+{% block Header %}
+	{% include "include/blue-line.njk" %}
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Главная</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="" class="breadcrumbs__link">Пункт меню</a>
+					<svg>
+						<use xlink:href="img/sprite.svg#svg--arrow-two">
+					</svg>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Структура администрации</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block Content %}
+	<section class="inner-grid-page inner-grid-page--change">
+		<div class="container">
+			<div class="inner-grid-page__wrapper">
+				<div class="inner-grid-page__left">
+					<div class="link-menu">
+						<div class="link-menu__up accordion-js">
+							<span class="link-menu__caption">Профиль</span>
+							<svg>
+								<use xlink:href="img/sprite.svg#svg--arrow-three">
+							</svg>
+						</div>
+						<ul class="link-menu__list">
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Профиль</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Сообщения (3)</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Настройка оповещений</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Рассылки новостей</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Транспорт (36)</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Обращения</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Онлайн конференции</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Техническая поддержка</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Помощь</span>
+								</a>
+							</li>
+							<li class="link-menu__item">
+								<a href="" class="link-menu__link">
+									<svg>
+										<use xlink:href="img/sprite.svg#svg--arrow-two">
+									</svg>
+									<span>Выход</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inner-grid-page__right">
+					<div class="personal-area">
+						<div class="personal-area__up">
+							<div class="row-title">
+								<h2 class="title">Настройка оповещений</h2>
+							</div>
+						</div>
+						<div class="personal-area__down">
+              <div class="alerts-block">
+                <div class="alerts-block__up">
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <span class="alerts-block__caption">СМС</span>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <span class="alerts-block__caption">E-mail</span>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--md">
+                    <span class="alerts-block__caption">Сообщения</span>
+                  </div>
+                </div>
+                <div class="alerts-block__row">
+                  <div class="alerts-block__item alerts-block__item--lg">
+                    <span class="alerts-block__text">Отключения коммунальных услуг электроснабжения</span>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--md">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="alerts-block__row">
+                  <div class="alerts-block__item alerts-block__item--lg">
+                    <span class="alerts-block__text">Отключения коммунальных услуг газоснабжения</span>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--md">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="alerts-block__row">
+                  <div class="alerts-block__item alerts-block__item--lg">
+                    <span class="alerts-block__text">Отключения коммунальных услуг водоснабжения</span>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--md">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="alerts-block__row">
+                  <div class="alerts-block__item alerts-block__item--lg">
+                    <span class="alerts-block__text">Отключения коммунальных услуг теплоснабжения</span>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--md">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="alerts-block__row">
+                  <div class="alerts-block__item alerts-block__item--lg">
+                    <span class="alerts-block__text">Отключения коммунальных услуг водоотведения</span>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--md">
+                    <div class="wrap-hint wrap-hint--disabled">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="alerts-block__row">
+                  <div class="alerts-block__item alerts-block__item--lg">
+                    <span class="alerts-block__text">Изменения маршрутов транспортного сообщения</span>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--md">
+                    <div class="wrap-hint">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="alerts-block__row">
+                  <div class="alerts-block__item alerts-block__item--lg">
+                    <span class="alerts-block__text">Информирование о черезвычайных происшествиях</span>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--sm">
+                    <div class="wrap-hint">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="alerts-block__item alerts-block__item--md">
+                    <div class="wrap-hint">
+                      <label class="posts-check">
+                        <input type="checkbox">
+                        <span class="posts-check__icon"></span>                      
+                      </label>
+                      <span class="message-copy">
+                        <span>Для получения рассылки, введите адреса по которым Вы хотите получать уведомления</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block Scripts %}
+<script>
+	const accUp = new Accordion(".accordion__up");
+
+	accUp.createAccordion();
+</script>
+{% endblock %}
