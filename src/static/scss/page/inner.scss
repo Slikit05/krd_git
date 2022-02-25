@@ -2440,6 +2440,15 @@
         margin: 0;
       }
     }
+    .btn-white,
+    .btn-block {
+      @media (max-width: 767px) {
+        margin-bottom: 22px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
 
@@ -4613,6 +4622,7 @@ table {
     display: flex;
     align-items: center;
     padding-bottom: 30px;
+    cursor: pointer;
   }
 
   svg {
@@ -4624,15 +4634,23 @@ table {
     margin-right: 24px;
   }
 
-  span {
+  &__text {
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
     color: #000000;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
 
     @media(max-width: 1023px) {
       font-size: 18px;
       line-height: 24px;
+    }
+  }
+  &:hover {
+    .personal-area-post__text {
+      color: #003b83;
+      border-color: #003b83;
     }
   }
 }

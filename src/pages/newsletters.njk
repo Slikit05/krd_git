@@ -139,7 +139,7 @@
 							</div>
 							<div class="personal-area__grid personal-area__grid--change">
 								<div class="personal-area-post">
-									<div class="personal-area-post__wrap">
+									<div class="personal-area-post__wrap" data-click-modal="mailing">
 										<svg>
 											<use xlink:href="img/sprite.svg#svg--personal-icon4">
 										</svg>
@@ -197,6 +197,7 @@
 			</div>
 		</div>
 	</section>
+	{% include "include/modal.njk" %}
 {% endblock %}
 
 {% block Scripts %}
