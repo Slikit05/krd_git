@@ -598,6 +598,7 @@
       color: #333;
       max-width: inherit;
       margin-bottom: 35px;
+
       @media (max-width: 767px) {
         font-size: 16px;
         line-height: 24px;
@@ -676,6 +677,7 @@
       font-size: 28px;
       line-height: 36px;
       color: #000;
+
       @media (max-width: 767px) {
         font-size: 22px;
         line-height: 28px;
@@ -2440,10 +2442,12 @@
         margin: 0;
       }
     }
+
     .btn-white,
     .btn-block {
       @media (max-width: 767px) {
         margin-bottom: 22px;
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -4516,6 +4520,10 @@ table {
 
     &--change {
       margin-bottom: 28px;
+
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
     }
 
     .filter-documentation {
@@ -4610,6 +4618,7 @@ table {
       grid-template-columns: 1fr;
     }
   }
+
   .btn-block {
     width: 100%;
   }
@@ -4632,6 +4641,7 @@ table {
     stroke-width: 2px;
     flex-shrink: 0;
     margin-right: 24px;
+    transition: all 0.3s ease-in-out;
   }
 
   &__text {
@@ -4639,18 +4649,29 @@ table {
     font-size: 18px;
     line-height: 24px;
     color: #000000;
-    display: inline-block;
     border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
 
     @media(max-width: 1023px) {
       font-size: 18px;
       line-height: 24px;
     }
+
+    @media(max-width: 767px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
+
   &:hover {
     .personal-area-post__text {
       color: #003b83;
       border-color: #003b83;
+    }
+
+    svg {
+      stroke: #003b83;
+      fill: #003b83;
     }
   }
 }
@@ -4751,6 +4772,9 @@ table {
     font-size: 14px;
     line-height: 20px;
     color: rgba($color: #000000, $alpha: 0.6);
+    @media(max-width: 767px) {
+      margin-bottom: 6px;
+    }
   }
 
   &__wrap-end {
@@ -4771,8 +4795,9 @@ table {
       width: 32px;
       height: 32px;
       border: 1px solid #B3CBE8;
+      background-color: #fff;
       border-radius: 4px;
-      margin-bottom: -15px;
+      margin-bottom: -5px;
       opacity: 0;
       transition: all 0.3s ease-in-out;
 
@@ -4780,10 +4805,18 @@ table {
       &::after {
         top: 7px;
         bottom: 7px;
+        transition: all 0.3s ease-in-out;
       }
 
       @media (max-width: 1023px) {
         display: none;
+      }
+      &:hover {
+        background-color: #003b83;
+        &::after,
+        &::before {
+          background-color: #fff;
+        }
       }
     }
   }
@@ -4836,8 +4869,7 @@ table {
 
     &:first-child {
       &::before {
-        border-top: 1px solid #d9d9de;
-        top: -1px;
+        top: -3px;
       }
     }
 
@@ -4956,12 +4988,14 @@ table {
 
 .my-addresses {
   margin-bottom: 30px;
+
   &__text {
     font-size: 18px;
     line-height: 28px;
     color: #333333;
     display: block;
     margin-bottom: 20px;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -4972,6 +5006,7 @@ table {
   padding: 0 24px 28px;
   border-bottom: 1px solid #D9D9DE;
   margin-bottom: 20px;
+
   @media (max-width: 767px) {
     padding: 0 0 28px;
   }
@@ -4984,6 +5019,7 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
     @media (max-width: 767px) {
       display: block;
     }
@@ -4992,6 +5028,7 @@ table {
   &__left {
     display: flex;
     align-items: flex-start;
+
     @media (max-width: 767px) {
       margin-bottom: 15px;
     }
@@ -5031,6 +5068,7 @@ table {
     line-height: 28px;
     color: #000000;
     margin-bottom: 10px;
+
     @media (max-width: 767px) {
       font-size: 18px;
       line-height: 24px;
@@ -5049,6 +5087,7 @@ table {
     font-size: 18px;
     line-height: 28px;
     color: #333333;
+
     @media (max-width: 767px) {
       font-size: 16px;
       line-height: 24px;
@@ -5061,6 +5100,7 @@ table {
     .btn-white {
       margin-right: 8px;
       padding: 4px 34px 6px;
+
       @media (max-width: 767px) {
         flex-grow: 1;
       }

@@ -137,7 +137,7 @@
 							<div class="row-title">
 								<h2 class="title">Сообщения (3)</h2>
 							</div>
-							<div class="filter-documentation filter-documentation--change">
+							<div class="filter-documentation">
 								<form action="" class="filter-documentation__form">
 									<div class="filter-documentation__wrapper">
 										<div class='filter-documentation__wrap'>
@@ -172,12 +172,12 @@
 							</div>
 							<div class="row-flex">
 								<label class="posts-check">
-									<input type="checkbox">
+									<input type="checkbox" data-checked-all-message>
 									<span class="posts-check__icon"></span>
 								</label>
 
 								<div class="row-flex__wrap">
-									<a href="#" class="link-change print-link" data-make-unread>
+									<a href="#" class="link-change" data-make-unread>
 										<span class="link-change__text">Сделать непрочитанным</span>
 										<svg><use xlink:href="img/sprite.svg#svg--connection"></svg>
 									</a>
@@ -208,7 +208,7 @@
 								<span class="pagination-mesages__text">1-20 из 244</span>
 								<div class="pagination-mesages__wrap">
 									<div class="pagination__left">
-										<a href="#" class="btn-white">
+										<a href="#" class="btn-white disable">
 											<svg>
 												<use xlink:href="img/sprite.svg#svg--arrow-two"></use>
 											</svg>
@@ -251,13 +251,28 @@
 <script src="js/choices.min.js"></script>
 <script>
 	const arrSelect = document.querySelectorAll('.select');
+	const checkArr = document.querySelectorAll('.posts-check');
+	const checkAllMessage = document.querySelector('[data-checked-all-message]');
+
 	for(let select of arrSelect) {
 		const choices = new Choices(select, {
 			itemSelectText: '',
 			searchEnabled: false,
 			placeholder: true,
 		});
-	}
+	};
+
+	checkAllMessage.addEventListener('change', function(event) {
+		if (event.target.checked === true) {
+			for (let checkbox of checkArr) {
+				checkbox.querySelector('input[type="checkbox"]').checked = true
+			}
+		} else {
+			for (let checkbox of checkArr) {
+				checkbox.querySelector('input[type="checkbox"]').checked = false
+			}
+		}
+	});
 
 	
 </script>
