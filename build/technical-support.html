@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="css/style.css" media="print" rel="stylesheet" />
 
-
+  <link rel="stylesheet" href="css/choices.min.css">
 
 </head>
 
@@ -666,7 +666,7 @@
                 </div>
                 <div class="personal-area__grid personal-area__grid--change">
                   <div class="personal-area-post">
-                    <div class="personal-area-post__wrap">
+                    <div class="personal-area-post__wrap" data-click-modal="ask-a-question">
                       <svg>
                         <use xlink:href="img/sprite.svg#svg--personal-icon9">
                       </svg>
@@ -678,7 +678,7 @@
                 </div>
                 <div class="row-flex">
                   <label class="posts-check">
-                    <input type="checkbox">
+                    <input type="checkbox" data-checked-all-message>
                     <span class="posts-check__icon"></span>
                   </label>
 
@@ -797,6 +797,584 @@
         </div>
       </div>
     </section>
+    <div class="modal" id="calendar">
+      <div class="modal__overlay">
+        <div class="modal__block modal-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Календарь</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="calendar tab-wrapper">
+                <div class="calendar__up">
+                  <div class="calendar__item active-item-tab" data-nametabs="date">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#svg--date"></use>
+                    </svg>
+                    <span>Выбор даты</span>
+                  </div>
+                  <div class="calendar__item" data-nametabs="period">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#svg--period"></use>
+                    </svg>
+                    <span>Выбор периода</span>
+                  </div>
+                </div>
+                <div class="calendar__down">
+                  <div class="calendar__tab tab-block tab-block--active" data-tabcontent="date">
+                    <input type="text" class="calendar__field calendar__field-date" placeholder="Пожалуйста выберите дату" id="date1">
+                    <button class="btn-white btn-cancel">
+                      <span class="btn-white__text">Отмена</span>
+                    </button>
+                  </div>
+                  <div class="calendar__tab tab-block tab-block--period flatpickr" data-tabcontent="period">
+                    <input type="text" class="calendar__field calendar__field-period" placeholder="Пожалуйста выберите период" id="period1">
+                    <button class="btn-white btn-cancel">
+                      <span class="btn-white__text">Отмена</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="calendar2">
+      <div class="modal__overlay">
+        <div class="modal__block modal-calendar event-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Календарь</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="calendar tab-wrapper">
+                <div class="calendar__down">
+                  <div class="calendar__tab">
+                    <input type="text" class="calendar__field calendar__field-date calendar__field--change" placeholder="Пожалуйста выберите дату" id="date2">
+                    <span class="event-text"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="calendar3">
+      <div class="modal__overlay">
+        <div class="modal__block modal-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Календарь</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="calendar tab-wrapper">
+                <div class="calendar__down">
+                  <div class="calendar__tab">
+                    <input type="text" class="calendar__field calendar__field-date calendar__field--change" placeholder="Пожалуйста выберите дату" id="period2">
+                    <button class="btn-white btn-cancel">
+                      <span class="btn-white__text">Отмена</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal" id="topic">
+      <div class="modal__overlay">
+        <div class="modal__block modal-topic">
+          <div class="modal__up">
+            <h4 class="modal__caption">Выберите тему</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="topic-block">
+                <div class="topic-block__up">
+                  <span class="topic-block__caption">Поиск темы</span>
+                  <div class="topic-block__field-wrap">
+                    <input type="text" id="filter" value="" class="topic-block__field" placeholder="Введите название темы">
+                    <div class="topic-block__btn-search">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#svg--search">
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="topic-block__middle">
+                  <div class="topic-block__scroll">
+                    <ul class="topic-block__list" id="items">
+
+                      <li class="topic-block__item" id="item1">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евгений Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item2">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item3">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+
+                      <li class="topic-block__item" id="item4">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евген Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item5">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item6">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+
+                      <li class="topic-block__item" id="item7">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евгений Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item8">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item9">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+
+                      <li class="topic-block__item" id="item10">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евгений Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item11">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item12">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+
+                      <li class="topic-block__item" id="item13">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Евгений Первышов (2155)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item14">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Городское хозяйство (1423)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                      <li class="topic-block__item" id="item15">
+                        <label class="check-row">
+                          <input type="checkbox">
+                          <div class="check-row__wrap">
+                            <span class="check-row__square"></span>
+                            <span class="check-row__text">Транспорт (1755)</span>
+                          </div>
+                        </label>
+                      </li>
+
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="topic-block__down">
+                  <div class="topic-block__flex">
+                    <div class="topic-block__left">
+                      <div class="wrapper-topic">
+
+                      </div>
+                    </div>
+                    <div class="topic-block__right">
+                      <a href="#" class="btn-block" data-btn-show>
+                        <span class="btn-block__text">Показать</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="mailing" data-message-success="Вы подписались на рассылку">
+      <div class="modal__overlay">
+        <div class="modal__block mailing-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Подписка на рассылку</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="form-modal">
+                <form action="js/test.json">
+                  <div class="form-modal__wrapper">
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Введите E-mail на который хотите получать рассылку<span class="red">*</span>:</span>
+                        <span class="error-text">Ошибка: заполните поле</span>
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Рассылка' required>
+                      </label>
+                    </div>
+                    <div class="wrap-field-check wrap-field-check--offset">
+                      <label class="check-row">
+                        <input type="checkbox" name="check">
+                        <div class="check-row__wrap">
+                          <span class="check-row__square"></span>
+                          <span class="check-row__text">Совпадает с основным e-mail</span>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="form-over__wrap-btn">
+                      <button class="btn-white md-width-btn" type="reset">
+                        <span class="btn-white__text">Очистить</span>
+                      </button>
+                      <button type="submit" class="btn-block md-width-btn">
+                        <span class="btn-block__text">Подписаться</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal" id="report-a-bug" data-message-success="Вы отправили сообщение об ошибке">
+      <div class="modal__overlay">
+        <div class="modal__block mailing-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Сообщить об ошибке</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="form-modal">
+                <form action="js/test.json">
+                  <div class="form-modal__wrapper">
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Контактные данные:</span>
+
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                      </label>
+                    </div>
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Электронная почта<span class="red">*</span>:</span>
+
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Рассылка' required>
+                      </label>
+                    </div>
+                    <div class="wrap-field">
+                      <div class="wrap-field__flex">
+                        <span class="wrap-field__description">Адрес страницы с ошибкой<span class="red">*</span>:</span>
+                        <a href="#" class="url-link">https://krd.ru/</a>
+                      </div>
+                    </div>
+
+                    <div class="wrap-field">
+                      <div class="wrap-field__flex">
+                        <span class="wrap-field__description">Характер ошибки<span class="red">*</span>:</span>
+                        <div class='select-wrap' id='category'>
+                          <select class='select select-category-document' name="error">
+                            <option placeholder>Выберите из списка</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="wrap-field">
+                      <span class="wrap-field__description">Описание<span class="red">*</span>:</span>
+                      <label>
+                        <textarea class="wrap-field__textarea" name='textarea' placeholder="" data-name="Описание"></textarea>
+                      </label>
+                    </div>
+
+                    <div class="form-over__wrap-btn">
+                      <button type="submit" class="btn-block md-width-btn">
+                        <span class="btn-block__text">Оправить</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="add-address" data-message-success="Вы добавили адрес">
+      <div class="modal__overlay">
+        <div class="modal__block mailing-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Добавление адреса</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="form-modal">
+                <form action="js/test.json">
+                  <div class="form-modal__wrapper">
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Описание<span class="red">*</span>:</span>
+
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                      </label>
+                    </div>
+
+                    <div class="wrap-field">
+                      <div class="wrap-field__flex">
+                        <span class="wrap-field__description">Категория<span class="red">*</span>:</span>
+                        <div class='select-wrap' id='category'>
+                          <select class='select select-category-document' name="error">
+                            <option placeholder>Выберите из списка</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Населенный пункт<span class="red">*</span>:</span>
+
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                      </label>
+                    </div>
+
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Улица<span class="red">*</span>:</span>
+
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                      </label>
+                    </div>
+
+                    <div class="form-modal__grid">
+                      <div class="wrap-field">
+                        <label>
+                          <span class="wrap-field__description">Дом<span class="red">*</span>:</span>
+
+                          <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                        </label>
+                      </div>
+                      <div class="wrap-field">
+                        <label>
+                          <span class="wrap-field__description">Корпус<span class="red">*</span>:</span>
+
+                          <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                        </label>
+                      </div>
+                      <div class="wrap-field">
+                        <label>
+                          <span class="wrap-field__description">Квартира<span class="red">*</span>:</span>
+
+                          <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="form-over__wrap-btn">
+                      <a href="#" class="btn-white md-width-btn">
+                        <span class="btn-white__text">Очистить</span>
+                      </a>
+                      <button type="submit" class="btn-block md-width-btn">
+                        <span class="btn-block__text">Добавить</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="ask-a-question" data-message-success="Вы задали вопрос технической поддержке">
+      <div class="modal__overlay">
+        <div class="modal__block mailing-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Вопрос технической поддержке</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="form-modal">
+                <form action="js/test.json">
+                  <div class="form-modal__wrapper">
+                    <div class="wrap-field">
+                      <div class="wrap-field__flex">
+                        <span class="wrap-field__description">Выберите тему<span class="red">*</span>:</span>
+                        <div class='select-wrap' id='category'>
+                          <select class='select select-category-document' name="error">
+                            <option placeholder>Выберите из списка</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Заголовок<span class="red">*</span>:</span>
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                      </label>
+                    </div>
+
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Ваш вопрос:</span>
+                        <textarea class="wrap-field__textarea" placeholder="Напишите Ваш вопрос" data-name=''></textarea>
+                      </label>
+                    </div>
+
+                    <div class="form-over__wrap-btn">
+                      <a href="#" class="btn-white md-width-btn">
+                        <span class="btn-white__text">Очистить</span>
+                      </a>
+                      <button type="submit" class="btn-block md-width-btn">
+                        <span class="btn-block__text">Добавить</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
   </main>
 
@@ -1380,6 +1958,32 @@
   <script src="js/smooth-scrollbar.js"></script>
   <script src="js/main.js"></script>
 
+  <script src="js/choices.min.js"></script>
+  <script>
+    const checkArr = document.querySelectorAll('.posts-check');
+    const checkAllMessage = document.querySelector('[data-checked-all-message]');
+    const arrSelect = document.querySelectorAll('.select');
+
+    checkAllMessage.addEventListener('change', function(event) {
+      if (event.target.checked === true) {
+        for (let checkbox of checkArr) {
+          checkbox.querySelector('input[type="checkbox"]').checked = true
+        }
+      } else {
+        for (let checkbox of checkArr) {
+          checkbox.querySelector('input[type="checkbox"]').checked = false
+        }
+      }
+    });
+
+    for (let select of arrSelect) {
+      const choices = new Choices(select, {
+        itemSelectText: '',
+        searchEnabled: false,
+        placeholder: true,
+      });
+    }
+  </script>
 
 </body>
 

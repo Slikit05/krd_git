@@ -207,20 +207,20 @@
 {% endblock %}
 
 {% block Scripts %}
-<script src="js/choices.min.js"></script>
-<script>
-	const accUp = new Accordion(".accordion__up");
-	const arrSelect = document.querySelectorAll('.select');
+	<script src="js/choices.min.js"></script>
+	<script>
+		const accUp = new Accordion(".accordion__up");
+		const arrSelect = document.querySelectorAll('.select');
 
-	accUp.createAccordion();
+		accUp.createAccordion();
 
-	
-	for(let select of arrSelect) {
-		const choices = new Choices(select, {
-			itemSelectText: '',
-			searchEnabled: false,
-			placeholder: true,
-		});
-	}
-</script>
+		
+		for(let select of arrSelect) {
+			const choices = new Choices(select, {
+				itemSelectText: '',
+				searchEnabled: false,
+				placeholder: true,
+			});
+		}
+	</script>
 {% endblock %}

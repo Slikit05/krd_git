@@ -1153,7 +1153,7 @@
       </div>
     </div>
 
-    <div class="modal" id="add-address" data-message-success="Вы отправили сообщение об ошибке">
+    <div class="modal" id="add-address" data-message-success="Вы добавили адрес">
       <div class="modal__overlay">
         <div class="modal__block mailing-calendar">
           <div class="modal__up">
@@ -1244,6 +1244,66 @@
         </div>
       </div>
     </div>
+
+    <div class="modal" id="ask-a-question" data-message-success="Вы задали вопрос технической поддержке">
+      <div class="modal__overlay">
+        <div class="modal__block mailing-calendar">
+          <div class="modal__up">
+            <h4 class="modal__caption">Вопрос технической поддержке</h4>
+            <span class="close"></span>
+          </div>
+          <div class="modal__down">
+            <div class="modal__content">
+              <div class="form-modal">
+                <form action="js/test.json">
+                  <div class="form-modal__wrapper">
+                    <div class="wrap-field">
+                      <div class="wrap-field__flex">
+                        <span class="wrap-field__description">Выберите тему<span class="red">*</span>:</span>
+                        <div class='select-wrap' id='category'>
+                          <select class='select select-category-document' name="error">
+                            <option placeholder>Выберите из списка</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Заголовок<span class="red">*</span>:</span>
+                        <input type="text" name="test" class="wrap-field__field" placeholder="" data-name='Контактные данные'>
+                      </label>
+                    </div>
+
+                    <div class="wrap-field">
+                      <label>
+                        <span class="wrap-field__description">Ваш вопрос:</span>
+                        <textarea class="wrap-field__textarea" placeholder="Напишите Ваш вопрос" data-name=''></textarea>
+                      </label>
+                    </div>
+
+                    <div class="form-over__wrap-btn">
+                      <a href="#" class="btn-white md-width-btn">
+                        <span class="btn-white__text">Очистить</span>
+                      </a>
+                      <button type="submit" class="btn-block md-width-btn">
+                        <span class="btn-block__text">Добавить</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
   </main>
 

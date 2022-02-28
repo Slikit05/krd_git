@@ -1,7 +1,7 @@
 {% extends "__layout.njk" %}
 
 {% block Link %}
-	
+<link rel="stylesheet" href="css/choices.min.css">
 {% endblock %}
 
 {% block Header %}
@@ -139,7 +139,7 @@
 							</div>
 							<div class="personal-area__grid personal-area__grid--change">
 								<div class="personal-area-post">
-									<div class="personal-area-post__wrap">
+									<div class="personal-area-post__wrap" data-click-modal="ask-a-question">
 										<svg>
 											<use xlink:href="img/sprite.svg#svg--personal-icon9">
 										</svg>
@@ -151,7 +151,7 @@
 							</div>
               <div class="row-flex">
 								<label class="posts-check">
-									<input type="checkbox">
+									<input type="checkbox" data-checked-all-message>
 									<span class="posts-check__icon"></span>
 								</label>
 
@@ -178,7 +178,34 @@
 			</div>
 		</div>
 	</section>
+	{% include "include/modal.njk" %}
 {% endblock %}
 
 {% block Scripts %}
+	<script src="js/choices.min.js"></script>
+	<script>
+		const checkArr = document.querySelectorAll('.posts-check');
+		const checkAllMessage = document.querySelector('[data-checked-all-message]');
+		const arrSelect = document.querySelectorAll('.select');
+
+		checkAllMessage.addEventListener('change', function(event) {
+			if (event.target.checked === true) {
+				for (let checkbox of checkArr) {
+					checkbox.querySelector('input[type="checkbox"]').checked = true
+				}
+			} else {
+				for (let checkbox of checkArr) {
+					checkbox.querySelector('input[type="checkbox"]').checked = false
+				}
+			}
+		});
+
+		for(let select of arrSelect) {
+			const choices = new Choices(select, {
+				itemSelectText: '',
+				searchEnabled: false,
+				placeholder: true,
+			});
+		}
+	</script>
 {% endblock %}

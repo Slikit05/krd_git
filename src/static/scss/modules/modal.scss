@@ -113,6 +113,10 @@ nobr {
 	top: 24px;
 	right: 24px;
 	cursor: pointer;
+	@media (max-width: 767px) {
+		top: 10px;
+		right: 10px;
+	}
 
 	&::before,
 	&::after {
@@ -769,6 +773,12 @@ nobr {
 		}
 		.wrap-field {
 			margin-bottom: 0;
+		}
+	}
+	.form-over__wrap-btn {
+		margin-top: 32px;
+		@media (max-width: 767px) {
+			margin-top: 25px;
 		}
 	}
 }

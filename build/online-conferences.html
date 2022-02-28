@@ -678,7 +678,7 @@
                 </div>
                 <div class="row-flex">
                   <label class="posts-check">
-                    <input type="checkbox">
+                    <input type="checkbox" data-checked-all-message>
                     <span class="posts-check__icon"></span>
                   </label>
 
@@ -1380,6 +1380,22 @@
   <script src="js/smooth-scrollbar.js"></script>
   <script src="js/main.js"></script>
 
+  <script>
+    const checkArr = document.querySelectorAll('.posts-check');
+    const checkAllMessage = document.querySelector('[data-checked-all-message]');
+
+    checkAllMessage.addEventListener('change', function(event) {
+      if (event.target.checked === true) {
+        for (let checkbox of checkArr) {
+          checkbox.querySelector('input[type="checkbox"]').checked = true
+        }
+      } else {
+        for (let checkbox of checkArr) {
+          checkbox.querySelector('input[type="checkbox"]').checked = false
+        }
+      }
+    });
+  </script>
 
 </body>
 

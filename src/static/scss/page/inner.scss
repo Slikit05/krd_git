@@ -32,12 +32,6 @@
     &:last-child {
       margin-right: 0;
 
-      @media (max-width: 1079px) {
-        &:last-child {
-          // padding-right: 25px;
-        }
-      }
-
       .breadcrumbs__link {
         color: #333333;
       }
@@ -681,7 +675,7 @@
       @media (max-width: 767px) {
         font-size: 22px;
         line-height: 28px;
-        margin-bottom: 0;
+        // margin-bottom: 0;
       }
     }
 
@@ -1400,8 +1394,6 @@
   img {
     width: 100%;
   }
-
-  &__container {}
 }
 
 .gallery-grid {
@@ -2556,12 +2548,8 @@
 }
 
 .wrap-field {
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   position: relative;
-
-  &__flex {
-    // display: flex;
-  }
 
   label {
     position: relative;
@@ -3412,11 +3400,6 @@ $tableWidthProcent: 250px;
       padding: 0 0 20px;
     }
 
-    .scroll-content {
-      // scroll-margin-right: 32px;
-      // margin-right: 32px;
-    }
-
     .scrollbar-track {
       opacity: 1;
       background-color: #f5f5f7;
@@ -3502,13 +3485,6 @@ $tableWidthProcent: 250px;
           &:first-child {
             padding-left: 16px;
             min-width: $tableWidthProcentSm;
-            // white-space: nowrap;
-          }
-
-          &:nth-child(2),
-          &:nth-child(3),
-          &:nth-child(5) {
-            // min-width: $tableWidthProcent;
           }
 
           &:last-child {
@@ -3528,14 +3504,6 @@ $tableWidthProcent: 250px;
 
           &:first-child {
             padding-left: 16px;
-            // min-width: $tableWidthProcentSm;
-            // white-space: nowrap;
-          }
-
-          &:nth-child(2),
-          &:nth-child(3),
-          &:nth-child(5) {
-            // min-width: $tableWidthProcent;
           }
 
           &:last-child {
@@ -3650,12 +3618,6 @@ table {
         // white-space: nowrap;
       }
 
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(5) {
-        // min-width: $tableWidthProcent;
-      }
-
       &:last-child {
         padding-right: 16px;
       }
@@ -3723,12 +3685,6 @@ table {
           // white-space: nowrap;
         }
 
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(5) {
-          // min-width: $tableWidthProcent;
-        }
-
         &:last-child {
           padding-right: 16px;
         }
@@ -3756,12 +3712,6 @@ table {
           padding-left: 16px;
           // min-width: $tableWidthProcentSm;
           // white-space: nowrap;
-        }
-
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(5) {
-          // min-width: $tableWidthProcent;
         }
 
         &:last-child {
@@ -4516,7 +4466,7 @@ table {
   }
 
   &__up {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 
     &--change {
       margin-bottom: 28px;
@@ -4632,6 +4582,9 @@ table {
     align-items: center;
     padding-bottom: 30px;
     cursor: pointer;
+    * {
+      pointer-events: none;
+    }
   }
 
   svg {

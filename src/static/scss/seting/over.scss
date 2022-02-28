@@ -241,7 +241,7 @@
   justify-content: space-between;
   border-bottom: 1px solid #d9d9de;
   padding-bottom: 20px;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   flex-wrap: wrap;
 
   .title {
@@ -1058,12 +1058,15 @@ a.link-doc img {
     }
     @media (max-width: 767px) {
       padding-left: 0;
+      margin-bottom: 25px;
     }
   }
 
   .accordion {
     &:first-child {
+      
       .accordion__up {
+        padding-top: 0;
         @media (max-width: 1200px) {
           // padding-top: 0;
         }
@@ -1327,10 +1330,6 @@ a.link-doc img {
 
 .accordion {
   border-bottom: 1px solid #e5e5eb;
-
-  &:last-child {
-    // border-bottom: none;
-  }
 
   &__up {
     display: flex;
@@ -1836,7 +1835,7 @@ a.link-doc img {
 .block-link-doc,
 .block-accordions,
 .block-links-section {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 
   @media (max-width: 1200px) {
     margin-bottom: 20px;
@@ -1844,10 +1843,6 @@ a.link-doc img {
 
   @media (max-width: 767px) {
     margin-bottom: 10px;
-  }
-
-  &:last-child {
-    // margin-bottom: 0;
   }
 }
 
@@ -2030,15 +2025,6 @@ a.link-doc img {
 
     @media (max-width: 1300px) {
       padding: 0 16px;
-
-      &:nth-child(5),
-      &:nth-child(6) {
-        // display: none;
-      }
-
-      &:last-child {
-        // display: block;
-      }
     }
 
     @media (max-width: 1079px) {
@@ -2047,10 +2033,6 @@ a.link-doc img {
 
     @media (max-width: 767px) {
       padding: 0 2px;
-
-      &:nth-child(4) {
-        // display: none;
-      }
     }
   }
 
@@ -3597,12 +3579,6 @@ html .scrollbar-track {
       transition: all 0.3s ease-in-out;
       background-color: #F5F5F7;
       z-index: 10 !important;
-
-      .choices__item {
-        &:first-child {
-          // display: none;
-        }
-      }
     }
   }
 
@@ -3856,9 +3832,6 @@ body {
     }
   }
 }
-
-html body main .modal .modal__down .calendar .flatpickr-day.nextMonthDay,
-html body main .modal .modal__down .calendar .flatpickr-day.prevMonthDay {}
 
 html body .bvi-body {
 
@@ -4699,6 +4672,7 @@ hr {
 
     @media (max-width: 767px) {
       flex-wrap: wrap;
+      padding: 21px 0;
     }
   }
 
@@ -4718,8 +4692,7 @@ hr {
     }
 
     &--md {
-
-      // width: 16%;
+      width: 16%;
       @media (max-width: 1200px) {
         width: 15.4%;
         min-width: 92px;
@@ -4767,6 +4740,9 @@ hr {
     font-size: 18px;
     line-height: normal;
     color: #333333;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
 }
 
