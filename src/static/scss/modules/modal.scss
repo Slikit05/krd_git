@@ -88,6 +88,9 @@ nobr {
 	&__down {
 		display: block;
 		vertical-align: inherit;
+		div.form-over__wrap-btn {
+			margin-top: 0;
+		}
 	}
 
 	&__caption {

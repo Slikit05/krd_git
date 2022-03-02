@@ -4469,10 +4469,19 @@ table {
     margin-bottom: 32px;
 
     &--change {
-      margin-bottom: 28px;
+      padding-bottom: 28px;
+      margin-bottom: 0;
 
       @media (max-width: 767px) {
-        margin-bottom: 20px;
+        padding-bottom: 20px;
+      }
+    }
+
+    &--border-bottom {
+      border-bottom: 1px solid #D9D9DE;
+      @media (max-width: 767px) {
+        margin: 0 -24px;
+        padding: 0 24px;
       }
     }
 
@@ -4823,6 +4832,9 @@ table {
     &:first-child {
       &::before {
         top: -3px;
+        @media (max-width: 767px) {
+          top: 0;
+        }
       }
     }
 
